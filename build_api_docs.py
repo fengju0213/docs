@@ -96,7 +96,6 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'myst_parser',
 ]
 
 # autodoc settings
@@ -108,6 +107,10 @@ autodoc_default_options = {{
     'inherited-members': False,
     'show-inheritance': True,
 }}
+
+# Be more tolerant of errors
+autodoc_warningiserror = False
+suppress_warnings = ['autodoc', 'autodoc.import_object']
 
 # autosummary settings
 autosummary_generate = True
@@ -130,7 +133,6 @@ napoleon_type_aliases = None
 # Source and build directories
 source_suffix = {{
     '.rst': None,
-    '.md': 'myst_parser',
 }}
 
 # Master document
@@ -146,8 +148,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Output format for markdown
-# We'll use a custom builder to generate markdown
+# More tolerant settings
+nitpicky = False
 '''
     
     # 创建配置文件
@@ -155,7 +157,32 @@ html_static_path = ['_static']
     with open(conf_file, 'w', encoding='utf-8') as f:
         f.write(conf_py_content)
     
+    # 创建 _static 和 _templates 目录
+    static_dir = os.path.join(source_dir, '_static')
+    templates_dir = os.path.join(source_dir, '_templates')
+    os.makedirs(static_dir, exist_ok=True)
+    os.makedirs(templates_dir, exist_ok=True)
+    
     return conf_file
+
+def create_index_rst(source_dir):
+    """创建 index.rst 文件"""
+    index_content = """
+Welcome to API Documentation
+============================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+This is a temporary index file for Sphinx builds.
+"""
+    
+    index_file = os.path.join(source_dir, 'index.rst')
+    with open(index_file, 'w', encoding='utf-8') as f:
+        f.write(index_content.strip())
+    
+    return index_file
 
 def generate_rst_files(source_dir, package_name="camel", modules=None):
     """使用 sphinx-apidoc 生成 RST 文件"""
@@ -199,6 +226,9 @@ def generate_rst_files(source_dir, package_name="camel", modules=None):
 def sphinx_build_to_markdown(source_dir, build_dir, module_name):
     """使用 Sphinx 构建单个模块的 markdown 文档"""
     try:
+        # 创建 index.rst 文件
+        create_index_rst(source_dir)
+        
         # 创建临时的 RST 文件用于单个模块
         rst_content = f"""
 {module_name}
@@ -209,6 +239,7 @@ def sphinx_build_to_markdown(source_dir, build_dir, module_name):
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
+   :ignore-module-all:
 """
         rst_file = os.path.join(source_dir, f"{module_name}.rst")
         with open(rst_file, 'w', encoding='utf-8') as f:
@@ -221,6 +252,7 @@ def sphinx_build_to_markdown(source_dir, build_dir, module_name):
                 'sphinx-build',
                 '-b', 'markdown',
                 '-q',  # quiet mode
+                '-W', '--keep-going',  # Convert warnings to errors but keep going
                 source_dir,
                 markdown_build_dir
             ]
@@ -240,6 +272,7 @@ def sphinx_build_to_markdown(source_dir, build_dir, module_name):
             'sphinx-build',
             '-b', 'html',
             '-q',  # quiet mode
+            '--keep-going',  # Continue on errors
             source_dir,
             html_build_dir
         ]
@@ -254,9 +287,15 @@ def sphinx_build_to_markdown(source_dir, build_dir, module_name):
         return None
         
     except subprocess.CalledProcessError as e:
-        print(f"Error building Sphinx docs for {module_name}: {e}")
+        print(f"    Sphinx build failed: {e}")
         if e.stderr:
-            print(f"STDERR: {e.stderr}")
+            # 只显示真正的错误，忽略警告
+            error_lines = [line for line in e.stderr.split('\n') if 'ERROR:' in line]
+            if error_lines:
+                print(f"    Errors: {'; '.join(error_lines[:3])}")  # 只显示前3个错误
+        return None
+    except Exception as e:
+        print(f"    Unexpected error: {e}")
         return None
 
 def convert_html_to_markdown(html_file):
@@ -660,7 +699,7 @@ def main():
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
         except (subprocess.CalledProcessError, FileNotFoundError):
             print("ERROR: Sphinx is not installed. Please install it with:")
-            print("  pip install sphinx sphinx-rtd-theme myst-parser")
+            print("  pip install sphinx sphinx-rtd-theme beautifulsoup4")
             sys.exit(1)
         
         # 检查可选依赖
@@ -705,19 +744,37 @@ def main():
             
             # 生成文档
             print(f"Generating documentation for {len(modules)} modules using Sphinx...")
+            print("Note: Some warnings about docstring formatting are expected and will be handled gracefully.")
             generated_count = 0
             skipped_count = 0
+            error_count = 0
             
             for i, module in enumerate(modules):
                 print(f"  [{i+1}/{len(modules)}] Processing {module}...")
-                output_file = generate_mdx_docs(module, args.output_dir, sphinx_source_dir, sphinx_build_dir)
-                if output_file:
-                    print(f"    Generated {os.path.basename(output_file)}")
-                    generated_count += 1
-                else:
-                    skipped_count += 1
+                try:
+                    output_file = generate_mdx_docs(module, args.output_dir, sphinx_source_dir, sphinx_build_dir)
+                    if output_file:
+                        print(f"    ✅ Generated {os.path.basename(output_file)}")
+                        generated_count += 1
+                    else:
+                        print(f"    ⚠️  Skipped {module} (insufficient content or errors)")
+                        skipped_count += 1
+                except Exception as e:
+                    print(f"    ❌ Error processing {module}: {e}")
+                    error_count += 1
             
-            print(f"\nGenerated: {generated_count} files, Skipped: {skipped_count} files")
+            print(f"\n📊 Summary:")
+            print(f"   Generated: {generated_count} files")
+            print(f"   Skipped: {skipped_count} files") 
+            print(f"   Errors: {error_count} files")
+            
+            if generated_count == 0:
+                print("\n⚠️  No documentation was generated. This might be due to:")
+                print("   - Module import issues")
+                print("   - Missing or malformed docstrings")
+                print("   - Sphinx configuration problems")
+                print("\nTry running with a simple test first:")
+                print("   python test_sphinx_docs.py")
     
     # 构建模块树和更新mint.json
     print("\nUpdating mint.json configuration...")
@@ -759,7 +816,7 @@ def main():
         print("DEPENDENCY INFORMATION")
         print("="*60)
         print("Required dependencies for this script:")
-        print("  pip install sphinx sphinx-rtd-theme myst-parser beautifulsoup4")
+        print("  pip install sphinx sphinx-rtd-theme beautifulsoup4")
         print("\nOptional but recommended:")
         print("  pip install html2text  # Better HTML to Markdown conversion")
         print("  # Install pandoc: https://pandoc.org/installing.html")
@@ -775,7 +832,10 @@ def main():
         print("  - sphinx.ext.autodoc: Extract docstrings automatically")
         print("  - sphinx.ext.napoleon: Support Google/NumPy style docstrings")
         print("  - sphinx.ext.viewcode: Add source code links")
-        print("  - myst_parser: Support Markdown input (optional)")
+        print("\nTroubleshooting:")
+        print("  - If no docs are generated, check module imports")
+        print("  - Docstring formatting warnings are usually harmless")
+        print("  - Use --incremental to debug specific modules")
 
 if __name__ == "__main__":
     main() 

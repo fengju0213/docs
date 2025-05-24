@@ -199,6 +199,7 @@
               "reference/camel.configs.nvidia_config",
               "reference/camel.configs.ollama_config",
               "reference/camel.configs.ppio_config",
+              "reference/camel.configs.qwen_config",
               "reference/camel.configs.reka_config",
               "reference/camel.configs.sglang_config",
               "reference/camel.configs.siliconflow_config",

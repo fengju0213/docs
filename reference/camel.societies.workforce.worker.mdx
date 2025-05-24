@@ -2,38 +2,33 @@
 
 <a id="camel.societies.workforce.worker.Worker"></a>
 
-## Worker Objects
-
-```python
-class Worker(BaseNode, ABC)
-```
+## `class Worker(BaseNode, ABC):`
 
 A worker node that works on tasks. It is the basic unit of task
 processing in the workforce system.
 
-**Arguments**:
+**Parameters:**
 
-- `description` _str_ - Description of the node.
+- **description** (str): Description of the node.
 
-<a id="camel.societies.workforce.worker.Worker.start"></a>
+<a id="camel.societies.workforce.worker.Worker.__init__"></a>
 
-#### start
+### `def __init__(self, description: str):`
 
-```python
-@check_if_running(False)
-async def start()
-```
+<a id="camel.societies.workforce.worker.Worker.__repr__"></a>
 
-Start the worker.
+### `def __repr__(self):`
+
+<a id="camel.societies.workforce.worker.Worker._get_dep_tasks_info"></a>
+
+### `def _get_dep_tasks_info(dependencies: List[Task]):`
+
+<a id="camel.societies.workforce.worker.Worker.set_channel"></a>
+
+### `def set_channel(self, channel: TaskChannel):`
 
 <a id="camel.societies.workforce.worker.Worker.stop"></a>
 
-#### stop
-
-```python
-@check_if_running(True)
-def stop()
-```
+### `def stop(self):`
 
 Stop the worker.
-

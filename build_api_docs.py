@@ -10,6 +10,8 @@ import time
 from pathlib import Path
 import argparse
 from collections import defaultdict
+import tempfile
+import shutil
 
 # 模块名到显示名称的映射
 MODULE_NAME_DISPLAY = {
@@ -73,41 +75,311 @@ MODULE_ORDER = [
     "personas"
 ]
 
-def create_config_file(output_path="pydoc-markdown.yml"):
-    """创建pydoc-markdown配置文件"""
-    config = """loader:
-  type: python
-  search_path: ["."]
+def create_sphinx_config(source_dir, build_dir, package_name="camel"):
+    """创建 Sphinx 配置文件"""
+    conf_py_content = f'''# Configuration file for the Sphinx documentation builder.
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../..'))  # Add package root to path
 
-renderer:
-  type: markdown
-  render_toc: false
-  descriptive_class_title: true
-  classifiers_at_top: false
-  render_module_header: false
-  insert_header_anchors: true
-  use_fixed_header_levels: true
-  header_level_by_type:
-    Module: 1
-    Class: 2
-    Function: 3
-    Method: 3
-    ClassMethod: 3
-    StaticMethod: 3
-    Property: 3
-  add_method_class_prefix: false
-  add_member_class_prefix: false
-  signature_with_short_description: true
+# Project information
+project = '{package_name}'
+copyright = '2024, CAMEL-AI'
+author = 'CAMEL-AI'
 
-processors:
-  - type: smart
-  - type: filter
-    documented_only: false
-  - type: crossref
+# The full version, including alpha/beta/rc tags
+release = '0.1.0'
+
+# Extensions
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.napoleon',
+    'myst_parser',
+]
+
+# autodoc settings
+autodoc_default_options = {{
+    'members': True,
+    'undoc-members': True,
+    'private-members': False,
+    'special-members': '__init__',
+    'inherited-members': False,
+    'show-inheritance': True,
+}}
+
+# autosummary settings
+autosummary_generate = True
+autosummary_imported_members = True
+
+# Napoleon settings (for Google/NumPy style docstrings)
+napoleon_google_docstring = True
+napoleon_numpy_docstring = True
+napoleon_include_init_with_doc = False
+napoleon_include_private_with_doc = False
+napoleon_include_special_with_doc = True
+napoleon_use_admonition_for_examples = False
+napoleon_use_admonition_for_notes = False
+napoleon_use_admonition_for_references = False
+napoleon_use_ivar = False
+napoleon_use_param = True
+napoleon_use_rtype = True
+napoleon_type_aliases = None
+
+# Source and build directories
+source_suffix = {{
+    '.rst': None,
+    '.md': 'myst_parser',
+}}
+
+# Master document
+master_doc = 'index'
+
+# Templates path
+templates_path = ['_templates']
+
+# Exclude patterns
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# HTML output options
+html_theme = 'sphinx_rtd_theme'
+html_static_path = ['_static']
+
+# Output format for markdown
+# We'll use a custom builder to generate markdown
+'''
+    
+    # 创建配置文件
+    conf_file = os.path.join(source_dir, 'conf.py')
+    with open(conf_file, 'w', encoding='utf-8') as f:
+        f.write(conf_py_content)
+    
+    return conf_file
+
+def generate_rst_files(source_dir, package_name="camel", modules=None):
+    """使用 sphinx-apidoc 生成 RST 文件"""
+    try:
+        # 如果指定了特定模块，我们需要手动创建 RST 文件
+        if modules:
+            for module in modules:
+                rst_content = f"""
+{module}
+{'=' * len(module)}
+
+.. automodule:: {module}
+   :members:
+   :undoc-members:
+   :show-inheritance:
 """
-    with open(output_path, "w") as f:
-        f.write(config)
-    return output_path
+                rst_file = os.path.join(source_dir, f"{module}.rst")
+                with open(rst_file, 'w', encoding='utf-8') as f:
+                    f.write(rst_content.strip())
+        else:
+            # 使用 sphinx-apidoc 生成所有模块的 RST 文件
+            cmd = [
+                'sphinx-apidoc',
+                '-f',  # Force overwrite
+                '-o', source_dir,  # Output directory
+                '--separate',  # Create separate files for each module
+                '--module-first',  # Put module documentation before submodule
+                package_name,  # Package directory
+            ]
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            print(f"Generated RST files: {result.stdout}")
+        
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Error generating RST files: {e}")
+        if e.stderr:
+            print(f"STDERR: {e.stderr}")
+        return False
+
+def sphinx_build_to_markdown(source_dir, build_dir, module_name):
+    """使用 Sphinx 构建单个模块的 markdown 文档"""
+    try:
+        # 创建临时的 RST 文件用于单个模块
+        rst_content = f"""
+{module_name}
+{'=' * len(module_name)}
+
+.. automodule:: {module_name}
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+"""
+        rst_file = os.path.join(source_dir, f"{module_name}.rst")
+        with open(rst_file, 'w', encoding='utf-8') as f:
+            f.write(rst_content.strip())
+        
+        # 首先尝试直接使用 MyST builder 生成 markdown
+        markdown_build_dir = os.path.join(build_dir, 'markdown')
+        try:
+            cmd = [
+                'sphinx-build',
+                '-b', 'markdown',
+                '-q',  # quiet mode
+                source_dir,
+                markdown_build_dir
+            ]
+            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            
+            # 读取生成的 markdown 文件
+            markdown_file = os.path.join(markdown_build_dir, f"{module_name}.md")
+            if os.path.exists(markdown_file):
+                with open(markdown_file, 'r', encoding='utf-8') as f:
+                    return f.read()
+        except subprocess.CalledProcessError:
+            print(f"    MyST markdown builder not available, falling back to HTML conversion...")
+        
+        # 如果 markdown builder 不可用，使用 HTML 然后转换
+        html_build_dir = os.path.join(build_dir, 'html')
+        cmd = [
+            'sphinx-build',
+            '-b', 'html',
+            '-q',  # quiet mode
+            source_dir,
+            html_build_dir
+        ]
+        
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        
+        # 读取生成的 HTML 文件并转换为 markdown
+        html_file = os.path.join(html_build_dir, f"{module_name}.html")
+        if os.path.exists(html_file):
+            return convert_html_to_markdown(html_file)
+        
+        return None
+        
+    except subprocess.CalledProcessError as e:
+        print(f"Error building Sphinx docs for {module_name}: {e}")
+        if e.stderr:
+            print(f"STDERR: {e.stderr}")
+        return None
+
+def convert_html_to_markdown(html_file):
+    """将 Sphinx 生成的 HTML 转换为 markdown"""
+    try:
+        # 首先尝试使用 pandoc 
+        cmd = ['pandoc', '-f', 'html', '-t', 'markdown', '--wrap=none', html_file]
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        return clean_markdown_content(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"    Pandoc conversion failed: {e}")
+        return None
+    except FileNotFoundError:
+        print("    Pandoc not found, trying BeautifulSoup conversion...")
+        return simple_html_to_markdown(html_file)
+
+def clean_markdown_content(markdown_content):
+    """清理 markdown 内容"""
+    if not markdown_content:
+        return None
+    
+    lines = markdown_content.split('\n')
+    cleaned_lines = []
+    
+    # 跳过无用的开头和结尾
+    start_found = False
+    
+    for line in lines:
+        line = line.strip()
+        
+        # 跳过空行直到找到实际内容
+        if not start_found and not line:
+            continue
+            
+        # 跳过 HTML 导航和其他无关内容
+        if any(skip in line.lower() for skip in [
+            'navigation', 'breadcrumb', 'sidebar', 'footer',
+            'edit on github', 'view source', 'download'
+        ]):
+            continue
+            
+        # 找到实际内容的开始
+        if line and not start_found:
+            start_found = True
+            
+        if start_found:
+            cleaned_lines.append(line if line else '')
+    
+    # 移除结尾的空行
+    while cleaned_lines and not cleaned_lines[-1]:
+        cleaned_lines.pop()
+    
+    return '\n'.join(cleaned_lines)
+
+def simple_html_to_markdown(html_file):
+    """简单的 HTML 到 markdown 转换（备用方案）"""
+    try:
+        from bs4 import BeautifulSoup
+        import html2text
+        
+        with open(html_file, 'r', encoding='utf-8') as f:
+            soup = BeautifulSoup(f, 'html.parser')
+        
+        # 查找主要内容区域
+        content = (soup.find('div', class_='body') or 
+                  soup.find('div', class_='document') or
+                  soup.find('div', class_='documentwrapper') or
+                  soup.find('main') or
+                  soup.find('body'))
+        
+        if not content:
+            return None
+        
+        # 移除导航和其他无关元素
+        for element in content.find_all(['nav', 'aside', 'footer', 'header']):
+            element.decompose()
+        
+        # 使用 html2text 转换
+        h = html2text.HTML2Text()
+        h.ignore_links = False
+        h.ignore_images = True
+        h.body_width = 0  # 不换行
+        
+        return clean_markdown_content(h.handle(str(content)))
+        
+    except ImportError:
+        print("    html2text not available. Install with: pip install html2text")
+        # 最基本的文本提取
+        with open(html_file, 'r', encoding='utf-8') as f:
+            soup = BeautifulSoup(f, 'html.parser')
+        content = soup.find('div', class_='body') or soup.find('body')
+        return content.get_text() if content else None
+    except Exception as e:
+        print(f"    Error in HTML conversion: {e}")
+        return None
+
+def markdown_to_mdx(markdown_content, module_name):
+    """将 markdown 转换为 MDX 格式"""
+    if not markdown_content:
+        return None
+    
+    # 基本的 markdown 到 MDX 转换
+    # 添加 MDX 头部
+    mdx_content = f"---\ntitle: {module_name}\n---\n\n"
+    
+    # 处理标题层级，确保合适的结构
+    lines = markdown_content.split('\n')
+    processed_lines = []
+    
+    for line in lines:
+        # 转换标题格式
+        if line.startswith('#'):
+            # 确保标题格式正确
+            level = len(line) - len(line.lstrip('#'))
+            title = line.lstrip('#').strip()
+            if title:
+                processed_lines.append('#' * level + ' ' + title)
+        else:
+            processed_lines.append(line)
+    
+    mdx_content += '\n'.join(processed_lines)
+    
+    return mdx_content
 
 def get_module_display_name(module_name):
     """获取模块的美观显示名称"""
@@ -216,38 +488,40 @@ def is_content_substantial(content):
     # 如果实质内容少于3行，认为不够实质性
     return len(substantial_lines) >= 3
 
-def generate_mdx_docs(module_name, output_dir):
-    """为指定模块生成MDX文档"""
+def generate_mdx_docs(module_name, output_dir, sphinx_source_dir, sphinx_build_dir):
+    """为指定模块生成MDX文档（使用 Sphinx）"""
     os.makedirs(output_dir, exist_ok=True)
     
     # 输出文件路径
     output_file = os.path.join(output_dir, f"{module_name}.mdx")
     
-    # 使用pydoc-markdown生成文档
     try:
-        result = subprocess.run(
-            ["pydoc-markdown", "-I", ".", "-m", module_name],
-            capture_output=True,
-            text=True,
-            check=True
-        )
+        # 使用 Sphinx 生成 markdown
+        markdown_content = sphinx_build_to_markdown(sphinx_source_dir, sphinx_build_dir, module_name)
         
-        content = result.stdout
+        if not markdown_content:
+            print(f"    Skipped {module_name} (no content generated)")
+            return None
         
         # 检查内容是否足够实质性
-        if not is_content_substantial(content):
+        if not is_content_substantial(markdown_content):
             print(f"    Skipped {module_name} (insufficient content)")
+            return None
+        
+        # 转换为 MDX 格式
+        mdx_content = markdown_to_mdx(markdown_content, module_name)
+        
+        if not mdx_content:
+            print(f"    Skipped {module_name} (MDX conversion failed)")
             return None
         
         # 将输出写入文件
         with open(output_file, "w", encoding="utf-8") as f:
-            f.write(content)
+            f.write(mdx_content)
         
         return output_file
-    except subprocess.CalledProcessError as e:
+    except Exception as e:
         print(f"Error generating docs for {module_name}: {e}")
-        if e.stderr:
-            print(f"STDERR: {e.stderr}")
         return None
 
 def build_module_tree(mdx_files):
@@ -362,7 +636,7 @@ def update_mint_json(mint_json_path, navigation):
     return True
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate API documentation and update mint.json configuration")
+    parser = argparse.ArgumentParser(description="Generate API documentation using Sphinx and update mint.json configuration")
     parser.add_argument("--output_dir", type=str, default="docs/mintlify/reference",
                        help="Output directory for MDX files")
     parser.add_argument("--mint_json", type=str, default="docs/mintlify/mint.json",
@@ -380,58 +654,70 @@ def main():
     args = parser.parse_args()
     
     if not args.skip_generation:
-        # 检查pydoc-markdown是否已安装
+        # 检查 Sphinx 是否已安装
         try:
-            subprocess.run(["pydoc-markdown", "--version"], 
+            subprocess.run(["sphinx-build", "--version"], 
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
         except (subprocess.CalledProcessError, FileNotFoundError):
-            print("ERROR: pydoc-markdown is not installed. Please install it with:")
-            print("  pip install pydoc-markdown")
+            print("ERROR: Sphinx is not installed. Please install it with:")
+            print("  pip install sphinx sphinx-rtd-theme myst-parser")
             sys.exit(1)
         
-        # 创建配置文件
-        config_file = create_config_file()
+        # 检查可选依赖
+        try:
+            subprocess.run(["pandoc", "--version"], 
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            print("✅ Pandoc found (recommended for better HTML to Markdown conversion)")
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            print("⚠️  Pandoc not found. Install for better conversion: https://pandoc.org/installing.html")
+            print("   Fallback HTML parsing will be used.")
         
-        # 创建输出目录
-        os.makedirs(args.output_dir, exist_ok=True)
-        
-        # 清理输出目录（如有需要）
-        if args.clean:
-            print(f"Cleaning output directory: {args.output_dir}")
-            for file in glob.glob(os.path.join(args.output_dir, "*.mdx")):
-                os.remove(file)
-        
-        # 获取要处理的模块
-        if args.incremental:
-            print(f"Looking for modules changed in the last {args.since_hours} hours...")
-            modules = get_changed_modules(args.package, args.since_hours)
-            if not modules:
-                print("No modules have been changed recently.")
-                return
-            print(f"Found {len(modules)} changed modules")
-        else:
-            print(f"Discovering all modules in {args.package}...")
-            modules = get_all_modules(args.package)
-        
-        # 生成文档
-        print(f"Generating documentation for {len(modules)} modules...")
-        generated_count = 0
-        skipped_count = 0
-        
-        for i, module in enumerate(modules):
-            print(f"  [{i+1}/{len(modules)}] Processing {module}...")
-            output_file = generate_mdx_docs(module, args.output_dir)
-            if output_file:
-                print(f"    Generated {os.path.basename(output_file)}")
-                generated_count += 1
+        # 创建临时目录用于 Sphinx
+        with tempfile.TemporaryDirectory() as temp_dir:
+            sphinx_source_dir = os.path.join(temp_dir, "source")
+            sphinx_build_dir = os.path.join(temp_dir, "build")
+            os.makedirs(sphinx_source_dir, exist_ok=True)
+            os.makedirs(sphinx_build_dir, exist_ok=True)
+            
+            # 创建 Sphinx 配置
+            create_sphinx_config(sphinx_source_dir, sphinx_build_dir, args.package)
+            
+            # 创建输出目录
+            os.makedirs(args.output_dir, exist_ok=True)
+            
+            # 清理输出目录（如有需要）
+            if args.clean:
+                print(f"Cleaning output directory: {args.output_dir}")
+                for file in glob.glob(os.path.join(args.output_dir, "*.mdx")):
+                    os.remove(file)
+            
+            # 获取要处理的模块
+            if args.incremental:
+                print(f"Looking for modules changed in the last {args.since_hours} hours...")
+                modules = get_changed_modules(args.package, args.since_hours)
+                if not modules:
+                    print("No modules have been changed recently.")
+                    return
+                print(f"Found {len(modules)} changed modules")
             else:
-                skipped_count += 1
-        
-        # 清理配置文件
-        if os.path.exists(config_file):
-            os.remove(config_file)
-        
-        print(f"\nGenerated: {generated_count} files, Skipped: {skipped_count} files")
+                print(f"Discovering all modules in {args.package}...")
+                modules = get_all_modules(args.package)
+            
+            # 生成文档
+            print(f"Generating documentation for {len(modules)} modules using Sphinx...")
+            generated_count = 0
+            skipped_count = 0
+            
+            for i, module in enumerate(modules):
+                print(f"  [{i+1}/{len(modules)}] Processing {module}...")
+                output_file = generate_mdx_docs(module, args.output_dir, sphinx_source_dir, sphinx_build_dir)
+                if output_file:
+                    print(f"    Generated {os.path.basename(output_file)}")
+                    generated_count += 1
+                else:
+                    skipped_count += 1
+            
+            print(f"\nGenerated: {generated_count} files, Skipped: {skipped_count} files")
     
     # 构建模块树和更新mint.json
     print("\nUpdating mint.json configuration...")
@@ -469,6 +755,27 @@ def main():
     if not args.skip_generation:
         print("\nTo preview your Mintlify documentation, run:")
         print("  cd docs/mintlify && npx mintlify dev")
+        print("\n" + "="*60)
+        print("DEPENDENCY INFORMATION")
+        print("="*60)
+        print("Required dependencies for this script:")
+        print("  pip install sphinx sphinx-rtd-theme myst-parser beautifulsoup4")
+        print("\nOptional but recommended:")
+        print("  pip install html2text  # Better HTML to Markdown conversion")
+        print("  # Install pandoc: https://pandoc.org/installing.html")
+        print("    # - macOS: brew install pandoc")
+        print("    # - Ubuntu/Debian: apt-get install pandoc")
+        print("    # - Windows: Download from https://pandoc.org/installing.html")
+        print("\nWhat this script does:")
+        print("  1. Uses Sphinx to extract docstrings from Python modules")
+        print("  2. Converts RST format to Markdown (via HTML if needed)")
+        print("  3. Transforms Markdown to MDX format for Mintlify")
+        print("  4. Updates mint.json navigation structure")
+        print("\nSphinx Extensions used:")
+        print("  - sphinx.ext.autodoc: Extract docstrings automatically")
+        print("  - sphinx.ext.napoleon: Support Google/NumPy style docstrings")
+        print("  - sphinx.ext.viewcode: Add source code links")
+        print("  - myst_parser: Support Markdown input (optional)")
 
 if __name__ == "__main__":
     main() 

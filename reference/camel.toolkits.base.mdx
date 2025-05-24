@@ -2,46 +2,37 @@
 
 <a id="camel.toolkits.base.BaseToolkit"></a>
 
-## BaseToolkit Objects
-
-```python
-class BaseToolkit(metaclass=AgentOpsMeta)
-```
+## `class BaseToolkit:`
 
 Base class for toolkits.
 
-**Arguments**:
+**Parameters:**
 
-- `timeout` _Optional[float]_ - The timeout for the toolkit.
+- **timeout** (Optional[float]): The timeout for the toolkit.
+
+<a id="camel.toolkits.base.BaseToolkit.__init__"></a>
+
+### `def __init__(self, timeout: Optional[float] = None):`
+
+<a id="camel.toolkits.base.BaseToolkit.__init_subclass__"></a>
+
+### `def __init_subclass__(cls, **kwargs):`
 
 <a id="camel.toolkits.base.BaseToolkit.get_tools"></a>
 
-#### get\_tools
+### `def get_tools(self):`
 
-```python
-def get_tools() -> List[FunctionTool]
-```
+**Returns:**
 
-Returns a list of FunctionTool objects representing the
-functions in the toolkit.
-
-**Returns**:
-
-- `List[FunctionTool]` - A list of FunctionTool objects
-  representing the functions in the toolkit.
+  List[FunctionTool]: A list of FunctionTool objects
+representing the functions in the toolkit.
 
 <a id="camel.toolkits.base.BaseToolkit.run_mcp_server"></a>
 
-#### run\_mcp\_server
-
-```python
-def run_mcp_server(mode: Literal["stdio", "sse", "streamable-http"]) -> None
-```
+### `def run_mcp_server(self, mode: Literal['stdio', 'sse', 'streamable-http']):`
 
 Run the MCP server in the specified mode.
 
-**Arguments**:
+**Parameters:**
 
-- `mode` _Literal["stdio", "sse", "streamable-http"]_ - The mode to run
-  the MCP server in.
-
+- **mode** (Literal["stdio", "sse", "streamable-http"]): The mode to run the MCP server in.

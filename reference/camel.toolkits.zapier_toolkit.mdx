@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.zapier_toolkit.ZapierToolkit"></a>
 
-## `class ZapierToolkit(BaseToolkit):`
+## ZapierToolkit
+
+```python
+class ZapierToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for interacting with Zapier's NLA API.
 
@@ -19,11 +23,19 @@ in seconds. If None, no timeout is applied.
 
 <a id="camel.toolkits.zapier_toolkit.ZapierToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 <a id="camel.toolkits.zapier_toolkit.ZapierToolkit.list_actions"></a>
 
-### `def list_actions(self):`
+### list_actions
+
+```python
+def list_actions(self):
+```
 
 **Returns:**
 
@@ -32,7 +44,11 @@ actions.
 
 <a id="camel.toolkits.zapier_toolkit.ZapierToolkit.execute_action"></a>
 
-### `def execute_action(self, action_id: str, instructions: str):`
+### execute_action
+
+```python
+def execute_action(self, action_id: str, instructions: str):
+```
 
 Execute a specific Zapier action using natural language
 instructions.
@@ -49,7 +65,11 @@ status and any output data.
 
 <a id="camel.toolkits.zapier_toolkit.ZapierToolkit.preview_action"></a>
 
-### `def preview_action(self, action_id: str, instructions: str):`
+### preview_action
+
+```python
+def preview_action(self, action_id: str, instructions: str):
+```
 
 Preview a specific Zapier action using natural language
 instructions.
@@ -66,7 +86,11 @@ be used if the action were executed.
 
 <a id="camel.toolkits.zapier_toolkit.ZapierToolkit.get_execution_result"></a>
 
-### `def get_execution_result(self, execution_id: str):`
+### get_execution_result
+
+```python
+def get_execution_result(self, execution_id: str):
+```
 
 Get the execution result of a Zapier action.
 
@@ -81,7 +105,11 @@ and any output data from the action execution.
 
 <a id="camel.toolkits.zapier_toolkit.ZapierToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

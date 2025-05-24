@@ -2,7 +2,11 @@
 
 <a id="camel.interpreters.e2b_interpreter.E2BInterpreter"></a>
 
-## `class E2BInterpreter(BaseInterpreter):`
+## E2BInterpreter
+
+```python
+class E2BInterpreter(BaseInterpreter):
+```
 
 E2B Code Interpreter implementation.
 
@@ -12,11 +16,19 @@ E2B Code Interpreter implementation.
 
 <a id="camel.interpreters.e2b_interpreter.E2BInterpreter.__init__"></a>
 
-### `def __init__(self, require_confirm: bool = True):`
+### __init__
+
+```python
+def __init__(self, require_confirm: bool = True):
+```
 
 <a id="camel.interpreters.e2b_interpreter.E2BInterpreter.__del__"></a>
 
-### `def __del__(self):`
+### __del__
+
+```python
+def __del__(self):
+```
 
 Destructor for the E2BInterpreter class.
 
@@ -25,7 +37,11 @@ interpreter is deleted.
 
 <a id="camel.interpreters.e2b_interpreter.E2BInterpreter.run"></a>
 
-### `def run(self, code: str, code_type: str):`
+### run
+
+```python
+def run(self, code: str, code_type: str):
+```
 
 Executes the given code in the e2b sandbox.
 
@@ -40,12 +56,20 @@ Executes the given code in the e2b sandbox.
 
 <a id="camel.interpreters.e2b_interpreter.E2BInterpreter.supported_code_types"></a>
 
-### `def supported_code_types(self):`
+### supported_code_types
+
+```python
+def supported_code_types(self):
+```
 
 Provides supported code types by the interpreter.
 
 <a id="camel.interpreters.e2b_interpreter.E2BInterpreter.update_action_space"></a>
 
-### `def update_action_space(self, action_space: Dict[str, Any]):`
+### update_action_space
+
+```python
+def update_action_space(self, action_space: Dict[str, Any]):
+```
 
 Updates action space for *python* interpreter

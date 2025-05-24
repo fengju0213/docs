@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit"></a>
 
-## `class KlavisToolkit(BaseToolkit):`
+## KlavisToolkit
+
+```python
+class KlavisToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for interacting with Klavis API.
 
@@ -19,14 +23,18 @@ in seconds. If None, no timeout is applied.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initialize the KlavisToolkit with API client. The API key is
 retrieved from environment variables.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit._request"></a>
 
-### `_request`
+### _request
 
 ```python
 def _request(
@@ -54,7 +62,7 @@ dict.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.create_server_instance"></a>
 
-### `create_server_instance`
+### create_server_instance
 
 ```python
 def create_server_instance(
@@ -79,7 +87,11 @@ Create a Server-Sent Events (SSE) URL for a specified MCP server.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.get_server_instance"></a>
 
-### `def get_server_instance(self, instance_id: str):`
+### get_server_instance
+
+```python
+def get_server_instance(self, instance_id: str):
+```
 
 Get details of a specific server connection instance.
 
@@ -93,7 +105,11 @@ Get details of a specific server connection instance.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.delete_auth_data"></a>
 
-### `def delete_auth_data(self, instance_id: str):`
+### delete_auth_data
+
+```python
+def delete_auth_data(self, instance_id: str):
+```
 
 Delete authentication metadata for a specific server
 connection instance.
@@ -108,7 +124,11 @@ connection instance.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.delete_server_instance"></a>
 
-### `def delete_server_instance(self, instance_id: str):`
+### delete_server_instance
+
+```python
+def delete_server_instance(self, instance_id: str):
+```
 
 Completely removes a server connection instance.
 
@@ -122,7 +142,11 @@ Completely removes a server connection instance.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.get_all_servers"></a>
 
-### `def get_all_servers(self):`
+### get_all_servers
+
+```python
+def get_all_servers(self):
+```
 
 **Returns:**
 
@@ -130,7 +154,11 @@ Completely removes a server connection instance.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.set_auth_token"></a>
 
-### `def set_auth_token(self, instance_id: str, auth_token: str):`
+### set_auth_token
+
+```python
+def set_auth_token(self, instance_id: str, auth_token: str):
+```
 
 Sets an authentication token for a specific instance.
 
@@ -145,7 +173,11 @@ Sets an authentication token for a specific instance.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.list_tools"></a>
 
-### `def list_tools(self, server_url: str):`
+### list_tools
+
+```python
+def list_tools(self, server_url: str):
+```
 
 Lists all tools available for a specific remote MCP server.
 
@@ -159,7 +191,7 @@ Lists all tools available for a specific remote MCP server.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.call_tool"></a>
 
-### `call_tool`
+### call_tool
 
 ```python
 def call_tool(
@@ -186,7 +218,11 @@ or an error.
 
 <a id="camel.toolkits.klavis_toolkit.KlavisToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

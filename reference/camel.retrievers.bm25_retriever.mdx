@@ -2,7 +2,11 @@
 
 <a id="camel.retrievers.bm25_retriever.BM25Retriever"></a>
 
-## `class BM25Retriever(BaseRetriever):`
+## BM25Retriever
+
+```python
+class BM25Retriever(BaseRetriever):
+```
 
 An implementation of the `BaseRetriever` using the `BM25` model.
 
@@ -23,13 +27,17 @@ https://github.com/dorianbrown/rank_bm25
 
 <a id="camel.retrievers.bm25_retriever.BM25Retriever.__init__"></a>
 
-### `def __init__(self):`
+### __init__
+
+```python
+def __init__(self):
+```
 
 Initializes the BM25Retriever.
 
 <a id="camel.retrievers.bm25_retriever.BM25Retriever.process"></a>
 
-### `process`
+### process
 
 ```python
 def process(
@@ -51,7 +59,11 @@ called before executing queries with the retriever.
 
 <a id="camel.retrievers.bm25_retriever.BM25Retriever.query"></a>
 
-### `def query(self, query: str, top_k: int = DEFAULT_TOP_K_RESULTS):`
+### query
+
+```python
+def query(self, query: str, top_k: int = DEFAULT_TOP_K_RESULTS):
+```
 
 Executes a query and compiles the results.
 

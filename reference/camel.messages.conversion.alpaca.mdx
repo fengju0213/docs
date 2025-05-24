@@ -2,7 +2,11 @@
 
 <a id="camel.messages.conversion.alpaca.AlpacaItem"></a>
 
-## `class AlpacaItem(BaseModel):`
+## AlpacaItem
+
+```python
+class AlpacaItem(BaseModel):
+```
 
 Represents an instruction-response item in the Alpaca format.
 
@@ -17,14 +21,22 @@ Provides parsing from string format using the class method from_string().
 
 <a id="camel.messages.conversion.alpaca.AlpacaItem.no_section_markers"></a>
 
-### `def no_section_markers(cls, value: str):`
+### no_section_markers
+
+```python
+def no_section_markers(cls, value: str):
+```
 
 Ensures fields don't contain section markers like '###
 Response:'
 
 <a id="camel.messages.conversion.alpaca.AlpacaItem.from_string"></a>
 
-### `def from_string(cls, text: str):`
+### from_string
+
+```python
+def from_string(cls, text: str):
+```
 
 Creates an AlpacaItem from a formatted string.
 
@@ -38,7 +50,11 @@ Creates an AlpacaItem from a formatted string.
 
 <a id="camel.messages.conversion.alpaca.AlpacaItem.to_string"></a>
 
-### `def to_string(self):`
+### to_string
+
+```python
+def to_string(self):
+```
 
 **Returns:**
 

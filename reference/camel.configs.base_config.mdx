@@ -2,7 +2,11 @@
 
 <a id="camel.configs.base_config.BaseConfig"></a>
 
-## `class BaseConfig(ABC, BaseModel):`
+## BaseConfig
+
+```python
+class BaseConfig(ABC, BaseModel):
+```
 
 Base configuration class for all models.
 
@@ -11,7 +15,11 @@ models have a consistent set of attributes and methods.
 
 <a id="camel.configs.base_config.BaseConfig.fields_type_checking"></a>
 
-### `def fields_type_checking(cls, tools):`
+### fields_type_checking
+
+```python
+def fields_type_checking(cls, tools):
+```
 
 Validate the type of tools in the configuration.
 
@@ -21,7 +29,11 @@ instances of `FunctionTool`. If any tool is not an instance of
 
 <a id="camel.configs.base_config.BaseConfig.as_dict"></a>
 
-### `def as_dict(self):`
+### as_dict
+
+```python
+def as_dict(self):
+```
 
 **Returns:**
 

@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit"></a>
 
-## `class GoogleScholarToolkit(BaseToolkit):`
+## GoogleScholarToolkit
+
+```python
+class GoogleScholarToolkit(BaseToolkit):
+```
 
 A toolkit for retrieving information about authors and their
 publications from Google Scholar.
@@ -18,7 +22,7 @@ manual assignment if desired.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -44,7 +48,11 @@ Initializes the GoogleScholarToolkit with the author's identifier.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.author"></a>
 
-### `def author(self):`
+### author
+
+```python
+def author(self):
+```
 
 **Returns:**
 
@@ -53,7 +61,11 @@ is available, returns an empty dictionary.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.author"></a>
 
-### `def author(self, value: Optional[Dict[str, Any]]):`
+### author
+
+```python
+def author(self, value: Optional[Dict[str, Any]]):
+```
 
 Sets or overrides the cached author information.
 
@@ -63,7 +75,11 @@ Sets or overrides the cached author information.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit._extract_author_id"></a>
 
-### `def _extract_author_id(self):`
+### _extract_author_id
+
+```python
+def _extract_author_id(self):
+```
 
 **Returns:**
 
@@ -71,7 +87,11 @@ Sets or overrides the cached author information.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.get_author_detailed_info"></a>
 
-### `def get_author_detailed_info(self):`
+### get_author_detailed_info
+
+```python
+def get_author_detailed_info(self):
+```
 
 **Returns:**
 
@@ -80,7 +100,11 @@ author.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.get_author_publications"></a>
 
-### `def get_author_publications(self):`
+### get_author_publications
+
+```python
+def get_author_publications(self):
+```
 
 **Returns:**
 
@@ -88,7 +112,11 @@ author.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.get_publication_by_title"></a>
 
-### `def get_publication_by_title(self, publication_title: str):`
+### get_publication_by_title
+
+```python
+def get_publication_by_title(self, publication_title: str):
+```
 
 Retrieves detailed information about a specific publication by its
 title. Note that this method cannot retrieve the full content of the
@@ -105,7 +133,11 @@ the publication if found; otherwise, `None`.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.get_full_paper_content_by_link"></a>
 
-### `def get_full_paper_content_by_link(self, pdf_url: str):`
+### get_full_paper_content_by_link
+
+```python
+def get_full_paper_content_by_link(self, pdf_url: str):
+```
 
 Retrieves the full paper content from a given PDF URL using the
 arxiv2text tool.
@@ -121,7 +153,11 @@ an error occurs.
 
 <a id="camel.toolkits.google_scholar_toolkit.GoogleScholarToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

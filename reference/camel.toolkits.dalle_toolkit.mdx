@@ -2,14 +2,22 @@
 
 <a id="camel.toolkits.dalle_toolkit.DalleToolkit"></a>
 
-## `class DalleToolkit(BaseToolkit):`
+## DalleToolkit
+
+```python
+class DalleToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for image generation using OpenAI's
 DALL-E model.
 
 <a id="camel.toolkits.dalle_toolkit.DalleToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initializes a new instance of the DalleToolkit class.
 
@@ -19,7 +27,11 @@ Initializes a new instance of the DalleToolkit class.
 
 <a id="camel.toolkits.dalle_toolkit.DalleToolkit.base64_to_image"></a>
 
-### `def base64_to_image(self, base64_string: str):`
+### base64_to_image
+
+```python
+def base64_to_image(self, base64_string: str):
+```
 
 Converts a base64 encoded string into a PIL Image object.
 
@@ -34,7 +46,11 @@ fails.
 
 <a id="camel.toolkits.dalle_toolkit.DalleToolkit.image_path_to_base64"></a>
 
-### `def image_path_to_base64(self, image_path: str):`
+### image_path_to_base64
+
+```python
+def image_path_to_base64(self, image_path: str):
+```
 
 Converts the file path of an image to a Base64 encoded string.
 
@@ -49,7 +65,11 @@ file.
 
 <a id="camel.toolkits.dalle_toolkit.DalleToolkit.image_to_base64"></a>
 
-### `def image_to_base64(self, image: Image.Image):`
+### image_to_base64
+
+```python
+def image_to_base64(self, image: Image.Image):
+```
 
 Converts an image into a base64-encoded string.
 
@@ -68,7 +88,11 @@ message and returns None.
 
 <a id="camel.toolkits.dalle_toolkit.DalleToolkit.get_dalle_img"></a>
 
-### `def get_dalle_img(self, prompt: str, image_dir: str = 'img'):`
+### get_dalle_img
+
+```python
+def get_dalle_img(self, prompt: str, image_dir: str = 'img'):
+```
 
 Generate an image using OpenAI's DALL-E model.
 The generated image is saved to the specified directory.
@@ -84,7 +108,11 @@ The generated image is saved to the specified directory.
 
 <a id="camel.toolkits.dalle_toolkit.DalleToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

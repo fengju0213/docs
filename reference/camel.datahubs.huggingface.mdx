@@ -2,7 +2,11 @@
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager"></a>
 
-## `class HuggingFaceDatasetManager(BaseDatasetManager):`
+## HuggingFaceDatasetManager
+
+```python
+class HuggingFaceDatasetManager(BaseDatasetManager):
+```
 
 A dataset manager for Hugging Face datasets. This class provides
 methods to create, add, update, delete, and list records in a dataset on
@@ -14,11 +18,15 @@ the Hugging Face Hub.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.__init__"></a>
 
-### `def __init__(self, token: Optional[str] = None):`
+### __init__
+
+```python
+def __init__(self, token: Optional[str] = None):
+```
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.create_dataset_card"></a>
 
-### `create_dataset_card`
+### create_dataset_card
 
 ```python
 def create_dataset_card(
@@ -54,7 +62,7 @@ format.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.create_dataset"></a>
 
-### `create_dataset`
+### create_dataset
 
 ```python
 def create_dataset(
@@ -79,7 +87,7 @@ Creates a new dataset on the Hugging Face Hub.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.list_datasets"></a>
 
-### `list_datasets`
+### list_datasets
 
 ```python
 def list_datasets(
@@ -104,7 +112,11 @@ Lists all datasets for the current user.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.delete_dataset"></a>
 
-### `def delete_dataset(self, dataset_name: str, **kwargs: Any):`
+### delete_dataset
+
+```python
+def delete_dataset(self, dataset_name: str, **kwargs: Any):
+```
 
 Deletes a dataset from the Hugging Face Hub.
 
@@ -115,7 +127,7 @@ Deletes a dataset from the Hugging Face Hub.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.add_records"></a>
 
-### `add_records`
+### add_records
 
 ```python
 def add_records(
@@ -138,7 +150,7 @@ Adds records to a dataset on the Hugging Face Hub.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.update_records"></a>
 
-### `update_records`
+### update_records
 
 ```python
 def update_records(
@@ -161,7 +173,7 @@ Updates records in a dataset on the Hugging Face Hub.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.delete_record"></a>
 
-### `delete_record`
+### delete_record
 
 ```python
 def delete_record(
@@ -184,7 +196,7 @@ Deletes a record from the dataset.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager.list_records"></a>
 
-### `list_records`
+### list_records
 
 ```python
 def list_records(
@@ -209,7 +221,7 @@ Lists all records in a dataset.
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager._download_records"></a>
 
-### `_download_records`
+### _download_records
 
 ```python
 def _download_records(
@@ -222,7 +234,7 @@ def _download_records(
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager._upload_records"></a>
 
-### `_upload_records`
+### _upload_records
 
 ```python
 def _upload_records(
@@ -236,7 +248,7 @@ def _upload_records(
 
 <a id="camel.datahubs.huggingface.HuggingFaceDatasetManager._upload_file"></a>
 
-### `_upload_file`
+### _upload_file
 
 ```python
 def _upload_file(

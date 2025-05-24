@@ -2,7 +2,11 @@
 
 <a id="camel.human.Human"></a>
 
-## `class Human:`
+## Human
+
+```python
+class Human:
+```
 
 A class representing a human user.
 
@@ -19,7 +23,7 @@ A class representing a human user.
 
 <a id="camel.human.Human.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -31,7 +35,11 @@ def __init__(
 
 <a id="camel.human.Human.display_options"></a>
 
-### `def display_options(self, messages: Sequence[BaseMessage]):`
+### display_options
+
+```python
+def display_options(self, messages: Sequence[BaseMessage]):
+```
 
 Displays the options to the user.
 
@@ -45,7 +53,11 @@ Displays the options to the user.
 
 <a id="camel.human.Human.get_input"></a>
 
-### `def get_input(self):`
+### get_input
+
+```python
+def get_input(self):
+```
 
 **Returns:**
 
@@ -53,7 +65,11 @@ Displays the options to the user.
 
 <a id="camel.human.Human.parse_input"></a>
 
-### `def parse_input(self, human_input: str):`
+### parse_input
+
+```python
+def parse_input(self, human_input: str):
+```
 
 Parses the user's input and returns a `BaseMessage` object.
 
@@ -67,7 +83,11 @@ Parses the user's input and returns a `BaseMessage` object.
 
 <a id="camel.human.Human.reduce_step"></a>
 
-### `def reduce_step(self, messages: Sequence[BaseMessage]):`
+### reduce_step
+
+```python
+def reduce_step(self, messages: Sequence[BaseMessage]):
+```
 
 Performs one step of the conversation by displaying options to the
 user, getting their input, and parsing their choice.
@@ -83,7 +103,11 @@ user's choice.
 
 <a id="camel.human.Human.clone"></a>
 
-### `def clone(self, with_memory: bool = False):`
+### clone
+
+```python
+def clone(self, with_memory: bool = False):
+```
 
 Creates a new instance of the Human class with the same
 attributes.

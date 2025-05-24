@@ -2,7 +2,11 @@
 
 <a id="camel.agents.role_assignment_agent.RoleAssignmentAgent"></a>
 
-## `class RoleAssignmentAgent(ChatAgent):`
+## RoleAssignmentAgent
+
+```python
+class RoleAssignmentAgent(ChatAgent):
+```
 
 An agent that generates role names based on the task prompt.
 
@@ -14,11 +18,19 @@ An agent that generates role names based on the task prompt.
 
 <a id="camel.agents.role_assignment_agent.RoleAssignmentAgent.__init__"></a>
 
-### `def __init__(self, model: Optional[BaseModelBackend] = None):`
+### __init__
+
+```python
+def __init__(self, model: Optional[BaseModelBackend] = None):
+```
 
 <a id="camel.agents.role_assignment_agent.RoleAssignmentAgent.run"></a>
 
-### `def run(self, task_prompt: Union[str, TextPrompt], num_roles: int = 2):`
+### run
+
+```python
+def run(self, task_prompt: Union[str, TextPrompt], num_roles: int = 2):
+```
 
 Generate role names based on the input task prompt.
 

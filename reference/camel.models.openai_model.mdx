@@ -2,7 +2,11 @@
 
 <a id="camel.models.openai_model.OpenAIModel"></a>
 
-## `class OpenAIModel(BaseModelBackend):`
+## OpenAIModel
+
+```python
+class OpenAIModel(BaseModelBackend):
+```
 
 OpenAI API in a unified BaseModelBackend interface.
 
@@ -17,7 +21,7 @@ OpenAI API in a unified BaseModelBackend interface.
 
 <a id="camel.models.openai_model.OpenAIModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,13 +37,21 @@ def __init__(
 
 <a id="camel.models.openai_model.OpenAIModel._sanitize_config"></a>
 
-### `def _sanitize_config(self, config_dict: Dict[str, Any]):`
+### _sanitize_config
+
+```python
+def _sanitize_config(self, config_dict: Dict[str, Any]):
+```
 
 Sanitize the model configuration for O1 models.
 
 <a id="camel.models.openai_model.OpenAIModel._adapt_messages_for_o1_models"></a>
 
-### `def _adapt_messages_for_o1_models(self, messages: List[OpenAIMessage]):`
+### _adapt_messages_for_o1_models
+
+```python
+def _adapt_messages_for_o1_models(self, messages: List[OpenAIMessage]):
+```
 
 Adjust message roles to comply with O1 model requirements by
 converting 'system' or 'developer' to 'user' role.
@@ -55,7 +67,11 @@ messages to avoid mutating input.
 
 <a id="camel.models.openai_model.OpenAIModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -64,7 +80,7 @@ tokenization style.
 
 <a id="camel.models.openai_model.OpenAIModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -91,7 +107,7 @@ Runs inference of OpenAI chat completion.
 
 <a id="camel.models.openai_model.OpenAIModel._request_chat_completion"></a>
 
-### `_request_chat_completion`
+### _request_chat_completion
 
 ```python
 def _request_chat_completion(
@@ -103,7 +119,7 @@ def _request_chat_completion(
 
 <a id="camel.models.openai_model.OpenAIModel._request_parse"></a>
 
-### `_request_parse`
+### _request_parse
 
 ```python
 def _request_parse(
@@ -116,11 +132,19 @@ def _request_parse(
 
 <a id="camel.models.openai_model.OpenAIModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 <a id="camel.models.openai_model.OpenAIModel.stream"></a>
 
-### `def stream(self):`
+### stream
+
+```python
+def stream(self):
+```
 
 **Returns:**
 

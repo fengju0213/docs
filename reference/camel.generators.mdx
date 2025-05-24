@@ -2,7 +2,11 @@
 
 <a id="camel.generators.SystemMessageGenerator"></a>
 
-## `class SystemMessageGenerator:`
+## SystemMessageGenerator
+
+```python
+class SystemMessageGenerator:
+```
 
 System message generator for agents.
 
@@ -14,7 +18,7 @@ System message generator for agents.
 
 <a id="camel.generators.SystemMessageGenerator.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -27,7 +31,11 @@ def __init__(
 
 <a id="camel.generators.SystemMessageGenerator.validate_meta_dict_keys"></a>
 
-### `def validate_meta_dict_keys(self, meta_dict: Dict[str, str]):`
+### validate_meta_dict_keys
+
+```python
+def validate_meta_dict_keys(self, meta_dict: Dict[str, str]):
+```
 
 Validates the keys of the meta_dict.
 
@@ -37,7 +45,7 @@ Validates the keys of the meta_dict.
 
 <a id="camel.generators.SystemMessageGenerator.from_dict"></a>
 
-### `from_dict`
+### from_dict
 
 ```python
 def from_dict(
@@ -60,7 +68,7 @@ Generates a system message from a dictionary.
 
 <a id="camel.generators.SystemMessageGenerator.from_dicts"></a>
 
-### `from_dicts`
+### from_dicts
 
 ```python
 def from_dicts(
@@ -83,7 +91,11 @@ Generates a list of system messages from a list of dictionaries.
 
 <a id="camel.generators.RoleNameGenerator"></a>
 
-## `class RoleNameGenerator:`
+## RoleNameGenerator
+
+```python
+class RoleNameGenerator:
+```
 
 Role name generator for role-playing workers.
 
@@ -96,7 +108,7 @@ Role name generator for role-playing workers.
 
 <a id="camel.generators.RoleNameGenerator.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -110,7 +122,11 @@ def __init__(
 
 <a id="camel.generators.RoleNameGenerator.from_role_files"></a>
 
-### `def from_role_files(self):`
+### from_role_files
+
+```python
+def from_role_files(self):
+```
 
 **Returns:**
 
@@ -119,7 +135,11 @@ assistant role names and user role names.
 
 <a id="camel.generators.AISocietyTaskPromptGenerator"></a>
 
-## `class AISocietyTaskPromptGenerator:`
+## AISocietyTaskPromptGenerator
+
+```python
+class AISocietyTaskPromptGenerator:
+```
 
 Task prompt generator for AI society tasks.
 
@@ -129,11 +149,15 @@ Task prompt generator for AI society tasks.
 
 <a id="camel.generators.AISocietyTaskPromptGenerator.__init__"></a>
 
-### `def __init__(self, num_tasks: int = 10):`
+### __init__
+
+```python
+def __init__(self, num_tasks: int = 10):
+```
 
 <a id="camel.generators.AISocietyTaskPromptGenerator.from_role_files"></a>
 
-### `from_role_files`
+### from_role_files
 
 ```python
 def from_role_files(
@@ -157,7 +181,11 @@ that yields tuples of task prompts and role names.
 
 <a id="camel.generators.AISocietyTaskPromptGenerator.from_role_generator"></a>
 
-### `def from_role_generator(self, role_generator: Generator[Tuple, None, None]):`
+### from_role_generator
+
+```python
+def from_role_generator(self, role_generator: Generator[Tuple, None, None]):
+```
 
 Generate tasks from a role generator.
 
@@ -172,7 +200,11 @@ that yields tuples of task prompts and role names.
 
 <a id="camel.generators.SingleTxtGenerator"></a>
 
-## `class SingleTxtGenerator:`
+## SingleTxtGenerator
+
+```python
+class SingleTxtGenerator:
+```
 
 Single text generator for role-playing workers.
 
@@ -182,11 +214,19 @@ Single text generator for role-playing workers.
 
 <a id="camel.generators.SingleTxtGenerator.__init__"></a>
 
-### `def __init__(self, text_file_path: str):`
+### __init__
+
+```python
+def __init__(self, text_file_path: str):
+```
 
 <a id="camel.generators.SingleTxtGenerator.from_role_files"></a>
 
-### `def from_role_files(self):`
+### from_role_files
+
+```python
+def from_role_files(self):
+```
 
 **Returns:**
 
@@ -194,7 +234,11 @@ Single text generator for role-playing workers.
 
 <a id="camel.generators.CodeTaskPromptGenerator"></a>
 
-## `class CodeTaskPromptGenerator:`
+## CodeTaskPromptGenerator
+
+```python
+class CodeTaskPromptGenerator:
+```
 
 Code task prompt generator for code tasks.
 
@@ -204,11 +248,15 @@ Code task prompt generator for code tasks.
 
 <a id="camel.generators.CodeTaskPromptGenerator.__init__"></a>
 
-### `def __init__(self, num_tasks: int = 50):`
+### __init__
+
+```python
+def __init__(self, num_tasks: int = 50):
+```
 
 <a id="camel.generators.CodeTaskPromptGenerator.from_role_files"></a>
 
-### `from_role_files`
+### from_role_files
 
 ```python
 def from_role_files(
@@ -233,7 +281,11 @@ names.
 
 <a id="camel.generators.CodeTaskPromptGenerator.from_role_generator"></a>
 
-### `def from_role_generator(self, role_generator: Generator[Tuple, None, None]):`
+### from_role_generator
+
+```python
+def from_role_generator(self, role_generator: Generator[Tuple, None, None]):
+```
 
 Generate tasks from a role generator.
 

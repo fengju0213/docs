@@ -2,7 +2,11 @@
 
 <a id="camel.datasets.static_dataset.StaticDataset"></a>
 
-## `class StaticDataset(Dataset):`
+## StaticDataset
+
+```python
+class StaticDataset(Dataset):
+```
 
 A static dataset containing a list of datapoints.
 Ensures that all items adhere to the DataPoint schema.
@@ -15,7 +19,7 @@ converting them into a consistent internal format.
 
 <a id="camel.datasets.static_dataset.StaticDataset.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -39,7 +43,7 @@ Initialize the static dataset and validate integrity.
 
 <a id="camel.datasets.static_dataset.StaticDataset._init_data"></a>
 
-### `_init_data`
+### _init_data
 
 ```python
 def _init_data(
@@ -62,13 +66,21 @@ instances.
 
 <a id="camel.datasets.static_dataset.StaticDataset.__len__"></a>
 
-### `def __len__(self):`
+### __len__
+
+```python
+def __len__(self):
+```
 
 Return the size of the dataset.
 
 <a id="camel.datasets.static_dataset.StaticDataset.__getitem__"></a>
 
-### `def __getitem__(self, idx: Union[int, slice]):`
+### __getitem__
+
+```python
+def __getitem__(self, idx: Union[int, slice]):
+```
 
 Retrieve a datapoint or a batch of datapoints by index or slice.
 
@@ -82,7 +94,11 @@ Retrieve a datapoint or a batch of datapoints by index or slice.
 
 <a id="camel.datasets.static_dataset.StaticDataset.sample"></a>
 
-### `def sample(self):`
+### sample
+
+```python
+def sample(self):
+```
 
 **Returns:**
 
@@ -90,7 +106,11 @@ Retrieve a datapoint or a batch of datapoints by index or slice.
 
 <a id="camel.datasets.static_dataset.StaticDataset.metadata"></a>
 
-### `def metadata(self):`
+### metadata
+
+```python
+def metadata(self):
+```
 
 **Returns:**
 
@@ -98,7 +118,11 @@ Retrieve a datapoint or a batch of datapoints by index or slice.
 
 <a id="camel.datasets.static_dataset.StaticDataset._init_from_hf_dataset"></a>
 
-### `def _init_from_hf_dataset(self, data: HFDataset):`
+### _init_from_hf_dataset
+
+```python
+def _init_from_hf_dataset(self, data: HFDataset):
+```
 
 Convert a Hugging Face dataset into a list of dictionaries.
 
@@ -113,7 +137,11 @@ the dataset, where each dictionary corresponds to a datapoint.
 
 <a id="camel.datasets.static_dataset.StaticDataset._init_from_pytorch_dataset"></a>
 
-### `def _init_from_pytorch_dataset(self, data: Dataset):`
+### _init_from_pytorch_dataset
+
+```python
+def _init_from_pytorch_dataset(self, data: Dataset):
+```
 
 Convert a PyTorch dataset into a list of dictionaries.
 
@@ -128,7 +156,11 @@ the dataset.
 
 <a id="camel.datasets.static_dataset.StaticDataset._init_from_json_path"></a>
 
-### `def _init_from_json_path(self, data: Path):`
+### _init_from_json_path
+
+```python
+def _init_from_json_path(self, data: Path):
+```
 
 Load and parse a dataset from a JSON file.
 
@@ -142,7 +174,11 @@ Load and parse a dataset from a JSON file.
 
 <a id="camel.datasets.static_dataset.StaticDataset._init_from_jsonl_path"></a>
 
-### `def _init_from_jsonl_path(self, data: Path):`
+### _init_from_jsonl_path
+
+```python
+def _init_from_jsonl_path(self, data: Path):
+```
 
 Load and parse a dataset from a JSONL file.
 
@@ -156,7 +192,11 @@ Load and parse a dataset from a JSONL file.
 
 <a id="camel.datasets.static_dataset.StaticDataset._init_from_list"></a>
 
-### `def _init_from_list(self, data: List[Dict[str, Any]]):`
+### _init_from_list
+
+```python
+def _init_from_list(self, data: List[Dict[str, Any]]):
+```
 
 Validate and convert a list of dictionaries into a dataset.
 

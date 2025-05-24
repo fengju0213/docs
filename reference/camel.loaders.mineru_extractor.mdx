@@ -2,7 +2,11 @@
 
 <a id="camel.loaders.mineru_extractor.MinerU"></a>
 
-## `class MinerU:`
+## MinerU
+
+```python
+class MinerU:
+```
 
 Document extraction service supporting OCR, formula recognition
 and tables.
@@ -15,7 +19,7 @@ and tables.
 
 <a id="camel.loaders.mineru_extractor.MinerU.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -44,7 +48,11 @@ Initialize MinerU extractor.
 
 <a id="camel.loaders.mineru_extractor.MinerU.extract_url"></a>
 
-### `def extract_url(self, url: str):`
+### extract_url
+
+```python
+def extract_url(self, url: str):
+```
 
 Extract content from a URL document.
 
@@ -58,7 +66,11 @@ Extract content from a URL document.
 
 <a id="camel.loaders.mineru_extractor.MinerU.batch_extract_urls"></a>
 
-### `def batch_extract_urls(self, files: List[Dict[str, Union[str, bool]]]):`
+### batch_extract_urls
+
+```python
+def batch_extract_urls(self, files: List[Dict[str, Union[str, bool]]]):
+```
 
 Extract content from multiple document URLs in batch.
 
@@ -72,7 +84,11 @@ Extract content from multiple document URLs in batch.
 
 <a id="camel.loaders.mineru_extractor.MinerU.get_task_status"></a>
 
-### `def get_task_status(self, task_id: str):`
+### get_task_status
+
+```python
+def get_task_status(self, task_id: str):
+```
 
 Retrieve status of a single extraction task.
 
@@ -86,7 +102,11 @@ Retrieve status of a single extraction task.
 
 <a id="camel.loaders.mineru_extractor.MinerU.get_batch_status"></a>
 
-### `def get_batch_status(self, batch_id: str):`
+### get_batch_status
+
+```python
+def get_batch_status(self, batch_id: str):
+```
 
 Retrieve status of a batch extraction task.
 
@@ -100,7 +120,7 @@ Retrieve status of a batch extraction task.
 
 <a id="camel.loaders.mineru_extractor.MinerU.wait_for_completion"></a>
 
-### `wait_for_completion`
+### wait_for_completion
 
 ```python
 def wait_for_completion(

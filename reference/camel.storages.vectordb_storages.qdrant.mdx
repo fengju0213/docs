@@ -2,7 +2,11 @@
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage"></a>
 
-## `class QdrantStorage(BaseVectorStorage):`
+## QdrantStorage
+
+```python
+class QdrantStorage(BaseVectorStorage):
+```
 
 An implementation of the `BaseVectorStorage` for interacting with
 Qdrant, a vector search engine.
@@ -22,7 +26,7 @@ The detailed information about Qdrant is available at:
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -39,14 +43,18 @@ def __init__(
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.__del__"></a>
 
-### `def __del__(self):`
+### __del__
+
+```python
+def __del__(self):
+```
 
 Deletes the collection if :obj:`del_collection` is set to
 :obj:`True`.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage._create_client"></a>
 
-### `_create_client`
+### _create_client
 
 ```python
 def _create_client(
@@ -59,11 +67,15 @@ def _create_client(
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage._check_and_create_collection"></a>
 
-### `def _check_and_create_collection(self):`
+### _check_and_create_collection
+
+```python
+def _check_and_create_collection(self):
+```
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage._create_collection"></a>
 
-### `_create_collection`
+### _create_collection
 
 ```python
 def _create_collection(
@@ -85,7 +97,11 @@ Creates a new collection in the database.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage._delete_collection"></a>
 
-### `def _delete_collection(self, collection_name: str, **kwargs: Any):`
+### _delete_collection
+
+```python
+def _delete_collection(self, collection_name: str, **kwargs: Any):
+```
 
 Deletes an existing collection from the database.
 
@@ -95,19 +111,31 @@ Deletes an existing collection from the database.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage._collection_exists"></a>
 
-### `def _collection_exists(self, collection_name: str):`
+### _collection_exists
+
+```python
+def _collection_exists(self, collection_name: str):
+```
 
 Returns whether the collection exists in the database
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage._generate_collection_name"></a>
 
-### `def _generate_collection_name(self):`
+### _generate_collection_name
+
+```python
+def _generate_collection_name(self):
+```
 
 Generates a collection name if user doesn't provide
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage._get_collection_info"></a>
 
-### `def _get_collection_info(self, collection_name: str):`
+### _get_collection_info
+
+```python
+def _get_collection_info(self, collection_name: str):
+```
 
 Retrieves details of an existing collection.
 
@@ -122,13 +150,21 @@ collection.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.close_client"></a>
 
-### `def close_client(self, **kwargs):`
+### close_client
+
+```python
+def close_client(self, **kwargs):
+```
 
 Closes the client connection to the Qdrant storage.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.add"></a>
 
-### `def add(self, records: List[VectorRecord], **kwargs):`
+### add
+
+```python
+def add(self, records: List[VectorRecord], **kwargs):
+```
 
 Adds a list of vectors to the specified collection.
 
@@ -138,7 +174,7 @@ Adds a list of vectors to the specified collection.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.update_payload"></a>
 
-### `update_payload`
+### update_payload
 
 ```python
 def update_payload(
@@ -158,13 +194,17 @@ Updates the payload of the vectors identified by their IDs.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.delete_collection"></a>
 
-### `def delete_collection(self):`
+### delete_collection
+
+```python
+def delete_collection(self):
+```
 
 Deletes the entire collection in the Qdrant storage.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.delete"></a>
 
-### `delete`
+### delete
 
 ```python
 def delete(
@@ -185,11 +225,15 @@ filters.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.status"></a>
 
-### `def status(self):`
+### status
+
+```python
+def status(self):
+```
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.query"></a>
 
-### `query`
+### query
 
 ```python
 def query(
@@ -215,18 +259,30 @@ storage based on similarity to the query vector.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Remove all vectors from the storage.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 Load the collection hosted on cloud service.
 
 <a id="camel.storages.vectordb_storages.qdrant.QdrantStorage.client"></a>
 
-### `def client(self):`
+### client
+
+```python
+def client(self):
+```
 
 Provides access to the underlying vector database client.

@@ -2,7 +2,11 @@
 
 <a id="camel.memories.records.MemoryRecord"></a>
 
-## `class MemoryRecord(BaseModel):`
+## MemoryRecord
+
+```python
+class MemoryRecord(BaseModel):
+```
 
 The basic message storing unit in the CAMEL memory system.
 
@@ -24,7 +28,11 @@ memory.
 
 <a id="camel.memories.records.MemoryRecord.from_dict"></a>
 
-### `def from_dict(cls, record_dict: Dict[str, Any]):`
+### from_dict
+
+```python
+def from_dict(cls, record_dict: Dict[str, Any]):
+```
 
 Reconstruct a :obj:`MemoryRecord` from the input dict.
 
@@ -34,19 +42,31 @@ Reconstruct a :obj:`MemoryRecord` from the input dict.
 
 <a id="camel.memories.records.MemoryRecord.to_dict"></a>
 
-### `def to_dict(self):`
+### to_dict
+
+```python
+def to_dict(self):
+```
 
 Convert the :obj:`MemoryRecord` to a dict for serialization
 purposes.
 
 <a id="camel.memories.records.MemoryRecord.to_openai_message"></a>
 
-### `def to_openai_message(self):`
+### to_openai_message
+
+```python
+def to_openai_message(self):
+```
 
 Converts the record to an :obj:`OpenAIMessage` object.
 
 <a id="camel.memories.records.ContextRecord"></a>
 
-## `class ContextRecord(BaseModel):`
+## ContextRecord
+
+```python
+class ContextRecord(BaseModel):
+```
 
 The result of memory retrieving.

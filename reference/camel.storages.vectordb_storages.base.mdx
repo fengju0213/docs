@@ -2,7 +2,11 @@
 
 <a id="camel.storages.vectordb_storages.base.VectorRecord"></a>
 
-## `class VectorRecord(BaseModel):`
+## VectorRecord
+
+```python
+class VectorRecord(BaseModel):
+```
 
 Encapsulates information about a vector's unique identifier and its
 payload, which is primarily used as a data transfer object when saving
@@ -17,7 +21,11 @@ or information related to the vector. (default: :obj:`None`)
 
 <a id="camel.storages.vectordb_storages.base.VectorDBQuery"></a>
 
-## `class VectorDBQuery(BaseModel):`
+## VectorDBQuery
+
+```python
+class VectorDBQuery(BaseModel):
+```
 
 Represents a query to a vector database.
 
@@ -29,7 +37,7 @@ from the database. (default: :obj:`1`)
 
 <a id="camel.storages.vectordb_storages.base.VectorDBQuery.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -49,7 +57,11 @@ Pass in query_vector and tok_k as positional arg.
 
 <a id="camel.storages.vectordb_storages.base.VectorDBQueryResult"></a>
 
-## `class VectorDBQueryResult(BaseModel):`
+## VectorDBQueryResult
+
+```python
+class VectorDBQueryResult(BaseModel):
+```
 
 Encapsulates the result of a query against a vector database.
 
@@ -60,7 +72,7 @@ the record.
 
 <a id="camel.storages.vectordb_storages.base.VectorDBQueryResult.create"></a>
 
-### `create`
+### create
 
 ```python
 def create(
@@ -76,7 +88,11 @@ A class method to construct a `VectorDBQueryResult` instance.
 
 <a id="camel.storages.vectordb_storages.base.VectorDBStatus"></a>
 
-## `class VectorDBStatus(BaseModel):`
+## VectorDBStatus
+
+```python
+class VectorDBStatus(BaseModel):
+```
 
 Vector database status.
 
@@ -86,13 +102,21 @@ vector_count (int): The number of stored vectors.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage"></a>
 
-## `class BaseVectorStorage(ABC):`
+## BaseVectorStorage
+
+```python
+class BaseVectorStorage(ABC):
+```
 
 An abstract base class for vector storage systems.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.add"></a>
 
-### `def add(self, records: List[VectorRecord], **kwargs: Any):`
+### add
+
+```python
+def add(self, records: List[VectorRecord], **kwargs: Any):
+```
 
 Saves a list of vector records to the storage.
 
@@ -102,7 +126,11 @@ Saves a list of vector records to the storage.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.delete"></a>
 
-### `def delete(self, ids: List[str], **kwargs: Any):`
+### delete
+
+```python
+def delete(self, ids: List[str], **kwargs: Any):
+```
 
 Deletes a list of vectors identified by their IDs from the storage.
 
@@ -112,7 +140,11 @@ Deletes a list of vectors identified by their IDs from the storage.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.status"></a>
 
-### `def status(self):`
+### status
+
+```python
+def status(self):
+```
 
 **Returns:**
 
@@ -120,7 +152,11 @@ Deletes a list of vectors identified by their IDs from the storage.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.query"></a>
 
-### `def query(self, query: VectorDBQuery, **kwargs: Any):`
+### query
+
+```python
+def query(self, query: VectorDBQuery, **kwargs: Any):
+```
 
 Searches for similar vectors in the storage based on the provided
 query.
@@ -136,25 +172,41 @@ storage based on similarity to the query vector.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Remove all vectors from the storage.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 Load the collection hosted on cloud service.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.client"></a>
 
-### `def client(self):`
+### client
+
+```python
+def client(self):
+```
 
 Provides access to the underlying vector database client.
 
 <a id="camel.storages.vectordb_storages.base.BaseVectorStorage.get_payloads_by_vector"></a>
 
-### `def get_payloads_by_vector(self, vector: List[float], top_k: int):`
+### get_payloads_by_vector
+
+```python
+def get_payloads_by_vector(self, vector: List[float], top_k: int):
+```
 
 Returns payloads of top k vector records that closest to the given
 vector.

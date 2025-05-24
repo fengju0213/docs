@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.notion_toolkit.get_plain_text_from_rich_text"></a>
 
-## `def get_plain_text_from_rich_text(rich_text: List[dict]):`
+## get_plain_text_from_rich_text
+
+```python
+def get_plain_text_from_rich_text(rich_text: List[dict]):
+```
 
 Extracts plain text from a list of rich text elements.
 
@@ -17,7 +21,11 @@ joined together.
 
 <a id="camel.toolkits.notion_toolkit.get_media_source_text"></a>
 
-## `def get_media_source_text(block: dict):`
+## get_media_source_text
+
+```python
+def get_media_source_text(block: dict):
+```
 
 Extracts the source URL and optional caption from a
 Notion media block.
@@ -33,7 +41,11 @@ separated by a colon.
 
 <a id="camel.toolkits.notion_toolkit.NotionToolkit"></a>
 
-## `class NotionToolkit(BaseToolkit):`
+## NotionToolkit
+
+```python
+class NotionToolkit(BaseToolkit):
+```
 
 A toolkit for retrieving information from the user's notion pages.
 
@@ -45,7 +57,7 @@ the notion APIs.
 
 <a id="camel.toolkits.notion_toolkit.NotionToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -63,7 +75,11 @@ Initializes the NotionToolkit.
 
 <a id="camel.toolkits.notion_toolkit.NotionToolkit.list_all_users"></a>
 
-### `def list_all_users(self):`
+### list_all_users
+
+```python
+def list_all_users(self):
+```
 
 **Returns:**
 
@@ -71,7 +87,11 @@ Initializes the NotionToolkit.
 
 <a id="camel.toolkits.notion_toolkit.NotionToolkit.list_all_pages"></a>
 
-### `def list_all_pages(self):`
+### list_all_pages
+
+```python
+def list_all_pages(self):
+```
 
 **Returns:**
 
@@ -79,7 +99,11 @@ Initializes the NotionToolkit.
 
 <a id="camel.toolkits.notion_toolkit.NotionToolkit.get_notion_block_text_content"></a>
 
-### `def get_notion_block_text_content(self, block_id: str):`
+### get_notion_block_text_content
+
+```python
+def get_notion_block_text_content(self, block_id: str):
+```
 
 Retrieves the text content of a Notion block.
 
@@ -94,7 +118,11 @@ the sub blocks.
 
 <a id="camel.toolkits.notion_toolkit.NotionToolkit.get_text_from_block"></a>
 
-### `def get_text_from_block(self, block: dict):`
+### get_text_from_block
+
+```python
+def get_text_from_block(self, block: dict):
+```
 
 Extracts plain text from a Notion block based on its type.
 
@@ -108,7 +136,11 @@ Extracts plain text from a Notion block based on its type.
 
 <a id="camel.toolkits.notion_toolkit.NotionToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

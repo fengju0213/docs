@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.base.BaseToolkit"></a>
 
-## `class BaseToolkit:`
+## BaseToolkit
+
+```python
+class BaseToolkit:
+```
 
 Base class for toolkits.
 
@@ -12,15 +16,27 @@ Base class for toolkits.
 
 <a id="camel.toolkits.base.BaseToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 <a id="camel.toolkits.base.BaseToolkit.__init_subclass__"></a>
 
-### `def __init_subclass__(cls, **kwargs):`
+### __init_subclass__
+
+```python
+def __init_subclass__(cls, **kwargs):
+```
 
 <a id="camel.toolkits.base.BaseToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 
@@ -29,7 +45,11 @@ representing the functions in the toolkit.
 
 <a id="camel.toolkits.base.BaseToolkit.run_mcp_server"></a>
 
-### `def run_mcp_server(self, mode: Literal['stdio', 'sse', 'streamable-http']):`
+### run_mcp_server
+
+```python
+def run_mcp_server(self, mode: Literal['stdio', 'sse', 'streamable-http']):
+```
 
 Run the MCP server in the specified mode.
 

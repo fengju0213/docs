@@ -2,7 +2,11 @@
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO"></a>
 
-## `class UnstructuredIO:`
+## UnstructuredIO
+
+```python
+class UnstructuredIO:
+```
 
 A class to handle various functionalities provided by the
 Unstructured library, including version checking, parsing, cleaning,
@@ -14,7 +18,7 @@ https://docs.unstructured.io/
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO.create_element_from_text"></a>
 
-### `create_element_from_text`
+### create_element_from_text
 
 ```python
 def create_element_from_text(
@@ -50,7 +54,11 @@ metadata.
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO.parse_file_or_url"></a>
 
-### `def parse_file_or_url(input_path: str, **kwargs: Any):`
+### parse_file_or_url
+
+```python
+def parse_file_or_url(input_path: str, **kwargs: Any):
+```
 
 Loads a file or a URL and parses its contents into elements.
 
@@ -65,7 +73,11 @@ or URL if success.
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO.parse_bytes"></a>
 
-### `def parse_bytes(file: IO[bytes], **kwargs: Any):`
+### parse_bytes
+
+```python
+def parse_bytes(file: IO[bytes], **kwargs: Any):
+```
 
 Parses a bytes stream and converts its contents into elements.
 
@@ -88,7 +100,7 @@ https://docs.unstructured.io/open-source/core-functionality/partitioning
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO.clean_text_data"></a>
 
-### `clean_text_data`
+### clean_text_data
 
 ```python
 def clean_text_data(
@@ -121,7 +133,7 @@ operations is applied. These defaults including operations
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO.extract_data_from_text"></a>
 
-### `extract_data_from_text`
+### extract_data_from_text
 
 ```python
 def extract_data_from_text(
@@ -147,7 +159,7 @@ https://unstructured-io.github.io/unstructured/
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO.stage_elements"></a>
 
-### `stage_elements`
+### stage_elements
 
 ```python
 def stage_elements(
@@ -177,7 +189,11 @@ format appropriate for the specified staging type.
 
 <a id="camel.loaders.unstructured_io.UnstructuredIO.chunk_elements"></a>
 
-### `def chunk_elements(elements: List['Element'], chunk_type: str, **kwargs):`
+### chunk_elements
+
+```python
+def chunk_elements(elements: List['Element'], chunk_type: str, **kwargs):
+```
 
 Chunks elements by titles.
 

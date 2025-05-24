@@ -2,11 +2,15 @@
 
 <a id="camel.models.model_factory.ModelFactory"></a>
 
-## `class ModelFactory:`
+## ModelFactory
+
+```python
+class ModelFactory:
+```
 
 <a id="camel.models.model_factory.ModelFactory.create"></a>
 
-### `create`
+### create
 
 ```python
 def create(
@@ -39,7 +43,11 @@ Creates an instance of `BaseModelBackend` of the specified type.
 
 <a id="camel.models.model_factory.ModelFactory.__parse_model_platform"></a>
 
-### `def __parse_model_platform(cls, model_platform_str: str):`
+### __parse_model_platform
+
+```python
+def __parse_model_platform(cls, model_platform_str: str):
+```
 
 Parses a string and returns the corresponding ModelPlatformType
 enum.
@@ -54,11 +62,19 @@ enum.
 
 <a id="camel.models.model_factory.ModelFactory.__load_yaml"></a>
 
-### `def __load_yaml(cls, filepath: str):`
+### __load_yaml
+
+```python
+def __load_yaml(cls, filepath: str):
+```
 
 <a id="camel.models.model_factory.ModelFactory.__load_json"></a>
 
-### `def __load_json(cls, filepath: str):`
+### __load_json
+
+```python
+def __load_json(cls, filepath: str):
+```
 
 Loads and parses a JSON file into a dictionary.
 
@@ -72,7 +88,11 @@ Loads and parses a JSON file into a dictionary.
 
 <a id="camel.models.model_factory.ModelFactory.create_from_yaml"></a>
 
-### `def create_from_yaml(cls, filepath: str):`
+### create_from_yaml
+
+```python
+def create_from_yaml(cls, filepath: str):
+```
 
 Creates and returns a model base backend instance
 from a YAML configuration file.
@@ -88,7 +108,11 @@ configuration.
 
 <a id="camel.models.model_factory.ModelFactory.create_from_json"></a>
 
-### `def create_from_json(cls, filepath: str):`
+### create_from_json
+
+```python
+def create_from_json(cls, filepath: str):
+```
 
 Creates and returns a base model backend instance
 from a JSON configuration file.

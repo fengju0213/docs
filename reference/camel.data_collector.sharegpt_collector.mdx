@@ -2,27 +2,43 @@
 
 <a id="camel.data_collector.sharegpt_collector.ShareGPTDataCollector"></a>
 
-## `class ShareGPTDataCollector(BaseDataCollector):`
+## ShareGPTDataCollector
+
+```python
+class ShareGPTDataCollector(BaseDataCollector):
+```
 
 <a id="camel.data_collector.sharegpt_collector.ShareGPTDataCollector.__init__"></a>
 
-### `def __init__(self):`
+### __init__
+
+```python
+def __init__(self):
+```
 
 <a id="camel.data_collector.sharegpt_collector.ShareGPTDataCollector.record"></a>
 
-### `def record(self, agent: Union[List[ChatAgent], ChatAgent]):`
+### record
+
+```python
+def record(self, agent: Union[List[ChatAgent], ChatAgent]):
+```
 
 Inject an agent into the data collector.
 
 <a id="camel.data_collector.sharegpt_collector.ShareGPTDataCollector.convert"></a>
 
-### `def convert(self):`
+### convert
+
+```python
+def convert(self):
+```
 
 Convert the collected data into a dictionary.
 
 <a id="camel.data_collector.sharegpt_collector.ShareGPTDataCollector.llm_convert"></a>
 
-### `llm_convert`
+### llm_convert
 
 ```python
 def llm_convert(
@@ -45,4 +61,8 @@ Convert collected data using an LLM schema converter.
 
 <a id="camel.data_collector.sharegpt_collector.ShareGPTDataCollector.to_sharegpt_conversation"></a>
 
-### `def to_sharegpt_conversation(data: Dict[str, Any]):`
+### to_sharegpt_conversation
+
+```python
+def to_sharegpt_conversation(data: Dict[str, Any]):
+```

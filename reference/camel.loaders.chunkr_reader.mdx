@@ -2,7 +2,11 @@
 
 <a id="camel.loaders.chunkr_reader.ChunkrReader"></a>
 
-## `class ChunkrReader:`
+## ChunkrReader
+
+```python
+class ChunkrReader:
+```
 
 Chunkr Reader for processing documents and returning content
 in various formats.
@@ -15,7 +19,7 @@ in various formats.
 
 <a id="camel.loaders.chunkr_reader.ChunkrReader.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -29,7 +33,7 @@ def __init__(
 
 <a id="camel.loaders.chunkr_reader.ChunkrReader.submit_task"></a>
 
-### `submit_task`
+### submit_task
 
 ```python
 def submit_task(
@@ -56,7 +60,11 @@ Submits a file to the Chunkr API and returns the task ID.
 
 <a id="camel.loaders.chunkr_reader.ChunkrReader.get_task_output"></a>
 
-### `def get_task_output(self, task_id: str, max_retries: int = 5):`
+### get_task_output
+
+```python
+def get_task_output(self, task_id: str, max_retries: int = 5):
+```
 
 Polls the Chunkr API to check the task status and returns the task
 result.
@@ -72,7 +80,11 @@ result.
 
 <a id="camel.loaders.chunkr_reader.ChunkrReader._pretty_print_response"></a>
 
-### `def _pretty_print_response(self, response_json: dict):`
+### _pretty_print_response
+
+```python
+def _pretty_print_response(self, response_json: dict):
+```
 
 Pretty prints the JSON response.
 

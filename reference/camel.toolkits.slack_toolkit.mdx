@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit"></a>
 
-## `class SlackToolkit(BaseToolkit):`
+## SlackToolkit
+
+```python
+class SlackToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for Slack operations.
 
@@ -11,7 +15,11 @@ channel, joining an existing channel, leaving a channel.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initializes a new instance of the SlackToolkit class.
 
@@ -21,7 +29,7 @@ Initializes a new instance of the SlackToolkit class.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit._login_slack"></a>
 
-### `_login_slack`
+### _login_slack
 
 ```python
 def _login_slack(
@@ -44,7 +52,11 @@ Authenticate using the Slack API.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.create_slack_channel"></a>
 
-### `def create_slack_channel(self, name: str, is_private: Optional[bool] = True):`
+### create_slack_channel
+
+```python
+def create_slack_channel(self, name: str, is_private: Optional[bool] = True):
+```
 
 Creates a new slack channel, either public or private.
 
@@ -60,7 +72,11 @@ channel created.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.join_slack_channel"></a>
 
-### `def join_slack_channel(self, channel_id: str):`
+### join_slack_channel
+
+```python
+def join_slack_channel(self, channel_id: str):
+```
 
 Joins an existing Slack channel.
 
@@ -75,7 +91,11 @@ or an error message.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.leave_slack_channel"></a>
 
-### `def leave_slack_channel(self, channel_id: str):`
+### leave_slack_channel
+
+```python
+def leave_slack_channel(self, channel_id: str):
+```
 
 Leaves an existing Slack channel.
 
@@ -90,7 +110,11 @@ or an error message.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.get_slack_channel_information"></a>
 
-### `def get_slack_channel_information(self):`
+### get_slack_channel_information
+
+```python
+def get_slack_channel_information(self):
+```
 
 **Returns:**
 
@@ -98,7 +122,11 @@ or an error message.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.get_slack_channel_message"></a>
 
-### `def get_slack_channel_message(self, channel_id: str):`
+### get_slack_channel_message
+
+```python
+def get_slack_channel_message(self, channel_id: str):
+```
 
 Retrieve messages from a Slack channel.
 
@@ -112,7 +140,7 @@ Retrieve messages from a Slack channel.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.send_slack_message"></a>
 
-### `send_slack_message`
+### send_slack_message
 
 ```python
 def send_slack_message(
@@ -138,7 +166,11 @@ successfully or an error message.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.delete_slack_message"></a>
 
-### `def delete_slack_message(self, time_stamp: str, channel_id: str):`
+### delete_slack_message
+
+```python
+def delete_slack_message(self, time_stamp: str, channel_id: str):
+```
 
 Delete a message to a Slack channel.
 
@@ -154,7 +186,11 @@ was delete successfully or an error message.
 
 <a id="camel.toolkits.slack_toolkit.SlackToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

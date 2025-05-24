@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit"></a>
 
-## `class OpenBBToolkit(BaseToolkit):`
+## OpenBBToolkit
+
+```python
+class OpenBBToolkit(BaseToolkit):
+```
 
 A toolkit for accessing financial data and analysis through OpenBB
 Platform.
@@ -15,7 +19,11 @@ https://my.openbb.co/app/platform/credentials .
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initialize the OpenBBToolkit.
 
@@ -24,7 +32,7 @@ Hub account system.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit._handle_api_error"></a>
 
-### `_handle_api_error`
+### _handle_api_error
 
 ```python
 def _handle_api_error(
@@ -51,7 +59,11 @@ Handle API operation errors consistently.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.search_equity"></a>
 
-### `def search_equity(self, query: str, provider: Literal['intrinio', 'sec'] = 'sec'):`
+### search_equity
+
+```python
+def search_equity(self, query: str, provider: Literal['intrinio', 'sec'] = 'sec'):
+```
 
 Search for equity symbols and company information.
 
@@ -70,7 +82,11 @@ companies sorted by market cap.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.search_institution"></a>
 
-### `def search_institution(self, query: str):`
+### search_institution
+
+```python
+def search_institution(self, query: str):
+```
 
 Search for financial institutions in SEC database.
 
@@ -84,7 +100,7 @@ Search for financial institutions in SEC database.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.search_filings"></a>
 
-### `search_filings`
+### search_filings
 
 ```python
 def search_filings(
@@ -109,7 +125,11 @@ Search for SEC filings by CIK or ticker symbol.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.search_etf"></a>
 
-### `def search_etf(self, query: str, provider: Literal['fmp', 'intrinio'] = 'fmp'):`
+### search_etf
+
+```python
+def search_etf(self, query: str, provider: Literal['fmp', 'intrinio'] = 'fmp'):
+```
 
 Search for ETF information.
 
@@ -124,7 +144,7 @@ Search for ETF information.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.screen_market"></a>
 
-### `screen_market`
+### screen_market
 
 ```python
 def screen_market(
@@ -161,7 +181,11 @@ Screen stocks based on market and fundamental criteria.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_available_indices"></a>
 
-### `def get_available_indices(self, provider: Literal['fmp', 'yfinance'] = 'fmp'):`
+### get_available_indices
+
+```python
+def get_available_indices(self, provider: Literal['fmp', 'yfinance'] = 'fmp'):
+```
 
 Get list of available market indices.
 
@@ -175,7 +199,7 @@ Get list of available market indices.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_stock_quote"></a>
 
-### `get_stock_quote`
+### get_stock_quote
 
 ```python
 def get_stock_quote(
@@ -198,7 +222,7 @@ Get current stock quote for a given symbol.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_historical_data"></a>
 
-### `get_historical_data`
+### get_historical_data
 
 ```python
 def get_historical_data(
@@ -229,7 +253,7 @@ Retrieves historical market data from OpenBB Platform providers.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_market_data"></a>
 
-### `get_market_data`
+### get_market_data
 
 ```python
 def get_market_data(
@@ -250,7 +274,7 @@ Get market movers data.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_earnings_calendar"></a>
 
-### `get_earnings_calendar`
+### get_earnings_calendar
 
 ```python
 def get_earnings_calendar(
@@ -273,7 +297,7 @@ Get company earnings calendar with filtering and sorting options.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_dividend_calendar"></a>
 
-### `get_dividend_calendar`
+### get_dividend_calendar
 
 ```python
 def get_dividend_calendar(
@@ -296,7 +320,7 @@ Get dividend calendar with optional yield calculations.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_ipo_calendar"></a>
 
-### `get_ipo_calendar`
+### get_ipo_calendar
 
 ```python
 def get_ipo_calendar(
@@ -319,7 +343,11 @@ Get IPO/SPO calendar with comprehensive filtering options.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_available_indicators"></a>
 
-### `def get_available_indicators(self, provider: Literal['econdb', 'imf'] = 'econdb'):`
+### get_available_indicators
+
+```python
+def get_available_indicators(self, provider: Literal['econdb', 'imf'] = 'econdb'):
+```
 
 Get list of available economic indicators.
 
@@ -333,7 +361,7 @@ Get list of available economic indicators.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_indicator_data"></a>
 
-### `get_indicator_data`
+### get_indicator_data
 
 ```python
 def get_indicator_data(
@@ -358,7 +386,7 @@ Get detailed metadata for an economic indicator.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_financial_metrics"></a>
 
-### `get_financial_metrics`
+### get_financial_metrics
 
 ```python
 def get_financial_metrics(
@@ -385,7 +413,7 @@ Get company financial metrics and ratios.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_company_profile"></a>
 
-### `get_company_profile`
+### get_company_profile
 
 ```python
 def get_company_profile(
@@ -408,7 +436,7 @@ Get company profile information.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_financial_statement"></a>
 
-### `get_financial_statement`
+### get_financial_statement
 
 ```python
 def get_financial_statement(
@@ -440,7 +468,7 @@ Data availability and field names vary by provider and company type.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_financial_attributes"></a>
 
-### `get_financial_attributes`
+### get_financial_attributes
 
 ```python
 def get_financial_attributes(
@@ -464,7 +492,11 @@ Get historical values for a specific financial attribute.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.search_financial_attributes"></a>
 
-### `def search_financial_attributes(self, query: str):`
+### search_financial_attributes
+
+```python
+def search_financial_attributes(self, query: str):
+```
 
 Search for available financial attributes/tags.
 
@@ -478,7 +510,7 @@ Search for available financial attributes/tags.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_economic_calendar"></a>
 
-### `get_economic_calendar`
+### get_economic_calendar
 
 ```python
 def get_economic_calendar(
@@ -503,7 +535,11 @@ Get economic calendar events.
 
 <a id="camel.toolkits.openbb_toolkit.OpenBBToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

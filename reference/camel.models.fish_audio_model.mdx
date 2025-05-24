@@ -2,14 +2,22 @@
 
 <a id="camel.models.fish_audio_model.FishAudioModel"></a>
 
-## `class FishAudioModel(BaseAudioModel):`
+## FishAudioModel
+
+```python
+class FishAudioModel(BaseAudioModel):
+```
 
 Provides access to FishAudio's Text-to-Speech (TTS) and Speech_to_Text
 (STT) models.
 
 <a id="camel.models.fish_audio_model.FishAudioModel.__init__"></a>
 
-### `def __init__(self, api_key: Optional[str] = None, url: Optional[str] = None):`
+### __init__
+
+```python
+def __init__(self, api_key: Optional[str] = None, url: Optional[str] = None):
+```
 
 Initialize an instance of FishAudioModel.
 
@@ -20,7 +28,11 @@ Initialize an instance of FishAudioModel.
 
 <a id="camel.models.fish_audio_model.FishAudioModel.text_to_speech"></a>
 
-### `def text_to_speech(self, input: str, **kwargs: Any):`
+### text_to_speech
+
+```python
+def text_to_speech(self, input: str, **kwargs: Any):
+```
 
 Convert text to speech and save the output to a file.
 
@@ -34,7 +46,7 @@ Convert text to speech and save the output to a file.
 
 <a id="camel.models.fish_audio_model.FishAudioModel.speech_to_text"></a>
 
-### `speech_to_text`
+### speech_to_text
 
 ```python
 def speech_to_text(

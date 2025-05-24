@@ -2,7 +2,11 @@
 
 <a id="camel.models.litellm_model.LiteLLMModel"></a>
 
-## `class LiteLLMModel(BaseModelBackend):`
+## LiteLLMModel
+
+```python
+class LiteLLMModel(BaseModelBackend):
+```
 
 Constructor for LiteLLM backend with OpenAI compatibility.
 
@@ -17,7 +21,7 @@ Constructor for LiteLLM backend with OpenAI compatibility.
 
 <a id="camel.models.litellm_model.LiteLLMModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,7 +37,11 @@ def __init__(
 
 <a id="camel.models.litellm_model.LiteLLMModel._convert_response_from_litellm_to_openai"></a>
 
-### `def _convert_response_from_litellm_to_openai(self, response):`
+### _convert_response_from_litellm_to_openai
+
+```python
+def _convert_response_from_litellm_to_openai(self, response):
+```
 
 Converts a response from the LiteLLM format to the OpenAI format.
 
@@ -47,7 +55,11 @@ Converts a response from the LiteLLM format to the OpenAI format.
 
 <a id="camel.models.litellm_model.LiteLLMModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -56,7 +68,7 @@ tokenization style.
 
 <a id="camel.models.litellm_model.LiteLLMModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -79,4 +91,8 @@ Runs inference of LiteLLM chat completion.
 
 <a id="camel.models.litellm_model.LiteLLMModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```

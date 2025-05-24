@@ -2,7 +2,11 @@
 
 <a id="camel.bots.discord.discord_store.DiscordBaseInstallationStore"></a>
 
-## `class DiscordBaseInstallationStore:`
+## DiscordBaseInstallationStore
+
+```python
+class DiscordBaseInstallationStore:
+```
 
 Abstract base class for managing Discord installations.
 
@@ -12,7 +16,11 @@ methods to handle database-specific logic.
 
 <a id="camel.bots.discord.discord_store.DiscordSQLiteInstallationStore"></a>
 
-## `class DiscordSQLiteInstallationStore(DiscordBaseInstallationStore):`
+## DiscordSQLiteInstallationStore
+
+```python
+class DiscordSQLiteInstallationStore(DiscordBaseInstallationStore):
+```
 
 SQLite-based implementation for managing Discord installations.
 
@@ -24,7 +32,11 @@ database (str): Path to the SQLite database file.
 
 <a id="camel.bots.discord.discord_store.DiscordSQLiteInstallationStore.__init__"></a>
 
-### `def __init__(self, database: str):`
+### __init__
+
+```python
+def __init__(self, database: str):
+```
 
 Initializes the SQLite installation store.
 

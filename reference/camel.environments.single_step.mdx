@@ -2,7 +2,11 @@
 
 <a id="camel.environments.single_step.SingleStepEnv"></a>
 
-## `class SingleStepEnv:`
+## SingleStepEnv
+
+```python
+class SingleStepEnv:
+```
 
 A lightweight environment for single-step RL with LLMs as policy.
 
@@ -24,7 +28,7 @@ Key Features:
 
 <a id="camel.environments.single_step.SingleStepEnv.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -47,7 +51,11 @@ Initialize the SingleStepEnv.
 
 <a id="camel.environments.single_step.SingleStepEnv._normalize_actions"></a>
 
-### `def _normalize_actions(self, action: Union[Action, List[Action], str, Dict[int, str]]):`
+### _normalize_actions
+
+```python
+def _normalize_actions(self, action: Union[Action, List[Action], str, Dict[int, str]]):
+```
 
 Normalize the user-provided action(s) into a validated list
 of `Action` objects.
@@ -68,7 +76,11 @@ ready for evaluation.
 
 <a id="camel.environments.single_step.SingleStepEnv._batch_done"></a>
 
-### `def _batch_done(self):`
+### _batch_done
+
+```python
+def _batch_done(self):
+```
 
 **Returns:**
 
@@ -76,7 +88,11 @@ ready for evaluation.
 
 <a id="camel.environments.single_step.SingleStepEnv._batch_started"></a>
 
-### `def _batch_started(self):`
+### _batch_started
+
+```python
+def _batch_started(self):
+```
 
 **Returns:**
 
@@ -85,7 +101,11 @@ otherwise.
 
 <a id="camel.environments.single_step.SingleStepEnv.metadata"></a>
 
-### `def metadata(self):`
+### metadata
+
+```python
+def metadata(self):
+```
 
 **Returns:**
 

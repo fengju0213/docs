@@ -2,7 +2,11 @@
 
 <a id="camel.models.reward.evaluator.Evaluator"></a>
 
-## `class Evaluator:`
+## Evaluator
+
+```python
+class Evaluator:
+```
 
 Evaluator class to evaluate messages using a reward model and filter
 data based on the scores.
@@ -13,11 +17,19 @@ data based on the scores.
 
 <a id="camel.models.reward.evaluator.Evaluator.__init__"></a>
 
-### `def __init__(self, reward_model: BaseRewardModel):`
+### __init__
+
+```python
+def __init__(self, reward_model: BaseRewardModel):
+```
 
 <a id="camel.models.reward.evaluator.Evaluator.evaluate"></a>
 
-### `def evaluate(self, messages: List[Dict[str, str]]):`
+### evaluate
+
+```python
+def evaluate(self, messages: List[Dict[str, str]]):
+```
 
 Evaluate the messages using the reward model.
 
@@ -31,7 +43,7 @@ Evaluate the messages using the reward model.
 
 <a id="camel.models.reward.evaluator.Evaluator.filter_data"></a>
 
-### `filter_data`
+### filter_data
 
 ```python
 def filter_data(

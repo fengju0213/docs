@@ -2,13 +2,17 @@
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit"></a>
 
-## `class PyAutoGUIToolkit(BaseToolkit):`
+## PyAutoGUIToolkit
+
+```python
+class PyAutoGUIToolkit(BaseToolkit):
+```
 
 A toolkit for automating GUI interactions using PyAutoGUI.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -27,7 +31,11 @@ Initializes the PyAutoGUIToolkit with optional timeout.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit._get_safe_coordinates"></a>
 
-### `def _get_safe_coordinates(self, x: int, y: int):`
+### _get_safe_coordinates
+
+```python
+def _get_safe_coordinates(self, x: int, y: int):
+```
 
 Ensure coordinates are within safe boundaries to prevent triggering
 failsafe.
@@ -43,7 +51,11 @@ failsafe.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.mouse_move"></a>
 
-### `def mouse_move(self, x: int, y: int):`
+### mouse_move
+
+```python
+def mouse_move(self, x: int, y: int):
+```
 
 Move mouse pointer to specified coordinates.
 
@@ -58,7 +70,7 @@ Move mouse pointer to specified coordinates.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.mouse_click"></a>
 
-### `mouse_click`
+### mouse_click
 
 ```python
 def mouse_click(
@@ -88,7 +100,11 @@ or "Clicked right button 2 time(s) at current position."
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.get_mouse_position"></a>
 
-### `def get_mouse_position(self):`
+### get_mouse_position
+
+```python
+def get_mouse_position(self):
+```
 
 **Returns:**
 
@@ -96,7 +112,11 @@ or "Clicked right button 2 time(s) at current position."
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.take_screenshot"></a>
 
-### `def take_screenshot(self):`
+### take_screenshot
+
+```python
+def take_screenshot(self):
+```
 
 **Returns:**
 
@@ -104,7 +124,7 @@ or "Clicked right button 2 time(s) at current position."
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.mouse_drag"></a>
 
-### `mouse_drag`
+### mouse_drag
 
 ```python
 def mouse_drag(
@@ -133,7 +153,7 @@ Drag mouse from start position to end position.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.scroll"></a>
 
-### `scroll`
+### scroll
 
 ```python
 def scroll(
@@ -158,7 +178,11 @@ Scroll the mouse wheel.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.keyboard_type"></a>
 
-### `def keyboard_type(self, text: str, interval: float = 0.0):`
+### keyboard_type
+
+```python
+def keyboard_type(self, text: str, interval: float = 0.0):
+```
 
 Type text on the keyboard.
 
@@ -173,7 +197,11 @@ Type text on the keyboard.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.press_key"></a>
 
-### `def press_key(self, key: Union[str, List[str]]):`
+### press_key
+
+```python
+def press_key(self, key: Union[str, List[str]]):
+```
 
 Press a key on the keyboard.
 
@@ -187,7 +215,11 @@ Press a key on the keyboard.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.hotkey"></a>
 
-### `def hotkey(self, keys: List[str]):`
+### hotkey
+
+```python
+def hotkey(self, keys: List[str]):
+```
 
 Press keys in succession and release in reverse order.
 
@@ -201,7 +233,11 @@ Press keys in succession and release in reverse order.
 
 <a id="camel.toolkits.pyautogui_toolkit.PyAutoGUIToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

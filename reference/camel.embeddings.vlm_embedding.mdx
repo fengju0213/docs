@@ -2,7 +2,11 @@
 
 <a id="camel.embeddings.vlm_embedding.VisionLanguageEmbedding"></a>
 
-## `class VisionLanguageEmbedding:`
+## VisionLanguageEmbedding
+
+```python
+class VisionLanguageEmbedding:
+```
 
 Provides image embedding functionalities using multimodal model.
 
@@ -12,7 +16,11 @@ Provides image embedding functionalities using multimodal model.
 
 <a id="camel.embeddings.vlm_embedding.VisionLanguageEmbedding.__init__"></a>
 
-### `def __init__(self, model_name: str = 'openai/clip-vit-base-patch32'):`
+### __init__
+
+```python
+def __init__(self, model_name: str = 'openai/clip-vit-base-patch32'):
+```
 
 Initializes the: obj: `VisionLanguageEmbedding` class with a
 specified model and return the dimension of embeddings.
@@ -23,7 +31,11 @@ specified model and return the dimension of embeddings.
 
 <a id="camel.embeddings.vlm_embedding.VisionLanguageEmbedding.embed_list"></a>
 
-### `def embed_list(self, objs: List[Union[Image.Image, str]], **kwargs: Any):`
+### embed_list
+
+```python
+def embed_list(self, objs: List[Union[Image.Image, str]], **kwargs: Any):
+```
 
 Generates embeddings for the given images or texts.
 
@@ -41,7 +53,11 @@ as a list of floating-point numbers.
 
 <a id="camel.embeddings.vlm_embedding.VisionLanguageEmbedding.get_output_dim"></a>
 
-### `def get_output_dim(self):`
+### get_output_dim
+
+```python
+def get_output_dim(self):
+```
 
 **Returns:**
 

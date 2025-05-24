@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.linkedin_toolkit.LinkedInToolkit"></a>
 
-## `class LinkedInToolkit(BaseToolkit):`
+## LinkedInToolkit
+
+```python
+class LinkedInToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for LinkedIn operations.
 
@@ -11,11 +15,19 @@ retrieving the authenticated user's profile information.
 
 <a id="camel.toolkits.linkedin_toolkit.LinkedInToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 <a id="camel.toolkits.linkedin_toolkit.LinkedInToolkit.create_post"></a>
 
-### `def create_post(self, text: str):`
+### create_post
+
+```python
+def create_post(self, text: str):
+```
 
 Creates a post on LinkedIn for the authenticated user.
 
@@ -30,7 +42,11 @@ the post. If the post creation fails, the values will be None.
 
 <a id="camel.toolkits.linkedin_toolkit.LinkedInToolkit.delete_post"></a>
 
-### `def delete_post(self, post_id: str):`
+### delete_post
+
+```python
+def delete_post(self, post_id: str):
+```
 
 Deletes a LinkedIn post with the specified ID
 for an authorized user.
@@ -55,7 +71,11 @@ https://docs.microsoft.com/en-us/linkedin/marketing/integrations/community-manag
 
 <a id="camel.toolkits.linkedin_toolkit.LinkedInToolkit.get_profile"></a>
 
-### `def get_profile(self, include_id: bool = False):`
+### get_profile
+
+```python
+def get_profile(self, include_id: bool = False):
+```
 
 Retrieves the authenticated user's LinkedIn profile info.
 
@@ -75,7 +95,11 @@ include the profile ID.
 
 <a id="camel.toolkits.linkedin_toolkit.LinkedInToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 
@@ -84,7 +108,11 @@ representing the functions in the toolkit.
 
 <a id="camel.toolkits.linkedin_toolkit.LinkedInToolkit._get_access_token"></a>
 
-### `def _get_access_token(self):`
+### _get_access_token
+
+```python
+def _get_access_token(self):
+```
 
 **Returns:**
 

@@ -2,7 +2,11 @@
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage"></a>
 
-## `class MilvusStorage(BaseVectorStorage):`
+## MilvusStorage
+
+```python
+class MilvusStorage(BaseVectorStorage):
+```
 
 An implementation of the `BaseVectorStorage` for interacting with
 Milvus, a cloud-native vector search engine.
@@ -18,7 +22,7 @@ The detailed information about Milvus is available at:
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -32,7 +36,11 @@ def __init__(
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._create_client"></a>
 
-### `def _create_client(self, url_and_api_key: Tuple[str, str], **kwargs: Any):`
+### _create_client
+
+```python
+def _create_client(self, url_and_api_key: Tuple[str, str], **kwargs: Any):
+```
 
 Initializes the Milvus client with the provided connection details.
 
@@ -42,14 +50,22 @@ Initializes the Milvus client with the provided connection details.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._check_and_create_collection"></a>
 
-### `def _check_and_create_collection(self):`
+### _check_and_create_collection
+
+```python
+def _check_and_create_collection(self):
+```
 
 Checks if the specified collection exists in Milvus and creates it
 if it doesn't, ensuring it matches the specified vector dimensionality.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._create_collection"></a>
 
-### `def _create_collection(self, collection_name: str, **kwargs: Any):`
+### _create_collection
+
+```python
+def _create_collection(self, collection_name: str, **kwargs: Any):
+```
 
 Creates a new collection in the database.
 
@@ -59,7 +75,11 @@ Creates a new collection in the database.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._delete_collection"></a>
 
-### `def _delete_collection(self, collection_name: str):`
+### _delete_collection
+
+```python
+def _delete_collection(self, collection_name: str):
+```
 
 Deletes an existing collection from the database.
 
@@ -69,7 +89,11 @@ Deletes an existing collection from the database.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._collection_exists"></a>
 
-### `def _collection_exists(self, collection_name: str):`
+### _collection_exists
+
+```python
+def _collection_exists(self, collection_name: str):
+```
 
 Checks whether a collection with the specified name exists in the
 database.
@@ -84,7 +108,11 @@ database.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._generate_collection_name"></a>
 
-### `def _generate_collection_name(self):`
+### _generate_collection_name
+
+```python
+def _generate_collection_name(self):
+```
 
 **Returns:**
 
@@ -92,7 +120,11 @@ database.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._get_collection_info"></a>
 
-### `def _get_collection_info(self, collection_name: str):`
+### _get_collection_info
+
+```python
+def _get_collection_info(self, collection_name: str):
+```
 
 Retrieves details of an existing collection.
 
@@ -107,7 +139,11 @@ collection.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage._validate_and_convert_vectors"></a>
 
-### `def _validate_and_convert_vectors(self, records: List[VectorRecord]):`
+### _validate_and_convert_vectors
+
+```python
+def _validate_and_convert_vectors(self, records: List[VectorRecord]):
+```
 
 Validates and converts VectorRecord instances to the format
 expected by Milvus.
@@ -122,7 +158,11 @@ expected by Milvus.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.add"></a>
 
-### `def add(self, records: List[VectorRecord], **kwargs):`
+### add
+
+```python
+def add(self, records: List[VectorRecord], **kwargs):
+```
 
 Adds a list of vectors to the specified collection.
 
@@ -132,7 +172,11 @@ Adds a list of vectors to the specified collection.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.delete"></a>
 
-### `def delete(self, ids: List[str], **kwargs: Any):`
+### delete
+
+```python
+def delete(self, ids: List[str], **kwargs: Any):
+```
 
 Deletes a list of vectors identified by their IDs from the
 storage. If unsure of ids you can first query the collection to grab
@@ -144,7 +188,11 @@ the corresponding data.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.status"></a>
 
-### `def status(self):`
+### status
+
+```python
+def status(self):
+```
 
 **Returns:**
 
@@ -153,7 +201,11 @@ collection's status.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.query"></a>
 
-### `def query(self, query: VectorDBQuery, **kwargs: Any):`
+### query
+
+```python
+def query(self, query: VectorDBQuery, **kwargs: Any):
+```
 
 Searches for similar vectors in the storage based on the provided
 query.
@@ -169,7 +221,11 @@ storage based on similarity to the query vector.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all vectors from the Milvus collection. This method
 deletes the existing collection and then recreates it with the same
@@ -177,13 +233,21 @@ schema to effectively remove all stored vectors.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 Load the collection hosted on cloud service.
 
 <a id="camel.storages.vectordb_storages.milvus.MilvusStorage.client"></a>
 
-### `def client(self):`
+### client
+
+```python
+def client(self):
+```
 
 **Returns:**
 

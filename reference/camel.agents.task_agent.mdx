@@ -2,7 +2,11 @@
 
 <a id="camel.agents.task_agent.TaskSpecifyAgent"></a>
 
-## `class TaskSpecifyAgent(ChatAgent):`
+## TaskSpecifyAgent
+
+```python
+class TaskSpecifyAgent(ChatAgent):
+```
 
 An agent that specifies a given task prompt by prompting the user to
 provide more details.
@@ -21,7 +25,7 @@ task_specify_prompt (TextPrompt): The prompt for specifying the task.
 
 <a id="camel.agents.task_agent.TaskSpecifyAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -36,7 +40,7 @@ def __init__(
 
 <a id="camel.agents.task_agent.TaskSpecifyAgent.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -59,7 +63,11 @@ Specify the given task prompt by providing more details.
 
 <a id="camel.agents.task_agent.TaskPlannerAgent"></a>
 
-## `class TaskPlannerAgent(ChatAgent):`
+## TaskPlannerAgent
+
+```python
+class TaskPlannerAgent(ChatAgent):
+```
 
 An agent that helps divide a task into subtasks based on the input
 task prompt.
@@ -75,7 +83,7 @@ the task into subtasks.
 
 <a id="camel.agents.task_agent.TaskPlannerAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -87,7 +95,11 @@ def __init__(
 
 <a id="camel.agents.task_agent.TaskPlannerAgent.run"></a>
 
-### `def run(self, task_prompt: Union[str, TextPrompt]):`
+### run
+
+```python
+def run(self, task_prompt: Union[str, TextPrompt]):
+```
 
 Generate subtasks based on the input task prompt.
 
@@ -101,7 +113,11 @@ Generate subtasks based on the input task prompt.
 
 <a id="camel.agents.task_agent.TaskCreationAgent"></a>
 
-## `class TaskCreationAgent(ChatAgent):`
+## TaskCreationAgent
+
+```python
+class TaskCreationAgent(ChatAgent):
+```
 
 An agent that helps create new tasks based on the objective
 and last completed task. Compared to :obj:`TaskPlannerAgent`,
@@ -124,7 +140,7 @@ create new tasks.
 
 <a id="camel.agents.task_agent.TaskCreationAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -140,7 +156,11 @@ def __init__(
 
 <a id="camel.agents.task_agent.TaskCreationAgent.run"></a>
 
-### `def run(self, task_list: List[str]):`
+### run
+
+```python
+def run(self, task_list: List[str]):
+```
 
 Generate subtasks based on the previous task results and
 incomplete task list.
@@ -155,7 +175,11 @@ incomplete task list.
 
 <a id="camel.agents.task_agent.TaskPrioritizationAgent"></a>
 
-## `class TaskPrioritizationAgent(ChatAgent):`
+## TaskPrioritizationAgent
+
+```python
+class TaskPrioritizationAgent(ChatAgent):
+```
 
 An agent that helps re-prioritize the task list and
 returns numbered prioritized list. Modified from
@@ -174,7 +198,7 @@ prioritize tasks.
 
 <a id="camel.agents.task_agent.TaskPrioritizationAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -188,7 +212,11 @@ def __init__(
 
 <a id="camel.agents.task_agent.TaskPrioritizationAgent.run"></a>
 
-### `def run(self, task_list: List[str]):`
+### run
+
+```python
+def run(self, task_list: List[str]):
+```
 
 Prioritize the task list given the agent objective.
 

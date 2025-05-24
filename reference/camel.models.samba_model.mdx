@@ -2,7 +2,11 @@
 
 <a id="camel.models.samba_model.SambaModel"></a>
 
-## `class SambaModel(BaseModelBackend):`
+## SambaModel
+
+```python
+class SambaModel(BaseModelBackend):
+```
 
 SambaNova service interface.
 
@@ -17,7 +21,7 @@ SambaNova service interface.
 
 <a id="camel.models.samba_model.SambaModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,7 +37,11 @@ def __init__(
 
 <a id="camel.models.samba_model.SambaModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -42,11 +50,15 @@ tokenization style.
 
 <a id="camel.models.samba_model.SambaModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 <a id="camel.models.samba_model.SambaModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -71,7 +83,11 @@ Runs SambaNova's service.
 
 <a id="camel.models.samba_model.SambaModel._run_streaming"></a>
 
-### `def _run_streaming(self, messages: List[OpenAIMessage]):`
+### _run_streaming
+
+```python
+def _run_streaming(self, messages: List[OpenAIMessage]):
+```
 
 Handles streaming inference with SambaNova's API.
 
@@ -87,7 +103,11 @@ API.
 
 <a id="camel.models.samba_model.SambaModel._run_non_streaming"></a>
 
-### `def _run_non_streaming(self, messages: List[OpenAIMessage]):`
+### _run_non_streaming
+
+```python
+def _run_non_streaming(self, messages: List[OpenAIMessage]):
+```
 
 Handles non-streaming inference with SambaNova's API.
 
@@ -102,7 +122,11 @@ response from the API.
 
 <a id="camel.models.samba_model.SambaModel._sambaverse_to_openai_response"></a>
 
-### `def _sambaverse_to_openai_response(self, samba_response: Dict[str, Any]):`
+### _sambaverse_to_openai_response
+
+```python
+def _sambaverse_to_openai_response(self, samba_response: Dict[str, Any]):
+```
 
 Converts SambaVerse API response into an OpenAI-compatible
 response.
@@ -118,7 +142,11 @@ aggregated response data.
 
 <a id="camel.models.samba_model.SambaModel.stream"></a>
 
-### `def stream(self):`
+### stream
+
+```python
+def stream(self):
+```
 
 **Returns:**
 

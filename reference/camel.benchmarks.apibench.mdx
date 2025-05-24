@@ -2,13 +2,21 @@
 
 <a id="camel.benchmarks.apibench.encode_question"></a>
 
-## `def encode_question(question: str, dataset_name: str):`
+## encode_question
+
+```python
+def encode_question(question: str, dataset_name: str):
+```
 
 Encode multiple prompt instructions into a single string.
 
 <a id="camel.benchmarks.apibench.APIBenchBenchmark"></a>
 
-## `class APIBenchBenchmark(BaseBenchmark):`
+## APIBenchBenchmark
+
+```python
+class APIBenchBenchmark(BaseBenchmark):
+```
 
 APIBench Benchmark adopted from `Gorilla: Large Language Model
 Connected with Massive APIs`
@@ -22,7 +30,7 @@ Connected with Massive APIs`
 
 <a id="camel.benchmarks.apibench.APIBenchBenchmark.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -43,13 +51,21 @@ Initialize the APIBench benchmark.
 
 <a id="camel.benchmarks.apibench.APIBenchBenchmark.download"></a>
 
-### `def download(self):`
+### download
+
+```python
+def download(self):
+```
 
 Download the APIBench dataset.
 
 <a id="camel.benchmarks.apibench.APIBenchBenchmark.load"></a>
 
-### `def load(self, dataset_name: str, force_download: bool = False):`
+### load
+
+```python
+def load(self, dataset_name: str, force_download: bool = False):
+```
 
 Load the APIBench Benchmark dataset.
 
@@ -60,7 +76,7 @@ Load the APIBench Benchmark dataset.
 
 <a id="camel.benchmarks.apibench.APIBenchBenchmark.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -82,23 +98,39 @@ Run the benchmark.
 
 <a id="camel.benchmarks.apibench.get_all_sub_trees"></a>
 
-## `def get_all_sub_trees(root_node):`
+## get_all_sub_trees
+
+```python
+def get_all_sub_trees(root_node):
+```
 
 <a id="camel.benchmarks.apibench.ast_parse"></a>
 
-## `def ast_parse(candidate):`
+## ast_parse
+
+```python
+def ast_parse(candidate):
+```
 
 <a id="camel.benchmarks.apibench.get_args"></a>
 
-## `def get_args(node, dataset_name):`
+## get_args
+
+```python
+def get_args(node, dataset_name):
+```
 
 <a id="camel.benchmarks.apibench.ast_check"></a>
 
-## `def ast_check(candidate_subtree_list, base_tree_list, dataset_name):`
+## ast_check
+
+```python
+def ast_check(candidate_subtree_list, base_tree_list, dataset_name):
+```
 
 <a id="camel.benchmarks.apibench.evaluate_response"></a>
 
-## `evaluate_response`
+## evaluate_response
 
 ```python
 def evaluate_response(

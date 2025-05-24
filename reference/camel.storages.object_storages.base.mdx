@@ -2,11 +2,19 @@
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage"></a>
 
-## `class BaseObjectStorage(ABC):`
+## BaseObjectStorage
+
+```python
+class BaseObjectStorage(ABC):
+```
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage.object_exists"></a>
 
-### `def object_exists(self, file_path: PurePath):`
+### object_exists
+
+```python
+def object_exists(self, file_path: PurePath):
+```
 
 Check if the object exists in the storage.
 
@@ -20,11 +28,19 @@ Check if the object exists in the storage.
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage.canonicalize_path"></a>
 
-### `def canonicalize_path(file_path: PurePath):`
+### canonicalize_path
+
+```python
+def canonicalize_path(file_path: PurePath):
+```
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage.put_file"></a>
 
-### `def put_file(self, file_path: PurePath, file: File):`
+### put_file
+
+```python
+def put_file(self, file_path: PurePath, file: File):
+```
 
 Put a file to the object storage.
 
@@ -35,7 +51,11 @@ Put a file to the object storage.
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage.get_file"></a>
 
-### `def get_file(self, file_path: PurePath):`
+### get_file
+
+```python
+def get_file(self, file_path: PurePath):
+```
 
 Get a file from the object storage.
 
@@ -49,7 +69,11 @@ Get a file from the object storage.
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage.upload_file"></a>
 
-### `def upload_file(self, local_file_path: Path, remote_file_path: PurePath):`
+### upload_file
+
+```python
+def upload_file(self, local_file_path: Path, remote_file_path: PurePath):
+```
 
 Upload a local file to the object storage.
 
@@ -60,7 +84,11 @@ Upload a local file to the object storage.
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage.download_file"></a>
 
-### `def download_file(self, local_file_path: Path, remote_file_path: PurePath):`
+### download_file
+
+```python
+def download_file(self, local_file_path: Path, remote_file_path: PurePath):
+```
 
 Download a file from the object storage to the local system.
 
@@ -71,20 +99,40 @@ Download a file from the object storage to the local system.
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage._put_file"></a>
 
-### `def _put_file(self, file_key: str, file: File):`
+### _put_file
+
+```python
+def _put_file(self, file_key: str, file: File):
+```
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage._get_file"></a>
 
-### `def _get_file(self, file_key: str, filename: str):`
+### _get_file
+
+```python
+def _get_file(self, file_key: str, filename: str):
+```
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage._object_exists"></a>
 
-### `def _object_exists(self, file_key: str):`
+### _object_exists
+
+```python
+def _object_exists(self, file_key: str):
+```
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage._upload_file"></a>
 
-### `def _upload_file(self, local_file_path: Path, remote_file_key: str):`
+### _upload_file
+
+```python
+def _upload_file(self, local_file_path: Path, remote_file_key: str):
+```
 
 <a id="camel.storages.object_storages.base.BaseObjectStorage._download_file"></a>
 
-### `def _download_file(self, local_file_path: Path, remote_file_key: str):`
+### _download_file
+
+```python
+def _download_file(self, local_file_path: Path, remote_file_key: str):
+```

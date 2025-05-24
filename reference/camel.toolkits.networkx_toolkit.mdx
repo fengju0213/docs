@@ -2,17 +2,25 @@
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit"></a>
 
-## `class NetworkXToolkit(BaseToolkit):`
+## NetworkXToolkit
+
+```python
+class NetworkXToolkit(BaseToolkit):
+```
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit._get_nx"></a>
 
-### `def _get_nx(cls):`
+### _get_nx
+
+```python
+def _get_nx(cls):
+```
 
 Lazily import networkx module when needed.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -30,7 +38,11 @@ Initializes the NetworkX graph client.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.add_node"></a>
 
-### `def add_node(self, node_id: str, **attributes: Any):`
+### add_node
+
+```python
+def add_node(self, node_id: str, **attributes: Any):
+```
 
 Adds a node to the graph.
 
@@ -41,7 +53,7 @@ Adds a node to the graph.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.add_edge"></a>
 
-### `add_edge`
+### add_edge
 
 ```python
 def add_edge(
@@ -62,7 +74,11 @@ Adds an edge to the graph.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.get_nodes"></a>
 
-### `def get_nodes(self):`
+### get_nodes
+
+```python
+def get_nodes(self):
+```
 
 **Returns:**
 
@@ -70,7 +86,11 @@ Adds an edge to the graph.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.get_edges"></a>
 
-### `def get_edges(self):`
+### get_edges
+
+```python
+def get_edges(self):
+```
 
 **Returns:**
 
@@ -78,7 +98,7 @@ Adds an edge to the graph.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.get_shortest_path"></a>
 
-### `get_shortest_path`
+### get_shortest_path
 
 ```python
 def get_shortest_path(
@@ -102,7 +122,11 @@ Finds the shortest path between two nodes.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.compute_centrality"></a>
 
-### `def compute_centrality(self):`
+### compute_centrality
+
+```python
+def compute_centrality(self):
+```
 
 **Returns:**
 
@@ -110,7 +134,11 @@ Finds the shortest path between two nodes.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.serialize_graph"></a>
 
-### `def serialize_graph(self):`
+### serialize_graph
+
+```python
+def serialize_graph(self):
+```
 
 **Returns:**
 
@@ -118,7 +146,11 @@ Finds the shortest path between two nodes.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.deserialize_graph"></a>
 
-### `def deserialize_graph(self, data: str):`
+### deserialize_graph
+
+```python
+def deserialize_graph(self, data: str):
+```
 
 Loads a graph from a serialized JSON string.
 
@@ -128,7 +160,11 @@ Loads a graph from a serialized JSON string.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.export_to_file"></a>
 
-### `def export_to_file(self, file_path: str):`
+### export_to_file
+
+```python
+def export_to_file(self, file_path: str):
+```
 
 Exports the graph to a file in JSON format.
 
@@ -138,7 +174,11 @@ Exports the graph to a file in JSON format.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.import_from_file"></a>
 
-### `def import_from_file(self, file_path: str):`
+### import_from_file
+
+```python
+def import_from_file(self, file_path: str):
+```
 
 Imports a graph from a JSON file.
 
@@ -148,13 +188,21 @@ Imports a graph from a JSON file.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.clear_graph"></a>
 
-### `def clear_graph(self):`
+### clear_graph
+
+```python
+def clear_graph(self):
+```
 
 Clears the current graph.
 
 <a id="camel.toolkits.networkx_toolkit.NetworkXToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

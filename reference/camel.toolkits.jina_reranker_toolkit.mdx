@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit"></a>
 
-## `class JinaRerankerToolkit(BaseToolkit):`
+## JinaRerankerToolkit
+
+```python
+class JinaRerankerToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for reranking documents
 using Jina Reranker.
@@ -12,7 +16,7 @@ based on their relevance to a given query using the Jina Reranker model.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -35,7 +39,11 @@ Initializes a new instance of the JinaRerankerToolkit class.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit._sort_documents"></a>
 
-### `def _sort_documents(self, documents: List[str], scores: List[float]):`
+### _sort_documents
+
+```python
+def _sort_documents(self, documents: List[str], scores: List[float]):
+```
 
 Sort documents by their scores in descending order.
 
@@ -50,7 +58,11 @@ Sort documents by their scores in descending order.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit._call_jina_api"></a>
 
-### `def _call_jina_api(self, data: Dict[str, Any]):`
+### _call_jina_api
+
+```python
+def _call_jina_api(self, data: Dict[str, Any]):
+```
 
 Makes a call to the JINA API for reranking.
 
@@ -65,7 +77,7 @@ the reranked documents and their relevance scores.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit.rerank_text_documents"></a>
 
-### `rerank_text_documents`
+### rerank_text_documents
 
 ```python
 def rerank_text_documents(
@@ -91,7 +103,7 @@ the reranked documents and their relevance scores.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit.rerank_image_documents"></a>
 
-### `rerank_image_documents`
+### rerank_image_documents
 
 ```python
 def rerank_image_documents(
@@ -117,7 +129,7 @@ the reranked image URLs/paths and their relevance scores.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit.image_query_text_documents"></a>
 
-### `image_query_text_documents`
+### image_query_text_documents
 
 ```python
 def image_query_text_documents(
@@ -143,7 +155,7 @@ the reranked documents and their relevance scores.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit.image_query_image_documents"></a>
 
-### `image_query_image_documents`
+### image_query_image_documents
 
 ```python
 def image_query_image_documents(
@@ -169,7 +181,11 @@ the reranked image URLs/paths and their relevance scores.
 
 <a id="camel.toolkits.jina_reranker_toolkit.JinaRerankerToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

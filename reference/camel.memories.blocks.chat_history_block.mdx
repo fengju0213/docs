@@ -2,7 +2,11 @@
 
 <a id="camel.memories.blocks.chat_history_block.ChatHistoryBlock"></a>
 
-## `class ChatHistoryBlock(MemoryBlock):`
+## ChatHistoryBlock
+
+```python
+class ChatHistoryBlock(MemoryBlock):
+```
 
 An implementation of the :obj:`MemoryBlock` abstract base class for
 maintaining a record of chat histories.
@@ -20,7 +24,7 @@ like to fetch.
 
 <a id="camel.memories.blocks.chat_history_block.ChatHistoryBlock.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -32,7 +36,11 @@ def __init__(
 
 <a id="camel.memories.blocks.chat_history_block.ChatHistoryBlock.retrieve"></a>
 
-### `def retrieve(self, window_size: Optional[int] = None):`
+### retrieve
+
+```python
+def retrieve(self, window_size: Optional[int] = None):
+```
 
 Retrieves records with a proper size for the agent from the memory
 based on the window size or fetches the entire chat history if no
@@ -48,7 +56,11 @@ window size is specified.
 
 <a id="camel.memories.blocks.chat_history_block.ChatHistoryBlock.write_records"></a>
 
-### `def write_records(self, records: List[MemoryRecord]):`
+### write_records
+
+```python
+def write_records(self, records: List[MemoryRecord]):
+```
 
 Writes memory records to the memory. Additionally, performs
 validation checks on the messages.
@@ -59,6 +71,10 @@ validation checks on the messages.
 
 <a id="camel.memories.blocks.chat_history_block.ChatHistoryBlock.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Clears all chat messages from the memory.

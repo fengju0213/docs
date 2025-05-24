@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit"></a>
 
-## `class VideoAnalysisToolkit(BaseToolkit):`
+## VideoAnalysisToolkit
+
+```python
+class VideoAnalysisToolkit(BaseToolkit):
+```
 
 A class for analysing videos with vision-language model.
 
@@ -18,7 +22,7 @@ A class for analysing videos with vision-language model.
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -35,14 +39,22 @@ def __init__(
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit.__del__"></a>
 
-### `def __del__(self):`
+### __del__
+
+```python
+def __del__(self):
+```
 
 Clean up temporary directories and files when the object is
 destroyed.
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit._extract_audio_from_video"></a>
 
-### `def _extract_audio_from_video(self, video_path: str, output_format: str = 'mp3'):`
+### _extract_audio_from_video
+
+```python
+def _extract_audio_from_video(self, video_path: str, output_format: str = 'mp3'):
+```
 
 Extract audio from the video.
 
@@ -57,13 +69,21 @@ Extract audio from the video.
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit._transcribe_audio"></a>
 
-### `def _transcribe_audio(self, audio_path: str):`
+### _transcribe_audio
+
+```python
+def _transcribe_audio(self, audio_path: str):
+```
 
 Transcribe the audio of the video.
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit._extract_keyframes"></a>
 
-### `def _extract_keyframes(self, video_path: str):`
+### _extract_keyframes
+
+```python
+def _extract_keyframes(self, video_path: str):
+```
 
 Extract keyframes from a video based on scene changes and
 regular intervals,and return them as PIL.Image.Image objects.
@@ -79,7 +99,11 @@ the extracted keyframes.
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit._normalize_frames"></a>
 
-### `def _normalize_frames(self, frames: List[Image.Image], target_width: int = 512):`
+### _normalize_frames
+
+```python
+def _normalize_frames(self, frames: List[Image.Image], target_width: int = 512):
+```
 
 Normalize the size of extracted frames.
 
@@ -94,7 +118,11 @@ Normalize the size of extracted frames.
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit.ask_question_about_video"></a>
 
-### `def ask_question_about_video(self, video_path: str, question: str):`
+### ask_question_about_video
+
+```python
+def ask_question_about_video(self, video_path: str, question: str):
+```
 
 Ask a question about the video.
 
@@ -109,7 +137,11 @@ Ask a question about the video.
 
 <a id="camel.toolkits.video_analysis_toolkit.VideoAnalysisToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

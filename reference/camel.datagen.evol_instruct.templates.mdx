@@ -2,7 +2,11 @@
 
 <a id="camel.datagen.evol_instruct.templates.BaseEvolInstructTemplates"></a>
 
-## `class BaseEvolInstructTemplates(ABC):`
+## BaseEvolInstructTemplates
+
+```python
+class BaseEvolInstructTemplates(ABC):
+```
 
 Abstract base class for evolution instruction templates.
 
@@ -14,19 +18,31 @@ Subclasses should define concrete templates for specific domains.
 
 <a id="camel.datagen.evol_instruct.templates.BaseEvolInstructTemplates.EVOL_METHODS"></a>
 
-### `def EVOL_METHODS(self):`
+### EVOL_METHODS
+
+```python
+def EVOL_METHODS(self):
+```
 
 A dictionary mapping evolution method keys to their descriptions.
 
 <a id="camel.datagen.evol_instruct.templates.BaseEvolInstructTemplates.STRATEGY"></a>
 
-### `def STRATEGY(self):`
+### STRATEGY
+
+```python
+def STRATEGY(self):
+```
 
 A dictionary defining strategies and their corresponding methods.
 
 <a id="camel.datagen.evol_instruct.templates.EvolInstructTemplates"></a>
 
-## `class EvolInstructTemplates(BaseEvolInstructTemplates):`
+## EvolInstructTemplates
+
+```python
+class EvolInstructTemplates(BaseEvolInstructTemplates):
+```
 
 Contains templates for EvolInstruct prompt transformations.
 
@@ -39,6 +55,10 @@ https://arxiv.org/abs/2411.00062
 
 <a id="camel.datagen.evol_instruct.templates.MathEvolInstructTemplates"></a>
 
-## `class MathEvolInstructTemplates(BaseEvolInstructTemplates):`
+## MathEvolInstructTemplates
+
+```python
+class MathEvolInstructTemplates(BaseEvolInstructTemplates):
+```
 
 Contains templates for MathEvolInstruct prompt transformations.

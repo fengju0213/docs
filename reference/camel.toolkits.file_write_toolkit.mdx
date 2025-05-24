@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit"></a>
 
-## `class FileWriteToolkit(BaseToolkit):`
+## FileWriteToolkit
+
+```python
+class FileWriteToolkit(BaseToolkit):
+```
 
 A toolkit for creating, writing, and modifying text in files.
 
@@ -13,7 +17,7 @@ and enhanced formatting options for specialized formats.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -36,7 +40,11 @@ Initialize the FileWriteToolkit.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._resolve_filepath"></a>
 
-### `def _resolve_filepath(self, file_path: str):`
+### _resolve_filepath
+
+```python
+def _resolve_filepath(self, file_path: str):
+```
 
 Convert the given string path to a Path object.
 
@@ -55,7 +63,7 @@ in downstream processing.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_text_file"></a>
 
-### `_write_text_file`
+### _write_text_file
 
 ```python
 def _write_text_file(
@@ -76,7 +84,11 @@ Write text content to a plaintext file.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._create_backup"></a>
 
-### `def _create_backup(self, file_path: Path):`
+### _create_backup
+
+```python
+def _create_backup(self, file_path: Path):
+```
 
 Create a backup of the file if it exists and backup is enabled.
 
@@ -86,7 +98,11 @@ Create a backup of the file if it exists and backup is enabled.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_docx_file"></a>
 
-### `def _write_docx_file(self, file_path: Path, content: str):`
+### _write_docx_file
+
+```python
+def _write_docx_file(self, file_path: Path, content: str):
+```
 
 Write text content to a DOCX file with default formatting.
 
@@ -97,7 +113,7 @@ Write text content to a DOCX file with default formatting.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_pdf_file"></a>
 
-### `_write_pdf_file`
+### _write_pdf_file
 
 ```python
 def _write_pdf_file(
@@ -117,7 +133,7 @@ Write text content to a PDF file with default formatting.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_csv_file"></a>
 
-### `_write_csv_file`
+### _write_csv_file
 
 ```python
 def _write_csv_file(
@@ -138,7 +154,7 @@ Write CSV content to a file.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_json_file"></a>
 
-### `_write_json_file`
+### _write_json_file
 
 ```python
 def _write_json_file(
@@ -159,7 +175,7 @@ Write JSON content to a file.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_yaml_file"></a>
 
-### `_write_yaml_file`
+### _write_yaml_file
 
 ```python
 def _write_yaml_file(
@@ -180,7 +196,7 @@ Write YAML content to a file.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_html_file"></a>
 
-### `_write_html_file`
+### _write_html_file
 
 ```python
 def _write_html_file(
@@ -201,7 +217,7 @@ Write text content to an HTML file.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._write_markdown_file"></a>
 
-### `_write_markdown_file`
+### _write_markdown_file
 
 ```python
 def _write_markdown_file(
@@ -222,7 +238,7 @@ Write text content to a Markdown file.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit.write_to_file"></a>
 
-### `write_to_file`
+### write_to_file
 
 ```python
 def write_to_file(
@@ -252,7 +268,11 @@ and HTML (.html, .htm).
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 
@@ -261,7 +281,11 @@ the available functions in this toolkit.
 
 <a id="camel.toolkits.file_write_toolkit.FileWriteToolkit._sanitize_filename"></a>
 
-### `def _sanitize_filename(self, filename: str):`
+### _sanitize_filename
+
+```python
+def _sanitize_filename(self, filename: str):
+```
 
 Sanitize a filename by replacing any character that is not
 alphanumeric, a dot (.), hyphen (-), or underscore (_) with an

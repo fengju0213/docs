@@ -2,7 +2,11 @@
 
 <a id="camel.models.mistral_model.MistralModel"></a>
 
-## `class MistralModel(BaseModelBackend):`
+## MistralModel
+
+```python
+class MistralModel(BaseModelBackend):
+```
 
 Mistral API in a unified BaseModelBackend interface.
 
@@ -18,7 +22,7 @@ Mistral API in a unified BaseModelBackend interface.
 
 <a id="camel.models.mistral_model.MistralModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -34,15 +38,27 @@ def __init__(
 
 <a id="camel.models.mistral_model.MistralModel._to_openai_response"></a>
 
-### `def _to_openai_response(self, response: 'ChatCompletionResponse'):`
+### _to_openai_response
+
+```python
+def _to_openai_response(self, response: 'ChatCompletionResponse'):
+```
 
 <a id="camel.models.mistral_model.MistralModel._to_mistral_chatmessage"></a>
 
-### `def _to_mistral_chatmessage(self, messages: List[OpenAIMessage]):`
+### _to_mistral_chatmessage
+
+```python
+def _to_mistral_chatmessage(self, messages: List[OpenAIMessage]):
+```
 
 <a id="camel.models.mistral_model.MistralModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -51,7 +67,7 @@ tokenization style.
 
 <a id="camel.models.mistral_model.MistralModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -76,7 +92,7 @@ Runs inference of Mistral chat completion.
 
 <a id="camel.models.mistral_model.MistralModel._prepare_request"></a>
 
-### `_prepare_request`
+### _prepare_request
 
 ```python
 def _prepare_request(
@@ -89,11 +105,19 @@ def _prepare_request(
 
 <a id="camel.models.mistral_model.MistralModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 <a id="camel.models.mistral_model.MistralModel.stream"></a>
 
-### `def stream(self):`
+### stream
+
+```python
+def stream(self):
+```
 
 **Returns:**
 

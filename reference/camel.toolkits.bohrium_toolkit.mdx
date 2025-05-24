@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit"></a>
 
-## `class BohriumToolkit(BaseToolkit):`
+## BohriumToolkit
+
+```python
+class BohriumToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for interacting with Bohrium services.
 
@@ -15,7 +19,7 @@ A class representing a toolkit for interacting with Bohrium services.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -29,13 +33,17 @@ def __init__(
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit._custom_insert"></a>
 
-### `def _custom_insert(self, data):`
+### _custom_insert
+
+```python
+def _custom_insert(self, data):
+```
 
 refactor insert method, ensure return jobId information
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.submit_job"></a>
 
-### `submit_job`
+### submit_job
 
 ```python
 def submit_job(
@@ -62,7 +70,11 @@ Submit a job to Bohrium.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.get_job_details"></a>
 
-### `def get_job_details(self, job_id: int):`
+### get_job_details
+
+```python
+def get_job_details(self, job_id: int):
+```
 
 Get details for a specific job.
 
@@ -76,7 +88,11 @@ Get details for a specific job.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.terminate_job"></a>
 
-### `def terminate_job(self, job_id: int):`
+### terminate_job
+
+```python
+def terminate_job(self, job_id: int):
+```
 
 Terminate a running job.
 
@@ -90,7 +106,11 @@ Terminate a running job.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.kill_job"></a>
 
-### `def kill_job(self, job_id: int):`
+### kill_job
+
+```python
+def kill_job(self, job_id: int):
+```
 
 Kill a running job.
 
@@ -104,7 +124,7 @@ Kill a running job.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.get_job_logs"></a>
 
-### `get_job_logs`
+### get_job_logs
 
 ```python
 def get_job_logs(
@@ -131,7 +151,11 @@ Get logs for a specific job.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.create_job_group"></a>
 
-### `def create_job_group(self, project_id: int, job_group_name: str):`
+### create_job_group
+
+```python
+def create_job_group(self, project_id: int, job_group_name: str):
+```
 
 Create a job group.
 
@@ -146,7 +170,11 @@ Create a job group.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.download_job_results"></a>
 
-### `def download_job_results(self, job_id: int, save_path: str):`
+### download_job_results
+
+```python
+def download_job_results(self, job_id: int, save_path: str):
+```
 
 Download the results of a job.
 
@@ -161,7 +189,11 @@ Download the results of a job.
 
 <a id="camel.toolkits.bohrium_toolkit.BohriumToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

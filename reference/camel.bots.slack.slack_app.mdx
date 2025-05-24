@@ -2,7 +2,11 @@
 
 <a id="camel.bots.slack.slack_app.SlackApp"></a>
 
-## `class SlackApp:`
+## SlackApp
+
+```python
+class SlackApp:
+```
 
 Represents a Slack app that is powered by a Slack Bolt `AsyncApp`.
 
@@ -22,7 +26,7 @@ handling events such as messages and mentions from Slack.
 
 <a id="camel.bots.slack.slack_app.SlackApp.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -52,7 +56,11 @@ and configuring event handlers and OAuth settings.
 
 <a id="camel.bots.slack.slack_app.SlackApp.setup_handlers"></a>
 
-### `def setup_handlers(self):`
+### setup_handlers
+
+```python
+def setup_handlers(self):
+```
 
 Sets up the event handlers for Slack events, such as `app_mention`
 and `message`.
@@ -62,7 +70,7 @@ with the Slack Bolt app to respond to Slack events.
 
 <a id="camel.bots.slack.slack_app.SlackApp.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -84,7 +92,11 @@ events.
 
 <a id="camel.bots.slack.slack_app.SlackApp.mention_me"></a>
 
-### `def mention_me(self, context: 'AsyncBoltContext', body: SlackEventBody):`
+### mention_me
+
+```python
+def mention_me(self, context: 'AsyncBoltContext', body: SlackEventBody):
+```
 
 Check if the bot is mentioned in the message.
 

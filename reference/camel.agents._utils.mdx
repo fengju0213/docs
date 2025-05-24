@@ -2,7 +2,11 @@
 
 <a id="camel.agents._utils.generate_tool_prompt"></a>
 
-## `def generate_tool_prompt(tool_schema_list: List[Dict[str, Any]]):`
+## generate_tool_prompt
+
+```python
+def generate_tool_prompt(tool_schema_list: List[Dict[str, Any]]):
+```
 
 **Returns:**
 
@@ -10,7 +14,11 @@
 
 <a id="camel.agents._utils.extract_tool_call"></a>
 
-## `def extract_tool_call(content: str):`
+## extract_tool_call
+
+```python
+def extract_tool_call(content: str):
+```
 
 Extract the tool call from the model response, if present.
 
@@ -25,7 +33,11 @@ otherwise None.
 
 <a id="camel.agents._utils.safe_model_dump"></a>
 
-## `def safe_model_dump(obj):`
+## safe_model_dump
+
+```python
+def safe_model_dump(obj):
+```
 
 Safely dump a Pydantic model to a dictionary.
 
@@ -34,19 +46,27 @@ otherwise it falls back to the `dict` method.
 
 <a id="camel.agents._utils.convert_to_function_tool"></a>
 
-## `def convert_to_function_tool(tool: Union[FunctionTool, Callable]):`
+## convert_to_function_tool
+
+```python
+def convert_to_function_tool(tool: Union[FunctionTool, Callable]):
+```
 
 Convert a tool to a FunctionTool from Callable.
 
 <a id="camel.agents._utils.convert_to_schema"></a>
 
-## `def convert_to_schema(tool: Union[FunctionTool, Callable, Dict[str, Any]]):`
+## convert_to_schema
+
+```python
+def convert_to_schema(tool: Union[FunctionTool, Callable, Dict[str, Any]]):
+```
 
 Convert a tool to a schema from Callable or FunctionTool.
 
 <a id="camel.agents._utils.get_info_dict"></a>
 
-## `get_info_dict`
+## get_info_dict
 
 ```python
 def get_info_dict(
@@ -76,4 +96,8 @@ Returns a dictionary containing information about the chat session.
 
 <a id="camel.agents._utils.handle_logprobs"></a>
 
-## `def handle_logprobs(choice: Choice):`
+## handle_logprobs
+
+```python
+def handle_logprobs(choice: Choice):
+```

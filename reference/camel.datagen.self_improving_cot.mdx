@@ -2,7 +2,11 @@
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline"></a>
 
-## `class SelfImprovingCoTPipeline:`
+## SelfImprovingCoTPipeline
+
+```python
+class SelfImprovingCoTPipeline:
+```
 
 Pipeline for generating self-taught reasoning traces
 using the self-improving methodology.
@@ -15,7 +19,7 @@ This implements the STaR paper's approach of:
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -56,15 +60,27 @@ Initialize the self-improving cot pipeline.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.safe_write_json"></a>
 
-### `def safe_write_json(self, file_path, data):`
+### safe_write_json
+
+```python
+def safe_write_json(self, file_path, data):
+```
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.clean_json"></a>
 
-### `def clean_json(self, data):`
+### clean_json
+
+```python
+def clean_json(self, data):
+```
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline._check_score_threshold"></a>
 
-### `def _check_score_threshold(self, scores: Dict[str, float]):`
+### _check_score_threshold
+
+```python
+def _check_score_threshold(self, scores: Dict[str, float]):
+```
 
 Check if scores meet the threshold requirements.
 
@@ -78,7 +94,11 @@ Check if scores meet the threshold requirements.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline._generate_feedback"></a>
 
-### `def _generate_feedback(self, scores: Dict[str, float]):`
+### _generate_feedback
+
+```python
+def _generate_feedback(self, scores: Dict[str, float]):
+```
 
 Generate feedback based on which dimensions need improvement.
 
@@ -92,7 +112,11 @@ Generate feedback based on which dimensions need improvement.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.generate_reasoning_trace"></a>
 
-### `def generate_reasoning_trace(self, problem: str):`
+### generate_reasoning_trace
+
+```python
+def generate_reasoning_trace(self, problem: str):
+```
 
 Generate initial reasoning trace for a given problem.
 
@@ -106,7 +130,7 @@ Generate initial reasoning trace for a given problem.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.evaluate_trace"></a>
 
-### `evaluate_trace`
+### evaluate_trace
 
 ```python
 def evaluate_trace(
@@ -141,7 +165,11 @@ the model's evaluation dimensions.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.generate_reasoning_trace_rejection"></a>
 
-### `def generate_reasoning_trace_rejection(self, problem: str):`
+### generate_reasoning_trace_rejection
+
+```python
+def generate_reasoning_trace_rejection(self, problem: str):
+```
 
 Generate multiple candidate reasoning traces for a problem and
 select the best one based on evaluation.
@@ -157,7 +185,7 @@ first candidate if none qualify.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.improve_trace"></a>
 
-### `improve_trace`
+### improve_trace
 
 ```python
 def improve_trace(
@@ -184,7 +212,11 @@ Generate improved reasoning trace based on feedback.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.validate_problem_format"></a>
 
-### `def validate_problem_format(self, problem: Dict):`
+### validate_problem_format
+
+```python
+def validate_problem_format(self, problem: Dict):
+```
 
 Validate that a problem dictionary has the required format.
 
@@ -194,7 +226,11 @@ Validate that a problem dictionary has the required format.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline._check_boxed_answers"></a>
 
-### `def _check_boxed_answers(self, solution: str, trace: str):`
+### _check_boxed_answers
+
+```python
+def _check_boxed_answers(self, solution: str, trace: str):
+```
 
 Check if the answer in the trace matches the solution using the
 configured patterns.
@@ -210,7 +246,11 @@ configured patterns.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.process_problem"></a>
 
-### `def process_problem(self, problem: Dict, rationalization: bool = False):`
+### process_problem
+
+```python
+def process_problem(self, problem: Dict, rationalization: bool = False):
+```
 
 Process a single problem through the self-improving cot pipeline.
 
@@ -225,7 +265,11 @@ Process a single problem through the self-improving cot pipeline.
 
 <a id="camel.datagen.self_improving_cot.SelfImprovingCoTPipeline.generate"></a>
 
-### `def generate(self, rationalization: bool = False):`
+### generate
+
+```python
+def generate(self, rationalization: bool = False):
+```
 
 Execute the self-improving cot pipeline on all problems.
 

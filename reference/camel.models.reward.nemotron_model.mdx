@@ -2,7 +2,11 @@
 
 <a id="camel.models.reward.nemotron_model.NemotronRewardModel"></a>
 
-## `class NemotronRewardModel(BaseRewardModel):`
+## NemotronRewardModel
+
+```python
+class NemotronRewardModel(BaseRewardModel):
+```
 
 Reward model based on the Nemotron model with OpenAI compatibility.
 
@@ -15,7 +19,7 @@ Reward model based on the Nemotron model with OpenAI compatibility.
 
 <a id="camel.models.reward.nemotron_model.NemotronRewardModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -28,7 +32,11 @@ def __init__(
 
 <a id="camel.models.reward.nemotron_model.NemotronRewardModel.evaluate"></a>
 
-### `def evaluate(self, messages: List[Dict[str, str]]):`
+### evaluate
+
+```python
+def evaluate(self, messages: List[Dict[str, str]]):
+```
 
 Evaluate the messages using the Nemotron model.
 
@@ -43,7 +51,11 @@ values.
 
 <a id="camel.models.reward.nemotron_model.NemotronRewardModel.get_scores_types"></a>
 
-### `def get_scores_types(self):`
+### get_scores_types
+
+```python
+def get_scores_types(self):
+```
 
 **Returns:**
 
@@ -51,7 +63,11 @@ values.
 
 <a id="camel.models.reward.nemotron_model.NemotronRewardModel._parse_scores"></a>
 
-### `def _parse_scores(self, response: ChatCompletion):`
+### _parse_scores
+
+```python
+def _parse_scores(self, response: ChatCompletion):
+```
 
 Parse the scores from the response.
 

@@ -2,11 +2,15 @@
 
 <a id="camel.retrievers.hybrid_retrival.HybridRetriever"></a>
 
-## `class HybridRetriever(BaseRetriever):`
+## HybridRetriever
+
+```python
+class HybridRetriever(BaseRetriever):
+```
 
 <a id="camel.retrievers.hybrid_retrival.HybridRetriever.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -26,7 +30,11 @@ vector storage.
 
 <a id="camel.retrievers.hybrid_retrival.HybridRetriever.process"></a>
 
-### `def process(self, content_input_path: str):`
+### process
+
+```python
+def process(self, content_input_path: str):
+```
 
 Processes the content input path for both vector and BM25
 retrievers.
@@ -37,7 +45,7 @@ retrievers.
 
 <a id="camel.retrievers.hybrid_retrival.HybridRetriever._sort_rrf_scores"></a>
 
-### `_sort_rrf_scores`
+### _sort_rrf_scores
 
 ```python
 def _sort_rrf_scores(
@@ -71,7 +79,7 @@ representing the sorted results. Each dictionary contains the
 
 <a id="camel.retrievers.hybrid_retrival.HybridRetriever.query"></a>
 
-### `query`
+### query
 
 ```python
 def query(

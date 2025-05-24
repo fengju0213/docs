@@ -2,7 +2,11 @@
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter"></a>
 
-## `class DockerInterpreter(BaseInterpreter):`
+## DockerInterpreter
+
+```python
+class DockerInterpreter(BaseInterpreter):
+```
 
 A class for executing code files or code strings in a docker container.
 
@@ -19,7 +23,7 @@ strings.
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -32,7 +36,11 @@ def __init__(
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter.__del__"></a>
 
-### `def __del__(self):`
+### __del__
+
+```python
+def __del__(self):
+```
 
 Destructor for the DockerInterpreter class.
 
@@ -41,19 +49,35 @@ interpreter is deleted.
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter._initialize_if_needed"></a>
 
-### `def _initialize_if_needed(self):`
+### _initialize_if_needed
+
+```python
+def _initialize_if_needed(self):
+```
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter._create_file_in_container"></a>
 
-### `def _create_file_in_container(self, content: str):`
+### _create_file_in_container
+
+```python
+def _create_file_in_container(self, content: str):
+```
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter._run_file_in_container"></a>
 
-### `def _run_file_in_container(self, file: Path, code_type: str):`
+### _run_file_in_container
+
+```python
+def _run_file_in_container(self, file: Path, code_type: str):
+```
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter.run"></a>
 
-### `def run(self, code: str, code_type: str):`
+### run
+
+```python
+def run(self, code: str, code_type: str):
+```
 
 Executes the given code in the container attached to the
 interpreter, and captures the stdout and stderr streams.
@@ -70,16 +94,28 @@ executed code.
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter._check_code_type"></a>
 
-### `def _check_code_type(self, code_type: str):`
+### _check_code_type
+
+```python
+def _check_code_type(self, code_type: str):
+```
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter.supported_code_types"></a>
 
-### `def supported_code_types(self):`
+### supported_code_types
+
+```python
+def supported_code_types(self):
+```
 
 Provides supported code types by the interpreter.
 
 <a id="camel.interpreters.docker_interpreter.DockerInterpreter.update_action_space"></a>
 
-### `def update_action_space(self, action_space: Dict[str, Any]):`
+### update_action_space
+
+```python
+def update_action_space(self, action_space: Dict[str, Any]):
+```
 
 Updates action space for *python* interpreter

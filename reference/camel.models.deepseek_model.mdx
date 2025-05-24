@@ -2,7 +2,11 @@
 
 <a id="camel.models.deepseek_model.DeepSeekModel"></a>
 
-## `class DeepSeekModel(OpenAICompatibleModel):`
+## DeepSeekModel
+
+```python
+class DeepSeekModel(OpenAICompatibleModel):
+```
 
 DeepSeek API in a unified OpenAICompatibleModel interface.
 
@@ -19,7 +23,7 @@ DeepSeek API in a unified OpenAICompatibleModel interface.
 
 <a id="camel.models.deepseek_model.DeepSeekModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -35,7 +39,7 @@ def __init__(
 
 <a id="camel.models.deepseek_model.DeepSeekModel._prepare_request"></a>
 
-### `_prepare_request`
+### _prepare_request
 
 ```python
 def _prepare_request(
@@ -48,13 +52,17 @@ def _prepare_request(
 
 <a id="camel.models.deepseek_model.DeepSeekModel._post_handle_response"></a>
 
-### `def _post_handle_response(self, response: ChatCompletion):`
+### _post_handle_response
+
+```python
+def _post_handle_response(self, response: ChatCompletion):
+```
 
 Handle reasoning content with <think> tags at the beginning.
 
 <a id="camel.models.deepseek_model.DeepSeekModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -79,4 +87,8 @@ Runs inference of DeepSeek chat completion.
 
 <a id="camel.models.deepseek_model.DeepSeekModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```

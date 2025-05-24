@@ -2,7 +2,11 @@
 
 <a id="camel.runtime.docker_runtime.DockerRuntime"></a>
 
-## `class DockerRuntime(BaseRuntime):`
+## DockerRuntime
+
+```python
+class DockerRuntime(BaseRuntime):
+```
 
 A class representing a runtime environment using Docker.
 This class automatically wraps functions to be executed
@@ -17,7 +21,7 @@ in a Docker container.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -31,7 +35,11 @@ def __init__(
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.mount"></a>
 
-### `def mount(self, path: str, mount_path: str):`
+### mount
+
+```python
+def mount(self, path: str, mount_path: str):
+```
 
 Mount a local directory to the container.
 
@@ -46,7 +54,11 @@ Mount a local directory to the container.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.copy"></a>
 
-### `def copy(self, source: str, dest: str):`
+### copy
+
+```python
+def copy(self, source: str, dest: str):
+```
 
 Copy a file or directory to the container.
 
@@ -61,7 +73,11 @@ Copy a file or directory to the container.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.add_task"></a>
 
-### `def add_task(self, task: TaskConfig):`
+### add_task
+
+```python
+def add_task(self, task: TaskConfig):
+```
 
 Add a task to run a command inside the container when building.
 Similar to `docker exec`.
@@ -76,7 +92,11 @@ Similar to `docker exec`.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.exec_run"></a>
 
-### `def exec_run(self, task: TaskConfig):`
+### exec_run
+
+```python
+def exec_run(self, task: TaskConfig):
+```
 
 Run a command inside this container. Similar to `docker exec`.
 
@@ -98,7 +118,11 @@ A bytestring containing response data otherwise.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.build"></a>
 
-### `def build(self, time_out: int = 15):`
+### build
+
+```python
+def build(self, time_out: int = 15):
+```
 
 Build the Docker container and start it.
 
@@ -112,7 +136,7 @@ Build the Docker container and start it.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.add"></a>
 
-### `add`
+### add
 
 ```python
 def add(
@@ -139,7 +163,11 @@ Add a function or list of functions to the runtime.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 **Returns:**
 
@@ -147,7 +175,11 @@ Add a function or list of functions to the runtime.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.stop"></a>
 
-### `def stop(self, remove: Optional[bool] = None):`
+### stop
+
+```python
+def stop(self, remove: Optional[bool] = None):
+```
 
 stop the Docker container.
 
@@ -161,7 +193,11 @@ stop the Docker container.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.ok"></a>
 
-### `def ok(self):`
+### ok
+
+```python
+def ok(self):
+```
 
 **Returns:**
 
@@ -169,7 +205,11 @@ stop the Docker container.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.wait"></a>
 
-### `def wait(self, timeout: int = 10):`
+### wait
+
+```python
+def wait(self, timeout: int = 10):
+```
 
 Wait for the API Server to be ready.
 
@@ -183,7 +223,11 @@ Wait for the API Server to be ready.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.__enter__"></a>
 
-### `def __enter__(self):`
+### __enter__
+
+```python
+def __enter__(self):
+```
 
 **Returns:**
 
@@ -191,7 +235,7 @@ Wait for the API Server to be ready.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.__exit__"></a>
 
-### `__exit__`
+### __exit__
 
 ```python
 def __exit__(
@@ -206,7 +250,11 @@ Exit the context manager.
 
 <a id="camel.runtime.docker_runtime.DockerRuntime.docs"></a>
 
-### `def docs(self):`
+### docs
+
+```python
+def docs(self):
+```
 
 **Returns:**
 

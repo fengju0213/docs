@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.memory_toolkit.MemoryToolkit"></a>
 
-## `class MemoryToolkit(BaseToolkit):`
+## MemoryToolkit
+
+```python
+class MemoryToolkit(BaseToolkit):
+```
 
 A toolkit that provides methods for saving, loading, and clearing a
 ChatAgent's memory.
@@ -20,11 +24,19 @@ function calling. Internally, it calls:
 
 <a id="camel.toolkits.memory_toolkit.MemoryToolkit.__init__"></a>
 
-### `def __init__(self, agent: 'ChatAgent', timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, agent: 'ChatAgent', timeout: Optional[float] = None):
+```
 
 <a id="camel.toolkits.memory_toolkit.MemoryToolkit.save"></a>
 
-### `def save(self, path: str):`
+### save
+
+```python
+def save(self, path: str):
+```
 
 Saves the agent's current memory to a JSON file.
 
@@ -38,7 +50,11 @@ Saves the agent's current memory to a JSON file.
 
 <a id="camel.toolkits.memory_toolkit.MemoryToolkit.load"></a>
 
-### `def load(self, memory_json: str):`
+### load
+
+```python
+def load(self, memory_json: str):
+```
 
 Loads memory into the agent from a JSON string.
 
@@ -52,7 +68,11 @@ Loads memory into the agent from a JSON string.
 
 <a id="camel.toolkits.memory_toolkit.MemoryToolkit.load_from_path"></a>
 
-### `def load_from_path(self, path: str):`
+### load_from_path
+
+```python
+def load_from_path(self, path: str):
+```
 
 Loads the agent's memory from a JSON file.
 
@@ -66,7 +86,11 @@ Loads the agent's memory from a JSON file.
 
 <a id="camel.toolkits.memory_toolkit.MemoryToolkit.clear_memory"></a>
 
-### `def clear_memory(self):`
+### clear_memory
+
+```python
+def clear_memory(self):
+```
 
 **Returns:**
 
@@ -74,7 +98,11 @@ Loads the agent's memory from a JSON file.
 
 <a id="camel.toolkits.memory_toolkit.MemoryToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

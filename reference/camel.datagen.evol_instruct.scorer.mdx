@@ -2,11 +2,19 @@
 
 <a id="camel.datagen.evol_instruct.scorer.BaseScorer"></a>
 
-## `class BaseScorer(ABC):`
+## BaseScorer
+
+```python
+class BaseScorer(ABC):
+```
 
 <a id="camel.datagen.evol_instruct.scorer.BaseScorer.score"></a>
 
-### `def score(self, reference_prompt: str, candidate_prompt: str):`
+### score
+
+```python
+def score(self, reference_prompt: str, candidate_prompt: str):
+```
 
 Compare a candidate prompt against a reference prompt and
 return a tuple of scores. The higher the score, the better.
@@ -14,15 +22,27 @@ For example, (diversity, difficulty, feasibility).
 
 <a id="camel.datagen.evol_instruct.scorer.MathScorer"></a>
 
-## `class MathScorer(BaseScorer):`
+## MathScorer
+
+```python
+class MathScorer(BaseScorer):
+```
 
 <a id="camel.datagen.evol_instruct.scorer.MathScorer.__init__"></a>
 
-### `def __init__(self, agent: Optional[ChatAgent] = None):`
+### __init__
+
+```python
+def __init__(self, agent: Optional[ChatAgent] = None):
+```
 
 <a id="camel.datagen.evol_instruct.scorer.MathScorer.score"></a>
 
-### `def score(self, reference_problem: str, new_problem: str):`
+### score
+
+```python
+def score(self, reference_problem: str, new_problem: str):
+```
 
 Evaluates the new math problem relative to the reference math
 problem.
@@ -39,15 +59,27 @@ validity, and solvability.
 
 <a id="camel.datagen.evol_instruct.scorer.GeneralScorer"></a>
 
-## `class GeneralScorer(BaseScorer):`
+## GeneralScorer
+
+```python
+class GeneralScorer(BaseScorer):
+```
 
 <a id="camel.datagen.evol_instruct.scorer.GeneralScorer.__init__"></a>
 
-### `def __init__(self, agent: Optional[ChatAgent] = None):`
+### __init__
+
+```python
+def __init__(self, agent: Optional[ChatAgent] = None):
+```
 
 <a id="camel.datagen.evol_instruct.scorer.GeneralScorer.score"></a>
 
-### `def score(self, reference_problem: str, new_problem: str):`
+### score
+
+```python
+def score(self, reference_problem: str, new_problem: str):
+```
 
 Evaluates the new problem against the reference problem using
 structured scoring.

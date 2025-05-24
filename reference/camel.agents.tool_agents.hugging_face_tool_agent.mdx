@@ -2,7 +2,11 @@
 
 <a id="camel.agents.tool_agents.hugging_face_tool_agent.HuggingFaceToolAgent"></a>
 
-## `class HuggingFaceToolAgent(BaseToolAgent):`
+## HuggingFaceToolAgent
+
+```python
+class HuggingFaceToolAgent(BaseToolAgent):
+```
 
 Tool agent for calling HuggingFace models. This agent is a wrapper
 around agents from the `transformers` library. For more information
@@ -16,7 +20,7 @@ at https://huggingface.co/docs/transformers/transformers_agents.
 
 <a id="camel.agents.tool_agents.hugging_face_tool_agent.HuggingFaceToolAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -29,13 +33,21 @@ def __init__(
 
 <a id="camel.agents.tool_agents.hugging_face_tool_agent.HuggingFaceToolAgent.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 Resets the chat history of the agent.
 
 <a id="camel.agents.tool_agents.hugging_face_tool_agent.HuggingFaceToolAgent.step"></a>
 
-### `def step(self, *args: Any, **kwargs: Any):`
+### step
+
+```python
+def step(self, *args: Any, **kwargs: Any):
+```
 
 Runs the agent in single execution mode.
 
@@ -49,7 +61,11 @@ Runs the agent in single execution mode.
 
 <a id="camel.agents.tool_agents.hugging_face_tool_agent.HuggingFaceToolAgent.chat"></a>
 
-### `def chat(self, *args: Any, **kwargs: Any):`
+### chat
+
+```python
+def chat(self, *args: Any, **kwargs: Any):
+```
 
 Runs the agent in a chat conversation mode.
 

@@ -2,7 +2,11 @@
 
 <a id="camel.datasets.base_generator.BaseGenerator"></a>
 
-## `class BaseGenerator(ABC, IterableDataset):`
+## BaseGenerator
+
+```python
+class BaseGenerator(ABC, IterableDataset):
+```
 
 Abstract base class for data generators.
 
@@ -11,7 +15,7 @@ Concrete implementations should provide specific generation strategies.
 
 <a id="camel.datasets.base_generator.BaseGenerator.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -35,7 +39,11 @@ Initialize the base generator.
 
 <a id="camel.datasets.base_generator.BaseGenerator.__aiter__"></a>
 
-### `def __aiter__(self):`
+### __aiter__
+
+```python
+def __aiter__(self):
+```
 
 Async iterator that yields datapoints dynamically.
 
@@ -49,7 +57,11 @@ DataPoint: A single datapoint.
 
 <a id="camel.datasets.base_generator.BaseGenerator.__iter__"></a>
 
-### `def __iter__(self):`
+### __iter__
+
+```python
+def __iter__(self):
+```
 
 Synchronous iterator for PyTorch IterableDataset compatibility.
 
@@ -63,7 +75,11 @@ DataPoint: A single datapoint.
 
 <a id="camel.datasets.base_generator.BaseGenerator.sample"></a>
 
-### `def sample(self):`
+### sample
+
+```python
+def sample(self):
+```
 
 **Returns:**
 
@@ -76,7 +92,11 @@ avoid blocking or runtime errors.
 
 <a id="camel.datasets.base_generator.BaseGenerator.save_to_jsonl"></a>
 
-### `def save_to_jsonl(self, file_path: Union[str, Path]):`
+### save_to_jsonl
+
+```python
+def save_to_jsonl(self, file_path: Union[str, Path]):
+```
 
 Saves the generated datapoints to a JSONL (JSON Lines) file.
 
@@ -88,7 +108,11 @@ Each datapoint is stored as a separate JSON object on a new line.
 
 <a id="camel.datasets.base_generator.BaseGenerator.flush"></a>
 
-### `def flush(self, file_path: Union[str, Path]):`
+### flush
+
+```python
+def flush(self, file_path: Union[str, Path]):
+```
 
 Flush the current data to a JSONL file and clear the data.
 
@@ -99,7 +123,11 @@ Flush the current data to a JSONL file and clear the data.
 
 <a id="camel.datasets.base_generator.BaseGenerator._init_from_jsonl"></a>
 
-### `def _init_from_jsonl(self, file_path: Path):`
+### _init_from_jsonl
+
+```python
+def _init_from_jsonl(self, file_path: Path):
+```
 
 Load and parse a dataset from a JSONL file.
 

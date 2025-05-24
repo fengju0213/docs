@@ -2,7 +2,11 @@
 
 <a id="camel.types.unified_model_type.UnifiedModelType"></a>
 
-## `class UnifiedModelType(str):`
+## UnifiedModelType
+
+```python
+class UnifiedModelType(str):
+```
 
 Class used for support both :obj:`ModelType` and :obj:`str` to be used
 to represent a model type in a unified way. This class is a subclass of
@@ -14,159 +18,267 @@ to represent a model type in a unified way. This class is a subclass of
 
 <a id="camel.types.unified_model_type.UnifiedModelType.__new__"></a>
 
-### `def __new__(cls, value: Union['ModelType', str]):`
+### __new__
+
+```python
+def __new__(cls, value: Union['ModelType', str]):
+```
 
 <a id="camel.types.unified_model_type.UnifiedModelType.__init__"></a>
 
-### `def __init__(self, value: Union['ModelType', str]):`
+### __init__
+
+```python
+def __init__(self, value: Union['ModelType', str]):
+```
 
 <a id="camel.types.unified_model_type.UnifiedModelType.value_for_tiktoken"></a>
 
-### `def value_for_tiktoken(self):`
+### value_for_tiktoken
+
+```python
+def value_for_tiktoken(self):
+```
 
 Returns the model name for TikToken.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.token_limit"></a>
 
-### `def token_limit(self):`
+### token_limit
+
+```python
+def token_limit(self):
+```
 
 Returns the token limit for the model. Here we set the default
 value as `999_999_999` if it's not provided from `model_config_dict`
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_openai"></a>
 
-### `def is_openai(self):`
+### is_openai
+
+```python
+def is_openai(self):
+```
 
 Returns whether the model is an OpenAI model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_aws_bedrock"></a>
 
-### `def is_aws_bedrock(self):`
+### is_aws_bedrock
+
+```python
+def is_aws_bedrock(self):
+```
 
 Returns whether the model is an AWS Bedrock model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_anthropic"></a>
 
-### `def is_anthropic(self):`
+### is_anthropic
+
+```python
+def is_anthropic(self):
+```
 
 Returns whether the model is an Anthropic model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_azure_openai"></a>
 
-### `def is_azure_openai(self):`
+### is_azure_openai
+
+```python
+def is_azure_openai(self):
+```
 
 Returns whether the model is an Azure OpenAI model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_groq"></a>
 
-### `def is_groq(self):`
+### is_groq
+
+```python
+def is_groq(self):
+```
 
 Returns whether the model is a Groq served model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_openrouter"></a>
 
-### `def is_openrouter(self):`
+### is_openrouter
+
+```python
+def is_openrouter(self):
+```
 
 Returns whether the model is a OpenRouter served model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_lmstudio"></a>
 
-### `def is_lmstudio(self):`
+### is_lmstudio
+
+```python
+def is_lmstudio(self):
+```
 
 Returns whether the model is a LMStudio served model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_ppio"></a>
 
-### `def is_ppio(self):`
+### is_ppio
+
+```python
+def is_ppio(self):
+```
 
 Returns whether the model is a PPIO served model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_zhipuai"></a>
 
-### `def is_zhipuai(self):`
+### is_zhipuai
+
+```python
+def is_zhipuai(self):
+```
 
 Returns whether the model is a Zhipuai model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_gemini"></a>
 
-### `def is_gemini(self):`
+### is_gemini
+
+```python
+def is_gemini(self):
+```
 
 Returns whether the model is a Gemini model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_mistral"></a>
 
-### `def is_mistral(self):`
+### is_mistral
+
+```python
+def is_mistral(self):
+```
 
 Returns whether the model is a Mistral model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_netmind"></a>
 
-### `def is_netmind(self):`
+### is_netmind
+
+```python
+def is_netmind(self):
+```
 
 Returns whether the model is a Netmind model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_reka"></a>
 
-### `def is_reka(self):`
+### is_reka
+
+```python
+def is_reka(self):
+```
 
 Returns whether the model is a Reka model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_cohere"></a>
 
-### `def is_cohere(self):`
+### is_cohere
+
+```python
+def is_cohere(self):
+```
 
 Returns whether the model is a Cohere model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_yi"></a>
 
-### `def is_yi(self):`
+### is_yi
+
+```python
+def is_yi(self):
+```
 
 Returns whether the model is a Yi model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_qwen"></a>
 
-### `def is_qwen(self):`
+### is_qwen
+
+```python
+def is_qwen(self):
+```
 
 Returns whether the model is a Qwen model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_internlm"></a>
 
-### `def is_internlm(self):`
+### is_internlm
+
+```python
+def is_internlm(self):
+```
 
 Returns whether the model is a InternLM model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_modelscope"></a>
 
-### `def is_modelscope(self):`
+### is_modelscope
+
+```python
+def is_modelscope(self):
+```
 
 Returns whether the model is a ModelScope serverd model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_moonshot"></a>
 
-### `def is_moonshot(self):`
+### is_moonshot
+
+```python
+def is_moonshot(self):
+```
 
 Returns whether this platform is Moonshot model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_novita"></a>
 
-### `def is_novita(self):`
+### is_novita
+
+```python
+def is_novita(self):
+```
 
 Returns whether the model is a Novita served model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.is_watsonx"></a>
 
-### `def is_watsonx(self):`
+### is_watsonx
+
+```python
+def is_watsonx(self):
+```
 
 Returns whether the model is a WatsonX served model.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.support_native_structured_output"></a>
 
-### `def support_native_structured_output(self):`
+### support_native_structured_output
+
+```python
+def support_native_structured_output(self):
+```
 
 Returns whether the model supports native structured output.
 
 <a id="camel.types.unified_model_type.UnifiedModelType.support_native_tool_calling"></a>
 
-### `def support_native_tool_calling(self):`
+### support_native_tool_calling
+
+```python
+def support_native_tool_calling(self):
+```
 
 Returns whether the model supports native tool calling.

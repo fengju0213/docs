@@ -2,7 +2,11 @@
 
 <a id="camel.prompts.prompt_templates.PromptTemplateGenerator"></a>
 
-## `class PromptTemplateGenerator:`
+## PromptTemplateGenerator
+
+```python
+class PromptTemplateGenerator:
+```
 
 A class for generating prompt templates for tasks.
 
@@ -12,7 +16,7 @@ A class for generating prompt templates for tasks.
 
 <a id="camel.prompts.prompt_templates.PromptTemplateGenerator.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -23,7 +27,11 @@ def __init__(
 
 <a id="camel.prompts.prompt_templates.PromptTemplateGenerator.get_prompt_from_key"></a>
 
-### `def get_prompt_from_key(self, task_type: TaskType, key: Any):`
+### get_prompt_from_key
+
+```python
+def get_prompt_from_key(self, task_type: TaskType, key: Any):
+```
 
 Generates a text prompt using the specified :obj:`task_type` and
 :obj:`key`.
@@ -39,7 +47,11 @@ Generates a text prompt using the specified :obj:`task_type` and
 
 <a id="camel.prompts.prompt_templates.PromptTemplateGenerator.get_system_prompt"></a>
 
-### `def get_system_prompt(self, task_type: TaskType, role_type: RoleType):`
+### get_system_prompt
+
+```python
+def get_system_prompt(self, task_type: TaskType, role_type: RoleType):
+```
 
 Generates a text prompt for the system role, using the specified
 :obj:`task_type` and :obj:`role_type`.
@@ -55,7 +67,11 @@ Generates a text prompt for the system role, using the specified
 
 <a id="camel.prompts.prompt_templates.PromptTemplateGenerator.get_generate_tasks_prompt"></a>
 
-### `def get_generate_tasks_prompt(self, task_type: TaskType):`
+### get_generate_tasks_prompt
+
+```python
+def get_generate_tasks_prompt(self, task_type: TaskType):
+```
 
 Gets the prompt for generating tasks for a given task type.
 
@@ -69,7 +85,11 @@ Gets the prompt for generating tasks for a given task type.
 
 <a id="camel.prompts.prompt_templates.PromptTemplateGenerator.get_task_specify_prompt"></a>
 
-### `def get_task_specify_prompt(self, task_type: TaskType):`
+### get_task_specify_prompt
+
+```python
+def get_task_specify_prompt(self, task_type: TaskType):
+```
 
 Gets the prompt for specifying a task for a given task type.
 

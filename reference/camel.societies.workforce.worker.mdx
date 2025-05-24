@@ -2,7 +2,11 @@
 
 <a id="camel.societies.workforce.worker.Worker"></a>
 
-## `class Worker(BaseNode, ABC):`
+## Worker
+
+```python
+class Worker(BaseNode, ABC):
+```
 
 A worker node that works on tasks. It is the basic unit of task
 processing in the workforce system.
@@ -13,22 +17,42 @@ processing in the workforce system.
 
 <a id="camel.societies.workforce.worker.Worker.__init__"></a>
 
-### `def __init__(self, description: str):`
+### __init__
+
+```python
+def __init__(self, description: str):
+```
 
 <a id="camel.societies.workforce.worker.Worker.__repr__"></a>
 
-### `def __repr__(self):`
+### __repr__
+
+```python
+def __repr__(self):
+```
 
 <a id="camel.societies.workforce.worker.Worker._get_dep_tasks_info"></a>
 
-### `def _get_dep_tasks_info(dependencies: List[Task]):`
+### _get_dep_tasks_info
+
+```python
+def _get_dep_tasks_info(dependencies: List[Task]):
+```
 
 <a id="camel.societies.workforce.worker.Worker.set_channel"></a>
 
-### `def set_channel(self, channel: TaskChannel):`
+### set_channel
+
+```python
+def set_channel(self, channel: TaskChannel):
+```
 
 <a id="camel.societies.workforce.worker.Worker.stop"></a>
 
-### `def stop(self):`
+### stop
+
+```python
+def stop(self):
+```
 
 Stop the worker.

@@ -2,7 +2,11 @@
 
 <a id="camel.tasks.task.parse_response"></a>
 
-## `def parse_response(response: str, task_id: Optional[str] = None):`
+## parse_response
+
+```python
+def parse_response(response: str, task_id: Optional[str] = None):
+```
 
 Parse Tasks from a response.
 
@@ -17,15 +21,27 @@ Parse Tasks from a response.
 
 <a id="camel.tasks.task.TaskState"></a>
 
-## `class TaskState(str, Enum):`
+## TaskState
+
+```python
+class TaskState(str, Enum):
+```
 
 <a id="camel.tasks.task.TaskState.states"></a>
 
-### `def states(cls):`
+### states
+
+```python
+def states(cls):
+```
 
 <a id="camel.tasks.task.Task"></a>
 
-## `class Task(BaseModel):`
+## Task
+
+```python
+class Task(BaseModel):
+```
 
 Task is specific assignment that can be passed to a agent.
 
@@ -41,7 +57,11 @@ result: The answer for the task.
 
 <a id="camel.tasks.task.Task.from_message"></a>
 
-### `def from_message(cls, message: BaseMessage):`
+### from_message
+
+```python
+def from_message(cls, message: BaseMessage):
+```
 
 Create a task from a message.
 
@@ -55,19 +75,31 @@ Create a task from a message.
 
 <a id="camel.tasks.task.Task.to_message"></a>
 
-### `def to_message():`
+### to_message
+
+```python
+def to_message():
+```
 
 Convert a Task to a Message.
 
 <a id="camel.tasks.task.Task.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 Reset Task to initial state.
 
 <a id="camel.tasks.task.Task.update_result"></a>
 
-### `def update_result(self, result: str):`
+### update_result
+
+```python
+def update_result(self, result: str):
+```
 
 Set task result and mark the task as DONE.
 
@@ -77,7 +109,11 @@ Set task result and mark the task as DONE.
 
 <a id="camel.tasks.task.Task.set_id"></a>
 
-### `def set_id(self, id: str):`
+### set_id
+
+```python
+def set_id(self, id: str):
+```
 
 Set the id of the task.
 
@@ -87,7 +123,11 @@ Set the id of the task.
 
 <a id="camel.tasks.task.Task.set_state"></a>
 
-### `def set_state(self, state: TaskState):`
+### set_state
+
+```python
+def set_state(self, state: TaskState):
+```
 
 Recursively set the state of the task and its subtasks.
 
@@ -97,7 +137,11 @@ Recursively set the state of the task and its subtasks.
 
 <a id="camel.tasks.task.Task.add_subtask"></a>
 
-### `def add_subtask(self, task: 'Task'):`
+### add_subtask
+
+```python
+def add_subtask(self, task: 'Task'):
+```
 
 Add a subtask to the current task.
 
@@ -107,7 +151,11 @@ Add a subtask to the current task.
 
 <a id="camel.tasks.task.Task.remove_subtask"></a>
 
-### `def remove_subtask(self, id: str):`
+### remove_subtask
+
+```python
+def remove_subtask(self, id: str):
+```
 
 Remove a subtask from the current task.
 
@@ -117,13 +165,21 @@ Remove a subtask from the current task.
 
 <a id="camel.tasks.task.Task.get_running_task"></a>
 
-### `def get_running_task(self):`
+### get_running_task
+
+```python
+def get_running_task(self):
+```
 
 Get RUNNING task.
 
 <a id="camel.tasks.task.Task.to_string"></a>
 
-### `def to_string(self, indent: str = '', state: bool = False):`
+### to_string
+
+```python
+def to_string(self, indent: str = '', state: bool = False):
+```
 
 Convert task to a string.
 
@@ -138,7 +194,11 @@ Convert task to a string.
 
 <a id="camel.tasks.task.Task.get_result"></a>
 
-### `def get_result(self, indent: str = ''):`
+### get_result
+
+```python
+def get_result(self, indent: str = ''):
+```
 
 Get task result to a string.
 
@@ -152,7 +212,7 @@ Get task result to a string.
 
 <a id="camel.tasks.task.Task.decompose"></a>
 
-### `decompose`
+### decompose
 
 ```python
 def decompose(
@@ -178,7 +238,7 @@ generation and planner of agent.
 
 <a id="camel.tasks.task.Task.compose"></a>
 
-### `compose`
+### compose
 
 ```python
 def compose(
@@ -199,13 +259,21 @@ compose task result by the sub-tasks.
 
 <a id="camel.tasks.task.Task.get_depth"></a>
 
-### `def get_depth(self):`
+### get_depth
+
+```python
+def get_depth(self):
+```
 
 Get current task depth.
 
 <a id="camel.tasks.task.TaskManager"></a>
 
-## `class TaskManager:`
+## TaskManager
+
+```python
+class TaskManager:
+```
 
 TaskManager is used to manage tasks.
 
@@ -221,29 +289,49 @@ current_task_id: The current "RUNNING" task.id.
 
 <a id="camel.tasks.task.TaskManager.__init__"></a>
 
-### `def __init__(self, task: Task):`
+### __init__
+
+```python
+def __init__(self, task: Task):
+```
 
 <a id="camel.tasks.task.TaskManager.gen_task_id"></a>
 
-### `def gen_task_id(self):`
+### gen_task_id
+
+```python
+def gen_task_id(self):
+```
 
 Generate a new task id.
 
 <a id="camel.tasks.task.TaskManager.exist"></a>
 
-### `def exist(self, task_id: str):`
+### exist
+
+```python
+def exist(self, task_id: str):
+```
 
 Check if a task with the given id exists.
 
 <a id="camel.tasks.task.TaskManager.current_task"></a>
 
-### `def current_task(self):`
+### current_task
+
+```python
+def current_task(self):
+```
 
 Get the current task.
 
 <a id="camel.tasks.task.TaskManager.topological_sort"></a>
 
-### `def topological_sort(tasks: List[Task]):`
+### topological_sort
+
+```python
+def topological_sort(tasks: List[Task]):
+```
 
 Sort a list of tasks by topological way.
 
@@ -257,7 +345,7 @@ Sort a list of tasks by topological way.
 
 <a id="camel.tasks.task.TaskManager.set_tasks_dependence"></a>
 
-### `set_tasks_dependence`
+### set_tasks_dependence
 
 ```python
 def set_tasks_dependence(
@@ -280,13 +368,17 @@ Two relationships are currently supported: serial and parallel.
 
 <a id="camel.tasks.task.TaskManager.add_tasks"></a>
 
-### `def add_tasks(self, tasks: Union[Task, List[Task]]):`
+### add_tasks
+
+```python
+def add_tasks(self, tasks: Union[Task, List[Task]]):
+```
 
 self.tasks and self.task_map will be updated by the input tasks.
 
 <a id="camel.tasks.task.TaskManager.evolve"></a>
 
-### `evolve`
+### evolve
 
 ```python
 def evolve(

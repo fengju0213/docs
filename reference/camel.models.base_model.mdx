@@ -2,7 +2,11 @@
 
 <a id="camel.models.base_model.ModelBackendMeta"></a>
 
-## `class ModelBackendMeta(ABCMeta):`
+## ModelBackendMeta
+
+```python
+class ModelBackendMeta(ABCMeta):
+```
 
 Metaclass that automatically preprocesses messages in run method.
 
@@ -12,7 +16,7 @@ are sent to the model.
 
 <a id="camel.models.base_model.ModelBackendMeta.__new__"></a>
 
-### `__new__`
+### __new__
 
 ```python
 def __new__(
@@ -27,7 +31,11 @@ Wraps run method with preprocessing if it exists in the class.
 
 <a id="camel.models.base_model.BaseModelBackend"></a>
 
-## `class BaseModelBackend(ABC):`
+## BaseModelBackend
+
+```python
+class BaseModelBackend(ABC):
+```
 
 Base class for different model backends.
 It may be OpenAI API, a local LLM, a stub for unit tests, etc.
@@ -43,7 +51,7 @@ It may be OpenAI API, a local LLM, a stub for unit tests, etc.
 
 <a id="camel.models.base_model.BaseModelBackend.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -59,7 +67,11 @@ def __init__(
 
 <a id="camel.models.base_model.BaseModelBackend.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -68,7 +80,11 @@ tokenization style.
 
 <a id="camel.models.base_model.BaseModelBackend.preprocess_messages"></a>
 
-### `def preprocess_messages(self, messages: List[OpenAIMessage]):`
+### preprocess_messages
+
+```python
+def preprocess_messages(self, messages: List[OpenAIMessage]):
+```
 
 Preprocess messages before sending to model API.
 Removes thinking content from assistant and user messages.
@@ -85,7 +101,7 @@ detected.
 
 <a id="camel.models.base_model.BaseModelBackend._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -98,7 +114,7 @@ def _run(
 
 <a id="camel.models.base_model.BaseModelBackend.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -125,11 +141,19 @@ Runs the query to the backend model.
 
 <a id="camel.models.base_model.BaseModelBackend.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 <a id="camel.models.base_model.BaseModelBackend.count_tokens_from_messages"></a>
 
-### `def count_tokens_from_messages(self, messages: List[OpenAIMessage]):`
+### count_tokens_from_messages
+
+```python
+def count_tokens_from_messages(self, messages: List[OpenAIMessage]):
+```
 
 Count the number of tokens in the messages using the specific
 tokenizer.
@@ -144,11 +168,19 @@ tokenizer.
 
 <a id="camel.models.base_model.BaseModelBackend._to_chat_completion"></a>
 
-### `def _to_chat_completion(self, response: ParsedChatCompletion):`
+### _to_chat_completion
+
+```python
+def _to_chat_completion(self, response: ParsedChatCompletion):
+```
 
 <a id="camel.models.base_model.BaseModelBackend.token_limit"></a>
 
-### `def token_limit(self):`
+### token_limit
+
+```python
+def token_limit(self):
+```
 
 **Returns:**
 
@@ -156,7 +188,11 @@ tokenizer.
 
 <a id="camel.models.base_model.BaseModelBackend.stream"></a>
 
-### `def stream(self):`
+### stream
+
+```python
+def stream(self):
+```
 
 **Returns:**
 

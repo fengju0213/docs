@@ -2,7 +2,11 @@
 
 <a id="camel.memories.blocks.vectordb_block.VectorDBBlock"></a>
 
-## `class VectorDBBlock(MemoryBlock):`
+## VectorDBBlock
+
+```python
+class VectorDBBlock(MemoryBlock):
+```
 
 An implementation of the :obj:`MemoryBlock` abstract base class for
 maintaining and retrieving information using vector embeddings within a
@@ -15,7 +19,7 @@ vector database.
 
 <a id="camel.memories.blocks.vectordb_block.VectorDBBlock.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -27,7 +31,11 @@ def __init__(
 
 <a id="camel.memories.blocks.vectordb_block.VectorDBBlock.retrieve"></a>
 
-### `def retrieve(self, keyword: str, limit: int = 3):`
+### retrieve
+
+```python
+def retrieve(self, keyword: str, limit: int = 3):
+```
 
 Retrieves similar records from the vector database based on the
 content of the keyword.
@@ -44,7 +52,11 @@ vector database based on similarity to :obj:`current_state`.
 
 <a id="camel.memories.blocks.vectordb_block.VectorDBBlock.write_records"></a>
 
-### `def write_records(self, records: List[MemoryRecord]):`
+### write_records
+
+```python
+def write_records(self, records: List[MemoryRecord]):
+```
 
 Converts the provided chat messages into vector representations and
 writes them to the vector database.
@@ -55,6 +67,10 @@ writes them to the vector database.
 
 <a id="camel.memories.blocks.vectordb_block.VectorDBBlock.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the vector database memory.

@@ -2,7 +2,11 @@
 
 <a id="camel.retrievers.auto_retriever.AutoRetriever"></a>
 
-## `class AutoRetriever:`
+## AutoRetriever
+
+```python
+class AutoRetriever:
+```
 
 Facilitates the automatic retrieval of information using a
 query-based approach with pre-defined elements.
@@ -19,7 +23,7 @@ queries and documents. Defaults to `OpenAIEmbedding()`.
 
 <a id="camel.retrievers.auto_retriever.AutoRetriever.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,7 +37,11 @@ def __init__(
 
 <a id="camel.retrievers.auto_retriever.AutoRetriever._initialize_vector_storage"></a>
 
-### `def _initialize_vector_storage(self, collection_name: Optional[str] = None):`
+### _initialize_vector_storage
+
+```python
+def _initialize_vector_storage(self, collection_name: Optional[str] = None):
+```
 
 Sets up and returns a vector storage instance with specified
 parameters.
@@ -48,7 +56,11 @@ parameters.
 
 <a id="camel.retrievers.auto_retriever.AutoRetriever._collection_name_generator"></a>
 
-### `def _collection_name_generator(self, content: Union[str, 'Element']):`
+### _collection_name_generator
+
+```python
+def _collection_name_generator(self, content: Union[str, 'Element']):
+```
 
 Generates a valid collection name from a given file path or URL.
 
@@ -62,7 +74,7 @@ Generates a valid collection name from a given file path or URL.
 
 <a id="camel.retrievers.auto_retriever.AutoRetriever.run_vector_retriever"></a>
 
-### `run_vector_retriever`
+### run_vector_retriever
 
 ```python
 def run_vector_retriever(

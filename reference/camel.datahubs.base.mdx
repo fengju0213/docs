@@ -2,13 +2,21 @@
 
 <a id="camel.datahubs.base.BaseDatasetManager"></a>
 
-## `class BaseDatasetManager(ABC):`
+## BaseDatasetManager
+
+```python
+class BaseDatasetManager(ABC):
+```
 
 Abstract base class for dataset managers.
 
 <a id="camel.datahubs.base.BaseDatasetManager.create_dataset"></a>
 
-### `def create_dataset(self, name: str, **kwargs: Any):`
+### create_dataset
+
+```python
+def create_dataset(self, name: str, **kwargs: Any):
+```
 
 Creates a new dataset.
 
@@ -23,7 +31,7 @@ Creates a new dataset.
 
 <a id="camel.datahubs.base.BaseDatasetManager.list_datasets"></a>
 
-### `list_datasets`
+### list_datasets
 
 ```python
 def list_datasets(
@@ -48,7 +56,11 @@ Lists all datasets for the current user.
 
 <a id="camel.datahubs.base.BaseDatasetManager.delete_dataset"></a>
 
-### `def delete_dataset(self, dataset_name: str, **kwargs: Any):`
+### delete_dataset
+
+```python
+def delete_dataset(self, dataset_name: str, **kwargs: Any):
+```
 
 Deletes a dataset.
 
@@ -59,7 +71,7 @@ Deletes a dataset.
 
 <a id="camel.datahubs.base.BaseDatasetManager.add_records"></a>
 
-### `add_records`
+### add_records
 
 ```python
 def add_records(
@@ -82,7 +94,7 @@ Adds records to a dataset.
 
 <a id="camel.datahubs.base.BaseDatasetManager.update_records"></a>
 
-### `update_records`
+### update_records
 
 ```python
 def update_records(
@@ -105,7 +117,7 @@ Updates records in a dataset.
 
 <a id="camel.datahubs.base.BaseDatasetManager.list_records"></a>
 
-### `list_records`
+### list_records
 
 ```python
 def list_records(
@@ -126,7 +138,7 @@ Lists records in a dataset.
 
 <a id="camel.datahubs.base.BaseDatasetManager.delete_record"></a>
 
-### `delete_record`
+### delete_record
 
 ```python
 def delete_record(

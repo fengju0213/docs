@@ -2,7 +2,11 @@
 
 <a id="camel.datagen.source2synth.data_processor.UserDataProcessor"></a>
 
-## `class UserDataProcessor:`
+## UserDataProcessor
+
+```python
+class UserDataProcessor:
+```
 
 A processor for generating multi-hop question-answer pairs from user
 data.
@@ -19,7 +23,11 @@ generating QA pairs.
 
 <a id="camel.datagen.source2synth.data_processor.UserDataProcessor.__init__"></a>
 
-### `def __init__(self, config: Optional[ProcessorConfig] = None):`
+### __init__
+
+```python
+def __init__(self, config: Optional[ProcessorConfig] = None):
+```
 
 Initialize the UserDataProcessor.
 
@@ -29,7 +37,11 @@ Initialize the UserDataProcessor.
 
 <a id="camel.datagen.source2synth.data_processor.UserDataProcessor.process_text"></a>
 
-### `def process_text(self, text: str, source: str = 'user_input'):`
+### process_text
+
+```python
+def process_text(self, text: str, source: str = 'user_input'):
+```
 
 Process a single text to generate multi-hop QA pairs.
 
@@ -45,7 +57,11 @@ metadata.
 
 <a id="camel.datagen.source2synth.data_processor.UserDataProcessor.process_batch"></a>
 
-### `def process_batch(self, texts: List[str], sources: Optional[List[str]] = None):`
+### process_batch
+
+```python
+def process_batch(self, texts: List[str], sources: Optional[List[str]] = None):
+```
 
 Process multiple texts in batch to generate multi-hop QA pairs.
 
@@ -61,7 +77,11 @@ metadata.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor"></a>
 
-## `class ExampleConstructor:`
+## ExampleConstructor
+
+```python
+class ExampleConstructor:
+```
 
 Constructs training examples from raw text data.
 
@@ -75,7 +95,7 @@ generation.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -94,7 +114,11 @@ Initialize the ExampleConstructor.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor.construct_examples"></a>
 
-### `def construct_examples(self, raw_data: List[Dict[str, Any]]):`
+### construct_examples
+
+```python
+def construct_examples(self, raw_data: List[Dict[str, Any]]):
+```
 
 Construct training examples from raw data.
 
@@ -109,7 +133,11 @@ and metadata.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor._preprocess_text"></a>
 
-### `def _preprocess_text(self, text: str):`
+### _preprocess_text
+
+```python
+def _preprocess_text(self, text: str):
+```
 
 Preprocess input text for example construction.
 
@@ -124,7 +152,11 @@ checks.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor._check_text_quality"></a>
 
-### `def _check_text_quality(self, text: str):`
+### _check_text_quality
+
+```python
+def _check_text_quality(self, text: str):
+```
 
 Check the quality of input text.
 
@@ -138,7 +170,11 @@ Check the quality of input text.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor._extract_info_pairs"></a>
 
-### `def _extract_info_pairs(self, text: str):`
+### _extract_info_pairs
+
+```python
+def _extract_info_pairs(self, text: str):
+```
 
 Extract information pairs and relationships from text.
 
@@ -153,7 +189,11 @@ premise, intermediate, conclusion, and related contexts.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor._generate_qa_pairs"></a>
 
-### `def _generate_qa_pairs(self, info_pairs: List[Dict[str, Sequence[str]]]):`
+### _generate_qa_pairs
+
+```python
+def _generate_qa_pairs(self, info_pairs: List[Dict[str, Sequence[str]]]):
+```
 
 Generate multi-hop question-answer pairs from information pairs.
 
@@ -167,7 +207,11 @@ Generate multi-hop question-answer pairs from information pairs.
 
 <a id="camel.datagen.source2synth.data_processor.ExampleConstructor._calculate_complexity"></a>
 
-### `def _calculate_complexity(self, qa_pairs: List[Dict[str, Any]]):`
+### _calculate_complexity
+
+```python
+def _calculate_complexity(self, qa_pairs: List[Dict[str, Any]]):
+```
 
 Calculate the complexity score for a set of QA pairs.
 
@@ -181,7 +225,11 @@ Calculate the complexity score for a set of QA pairs.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator"></a>
 
-## `class DataCurator:`
+## DataCurator
+
+```python
+class DataCurator:
+```
 
 Manages and curates datasets of multi-hop question-answer pairs.
 
@@ -194,7 +242,11 @@ rng (random.Random): Random number generator for reproducible sampling.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator.__init__"></a>
 
-### `def __init__(self, config: ProcessorConfig, rng: random.Random):`
+### __init__
+
+```python
+def __init__(self, config: ProcessorConfig, rng: random.Random):
+```
 
 Initialize the DataCurator.
 
@@ -205,7 +257,11 @@ Initialize the DataCurator.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator.curate_dataset"></a>
 
-### `def curate_dataset(self, examples: List[Dict[str, Any]]):`
+### curate_dataset
+
+```python
+def curate_dataset(self, examples: List[Dict[str, Any]]):
+```
 
 Manage and curate a dataset through multiple filtering stages.
 
@@ -219,7 +275,11 @@ Manage and curate a dataset through multiple filtering stages.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator._quality_filter"></a>
 
-### `def _quality_filter(self, examples: List[Dict[str, Any]]):`
+### _quality_filter
+
+```python
+def _quality_filter(self, examples: List[Dict[str, Any]]):
+```
 
 Filter examples based on quality criteria.
 
@@ -233,7 +293,11 @@ Filter examples based on quality criteria.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator._check_qa_quality"></a>
 
-### `def _check_qa_quality(self, qa_pairs: List[Dict[str, str]]):`
+### _check_qa_quality
+
+```python
+def _check_qa_quality(self, qa_pairs: List[Dict[str, str]]):
+```
 
 Check the quality of question-answer pairs.
 
@@ -247,7 +311,11 @@ Check the quality of question-answer pairs.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator._complexity_filter"></a>
 
-### `def _complexity_filter(self, examples: List[Dict[str, Any]]):`
+### _complexity_filter
+
+```python
+def _complexity_filter(self, examples: List[Dict[str, Any]]):
+```
 
 Filter examples based on complexity threshold.
 
@@ -263,7 +331,11 @@ Removes examples with complexity scores below the configured threshold.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator._remove_duplicates"></a>
 
-### `def _remove_duplicates(self, examples: List[Dict[str, Any]]):`
+### _remove_duplicates
+
+```python
+def _remove_duplicates(self, examples: List[Dict[str, Any]]):
+```
 
 Remove duplicate examples from the dataset.
 
@@ -277,7 +349,11 @@ Remove duplicate examples from the dataset.
 
 <a id="camel.datagen.source2synth.data_processor.DataCurator._sample_dataset"></a>
 
-### `def _sample_dataset(self, examples: List[Dict[str, Any]]):`
+### _sample_dataset
+
+```python
+def _sample_dataset(self, examples: List[Dict[str, Any]]):
+```
 
 Sample examples to match target dataset size.
 

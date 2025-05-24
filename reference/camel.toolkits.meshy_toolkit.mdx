@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit"></a>
 
-## `class MeshyToolkit(BaseToolkit):`
+## MeshyToolkit
+
+```python
+class MeshyToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for 3D model generation using Meshy.
 
@@ -16,14 +20,18 @@ https://docs.meshy.ai/api-text-to-3d-beta#create-a-text-to-3d-preview-task
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initializes the MeshyToolkit with the API key from the
 environment.
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit.generate_3d_preview"></a>
 
-### `generate_3d_preview`
+### generate_3d_preview
 
 ```python
 def generate_3d_preview(
@@ -49,7 +57,11 @@ task id of the newly created Text to 3D task.
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit.refine_3d_model"></a>
 
-### `def refine_3d_model(self, preview_task_id: str):`
+### refine_3d_model
+
+```python
+def refine_3d_model(self, preview_task_id: str):
+```
 
 Refines a 3D model using the Meshy API.
 
@@ -63,7 +75,11 @@ Refines a 3D model using the Meshy API.
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit.get_task_status"></a>
 
-### `def get_task_status(self, task_id: str):`
+### get_task_status
+
+```python
+def get_task_status(self, task_id: str):
+```
 
 Retrieves the status or result of a specific 3D model generation
 task using the Meshy API.
@@ -78,7 +94,7 @@ task using the Meshy API.
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit.wait_for_task_completion"></a>
 
-### `wait_for_task_completion`
+### wait_for_task_completion
 
 ```python
 def wait_for_task_completion(
@@ -103,7 +119,7 @@ Waits for a task to complete by polling its status.
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit.generate_3d_model_complete"></a>
 
-### `generate_3d_model_complete`
+### generate_3d_model_complete
 
 ```python
 def generate_3d_model_complete(
@@ -129,7 +145,11 @@ stages
 
 <a id="camel.toolkits.meshy_toolkit.MeshyToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

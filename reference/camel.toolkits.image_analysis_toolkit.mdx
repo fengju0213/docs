@@ -2,14 +2,18 @@
 
 <a id="camel.toolkits.image_analysis_toolkit.ImageAnalysisToolkit"></a>
 
-## `class ImageAnalysisToolkit(BaseToolkit):`
+## ImageAnalysisToolkit
+
+```python
+class ImageAnalysisToolkit(BaseToolkit):
+```
 
 A toolkit for comprehensive image analysis and understanding.
 The toolkit uses vision-capable language models to perform these tasks.
 
 <a id="camel.toolkits.image_analysis_toolkit.ImageAnalysisToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -28,7 +32,11 @@ Initialize the ImageAnalysisToolkit.
 
 <a id="camel.toolkits.image_analysis_toolkit.ImageAnalysisToolkit.image_to_text"></a>
 
-### `def image_to_text(self, image_path: str, sys_prompt: Optional[str] = None):`
+### image_to_text
+
+```python
+def image_to_text(self, image_path: str, sys_prompt: Optional[str] = None):
+```
 
 Generates textual description of an image with optional custom
 prompt.
@@ -44,7 +52,7 @@ prompt.
 
 <a id="camel.toolkits.image_analysis_toolkit.ImageAnalysisToolkit.ask_question_about_image"></a>
 
-### `ask_question_about_image`
+### ask_question_about_image
 
 ```python
 def ask_question_about_image(
@@ -69,7 +77,11 @@ Answers image questions with optional custom instructions.
 
 <a id="camel.toolkits.image_analysis_toolkit.ImageAnalysisToolkit._load_image"></a>
 
-### `def _load_image(self, image_path: str):`
+### _load_image
+
+```python
+def _load_image(self, image_path: str):
+```
 
 Loads an image from either local path or URL.
 
@@ -83,7 +95,7 @@ Loads an image from either local path or URL.
 
 <a id="camel.toolkits.image_analysis_toolkit.ImageAnalysisToolkit._analyze_image"></a>
 
-### `_analyze_image`
+### _analyze_image
 
 ```python
 def _analyze_image(
@@ -108,7 +120,11 @@ Core analysis method handling image loading and processing.
 
 <a id="camel.toolkits.image_analysis_toolkit.ImageAnalysisToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

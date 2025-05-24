@@ -2,7 +2,11 @@
 
 <a id="camel.bots.slack.models.SlackAuthProfile"></a>
 
-## `class SlackAuthProfile(BaseModel):`
+## SlackAuthProfile
+
+```python
+class SlackAuthProfile(BaseModel):
+```
 
 Represents the authorization profile within a Slack event.
 
@@ -26,28 +30,44 @@ References:
 
 <a id="camel.bots.slack.models.SlackEventProfile"></a>
 
-## `class SlackEventProfile(BaseModel):`
+## SlackEventProfile
+
+```python
+class SlackEventProfile(BaseModel):
+```
 
 Represents the detailed profile of a Slack event, including user,
 message, and context data.
 
 <a id="camel.bots.slack.models.SlackEventBody"></a>
 
-## `class SlackEventBody(BaseModel):`
+## SlackEventBody
+
+```python
+class SlackEventBody(BaseModel):
+```
 
 Represents the entire body of a Slack event, including the event
 profile, authorization, and context.
 
 <a id="camel.bots.slack.models.SlackAppMentionEventProfile"></a>
 
-## `class SlackAppMentionEventProfile(SlackEventProfile):`
+## SlackAppMentionEventProfile
+
+```python
+class SlackAppMentionEventProfile(SlackEventProfile):
+```
 
 Represents the detailed profile of a Slack event where the app was
 mentioned in a message.
 
 <a id="camel.bots.slack.models.SlackAppMentionEventBody"></a>
 
-## `class SlackAppMentionEventBody(SlackEventBody):`
+## SlackAppMentionEventBody
+
+```python
+class SlackAppMentionEventBody(SlackEventBody):
+```
 
 Represents the entire body of a Slack event where the app was mentioned
 in a message.

@@ -2,7 +2,11 @@
 
 <a id="camel.models.cohere_model.CohereModel"></a>
 
-## `class CohereModel(BaseModelBackend):`
+## CohereModel
+
+```python
+class CohereModel(BaseModelBackend):
+```
 
 Cohere API in a unified BaseModelBackend interface.
 
@@ -17,7 +21,7 @@ Cohere API in a unified BaseModelBackend interface.
 
 <a id="camel.models.cohere_model.CohereModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,15 +37,27 @@ def __init__(
 
 <a id="camel.models.cohere_model.CohereModel._to_openai_response"></a>
 
-### `def _to_openai_response(self, response: 'ChatResponse'):`
+### _to_openai_response
+
+```python
+def _to_openai_response(self, response: 'ChatResponse'):
+```
 
 <a id="camel.models.cohere_model.CohereModel._to_cohere_chatmessage"></a>
 
-### `def _to_cohere_chatmessage(self, messages: List[OpenAIMessage]):`
+### _to_cohere_chatmessage
+
+```python
+def _to_cohere_chatmessage(self, messages: List[OpenAIMessage]):
+```
 
 <a id="camel.models.cohere_model.CohereModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -50,7 +66,7 @@ tokenization style.
 
 <a id="camel.models.cohere_model.CohereModel._prepare_request"></a>
 
-### `_prepare_request`
+### _prepare_request
 
 ```python
 def _prepare_request(
@@ -63,7 +79,7 @@ def _prepare_request(
 
 <a id="camel.models.cohere_model.CohereModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -86,11 +102,19 @@ Runs inference of Cohere chat completion.
 
 <a id="camel.models.cohere_model.CohereModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 <a id="camel.models.cohere_model.CohereModel.stream"></a>
 
-### `def stream(self):`
+### stream
+
+```python
+def stream(self):
+```
 
 **Returns:**
 

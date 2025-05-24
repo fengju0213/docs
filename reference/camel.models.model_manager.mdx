@@ -2,13 +2,21 @@
 
 <a id="camel.models.model_manager.ModelProcessingError"></a>
 
-## `class ModelProcessingError(Exception):`
+## ModelProcessingError
+
+```python
+class ModelProcessingError(Exception):
+```
 
 Raised when an error occurs during model processing.
 
 <a id="camel.models.model_manager.ModelManager"></a>
 
-## `class ModelManager:`
+## ModelManager
+
+```python
+class ModelManager:
+```
 
 ModelManager choosing a model from provided list.
 Models are picked according to defined strategy.
@@ -20,7 +28,7 @@ Models are picked according to defined strategy.
 
 <a id="camel.models.model_manager.ModelManager.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -32,7 +40,11 @@ def __init__(
 
 <a id="camel.models.model_manager.ModelManager.model_type"></a>
 
-### `def model_type(self):`
+### model_type
+
+```python
+def model_type(self):
+```
 
 **Returns:**
 
@@ -40,7 +52,11 @@ def __init__(
 
 <a id="camel.models.model_manager.ModelManager.model_config_dict"></a>
 
-### `def model_config_dict(self):`
+### model_config_dict
+
+```python
+def model_config_dict(self):
+```
 
 **Returns:**
 
@@ -48,7 +64,11 @@ def __init__(
 
 <a id="camel.models.model_manager.ModelManager.model_config_dict"></a>
 
-### `def model_config_dict(self, model_config_dict: Dict[str, Any]):`
+### model_config_dict
+
+```python
+def model_config_dict(self, model_config_dict: Dict[str, Any]):
+```
 
 Set model_config_dict to the current model.
 
@@ -58,7 +78,11 @@ Set model_config_dict to the current model.
 
 <a id="camel.models.model_manager.ModelManager.current_model_index"></a>
 
-### `def current_model_index(self):`
+### current_model_index
+
+```python
+def current_model_index(self):
+```
 
 **Returns:**
 
@@ -66,7 +90,11 @@ Set model_config_dict to the current model.
 
 <a id="camel.models.model_manager.ModelManager.num_models"></a>
 
-### `def num_models(self):`
+### num_models
+
+```python
+def num_models(self):
+```
 
 **Returns:**
 
@@ -74,7 +102,11 @@ Set model_config_dict to the current model.
 
 <a id="camel.models.model_manager.ModelManager.token_limit"></a>
 
-### `def token_limit(self):`
+### token_limit
+
+```python
+def token_limit(self):
+```
 
 **Returns:**
 
@@ -82,7 +114,11 @@ Set model_config_dict to the current model.
 
 <a id="camel.models.model_manager.ModelManager.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -91,7 +127,11 @@ tokenization style.
 
 <a id="camel.models.model_manager.ModelManager.add_strategy"></a>
 
-### `def add_strategy(self, name: str, strategy_fn: Callable):`
+### add_strategy
+
+```python
+def add_strategy(self, name: str, strategy_fn: Callable):
+```
 
 Add a scheduling strategy method provided by user in case when none
 of existent strategies fits.
@@ -105,7 +145,11 @@ When custom strategy is provided, it will be set as
 
 <a id="camel.models.model_manager.ModelManager.round_robin"></a>
 
-### `def round_robin(self):`
+### round_robin
+
+```python
+def round_robin(self):
+```
 
 **Returns:**
 
@@ -113,7 +157,11 @@ When custom strategy is provided, it will be set as
 
 <a id="camel.models.model_manager.ModelManager.always_first"></a>
 
-### `def always_first(self):`
+### always_first
+
+```python
+def always_first(self):
+```
 
 **Returns:**
 
@@ -121,7 +169,11 @@ When custom strategy is provided, it will be set as
 
 <a id="camel.models.model_manager.ModelManager.random_model"></a>
 
-### `def random_model(self):`
+### random_model
+
+```python
+def random_model(self):
+```
 
 **Returns:**
 
@@ -129,7 +181,7 @@ When custom strategy is provided, it will be set as
 
 <a id="camel.models.model_manager.ModelManager.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(

@@ -2,7 +2,11 @@
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory"></a>
 
-## `class ChatHistoryMemory(AgentMemory):`
+## ChatHistoryMemory
+
+```python
+class ChatHistoryMemory(AgentMemory):
+```
 
 An agent memory wrapper of :obj:`ChatHistoryBlock`.
 
@@ -15,7 +19,7 @@ An agent memory wrapper of :obj:`ChatHistoryBlock`.
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -29,31 +33,59 @@ def __init__(
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory.agent_id"></a>
 
-### `def agent_id(self):`
+### agent_id
+
+```python
+def agent_id(self):
+```
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory.agent_id"></a>
 
-### `def agent_id(self, val: Optional[str]):`
+### agent_id
+
+```python
+def agent_id(self, val: Optional[str]):
+```
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory.retrieve"></a>
 
-### `def retrieve(self):`
+### retrieve
+
+```python
+def retrieve(self):
+```
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory.write_records"></a>
 
-### `def write_records(self, records: List[MemoryRecord]):`
+### write_records
+
+```python
+def write_records(self, records: List[MemoryRecord]):
+```
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory.get_context_creator"></a>
 
-### `def get_context_creator(self):`
+### get_context_creator
+
+```python
+def get_context_creator(self):
+```
 
 <a id="camel.memories.agent_memories.ChatHistoryMemory.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 <a id="camel.memories.agent_memories.VectorDBMemory"></a>
 
-## `class VectorDBMemory(AgentMemory):`
+## VectorDBMemory
+
+```python
+class VectorDBMemory(AgentMemory):
+```
 
 An agent memory wrapper of :obj:`VectorDBBlock`. This memory queries
 messages stored in the vector database. Notice that the most recent
@@ -68,7 +100,7 @@ messages will not be added to the context.
 
 <a id="camel.memories.agent_memories.VectorDBMemory.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -82,33 +114,61 @@ def __init__(
 
 <a id="camel.memories.agent_memories.VectorDBMemory.agent_id"></a>
 
-### `def agent_id(self):`
+### agent_id
+
+```python
+def agent_id(self):
+```
 
 <a id="camel.memories.agent_memories.VectorDBMemory.agent_id"></a>
 
-### `def agent_id(self, val: Optional[str]):`
+### agent_id
+
+```python
+def agent_id(self, val: Optional[str]):
+```
 
 <a id="camel.memories.agent_memories.VectorDBMemory.retrieve"></a>
 
-### `def retrieve(self):`
+### retrieve
+
+```python
+def retrieve(self):
+```
 
 <a id="camel.memories.agent_memories.VectorDBMemory.write_records"></a>
 
-### `def write_records(self, records: List[MemoryRecord]):`
+### write_records
+
+```python
+def write_records(self, records: List[MemoryRecord]):
+```
 
 <a id="camel.memories.agent_memories.VectorDBMemory.get_context_creator"></a>
 
-### `def get_context_creator(self):`
+### get_context_creator
+
+```python
+def get_context_creator(self):
+```
 
 <a id="camel.memories.agent_memories.VectorDBMemory.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the vector database memory.
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory"></a>
 
-## `class LongtermAgentMemory(AgentMemory):`
+## LongtermAgentMemory
+
+```python
+class LongtermAgentMemory(AgentMemory):
+```
 
 An implementation of the :obj:`AgentMemory` abstract base class for
 augmenting ChatHistoryMemory with VectorDBMemory.
@@ -123,7 +183,7 @@ augmenting ChatHistoryMemory with VectorDBMemory.
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -138,15 +198,27 @@ def __init__(
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory.agent_id"></a>
 
-### `def agent_id(self):`
+### agent_id
+
+```python
+def agent_id(self):
+```
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory.agent_id"></a>
 
-### `def agent_id(self, val: Optional[str]):`
+### agent_id
+
+```python
+def agent_id(self, val: Optional[str]):
+```
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory.get_context_creator"></a>
 
-### `def get_context_creator(self):`
+### get_context_creator
+
+```python
+def get_context_creator(self):
+```
 
 **Returns:**
 
@@ -154,7 +226,11 @@ def __init__(
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory.retrieve"></a>
 
-### `def retrieve(self):`
+### retrieve
+
+```python
+def retrieve(self):
+```
 
 **Returns:**
 
@@ -163,7 +239,11 @@ the chat history and the vector database.
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory.write_records"></a>
 
-### `def write_records(self, records: List[MemoryRecord]):`
+### write_records
+
+```python
+def write_records(self, records: List[MemoryRecord]):
+```
 
 Converts the provided chat messages into vector representations and
 writes them to the vector database.
@@ -174,6 +254,10 @@ writes them to the vector database.
 
 <a id="camel.memories.agent_memories.LongtermAgentMemory.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the memory.

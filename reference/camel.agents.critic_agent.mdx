@@ -2,7 +2,11 @@
 
 <a id="camel.agents.critic_agent.CriticAgent"></a>
 
-## `class CriticAgent(ChatAgent):`
+## CriticAgent
+
+```python
+class CriticAgent(ChatAgent):
+```
 
 A class for the critic agent that assists in selecting an option.
 
@@ -16,7 +20,7 @@ A class for the critic agent that assists in selecting an option.
 
 <a id="camel.agents.critic_agent.CriticAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,7 +37,11 @@ def __init__(
 
 <a id="camel.agents.critic_agent.CriticAgent.flatten_options"></a>
 
-### `def flatten_options(self, messages: Sequence[BaseMessage]):`
+### flatten_options
+
+```python
+def flatten_options(self, messages: Sequence[BaseMessage]):
+```
 
 Flattens the options to the critic.
 
@@ -47,7 +55,11 @@ Flattens the options to the critic.
 
 <a id="camel.agents.critic_agent.CriticAgent.get_option"></a>
 
-### `def get_option(self, input_message: BaseMessage):`
+### get_option
+
+```python
+def get_option(self, input_message: BaseMessage):
+```
 
 Gets the option selected by the critic.
 
@@ -61,7 +73,11 @@ Gets the option selected by the critic.
 
 <a id="camel.agents.critic_agent.CriticAgent.parse_critic"></a>
 
-### `def parse_critic(self, critic_msg: BaseMessage):`
+### parse_critic
+
+```python
+def parse_critic(self, critic_msg: BaseMessage):
+```
 
 Parses the critic's message and extracts the choice.
 
@@ -76,7 +92,11 @@ message could not be parsed.
 
 <a id="camel.agents.critic_agent.CriticAgent.reduce_step"></a>
 
-### `def reduce_step(self, input_messages: Sequence[BaseMessage]):`
+### reduce_step
+
+```python
+def reduce_step(self, input_messages: Sequence[BaseMessage]):
+```
 
 Performs one step of the conversation by flattening options to the
 critic, getting the option, and parsing the choice.
@@ -92,7 +112,11 @@ critic's choice.
 
 <a id="camel.agents.critic_agent.CriticAgent.clone"></a>
 
-### `def clone(self, with_memory: bool = False):`
+### clone
+
+```python
+def clone(self, with_memory: bool = False):
+```
 
 Creates a new instance of :obj:`CriticAgent` with the same
 configuration as the current instance.

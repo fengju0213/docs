@@ -2,7 +2,11 @@
 
 <a id="camel.prompts.base.return_prompt_wrapper"></a>
 
-## `def return_prompt_wrapper(cls: Any, func: Callable):`
+## return_prompt_wrapper
+
+```python
+def return_prompt_wrapper(cls: Any, func: Callable):
+```
 
 Wrapper that converts the return value of a function to an input
 class instance if it's a string.
@@ -20,7 +24,11 @@ string.
 
 <a id="camel.prompts.base.wrap_prompt_functions"></a>
 
-## `def wrap_prompt_functions(cls: T):`
+## wrap_prompt_functions
+
+```python
+def wrap_prompt_functions(cls: T):
+```
 
 Decorator that wraps functions of a class inherited from :obj:`str`
 with the :obj:`return_text_prompt` decorator.
@@ -35,7 +43,11 @@ with the :obj:`return_text_prompt` decorator.
 
 <a id="camel.prompts.base.TextPrompt"></a>
 
-## `class TextPrompt(str):`
+## TextPrompt
+
+```python
+class TextPrompt(str):
+```
 
 A class that represents a text prompt. The :obj:`TextPrompt` class
 extends the built-in :obj:`str` class to provide a property for retrieving
@@ -47,13 +59,21 @@ prompt.
 
 <a id="camel.prompts.base.TextPrompt.key_words"></a>
 
-### `def key_words(self):`
+### key_words
+
+```python
+def key_words(self):
+```
 
 Returns a set of strings representing the keywords in the prompt.
 
 <a id="camel.prompts.base.TextPrompt.format"></a>
 
-### `def format(self, *args: Any, **kwargs: Any):`
+### format
+
+```python
+def format(self, *args: Any, **kwargs: Any):
+```
 
 Overrides the built-in :obj:`str.format` method to allow for
 default values in the format string. This is used to allow formatting
@@ -66,7 +86,11 @@ replaced with the formatted string.
 
 <a id="camel.prompts.base.CodePrompt"></a>
 
-## `class CodePrompt(TextPrompt):`
+## CodePrompt
+
+```python
+class CodePrompt(TextPrompt):
+```
 
 A class that represents a code prompt. It extends the :obj:`TextPrompt`
 class with a :obj:`code_type` property.
@@ -76,7 +100,11 @@ code_type (str, optional): The type of code. Defaults to None.
 
 <a id="camel.prompts.base.CodePrompt.__new__"></a>
 
-### `def __new__(cls, *args: Any, **kwargs: Any):`
+### __new__
+
+```python
+def __new__(cls, *args: Any, **kwargs: Any):
+```
 
 Creates a new instance of the :obj:`CodePrompt` class.
 
@@ -86,7 +114,11 @@ Creates a new instance of the :obj:`CodePrompt` class.
 
 <a id="camel.prompts.base.CodePrompt.code_type"></a>
 
-### `def code_type(self):`
+### code_type
+
+```python
+def code_type(self):
+```
 
 **Returns:**
 
@@ -94,7 +126,11 @@ Creates a new instance of the :obj:`CodePrompt` class.
 
 <a id="camel.prompts.base.CodePrompt.set_code_type"></a>
 
-### `def set_code_type(self, code_type: str):`
+### set_code_type
+
+```python
+def set_code_type(self, code_type: str):
+```
 
 Sets the type of code.
 
@@ -104,7 +140,7 @@ Sets the type of code.
 
 <a id="camel.prompts.base.CodePrompt.execute"></a>
 
-### `execute`
+### execute
 
 ```python
 def execute(
@@ -132,10 +168,18 @@ the issue.
 
 <a id="camel.prompts.base.TextPromptDict"></a>
 
-## `class TextPromptDict:`
+## TextPromptDict
+
+```python
+class TextPromptDict:
+```
 
 A dictionary class that maps from key to :obj:`TextPrompt` object.
 
 <a id="camel.prompts.base.TextPromptDict.__init__"></a>
 
-### `def __init__(self, *args: Any, **kwargs: Any):`
+### __init__
+
+```python
+def __init__(self, *args: Any, **kwargs: Any):
+```

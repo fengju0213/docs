@@ -2,7 +2,11 @@
 
 <a id="camel.utils.token_counting.get_model_encoding"></a>
 
-## `def get_model_encoding(value_for_tiktoken: str):`
+## get_model_encoding
+
+```python
+def get_model_encoding(value_for_tiktoken: str):
+```
 
 Get model encoding from tiktoken.
 
@@ -16,13 +20,21 @@ Get model encoding from tiktoken.
 
 <a id="camel.utils.token_counting.BaseTokenCounter"></a>
 
-## `class BaseTokenCounter(ABC):`
+## BaseTokenCounter
+
+```python
+class BaseTokenCounter(ABC):
+```
 
 Base class for token counters of different kinds of models.
 
 <a id="camel.utils.token_counting.BaseTokenCounter.count_tokens_from_messages"></a>
 
-### `def count_tokens_from_messages(self, messages: List[OpenAIMessage]):`
+### count_tokens_from_messages
+
+```python
+def count_tokens_from_messages(self, messages: List[OpenAIMessage]):
+```
 
 Count number of tokens in the provided message list.
 
@@ -36,7 +48,11 @@ Count number of tokens in the provided message list.
 
 <a id="camel.utils.token_counting.BaseTokenCounter.encode"></a>
 
-### `def encode(self, text: str):`
+### encode
+
+```python
+def encode(self, text: str):
+```
 
 Encode text into token IDs.
 
@@ -50,7 +66,11 @@ Encode text into token IDs.
 
 <a id="camel.utils.token_counting.BaseTokenCounter.decode"></a>
 
-### `def decode(self, token_ids: List[int]):`
+### decode
+
+```python
+def decode(self, token_ids: List[int]):
+```
 
 Decode token IDs back to text.
 
@@ -64,11 +84,19 @@ Decode token IDs back to text.
 
 <a id="camel.utils.token_counting.OpenAITokenCounter"></a>
 
-## `class OpenAITokenCounter(BaseTokenCounter):`
+## OpenAITokenCounter
+
+```python
+class OpenAITokenCounter(BaseTokenCounter):
+```
 
 <a id="camel.utils.token_counting.OpenAITokenCounter.__init__"></a>
 
-### `def __init__(self, model: UnifiedModelType):`
+### __init__
+
+```python
+def __init__(self, model: UnifiedModelType):
+```
 
 Constructor for the token counter for OpenAI models.
 
@@ -78,7 +106,11 @@ Constructor for the token counter for OpenAI models.
 
 <a id="camel.utils.token_counting.OpenAITokenCounter.count_tokens_from_messages"></a>
 
-### `def count_tokens_from_messages(self, messages: List[OpenAIMessage]):`
+### count_tokens_from_messages
+
+```python
+def count_tokens_from_messages(self, messages: List[OpenAIMessage]):
+```
 
 Count number of tokens in the provided message list with the
 help of package tiktoken.
@@ -93,7 +125,11 @@ help of package tiktoken.
 
 <a id="camel.utils.token_counting.OpenAITokenCounter._count_tokens_from_image"></a>
 
-### `def _count_tokens_from_image(self, image: Image.Image, detail: OpenAIVisionDetailType):`
+### _count_tokens_from_image
+
+```python
+def _count_tokens_from_image(self, image: Image.Image, detail: OpenAIVisionDetailType):
+```
 
 Count image tokens for OpenAI vision model. An :obj:`"auto"`
 resolution model will be treated as :obj:`"high"`. All images with
@@ -116,7 +152,11 @@ vision docs <https://platform.openai.com/docs/guides/vision>`_
 
 <a id="camel.utils.token_counting.OpenAITokenCounter.encode"></a>
 
-### `def encode(self, text: str):`
+### encode
+
+```python
+def encode(self, text: str):
+```
 
 Encode text into token IDs.
 
@@ -130,7 +170,11 @@ Encode text into token IDs.
 
 <a id="camel.utils.token_counting.OpenAITokenCounter.decode"></a>
 
-### `def decode(self, token_ids: List[int]):`
+### decode
+
+```python
+def decode(self, token_ids: List[int]):
+```
 
 Decode token IDs back to text.
 
@@ -144,11 +188,19 @@ Decode token IDs back to text.
 
 <a id="camel.utils.token_counting.AnthropicTokenCounter"></a>
 
-## `class AnthropicTokenCounter(BaseTokenCounter):`
+## AnthropicTokenCounter
+
+```python
+class AnthropicTokenCounter(BaseTokenCounter):
+```
 
 <a id="camel.utils.token_counting.AnthropicTokenCounter.__init__"></a>
 
-### `def __init__(self, model: str):`
+### __init__
+
+```python
+def __init__(self, model: str):
+```
 
 Constructor for the token counter for Anthropic models.
 
@@ -158,7 +210,11 @@ Constructor for the token counter for Anthropic models.
 
 <a id="camel.utils.token_counting.AnthropicTokenCounter.count_tokens_from_messages"></a>
 
-### `def count_tokens_from_messages(self, messages: List[OpenAIMessage]):`
+### count_tokens_from_messages
+
+```python
+def count_tokens_from_messages(self, messages: List[OpenAIMessage]):
+```
 
 Count number of tokens in the provided message list using
 loaded tokenizer specific for this type of model.
@@ -173,7 +229,11 @@ loaded tokenizer specific for this type of model.
 
 <a id="camel.utils.token_counting.AnthropicTokenCounter.encode"></a>
 
-### `def encode(self, text: str):`
+### encode
+
+```python
+def encode(self, text: str):
+```
 
 Encode text into token IDs.
 
@@ -187,7 +247,11 @@ Encode text into token IDs.
 
 <a id="camel.utils.token_counting.AnthropicTokenCounter.decode"></a>
 
-### `def decode(self, token_ids: List[int]):`
+### decode
+
+```python
+def decode(self, token_ids: List[int]):
+```
 
 Decode token IDs back to text.
 
@@ -201,11 +265,19 @@ Decode token IDs back to text.
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter"></a>
 
-## `class LiteLLMTokenCounter(BaseTokenCounter):`
+## LiteLLMTokenCounter
+
+```python
+class LiteLLMTokenCounter(BaseTokenCounter):
+```
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter.__init__"></a>
 
-### `def __init__(self, model_type: UnifiedModelType):`
+### __init__
+
+```python
+def __init__(self, model_type: UnifiedModelType):
+```
 
 Constructor for the token counter for LiteLLM models.
 
@@ -215,15 +287,27 @@ Constructor for the token counter for LiteLLM models.
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter.completion_cost"></a>
 
-### `def completion_cost(self):`
+### completion_cost
+
+```python
+def completion_cost(self):
+```
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter.count_tokens_from_messages"></a>
 
-### `def count_tokens_from_messages(self, messages: List[OpenAIMessage]):`
+### count_tokens_from_messages
+
+```python
+def count_tokens_from_messages(self, messages: List[OpenAIMessage]):
+```
 
 Count number of tokens in the provided message list using
 the tokenizer specific to this type of model.
@@ -238,7 +322,11 @@ the tokenizer specific to this type of model.
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter.calculate_cost_from_response"></a>
 
-### `def calculate_cost_from_response(self, response: dict):`
+### calculate_cost_from_response
+
+```python
+def calculate_cost_from_response(self, response: dict):
+```
 
 Calculate the cost of the given completion response.
 
@@ -252,7 +340,11 @@ Calculate the cost of the given completion response.
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter.encode"></a>
 
-### `def encode(self, text: str):`
+### encode
+
+```python
+def encode(self, text: str):
+```
 
 Encode text into token IDs.
 
@@ -266,7 +358,11 @@ Encode text into token IDs.
 
 <a id="camel.utils.token_counting.LiteLLMTokenCounter.decode"></a>
 
-### `def decode(self, token_ids: List[int]):`
+### decode
+
+```python
+def decode(self, token_ids: List[int]):
+```
 
 Decode token IDs back to text.
 
@@ -280,11 +376,19 @@ Decode token IDs back to text.
 
 <a id="camel.utils.token_counting.MistralTokenCounter"></a>
 
-## `class MistralTokenCounter(BaseTokenCounter):`
+## MistralTokenCounter
+
+```python
+class MistralTokenCounter(BaseTokenCounter):
+```
 
 <a id="camel.utils.token_counting.MistralTokenCounter.__init__"></a>
 
-### `def __init__(self, model_type: ModelType):`
+### __init__
+
+```python
+def __init__(self, model_type: ModelType):
+```
 
 Constructor for the token counter for Mistral models.
 
@@ -294,7 +398,11 @@ Constructor for the token counter for Mistral models.
 
 <a id="camel.utils.token_counting.MistralTokenCounter.count_tokens_from_messages"></a>
 
-### `def count_tokens_from_messages(self, messages: List[OpenAIMessage]):`
+### count_tokens_from_messages
+
+```python
+def count_tokens_from_messages(self, messages: List[OpenAIMessage]):
+```
 
 Count number of tokens in the provided message list using
 loaded tokenizer specific for this type of model.
@@ -309,7 +417,11 @@ loaded tokenizer specific for this type of model.
 
 <a id="camel.utils.token_counting.MistralTokenCounter._convert_response_from_openai_to_mistral"></a>
 
-### `def _convert_response_from_openai_to_mistral(self, openai_msg: OpenAIMessage):`
+### _convert_response_from_openai_to_mistral
+
+```python
+def _convert_response_from_openai_to_mistral(self, openai_msg: OpenAIMessage):
+```
 
 Convert an OpenAI message to a Mistral ChatCompletionRequest.
 
@@ -324,7 +436,11 @@ format.
 
 <a id="camel.utils.token_counting.MistralTokenCounter.encode"></a>
 
-### `def encode(self, text: str):`
+### encode
+
+```python
+def encode(self, text: str):
+```
 
 Encode text into token IDs.
 
@@ -338,7 +454,11 @@ Encode text into token IDs.
 
 <a id="camel.utils.token_counting.MistralTokenCounter.decode"></a>
 
-### `def decode(self, token_ids: List[int]):`
+### decode
+
+```python
+def decode(self, token_ids: List[int]):
+```
 
 Decode token IDs back to text.
 

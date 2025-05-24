@@ -2,7 +2,11 @@
 
 <a id="camel.loaders.pandas_reader.check_suffix"></a>
 
-## `def check_suffix(valid_suffixs: List[str]):`
+## check_suffix
+
+```python
+def check_suffix(valid_suffixs: List[str]):
+```
 
 A decorator to check the file suffix of a given file path.
 
@@ -16,11 +20,19 @@ A decorator to check the file suffix of a given file path.
 
 <a id="camel.loaders.pandas_reader.PandasReader"></a>
 
-## `class PandasReader:`
+## PandasReader
+
+```python
+class PandasReader:
+```
 
 <a id="camel.loaders.pandas_reader.PandasReader.__init__"></a>
 
-### `def __init__(self, config: Optional[Dict[str, Any]] = None):`
+### __init__
+
+```python
+def __init__(self, config: Optional[Dict[str, Any]] = None):
+```
 
 Initializes the PandasReader class.
 
@@ -30,7 +42,7 @@ Initializes the PandasReader class.
 
 <a id="camel.loaders.pandas_reader.PandasReader.load"></a>
 
-### `load`
+### load
 
 ```python
 def load(
@@ -59,7 +71,7 @@ object.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_csv"></a>
 
-### `read_csv`
+### read_csv
 
 ```python
 def read_csv(
@@ -82,7 +94,7 @@ Reads a CSV file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_excel"></a>
 
-### `read_excel`
+### read_excel
 
 ```python
 def read_excel(
@@ -105,7 +117,7 @@ Reads an Excel file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_json"></a>
 
-### `read_json`
+### read_json
 
 ```python
 def read_json(
@@ -128,7 +140,7 @@ Reads a JSON file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_parquet"></a>
 
-### `read_parquet`
+### read_parquet
 
 ```python
 def read_parquet(
@@ -151,7 +163,11 @@ Reads a Parquet file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_sql"></a>
 
-### `def read_sql(self, *args: Any, **kwargs: Dict[str, Any]):`
+### read_sql
+
+```python
+def read_sql(self, *args: Any, **kwargs: Dict[str, Any]):
+```
 
 Reads a SQL file and returns a DataFrame.
 
@@ -161,7 +177,7 @@ Reads a SQL file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_table"></a>
 
-### `read_table`
+### read_table
 
 ```python
 def read_table(
@@ -184,7 +200,11 @@ Reads a table and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_clipboard"></a>
 
-### `def read_clipboard(self, *args: Any, **kwargs: Dict[str, Any]):`
+### read_clipboard
+
+```python
+def read_clipboard(self, *args: Any, **kwargs: Dict[str, Any]):
+```
 
 Reads a clipboard and returns a DataFrame.
 
@@ -194,7 +214,7 @@ Reads a clipboard and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_html"></a>
 
-### `read_html`
+### read_html
 
 ```python
 def read_html(
@@ -217,7 +237,7 @@ Reads an HTML file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_feather"></a>
 
-### `read_feather`
+### read_feather
 
 ```python
 def read_feather(
@@ -240,7 +260,7 @@ Reads a Feather file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_stata"></a>
 
-### `read_stata`
+### read_stata
 
 ```python
 def read_stata(
@@ -263,7 +283,7 @@ Reads a Stata file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_sas"></a>
 
-### `read_sas`
+### read_sas
 
 ```python
 def read_sas(
@@ -286,7 +306,7 @@ Reads a SAS file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_pickle"></a>
 
-### `read_pickle`
+### read_pickle
 
 ```python
 def read_pickle(
@@ -309,7 +329,7 @@ Reads a Pickle file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_hdf"></a>
 
-### `read_hdf`
+### read_hdf
 
 ```python
 def read_hdf(
@@ -332,7 +352,7 @@ Reads an HDF file and returns a DataFrame.
 
 <a id="camel.loaders.pandas_reader.PandasReader.read_orc"></a>
 
-### `read_orc`
+### read_orc
 
 ```python
 def read_orc(

@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit"></a>
 
-## `class TerminalToolkit(BaseToolkit):`
+## TerminalToolkit
+
+```python
+class TerminalToolkit(BaseToolkit):
+```
 
 A toolkit for terminal operations across multiple operating systems.
 
@@ -23,7 +27,7 @@ managing terminal sessions.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -40,26 +44,42 @@ def __init__(
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._setup_file_output"></a>
 
-### `def _setup_file_output(self):`
+### _setup_file_output
+
+```python
+def _setup_file_output(self):
+```
 
 Set up file output to replace GUI, using a fixed file to simulate
 terminal.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._clone_current_environment"></a>
 
-### `def _clone_current_environment(self):`
+### _clone_current_environment
+
+```python
+def _clone_current_environment(self):
+```
 
 Create a new Python virtual environment.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._create_terminal"></a>
 
-### `def _create_terminal(self):`
+### _create_terminal
+
+```python
+def _create_terminal(self):
+```
 
 Create a terminal GUI.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._update_terminal_output"></a>
 
-### `def _update_terminal_output(self, output: str):`
+### _update_terminal_output
+
+```python
+def _update_terminal_output(self, output: str):
+```
 
 Update terminal output and send to agent.
 
@@ -69,7 +89,11 @@ Update terminal output and send to agent.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._is_path_within_working_dir"></a>
 
-### `def _is_path_within_working_dir(self, path: str):`
+### _is_path_within_working_dir
+
+```python
+def _is_path_within_working_dir(self, path: str):
+```
 
 Check if the path is within the working directory.
 
@@ -84,7 +108,11 @@ otherwise returns False
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._enforce_working_dir_for_execution"></a>
 
-### `def _enforce_working_dir_for_execution(self, path: str):`
+### _enforce_working_dir_for_execution
+
+```python
+def _enforce_working_dir_for_execution(self, path: str):
+```
 
 Enforce working directory restrictions, return error message
 if execution path is not within the working directory.
@@ -100,7 +128,11 @@ the working directory, otherwise returns None
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._copy_external_file_to_workdir"></a>
 
-### `def _copy_external_file_to_workdir(self, external_file: str):`
+### _copy_external_file_to_workdir
+
+```python
+def _copy_external_file_to_workdir(self, external_file: str):
+```
 
 Copy external file to working directory.
 
@@ -115,7 +147,7 @@ returns None on failure
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.file_find_in_content"></a>
 
-### `file_find_in_content`
+### file_find_in_content
 
 ```python
 def file_find_in_content(
@@ -140,7 +172,11 @@ Search for matching text within file content.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.file_find_by_name"></a>
 
-### `def file_find_by_name(self, path: str, glob: str):`
+### file_find_by_name
+
+```python
+def file_find_by_name(self, path: str, glob: str):
+```
 
 Find files by name pattern in specified directory.
 
@@ -155,7 +191,11 @@ Find files by name pattern in specified directory.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit._sanitize_command"></a>
 
-### `def _sanitize_command(self, command: str, exec_dir: str):`
+### _sanitize_command
+
+```python
+def _sanitize_command(self, command: str, exec_dir: str):
+```
 
 Check and modify command to ensure safety.
 
@@ -170,7 +210,11 @@ Check and modify command to ensure safety.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.shell_exec"></a>
 
-### `def shell_exec(self, id: str, command: str):`
+### shell_exec
+
+```python
+def shell_exec(self, id: str, command: str):
+```
 
 Execute commands. This can be used to execute various commands,
 such as writing code, executing code, and running commands.
@@ -186,7 +230,11 @@ such as writing code, executing code, and running commands.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.shell_view"></a>
 
-### `def shell_view(self, id: str):`
+### shell_view
+
+```python
+def shell_view(self, id: str):
+```
 
 View the content of a specified shell session.
 
@@ -200,7 +248,11 @@ View the content of a specified shell session.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.shell_wait"></a>
 
-### `def shell_wait(self, id: str, seconds: Optional[int] = None):`
+### shell_wait
+
+```python
+def shell_wait(self, id: str, seconds: Optional[int] = None):
+```
 
 Wait for the running process in a specified shell session to
 return.
@@ -216,7 +268,7 @@ return.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.shell_write_to_process"></a>
 
-### `shell_write_to_process`
+### shell_write_to_process
 
 ```python
 def shell_write_to_process(
@@ -241,7 +293,11 @@ Write input to a running process in a specified shell session.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.shell_kill_process"></a>
 
-### `def shell_kill_process(self, id: str):`
+### shell_kill_process
+
+```python
+def shell_kill_process(self, id: str):
+```
 
 Terminate a running process in a specified shell session.
 
@@ -255,14 +311,22 @@ Terminate a running process in a specified shell session.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.__del__"></a>
 
-### `def __del__(self):`
+### __del__
+
+```python
+def __del__(self):
+```
 
 Clean up resources when the object is being destroyed.
 Terminates all running processes and closes any open file handles.
 
 <a id="camel.toolkits.terminal_toolkit.TerminalToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

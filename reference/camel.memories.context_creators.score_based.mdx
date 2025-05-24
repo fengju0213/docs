@@ -2,7 +2,11 @@
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator"></a>
 
-## `class ScoreBasedContextCreator(BaseContextCreator):`
+## ScoreBasedContextCreator
+
+```python
+class ScoreBasedContextCreator(BaseContextCreator):
+```
 
 A default implementation of context creation strategy, which inherits
 from :obj:`BaseContextCreator`.
@@ -19,19 +23,35 @@ on their score if the total token count exceeds the limit.
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator.__init__"></a>
 
-### `def __init__(self, token_counter: BaseTokenCounter, token_limit: int):`
+### __init__
+
+```python
+def __init__(self, token_counter: BaseTokenCounter, token_limit: int):
+```
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator.token_limit"></a>
 
-### `def token_limit(self):`
+### token_limit
+
+```python
+def token_limit(self):
+```
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator.create_context"></a>
 
-### `def create_context(self, records: List[ContextRecord]):`
+### create_context
+
+```python
+def create_context(self, records: List[ContextRecord]):
+```
 
 Constructs conversation context from chat history while respecting
 token limits.
@@ -55,7 +75,11 @@ newer the message, the higher the score.
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator._extract_system_message"></a>
 
-### `def _extract_system_message(self, records: List[ContextRecord]):`
+### _extract_system_message
+
+```python
+def _extract_system_message(self, records: List[ContextRecord]):
+```
 
 Extracts the system message from records and validates it.
 
@@ -73,7 +97,11 @@ messages.
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator._truncation_sort_key"></a>
 
-### `def _truncation_sort_key(self, unit: _ContextUnit):`
+### _truncation_sort_key
+
+```python
+def _truncation_sort_key(self, unit: _ContextUnit):
+```
 
 Defines the sorting key for the truncation phase.
 
@@ -94,7 +122,11 @@ first when scores are equal).
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator._conversation_sort_key"></a>
 
-### `def _conversation_sort_key(self, unit: _ContextUnit):`
+### _conversation_sort_key
+
+```python
+def _conversation_sort_key(self, unit: _ContextUnit):
+```
 
 Defines the sorting key for assembling the final output.
 
@@ -115,7 +147,7 @@ when timestamps are equal).
 
 <a id="camel.memories.context_creators.score_based.ScoreBasedContextCreator._assemble_output"></a>
 
-### `_assemble_output`
+### _assemble_output
 
 ```python
 def _assemble_output(

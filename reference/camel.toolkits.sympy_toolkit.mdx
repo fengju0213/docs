@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit"></a>
 
-## `class SymPyToolkit(BaseToolkit):`
+## SymPyToolkit
+
+```python
+class SymPyToolkit(BaseToolkit):
+```
 
 A toolkit for performing symbolic computations using SymPy.
 This includes methods for Algebraic manipulation calculus
@@ -10,7 +14,7 @@ and Linear Algebra.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -28,7 +32,11 @@ Initializes the toolkit with a default variable and logging.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.simplify_expression"></a>
 
-### `def simplify_expression(self, expression: str):`
+### simplify_expression
+
+```python
+def simplify_expression(self, expression: str):
+```
 
 Simplifies a mathematical expression.
 
@@ -45,7 +53,11 @@ corresponding `"message"`.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.expand_expression"></a>
 
-### `def expand_expression(self, expression: str):`
+### expand_expression
+
+```python
+def expand_expression(self, expression: str):
+```
 
 Expands an algebraic expression.
 
@@ -62,7 +74,11 @@ error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.factor_expression"></a>
 
-### `def factor_expression(self, expression: str):`
+### factor_expression
+
+```python
+def factor_expression(self, expression: str):
+```
 
 Factors an algebraic expression.
 
@@ -79,7 +95,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.solve_linear_system"></a>
 
-### `def solve_linear_system(self, equations: List[str], variables: List[str]):`
+### solve_linear_system
+
+```python
+def solve_linear_system(self, equations: List[str], variables: List[str]):
+```
 
 Solves a system of linear equations.
 
@@ -98,7 +118,11 @@ field with the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.solve_nonlinear_system"></a>
 
-### `def solve_nonlinear_system(self, sympy_equations: List[str], variables: List[str]):`
+### solve_nonlinear_system
+
+```python
+def solve_nonlinear_system(self, sympy_equations: List[str], variables: List[str]):
+```
 
 Solves a system of nonlinear equations.
 
@@ -118,7 +142,11 @@ error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.solve_univariate_inequality"></a>
 
-### `def solve_univariate_inequality(self, inequality: str, variable: str):`
+### solve_univariate_inequality
+
+```python
+def solve_univariate_inequality(self, inequality: str, variable: str):
+```
 
 Solves a single-variable inequality.
 
@@ -137,7 +165,11 @@ corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.reduce_inequalities"></a>
 
-### `def reduce_inequalities(self, inequalities: List[str]):`
+### reduce_inequalities
+
+```python
+def reduce_inequalities(self, inequalities: List[str]):
+```
 
 Reduces a system of inequalities.
 
@@ -155,7 +187,11 @@ field with the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.polynomial_representation"></a>
 
-### `def polynomial_representation(self, expression: str, variable: str):`
+### polynomial_representation
+
+```python
+def polynomial_representation(self, expression: str, variable: str):
+```
 
 Represents an expression as a polynomial.
 
@@ -174,7 +210,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.polynomial_degree"></a>
 
-### `def polynomial_degree(self, expression: str, variable: str):`
+### polynomial_degree
+
+```python
+def polynomial_degree(self, expression: str, variable: str):
+```
 
 Returns the degree of a polynomial.
 
@@ -192,7 +232,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.polynomial_coefficients"></a>
 
-### `def polynomial_coefficients(self, expression: str, variable: str):`
+### polynomial_coefficients
+
+```python
+def polynomial_coefficients(self, expression: str, variable: str):
+```
 
 Returns the coefficients of a polynomial.
 
@@ -211,7 +255,11 @@ field with the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.solve_equation"></a>
 
-### `def solve_equation(self, sympy_equation: str, variable: Optional[str] = None):`
+### solve_equation
+
+```python
+def solve_equation(self, sympy_equation: str, variable: Optional[str] = None):
+```
 
 Solves an equation for a specific variable.
 
@@ -229,7 +277,11 @@ field with the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.find_roots"></a>
 
-### `def find_roots(self, expression: str):`
+### find_roots
+
+```python
+def find_roots(self, expression: str):
+```
 
 Finds the roots of a polynomial or algebraic equation.
 
@@ -247,7 +299,11 @@ with the corresponding error description.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.differentiate"></a>
 
-### `def differentiate(self, expression: str, variable: Optional[str] = None):`
+### differentiate
+
+```python
+def differentiate(self, expression: str, variable: Optional[str] = None):
+```
 
 Differentiates an expression with respect to a variable.
 
@@ -265,7 +321,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.integrate"></a>
 
-### `def integrate(self, expression: str, variable: Optional[str] = None):`
+### integrate
+
+```python
+def integrate(self, expression: str, variable: Optional[str] = None):
+```
 
 Integrates an expression with respect to a variable.
 
@@ -283,7 +343,7 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.definite_integral"></a>
 
-### `definite_integral`
+### definite_integral
 
 ```python
 def definite_integral(
@@ -314,7 +374,7 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.series_expansion"></a>
 
-### `series_expansion`
+### series_expansion
 
 ```python
 def series_expansion(
@@ -345,7 +405,7 @@ corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_limit"></a>
 
-### `compute_limit`
+### compute_limit
 
 ```python
 def compute_limit(
@@ -374,7 +434,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.find_critical_points"></a>
 
-### `def find_critical_points(self, expression: str, variable: str):`
+### find_critical_points
+
+```python
+def find_critical_points(self, expression: str, variable: str):
+```
 
 Finds the critical points of an expression by setting its
 derivative to zero.
@@ -394,7 +458,7 @@ the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.check_continuity"></a>
 
-### `check_continuity`
+### check_continuity
 
 ```python
 def check_continuity(
@@ -423,7 +487,11 @@ an `"error"` field with the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_determinant"></a>
 
-### `def compute_determinant(self, matrix: List[List[float]]):`
+### compute_determinant
+
+```python
+def compute_determinant(self, matrix: List[List[float]]):
+```
 
 Computes the determinant of a matrix.
 
@@ -440,7 +508,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_inverse"></a>
 
-### `def compute_inverse(self, matrix: List[List[float]]):`
+### compute_inverse
+
+```python
+def compute_inverse(self, matrix: List[List[float]]):
+```
 
 Computes the inverse of a matrix.
 
@@ -458,7 +530,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_eigenvalues"></a>
 
-### `def compute_eigenvalues(self, matrix: List[List[float]]):`
+### compute_eigenvalues
+
+```python
+def compute_eigenvalues(self, matrix: List[List[float]]):
+```
 
 Computes the eigenvalues of a matrix.
 
@@ -477,7 +553,11 @@ with the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_eigenvectors"></a>
 
-### `def compute_eigenvectors(self, matrix: List[List[float]]):`
+### compute_eigenvectors
+
+```python
+def compute_eigenvectors(self, matrix: List[List[float]]):
+```
 
 Computes the eigenvectors of a matrix.
 
@@ -501,7 +581,11 @@ field with the corresponding error message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_nullspace"></a>
 
-### `def compute_nullspace(self, matrix: List[List[float]]):`
+### compute_nullspace
+
+```python
+def compute_nullspace(self, matrix: List[List[float]]):
+```
 
 Computes the null space of a matrix.
 
@@ -520,7 +604,11 @@ message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_rank"></a>
 
-### `def compute_rank(self, matrix: List[List[float]]):`
+### compute_rank
+
+```python
+def compute_rank(self, matrix: List[List[float]]):
+```
 
 Computes the rank of a matrix.
 
@@ -537,7 +625,11 @@ If an error occurs,the JSON string will include an
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.compute_inner_product"></a>
 
-### `def compute_inner_product(self, vector1: List[float], vector2: List[float]):`
+### compute_inner_product
+
+```python
+def compute_inner_product(self, vector1: List[float], vector2: List[float]):
+```
 
 Computes the inner (dot) product of two vectors.
 
@@ -554,7 +646,11 @@ field. If an error occurs, the JSON string will include an
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.handle_exception"></a>
 
-### `def handle_exception(self, func_name: str, error: Exception):`
+### handle_exception
+
+```python
+def handle_exception(self, func_name: str, error: Exception):
+```
 
 Handles exceptions by logging and returning error details.
 
@@ -573,7 +669,11 @@ exception message.
 
 <a id="camel.toolkits.sympy_toolkit.SymPyToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

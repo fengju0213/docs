@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit"></a>
 
-## `class DataCommonsToolkit(BaseToolkit):`
+## DataCommonsToolkit
+
+```python
+class DataCommonsToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for Data Commons.
 
@@ -20,7 +24,11 @@ Refer to https://datacommons.org/browser/ for more details.
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initialize the DataCommonsToolkit.
 
@@ -30,7 +38,11 @@ Initialize the DataCommonsToolkit.
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.query_data_commons"></a>
 
-### `def query_data_commons(self, query_string: str):`
+### query_data_commons
+
+```python
+def query_data_commons(self, query_string: str):
+```
 
 Query the Data Commons knowledge graph using SPARQL.
 
@@ -56,7 +68,11 @@ https://docs.datacommons.org/api/python/query.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_triples"></a>
 
-### `def get_triples(self, dcids: Union[str, List[str]], limit: int = 500):`
+### get_triples
+
+```python
+def get_triples(self, dcids: Union[str, List[str]], limit: int = 500):
+```
 
 Retrieve triples associated with nodes.
 
@@ -87,7 +103,7 @@ https://docs.datacommons.org/api/python/triple.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_stat_time_series"></a>
 
-### `get_stat_time_series`
+### get_stat_time_series
 
 ```python
 def get_stat_time_series(
@@ -122,7 +138,11 @@ https://docs.datacommons.org/api/python/stat_series.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_property_labels"></a>
 
-### `def get_property_labels(self, dcids: Union[str, List[str]], out: bool = True):`
+### get_property_labels
+
+```python
+def get_property_labels(self, dcids: Union[str, List[str]], out: bool = True):
+```
 
 Retrieves and analyzes property labels for given DCIDs.
 
@@ -141,7 +161,7 @@ https://docs.datacommons.org/api/python/property_label.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_property_values"></a>
 
-### `get_property_values`
+### get_property_values
 
 ```python
 def get_property_values(
@@ -174,7 +194,11 @@ https://docs.datacommons.org/api/python/property_value.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_places_in"></a>
 
-### `def get_places_in(self, dcids: list, place_type: str):`
+### get_places_in
+
+```python
+def get_places_in(self, dcids: list, place_type: str):
+```
 
 Retrieves places within a given place type.
 
@@ -193,7 +217,7 @@ https://docs.datacommons.org/api/python/place_in.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_stat_value"></a>
 
-### `get_stat_value`
+### get_stat_value
 
 ```python
 def get_stat_value(
@@ -232,7 +256,11 @@ https://docs.datacommons.org/api/python/stat_value.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_stat_all"></a>
 
-### `def get_stat_all(self, places: str, stat_vars: str):`
+### get_stat_all
+
+```python
+def get_stat_all(self, places: str, stat_vars: str):
+```
 
 Retrieves the value of a statistical variable for a given place
 and date.
@@ -254,7 +282,11 @@ https://docs.datacommons.org/api/python/stat_all.html
 
 <a id="camel.toolkits.data_commons_toolkit.DataCommonsToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

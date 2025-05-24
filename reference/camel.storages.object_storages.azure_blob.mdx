@@ -2,7 +2,11 @@
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage"></a>
 
-## `class AzureBlobStorage(BaseObjectStorage):`
+## AzureBlobStorage
+
+```python
+class AzureBlobStorage(BaseObjectStorage):
+```
 
 A class to connect to Azure Blob Storage. It will connect to one
 container in the storage account.
@@ -17,7 +21,7 @@ container in the storage account.
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -31,13 +35,21 @@ def __init__(
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage._prepare_and_check"></a>
 
-### `def _prepare_and_check(self):`
+### _prepare_and_check
+
+```python
+def _prepare_and_check(self):
+```
 
 Check privileges and existence of the container.
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage.canonicalize_path"></a>
 
-### `def canonicalize_path(file_path: PurePath):`
+### canonicalize_path
+
+```python
+def canonicalize_path(file_path: PurePath):
+```
 
 Canonicalize file path for Azure Blob Storage.
 
@@ -51,7 +63,11 @@ Canonicalize file path for Azure Blob Storage.
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage._put_file"></a>
 
-### `def _put_file(self, file_key: str, file: File):`
+### _put_file
+
+```python
+def _put_file(self, file_key: str, file: File):
+```
 
 Put a file to the Azure Blob Storage container.
 
@@ -62,7 +78,11 @@ Put a file to the Azure Blob Storage container.
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage._get_file"></a>
 
-### `def _get_file(self, file_key: str, filename: str):`
+### _get_file
+
+```python
+def _get_file(self, file_key: str, filename: str):
+```
 
 Get a file from the Azure Blob Storage container.
 
@@ -77,7 +97,11 @@ Get a file from the Azure Blob Storage container.
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage._upload_file"></a>
 
-### `def _upload_file(self, local_file_path: Path, remote_file_key: str):`
+### _upload_file
+
+```python
+def _upload_file(self, local_file_path: Path, remote_file_key: str):
+```
 
 Upload a local file to the Azure Blob Storage container.
 
@@ -88,7 +112,11 @@ Upload a local file to the Azure Blob Storage container.
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage._download_file"></a>
 
-### `def _download_file(self, local_file_path: Path, remote_file_key: str):`
+### _download_file
+
+```python
+def _download_file(self, local_file_path: Path, remote_file_key: str):
+```
 
 Download a file from the Azure Blob Storage container to the local
 system.
@@ -100,7 +128,11 @@ system.
 
 <a id="camel.storages.object_storages.azure_blob.AzureBlobStorage._object_exists"></a>
 
-### `def _object_exists(self, file_key: str):`
+### _object_exists
+
+```python
+def _object_exists(self, file_key: str):
+```
 
 Check if the object exists in the Azure Blob Storage container.
 

@@ -2,20 +2,28 @@
 
 <a id="camel.toolkits.arxiv_toolkit.ArxivToolkit"></a>
 
-## `class ArxivToolkit(BaseToolkit):`
+## ArxivToolkit
+
+```python
+class ArxivToolkit(BaseToolkit):
+```
 
 A toolkit for interacting with the arXiv API to search and download
 academic papers.
 
 <a id="camel.toolkits.arxiv_toolkit.ArxivToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initializes the ArxivToolkit and sets up the arXiv client.
 
 <a id="camel.toolkits.arxiv_toolkit.ArxivToolkit._get_search_results"></a>
 
-### `_get_search_results`
+### _get_search_results
 
 ```python
 def _get_search_results(
@@ -43,7 +51,7 @@ query.
 
 <a id="camel.toolkits.arxiv_toolkit.ArxivToolkit.search_papers"></a>
 
-### `search_papers`
+### search_papers
 
 ```python
 def search_papers(
@@ -71,7 +79,7 @@ authors, entry ID, summary, and extracted text from the paper.
 
 <a id="camel.toolkits.arxiv_toolkit.ArxivToolkit.download_papers"></a>
 
-### `download_papers`
+### download_papers
 
 ```python
 def download_papers(
@@ -99,7 +107,11 @@ query.
 
 <a id="camel.toolkits.arxiv_toolkit.ArxivToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

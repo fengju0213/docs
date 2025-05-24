@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit"></a>
 
-## `class SearchToolkit(BaseToolkit):`
+## SearchToolkit
+
+```python
+class SearchToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for web search.
 
@@ -11,7 +15,11 @@ search engines like Google, DuckDuckGo, Wikipedia and Wolfram Alpha, Brave.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_wiki"></a>
 
-### `def search_wiki(self, entity: str):`
+### search_wiki
+
+```python
+def search_wiki(self, entity: str):
+```
 
 Search the entity in WikiPedia and return the summary of the
 required page, containing factual information about
@@ -28,7 +36,7 @@ exists, return the summary of this entity in a string.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_linkup"></a>
 
-### `search_linkup`
+### search_linkup
 
 ```python
 def search_linkup(
@@ -57,7 +65,7 @@ returns an error message.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_duckduckgo"></a>
 
-### `search_duckduckgo`
+### search_duckduckgo
 
 ```python
 def search_duckduckgo(
@@ -88,7 +96,7 @@ represents a search result.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_brave"></a>
 
-### `search_brave`
+### search_brave
 
 ```python
 def search_brave(
@@ -141,7 +149,11 @@ for more details.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_google"></a>
 
-### `def search_google(self, query: str, num_result_pages: int = 5):`
+### search_google
+
+```python
+def search_google(self, query: str, num_result_pages: int = 5):
+```
 
 Use Google search engine to search information for the given query.
 
@@ -163,7 +175,7 @@ Each dictionary contains the following keys:
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.tavily_search"></a>
 
-### `tavily_search`
+### tavily_search
 
 ```python
 def tavily_search(
@@ -198,7 +210,7 @@ results. Each dictionary contains:
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_bocha"></a>
 
-### `search_bocha`
+### search_bocha
 
 ```python
 def search_bocha(
@@ -229,7 +241,11 @@ follows the Bocha AI search API response format.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_baidu"></a>
 
-### `def search_baidu(self, query: str, max_results: int = 5):`
+### search_baidu
+
+```python
+def search_baidu(self, query: str, max_results: int = 5):
+```
 
 Search Baidu using web scraping to retrieve relevant search
 results. This method queries Baidu's search engine and extracts search
@@ -247,7 +263,11 @@ message.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_bing"></a>
 
-### `def search_bing(self, query: str, max_results: int = 5):`
+### search_bing
+
+```python
+def search_bing(self, query: str, max_results: int = 5):
+```
 
 Use Bing search engine to search information for the given query.
 
@@ -274,7 +294,7 @@ Chinese search results are desired.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_exa"></a>
 
-### `search_exa`
+### search_exa
 
 ```python
 def search_exa(
@@ -317,7 +337,7 @@ content extraction.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.search_alibaba_tongxiao"></a>
 
-### `search_alibaba_tongxiao`
+### search_alibaba_tongxiao
 
 ```python
 def search_alibaba_tongxiao(
@@ -359,7 +379,11 @@ metadata.
 
 <a id="camel.toolkits.search_toolkit.SearchToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit"></a>
 
-## `class GoogleCalendarToolkit(BaseToolkit):`
+## GoogleCalendarToolkit
+
+```python
+class GoogleCalendarToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for Google Calendar operations.
 
@@ -11,7 +15,11 @@ updating events, and deleting events from a Google Calendar.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initializes a new instance of the GoogleCalendarToolkit class.
 
@@ -21,7 +29,7 @@ Initializes a new instance of the GoogleCalendarToolkit class.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit.create_event"></a>
 
-### `create_event`
+### create_event
 
 ```python
 def create_event(
@@ -54,7 +62,11 @@ Creates an event in the user's primary Google Calendar.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit.get_events"></a>
 
-### `def get_events(self, max_results: int = 10, time_min: Optional[str] = None):`
+### get_events
+
+```python
+def get_events(self, max_results: int = 10, time_min: Optional[str] = None):
+```
 
 Retrieves upcoming events from the user's primary Google Calendar.
 
@@ -71,7 +83,7 @@ dictionary with an error message.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit.update_event"></a>
 
-### `update_event`
+### update_event
 
 ```python
 def update_event(
@@ -105,7 +117,11 @@ event.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit.delete_event"></a>
 
-### `def delete_event(self, event_id: str):`
+### delete_event
+
+```python
+def delete_event(self, event_id: str):
+```
 
 Deletes an event from the user's primary Google Calendar.
 
@@ -119,7 +135,11 @@ Deletes an event from the user's primary Google Calendar.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit.get_calendar_details"></a>
 
-### `def get_calendar_details(self):`
+### get_calendar_details
+
+```python
+def get_calendar_details(self):
+```
 
 **Returns:**
 
@@ -127,7 +147,11 @@ Deletes an event from the user's primary Google Calendar.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit._get_calendar_service"></a>
 
-### `def _get_calendar_service(self):`
+### _get_calendar_service
+
+```python
+def _get_calendar_service(self):
+```
 
 **Returns:**
 
@@ -135,7 +159,11 @@ Deletes an event from the user's primary Google Calendar.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit._authenticate"></a>
 
-### `def _authenticate(self):`
+### _authenticate
+
+```python
+def _authenticate(self):
+```
 
 **Returns:**
 
@@ -143,7 +171,11 @@ Deletes an event from the user's primary Google Calendar.
 
 <a id="camel.toolkits.google_calendar_toolkit.GoogleCalendarToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

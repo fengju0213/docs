@@ -2,13 +2,21 @@
 
 <a id="camel.benchmarks.nexus.NexusSample"></a>
 
-## `class NexusSample:`
+## NexusSample
+
+```python
+class NexusSample:
+```
 
 Nexus benchmark dataset sample.
 
 <a id="camel.benchmarks.nexus.NexusBenchmark"></a>
 
-## `class NexusBenchmark(BaseBenchmark):`
+## NexusBenchmark
+
+```python
+class NexusBenchmark(BaseBenchmark):
+```
 
 Nexus Function Calling Benchmark adapted from `NexusRaven V2
 Function Calling Benchmark`
@@ -22,7 +30,7 @@ Function Calling Benchmark`
 
 <a id="camel.benchmarks.nexus.NexusBenchmark.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -43,13 +51,21 @@ Initialize the Nexus Function Calling benchmark.
 
 <a id="camel.benchmarks.nexus.NexusBenchmark.download"></a>
 
-### `def download(self):`
+### download
+
+```python
+def download(self):
+```
 
 Download the Nexus Functional Calling Benchmark dataset.
 
 <a id="camel.benchmarks.nexus.NexusBenchmark.load"></a>
 
-### `def load(self, dataset_name: str, force_download: bool = False):`
+### load
+
+```python
+def load(self, dataset_name: str, force_download: bool = False):
+```
 
 Load the Nexus Benchmark dataset.
 
@@ -60,13 +76,17 @@ Load the Nexus Benchmark dataset.
 
 <a id="camel.benchmarks.nexus.NexusBenchmark.train"></a>
 
-### `def train(self):`
+### train
+
+```python
+def train(self):
+```
 
 Get the training set.
 
 <a id="camel.benchmarks.nexus.NexusBenchmark.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -92,20 +112,32 @@ Run the benchmark.
 
 <a id="camel.benchmarks.nexus.construct_tool_descriptions"></a>
 
-## `def construct_tool_descriptions(dataset_name: str):`
+## construct_tool_descriptions
+
+```python
+def construct_tool_descriptions(dataset_name: str):
+```
 
 Construct tool descriptions from function definitions and
 descriptions.
 
 <a id="camel.benchmarks.nexus.construct_prompt"></a>
 
-## `def construct_prompt(input: str, tools: str):`
+## construct_prompt
+
+```python
+def construct_prompt(input: str, tools: str):
+```
 
 Construct prompt from tools and input.
 
 <a id="camel.benchmarks.nexus.parse_function_call"></a>
 
-## `def parse_function_call(call: str):`
+## parse_function_call
+
+```python
+def parse_function_call(call: str):
+```
 
 Parse a function call string to extract the function name,
 positional arguments, and keyword arguments, including
@@ -122,7 +154,11 @@ keyword_args (dict)) or (None, None, None).
 
 <a id="camel.benchmarks.nexus.compare_function_calls"></a>
 
-## `def compare_function_calls(agent_call: str, ground_truth_call: str):`
+## compare_function_calls
+
+```python
+def compare_function_calls(agent_call: str, ground_truth_call: str):
+```
 
 Compare the function name and arguments of
 agent_call and ground_truth_call.

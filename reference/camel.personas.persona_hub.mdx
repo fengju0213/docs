@@ -2,7 +2,11 @@
 
 <a id="camel.personas.persona_hub.PersonaHub"></a>
 
-## `class PersonaHub:`
+## PersonaHub
+
+```python
+class PersonaHub:
+```
 
 The PersonaHub adapted from `"Scaling Synthetic Data Creation with 1,
 000,000,000 Personas"
@@ -25,11 +29,19 @@ Please refer to the paper for more details: https://arxiv.org/pdf/2406.20094.
 
 <a id="camel.personas.persona_hub.PersonaHub.__init__"></a>
 
-### `def __init__(self, model: Optional[BaseModelBackend] = None):`
+### __init__
+
+```python
+def __init__(self, model: Optional[BaseModelBackend] = None):
+```
 
 <a id="camel.personas.persona_hub.PersonaHub.__setitem__"></a>
 
-### `def __setitem__(self, persona: Persona):`
+### __setitem__
+
+```python
+def __setitem__(self, persona: Persona):
+```
 
 Add a persona to the group.
 
@@ -39,7 +51,11 @@ Add a persona to the group.
 
 <a id="camel.personas.persona_hub.PersonaHub.__delitem__"></a>
 
-### `def __delitem__(self, persona_id: uuid.UUID):`
+### __delitem__
+
+```python
+def __delitem__(self, persona_id: uuid.UUID):
+```
 
 Remove a persona from the group by ID.
 
@@ -49,7 +65,11 @@ Remove a persona from the group by ID.
 
 <a id="camel.personas.persona_hub.PersonaHub.__getitem__"></a>
 
-### `def __getitem__(self, persona_id: uuid.UUID):`
+### __getitem__
+
+```python
+def __getitem__(self, persona_id: uuid.UUID):
+```
 
 Get a persona by ID.
 
@@ -59,7 +79,7 @@ Get a persona by ID.
 
 <a id="camel.personas.persona_hub.PersonaHub.text_to_persona"></a>
 
-### `text_to_persona`
+### text_to_persona
 
 ```python
 def text_to_persona(
@@ -83,7 +103,11 @@ Infers a specific persona who is likely to [read|write|like|dislike
 
 <a id="camel.personas.persona_hub.PersonaHub.persona_to_persona"></a>
 
-### `def persona_to_persona(self, persona: Persona):`
+### persona_to_persona
+
+```python
+def persona_to_persona(self, persona: Persona):
+```
 
 Derives additional personas based on interpersonal relationships
 from this persona.
@@ -98,7 +122,7 @@ from this persona.
 
 <a id="camel.personas.persona_hub.PersonaHub.deduplicate"></a>
 
-### `deduplicate`
+### deduplicate
 
 ```python
 def deduplicate(
@@ -117,13 +141,21 @@ Remove similar personas from the group.
 
 <a id="camel.personas.persona_hub.PersonaHub._get_embedding"></a>
 
-### `def _get_embedding(embedding_model: BaseEmbedding, description: Optional[str]):`
+### _get_embedding
+
+```python
+def _get_embedding(embedding_model: BaseEmbedding, description: Optional[str]):
+```
 
 Cache embeddings to reduce recomputation.
 
 <a id="camel.personas.persona_hub.PersonaHub._cosine_similarity"></a>
 
-### `def _cosine_similarity(vec1: np.ndarray, vec2: np.ndarray):`
+### _cosine_similarity
+
+```python
+def _cosine_similarity(vec1: np.ndarray, vec2: np.ndarray):
+```
 
 Copmute the cosine similarity of two vectors.
 
@@ -134,7 +166,7 @@ Copmute the cosine similarity of two vectors.
 
 <a id="camel.personas.persona_hub.PersonaHub._is_similar"></a>
 
-### `_is_similar`
+### _is_similar
 
 ```python
 def _is_similar(
@@ -158,14 +190,26 @@ of the embeddings of their descriptions.
 
 <a id="camel.personas.persona_hub.PersonaHub.__len__"></a>
 
-### `def __len__(self):`
+### __len__
+
+```python
+def __len__(self):
+```
 
 <a id="camel.personas.persona_hub.PersonaHub.__iter__"></a>
 
-### `def __iter__(self):`
+### __iter__
+
+```python
+def __iter__(self):
+```
 
 <a id="camel.personas.persona_hub.PersonaHub.get_all_personas"></a>
 
-### `def get_all_personas(self):`
+### get_all_personas
+
+```python
+def get_all_personas(self):
+```
 
 Return a list of all personas.

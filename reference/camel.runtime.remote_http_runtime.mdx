@@ -2,7 +2,11 @@
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime"></a>
 
-## `class RemoteHttpRuntime(BaseRuntime):`
+## RemoteHttpRuntime
+
+```python
+class RemoteHttpRuntime(BaseRuntime):
+```
 
 A runtime that runs functions in a remote HTTP server.
 You need to run the API server in the remote server first.
@@ -15,7 +19,7 @@ You need to run the API server in the remote server first.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -28,7 +32,11 @@ def __init__(
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.build"></a>
 
-### `def build(self):`
+### build
+
+```python
+def build(self):
+```
 
 **Returns:**
 
@@ -36,13 +44,17 @@ def __init__(
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime._cleanup"></a>
 
-### `def _cleanup(self):`
+### _cleanup
+
+```python
+def _cleanup(self):
+```
 
 Clean up the API server when exiting.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.add"></a>
 
-### `add`
+### add
 
 ```python
 def add(
@@ -69,7 +81,11 @@ Add a function or list of functions to the runtime.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.ok"></a>
 
-### `def ok(self):`
+### ok
+
+```python
+def ok(self):
+```
 
 **Returns:**
 
@@ -77,7 +93,11 @@ Add a function or list of functions to the runtime.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.wait"></a>
 
-### `def wait(self, timeout: int = 10):`
+### wait
+
+```python
+def wait(self, timeout: int = 10):
+```
 
 Wait for the API Server to be ready.
 
@@ -91,13 +111,21 @@ Wait for the API Server to be ready.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.__del__"></a>
 
-### `def __del__(self):`
+### __del__
+
+```python
+def __del__(self):
+```
 
 Clean up the API server when the object is deleted.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.stop"></a>
 
-### `def stop(self):`
+### stop
+
+```python
+def stop(self):
+```
 
 **Returns:**
 
@@ -105,7 +133,11 @@ Clean up the API server when the object is deleted.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 **Returns:**
 
@@ -113,7 +145,11 @@ Clean up the API server when the object is deleted.
 
 <a id="camel.runtime.remote_http_runtime.RemoteHttpRuntime.docs"></a>
 
-### `def docs(self):`
+### docs
+
+```python
+def docs(self):
+```
 
 **Returns:**
 

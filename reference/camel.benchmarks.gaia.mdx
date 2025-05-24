@@ -2,14 +2,18 @@
 
 <a id="camel.benchmarks.gaia.RetrieverProtocol"></a>
 
-## `class RetrieverProtocol(Protocol):`
+## RetrieverProtocol
+
+```python
+class RetrieverProtocol(Protocol):
+```
 
 Protocol for the retriever class. Any retriever class implementing
 this protocol can be used in the benchmark class.
 
 <a id="camel.benchmarks.gaia.RetrieverProtocol.retrieve"></a>
 
-### `retrieve`
+### retrieve
 
 ```python
 def retrieve(
@@ -33,7 +37,11 @@ Retrieve the relevant content for the query.
 
 <a id="camel.benchmarks.gaia.RetrieverProtocol.reset"></a>
 
-### `def reset(self, **kwargs):`
+### reset
+
+```python
+def reset(self, **kwargs):
+```
 
 Reset the retriever.
 Some benchmarks may require resetting the retriever
@@ -45,7 +53,11 @@ after each query.
 
 <a id="camel.benchmarks.gaia.DefaultGAIARetriever"></a>
 
-## `class DefaultGAIARetriever(AutoRetriever):`
+## DefaultGAIARetriever
+
+```python
+class DefaultGAIARetriever(AutoRetriever):
+```
 
 Default retriever for the GAIA benchmark.
 This retriever uses AutoRetriever in camel to retrieve the content based on
@@ -53,7 +65,7 @@ the query.
 
 <a id="camel.benchmarks.gaia.DefaultGAIARetriever.retrieve"></a>
 
-### `retrieve`
+### retrieve
 
 ```python
 def retrieve(
@@ -77,7 +89,11 @@ Retrieve the content based on the query.
 
 <a id="camel.benchmarks.gaia.DefaultGAIARetriever.reset"></a>
 
-### `def reset(self, **kwargs: Any):`
+### reset
+
+```python
+def reset(self, **kwargs: Any):
+```
 
 Reset the retriever.
 
@@ -87,7 +103,11 @@ Reset the retriever.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark"></a>
 
-## `class GAIABenchmark(BaseBenchmark):`
+## GAIABenchmark
+
+```python
+class GAIABenchmark(BaseBenchmark):
+```
 
 GAIA Benchmark adapted from `"GAIA: a benchmark for General AI
 Assistants"
@@ -102,7 +122,7 @@ Assistants"
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -125,13 +145,21 @@ Initialize the GAIA benchmark.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.download"></a>
 
-### `def download(self):`
+### download
+
+```python
+def download(self):
+```
 
 Download the GAIA dataset.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.load"></a>
 
-### `def load(self, force_download = False):`
+### load
+
+```python
+def load(self, force_download = False):
+```
 
 Load the GAIA dataset.
 
@@ -141,13 +169,17 @@ Load the GAIA dataset.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.train"></a>
 
-### `def train(self):`
+### train
+
+```python
+def train(self):
+```
 
 Get the training set.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -176,19 +208,27 @@ Run the benchmark.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark._prepare_task"></a>
 
-### `def _prepare_task(self, task: Dict[str, Any]):`
+### _prepare_task
+
+```python
+def _prepare_task(self, task: Dict[str, Any]):
+```
 
 Prepare the task by validating and enriching its data.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark._create_user_message"></a>
 
-### `def _create_user_message(self, task: Dict[str, Any]):`
+### _create_user_message
+
+```python
+def _create_user_message(self, task: Dict[str, Any]):
+```
 
 Create a user message from a task.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark._process_result"></a>
 
-### `_process_result`
+### _process_result
 
 ```python
 def _process_result(
@@ -204,7 +244,7 @@ Process and store the result of a task.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark._handle_error"></a>
 
-### `_handle_error`
+### _handle_error
 
 ```python
 def _handle_error(
@@ -219,13 +259,21 @@ Handle errors encountered during task processing.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark._generate_summary"></a>
 
-### `def _generate_summary(self):`
+### _generate_summary
+
+```python
+def _generate_summary(self):
+```
 
 Generate and return a summary of the benchmark results.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.question_scorer"></a>
 
-### `def question_scorer(self, model_answer: str, ground_truth: str):`
+### question_scorer
+
+```python
+def question_scorer(self, model_answer: str, ground_truth: str):
+```
 
 Scorer for the GAIA benchmark.
 https://huggingface.co/spaces/gaia-benchmark/leaderboard/blob/main/
@@ -242,11 +290,19 @@ scorer.py
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.normalize_number_str"></a>
 
-### `def normalize_number_str(self, number_str: str):`
+### normalize_number_str
+
+```python
+def normalize_number_str(self, number_str: str):
+```
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.split_string"></a>
 
-### `def split_string(self, s: str, char_list: Optional[List[str]] = None):`
+### split_string
+
+```python
+def split_string(self, s: str, char_list: Optional[List[str]] = None):
+```
 
 Split a string based on a list of characters.
 
@@ -257,7 +313,11 @@ Split a string based on a list of characters.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.normalize_str"></a>
 
-### `def normalize_str(self, input_str, remove_punct = True):`
+### normalize_str
+
+```python
+def normalize_str(self, input_str, remove_punct = True):
+```
 
 Normalize a string.
 
@@ -272,7 +332,11 @@ Normalize a string.
 
 <a id="camel.benchmarks.gaia.GAIABenchmark.get_final_answer"></a>
 
-### `def get_final_answer(self, content: str):`
+### get_final_answer
+
+```python
+def get_final_answer(self, content: str):
+```
 
 Get the final answer from the content.
 

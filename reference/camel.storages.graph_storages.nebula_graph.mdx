@@ -2,11 +2,15 @@
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph"></a>
 
-## `class NebulaGraph(BaseGraphStorage):`
+## NebulaGraph
+
+```python
+class NebulaGraph(BaseGraphStorage):
+```
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,7 +37,11 @@ Initializes the NebulaGraph client.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph._init_connection_pool"></a>
 
-### `def _init_connection_pool(self):`
+### _init_connection_pool
+
+```python
+def _init_connection_pool(self):
+```
 
 **Returns:**
 
@@ -41,7 +49,11 @@ Initializes the NebulaGraph client.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph._get_session"></a>
 
-### `def _get_session(self):`
+### _get_session
+
+```python
+def _get_session(self):
+```
 
 **Returns:**
 
@@ -49,13 +61,21 @@ Initializes the NebulaGraph client.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.get_client"></a>
 
-### `def get_client(self):`
+### get_client
+
+```python
+def get_client(self):
+```
 
 Get the underlying graph storage client.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.query"></a>
 
-### `def query(self, query: str):`
+### query
+
+```python
+def query(self, query: str):
+```
 
 Execute a query on the graph store.
 
@@ -69,7 +89,11 @@ Execute a query on the graph store.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.get_relationship_types"></a>
 
-### `def get_relationship_types(self):`
+### get_relationship_types
+
+```python
+def get_relationship_types(self):
+```
 
 **Returns:**
 
@@ -77,7 +101,11 @@ Execute a query on the graph store.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.add_graph_elements"></a>
 
-### `def add_graph_elements(self, graph_elements: List[GraphElement]):`
+### add_graph_elements
+
+```python
+def add_graph_elements(self, graph_elements: List[GraphElement]):
+```
 
 Add graph elements (nodes and relationships) to the graph.
 
@@ -87,7 +115,11 @@ Add graph elements (nodes and relationships) to the graph.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.ensure_edge_type_exists"></a>
 
-### `def ensure_edge_type_exists(self, edge_type: str, time_label: Optional[str] = None):`
+### ensure_edge_type_exists
+
+```python
+def ensure_edge_type_exists(self, edge_type: str, time_label: Optional[str] = None):
+```
 
 Ensures that a specified edge type exists in the NebulaGraph
 database. If the edge type already exists, this method does nothing.
@@ -99,7 +131,11 @@ database. If the edge type already exists, this method does nothing.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.ensure_tag_exists"></a>
 
-### `def ensure_tag_exists(self, tag_name: str, time_label: Optional[str] = None):`
+### ensure_tag_exists
+
+```python
+def ensure_tag_exists(self, tag_name: str, time_label: Optional[str] = None):
+```
 
 Ensures a tag is created in the NebulaGraph database. If the tag
 already exists, it does nothing.
@@ -111,7 +147,7 @@ already exists, it does nothing.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.add_node"></a>
 
-### `add_node`
+### add_node
 
 ```python
 def add_node(
@@ -132,7 +168,11 @@ Add a node with the specified tag and properties.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph._extract_nodes"></a>
 
-### `def _extract_nodes(self, graph_elements: List[Any]):`
+### _extract_nodes
+
+```python
+def _extract_nodes(self, graph_elements: List[Any]):
+```
 
 Extracts unique nodes from graph elements.
 
@@ -146,7 +186,11 @@ Extracts unique nodes from graph elements.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph._extract_relationships"></a>
 
-### `def _extract_relationships(self, graph_elements: List[Any]):`
+### _extract_relationships
+
+```python
+def _extract_relationships(self, graph_elements: List[Any]):
+```
 
 Extracts relationships from graph elements.
 
@@ -160,13 +204,21 @@ Extracts relationships from graph elements.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.refresh_schema"></a>
 
-### `def refresh_schema(self):`
+### refresh_schema
+
+```python
+def refresh_schema(self):
+```
 
 Refreshes the schema by fetching the latest schema details.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.get_structured_schema"></a>
 
-### `def get_structured_schema(self):`
+### get_structured_schema
+
+```python
+def get_structured_schema(self):
+```
 
 **Returns:**
 
@@ -174,7 +226,11 @@ Refreshes the schema by fetching the latest schema details.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.get_schema"></a>
 
-### `def get_schema(self):`
+### get_schema
+
+```python
+def get_schema(self):
+```
 
 **Returns:**
 
@@ -182,7 +238,11 @@ Refreshes the schema by fetching the latest schema details.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.get_indexes"></a>
 
-### `def get_indexes(self):`
+### get_indexes
+
+```python
+def get_indexes(self):
+```
 
 **Returns:**
 
@@ -190,7 +250,7 @@ Refreshes the schema by fetching the latest schema details.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.add_triplet"></a>
 
-### `add_triplet`
+### add_triplet
 
 ```python
 def add_triplet(
@@ -214,7 +274,7 @@ Graph database.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.delete_triplet"></a>
 
-### `delete_triplet`
+### delete_triplet
 
 ```python
 def delete_triplet(
@@ -236,7 +296,11 @@ from the Nebula Graph database.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.delete_entity"></a>
 
-### `def delete_entity(self, entity_id: str):`
+### delete_entity
+
+```python
+def delete_entity(self, entity_id: str):
+```
 
 Deletes an entity (vertex) from the graph.
 
@@ -246,7 +310,11 @@ Deletes an entity (vertex) from the graph.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph._check_edges"></a>
 
-### `def _check_edges(self, entity_id: str):`
+### _check_edges
+
+```python
+def _check_edges(self, entity_id: str):
+```
 
 Checks if an entity has any remaining edges in the graph.
 
@@ -260,7 +328,11 @@ Checks if an entity has any remaining edges in the graph.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.get_node_properties"></a>
 
-### `def get_node_properties(self):`
+### get_node_properties
+
+```python
+def get_node_properties(self):
+```
 
 **Returns:**
 
@@ -270,7 +342,11 @@ element is a list of dictionaries representing node structures.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph.get_relationship_properties"></a>
 
-### `def get_relationship_properties(self):`
+### get_relationship_properties
+
+```python
+def get_relationship_properties(self):
+```
 
 **Returns:**
 
@@ -281,7 +357,11 @@ relationship structures.
 
 <a id="camel.storages.graph_storages.nebula_graph.NebulaGraph._validate_time_label"></a>
 
-### `def _validate_time_label(self, time_label: str):`
+### _validate_time_label
+
+```python
+def _validate_time_label(self, time_label: str):
+```
 
 Validates the format of a time label string.
 

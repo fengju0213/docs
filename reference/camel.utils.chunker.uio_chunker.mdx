@@ -2,7 +2,11 @@
 
 <a id="camel.utils.chunker.uio_chunker.UnstructuredIOChunker"></a>
 
-## `class UnstructuredIOChunker(BaseChunker):`
+## UnstructuredIOChunker
+
+```python
+class UnstructuredIOChunker(BaseChunker):
+```
 
 A class for chunking text while respecting structure and
 character limits.
@@ -21,7 +25,7 @@ the provided `chunk_type` parameter.
 
 <a id="camel.utils.chunker.uio_chunker.UnstructuredIOChunker.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -34,7 +38,11 @@ def __init__(
 
 <a id="camel.utils.chunker.uio_chunker.UnstructuredIOChunker.chunk"></a>
 
-### `def chunk(self, content: List['Element']):`
+### chunk
+
+```python
+def chunk(self, content: List['Element']):
+```
 
 Splits the content into smaller chunks while preserving
 structure and adhering to token constraints.

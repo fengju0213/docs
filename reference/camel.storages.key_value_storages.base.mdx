@@ -2,7 +2,11 @@
 
 <a id="camel.storages.key_value_storages.base.BaseKeyValueStorage"></a>
 
-## `class BaseKeyValueStorage(ABC):`
+## BaseKeyValueStorage
+
+```python
+class BaseKeyValueStorage(ABC):
+```
 
 An abstract base class for key-value storage systems. Provides a
 consistent interface for saving, loading, and clearing data records without
@@ -18,7 +22,11 @@ databases like MongoDB and Redis, as well as in-memory Python dictionaries.
 
 <a id="camel.storages.key_value_storages.base.BaseKeyValueStorage.save"></a>
 
-### `def save(self, records: List[Dict[str, Any]]):`
+### save
+
+```python
+def save(self, records: List[Dict[str, Any]]):
+```
 
 Saves a batch of records to the key-value storage system.
 
@@ -28,7 +36,11 @@ Saves a batch of records to the key-value storage system.
 
 <a id="camel.storages.key_value_storages.base.BaseKeyValueStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 **Returns:**
 
@@ -37,6 +49,10 @@ represents a stored record.
 
 <a id="camel.storages.key_value_storages.base.BaseKeyValueStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the key-value storage system.

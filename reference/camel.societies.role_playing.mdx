@@ -2,7 +2,11 @@
 
 <a id="camel.societies.role_playing.RolePlaying"></a>
 
-## `class RolePlaying:`
+## RolePlaying
+
+```python
+class RolePlaying:
+```
 
 Role playing between two agents.
 
@@ -31,11 +35,15 @@ Role playing between two agents.
 
 <a id="camel.societies.role_playing.RolePlaying.__init__"></a>
 
-### `def __init__(self, assistant_role_name: str, user_role_name: str):`
+### __init__
+
+```python
+def __init__(self, assistant_role_name: str, user_role_name: str):
+```
 
 <a id="camel.societies.role_playing.RolePlaying._init_specified_task_prompt"></a>
 
-### `_init_specified_task_prompt`
+### _init_specified_task_prompt
 
 ```python
 def _init_specified_task_prompt(
@@ -63,7 +71,7 @@ prompt will not be generated.
 
 <a id="camel.societies.role_playing.RolePlaying._init_planned_task_prompt"></a>
 
-### `_init_planned_task_prompt`
+### _init_planned_task_prompt
 
 ```python
 def _init_planned_task_prompt(
@@ -86,7 +94,7 @@ will not be generated.
 
 <a id="camel.societies.role_playing.RolePlaying._get_sys_message_info"></a>
 
-### `_get_sys_message_info`
+### _get_sys_message_info
 
 ```python
 def _get_sys_message_info(
@@ -117,7 +125,7 @@ message, and a list of system message meta dicts.
 
 <a id="camel.societies.role_playing.RolePlaying._init_agents"></a>
 
-### `_init_agents`
+### _init_agents
 
 ```python
 def _init_agents(
@@ -144,7 +152,7 @@ Initialize assistant and user agents with their system messages.
 
 <a id="camel.societies.role_playing.RolePlaying._init_critic"></a>
 
-### `_init_critic`
+### _init_critic
 
 ```python
 def _init_critic(
@@ -172,7 +180,11 @@ is not specified, set it to improve task performance.
 
 <a id="camel.societies.role_playing.RolePlaying._reduce_message_options"></a>
 
-### `def _reduce_message_options(self, messages: Sequence[BaseMessage]):`
+### _reduce_message_options
+
+```python
+def _reduce_message_options(self, messages: Sequence[BaseMessage]):
+```
 
 Processes a sequence of chat messages, returning the processed
 message. If multiple messages are provided and
@@ -190,7 +202,11 @@ message.
 
 <a id="camel.societies.role_playing.RolePlaying.init_chat"></a>
 
-### `def init_chat(self, init_msg_content: Optional[str] = None):`
+### init_chat
+
+```python
+def init_chat(self, init_msg_content: Optional[str] = None):
+```
 
 Initializes the chat by resetting both of the assistant and user
 agents. Returns an initial message for the role-playing session.
@@ -206,7 +222,11 @@ message.
 
 <a id="camel.societies.role_playing.RolePlaying.step"></a>
 
-### `def step(self, assistant_msg: BaseMessage):`
+### step
+
+```python
+def step(self, assistant_msg: BaseMessage):
+```
 
 Advances the conversation by taking a message from the assistant,
 processing it using the user agent, and then processing the resulting
@@ -232,7 +252,11 @@ information.
 
 <a id="camel.societies.role_playing.RolePlaying.clone"></a>
 
-### `def clone(self, task_prompt: str, with_memory: bool = False):`
+### clone
+
+```python
+def clone(self, task_prompt: str, with_memory: bool = False):
+```
 
 Creates a new instance of RolePlaying with the same configuration.
 

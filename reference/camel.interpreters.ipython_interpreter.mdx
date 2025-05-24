@@ -2,7 +2,11 @@
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter"></a>
 
-## `class JupyterKernelInterpreter(BaseInterpreter):`
+## JupyterKernelInterpreter
+
+```python
+class JupyterKernelInterpreter(BaseInterpreter):
+```
 
 A class for executing code strings in a Jupyter Kernel.
 
@@ -14,7 +18,7 @@ A class for executing code strings in a Jupyter Kernel.
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -27,32 +31,52 @@ def __init__(
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter.__del__"></a>
 
-### `def __del__(self):`
+### __del__
+
+```python
+def __del__(self):
+```
 
 Clean up the kernel and client.
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter._initialize_if_needed"></a>
 
-### `def _initialize_if_needed(self):`
+### _initialize_if_needed
+
+```python
+def _initialize_if_needed(self):
+```
 
 Initialize the kernel manager and client if they are not already
 initialized.
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter._clean_ipython_output"></a>
 
-### `def _clean_ipython_output(output: str):`
+### _clean_ipython_output
+
+```python
+def _clean_ipython_output(output: str):
+```
 
 Remove ANSI escape sequences from the output.
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter._execute"></a>
 
-### `def _execute(self, code: str, timeout: float):`
+### _execute
+
+```python
+def _execute(self, code: str, timeout: float):
+```
 
 Execute the code in the Jupyter kernel and return the result.
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter.run"></a>
 
-### `def run(self, code: str, code_type: str):`
+### run
+
+```python
+def run(self, code: str, code_type: str):
+```
 
 Executes the given code in the Jupyter kernel.
 
@@ -68,7 +92,11 @@ executed code.
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter.supported_code_types"></a>
 
-### `def supported_code_types(self):`
+### supported_code_types
+
+```python
+def supported_code_types(self):
+```
 
 **Returns:**
 
@@ -76,7 +104,11 @@ executed code.
 
 <a id="camel.interpreters.ipython_interpreter.JupyterKernelInterpreter.update_action_space"></a>
 
-### `def update_action_space(self, action_space: Dict[str, Any]):`
+### update_action_space
+
+```python
+def update_action_space(self, action_space: Dict[str, Any]):
+```
 
 Updates the action space for the interpreter.
 

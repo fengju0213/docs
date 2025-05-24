@@ -2,7 +2,11 @@
 
 <a id="camel.datasets.few_shot_generator.FewShotGenerator"></a>
 
-## `class FewShotGenerator(BaseGenerator):`
+## FewShotGenerator
+
+```python
+class FewShotGenerator(BaseGenerator):
+```
 
 A generator for creating synthetic datapoints using few-shot learning.
 
@@ -11,7 +15,7 @@ new synthetic datapoints on demand through few-shot prompting.
 
 <a id="camel.datasets.few_shot_generator.FewShotGenerator.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -35,11 +39,19 @@ Initialize the few-shot generator.
 
 <a id="camel.datasets.few_shot_generator.FewShotGenerator._validate_seed_dataset"></a>
 
-### `def _validate_seed_dataset(self):`
+### _validate_seed_dataset
+
+```python
+def _validate_seed_dataset(self):
+```
 
 <a id="camel.datasets.few_shot_generator.FewShotGenerator._construct_prompt"></a>
 
-### `def _construct_prompt(self, examples: List[DataPoint]):`
+### _construct_prompt
+
+```python
+def _construct_prompt(self, examples: List[DataPoint]):
+```
 
 Construct a prompt for generating new datapoints
 using a fixed sample of examples from the seed dataset.

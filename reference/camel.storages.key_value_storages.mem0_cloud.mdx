@@ -2,7 +2,11 @@
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage"></a>
 
-## `class Mem0Storage(BaseKeyValueStorage):`
+## Mem0Storage
+
+```python
+class Mem0Storage(BaseKeyValueStorage):
+```
 
 A concrete implementation of the :obj:`BaseKeyValueStorage` using Mem0
 as the backend. This storage system uses Mem0's text capabilities to store,
@@ -19,7 +23,7 @@ search, and manage text with context.
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,7 +37,7 @@ def __init__(
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage._prepare_options"></a>
 
-### `_prepare_options`
+### _prepare_options
 
 ```python
 def _prepare_options(
@@ -59,7 +63,7 @@ Helper method to prepare options for Mem0 API calls.
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage._prepare_filters"></a>
 
-### `_prepare_filters`
+### _prepare_filters
 
 ```python
 def _prepare_filters(
@@ -84,7 +88,11 @@ Helper method to prepare filters for Mem0 API calls.
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage._prepare_messages"></a>
 
-### `def _prepare_messages(self, records: List[Dict[str, Any]]):`
+### _prepare_messages
+
+```python
+def _prepare_messages(self, records: List[Dict[str, Any]]):
+```
 
 Prepare messages from records for Mem0 API calls.
 
@@ -98,7 +106,11 @@ Prepare messages from records for Mem0 API calls.
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage.save"></a>
 
-### `def save(self, records: List[Dict[str, Any]]):`
+### save
+
+```python
+def save(self, records: List[Dict[str, Any]]):
+```
 
 Saves a batch of records to the Mem0 storage system.
 
@@ -108,7 +120,11 @@ Saves a batch of records to the Mem0 storage system.
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 **Returns:**
 
@@ -117,6 +133,10 @@ represents a stored record.
 
 <a id="camel.storages.key_value_storages.mem0_cloud.Mem0Storage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the Mem0 storage system.

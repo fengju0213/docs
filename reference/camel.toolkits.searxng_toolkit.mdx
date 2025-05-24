@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.searxng_toolkit.SearxNGToolkit"></a>
 
-## `class SearxNGToolkit(BaseToolkit):`
+## SearxNGToolkit
+
+```python
+class SearxNGToolkit(BaseToolkit):
+```
 
 A toolkit for performing web searches using SearxNG search engine.
 
@@ -21,7 +25,7 @@ search parameters and safe search levels.
 
 <a id="camel.toolkits.searxng_toolkit.SearxNGToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -37,7 +41,11 @@ def __init__(
 
 <a id="camel.toolkits.searxng_toolkit.SearxNGToolkit._validate_searxng_host"></a>
 
-### `def _validate_searxng_host(self, url: str):`
+### _validate_searxng_host
+
+```python
+def _validate_searxng_host(self, url: str):
+```
 
 Validate if the given URL is a proper HTTP/HTTPS URL.
 
@@ -47,7 +55,11 @@ Validate if the given URL is a proper HTTP/HTTPS URL.
 
 <a id="camel.toolkits.searxng_toolkit.SearxNGToolkit._validate_safe_search"></a>
 
-### `def _validate_safe_search(self, level: int):`
+### _validate_safe_search
+
+```python
+def _validate_safe_search(self, level: int):
+```
 
 Validate if the safe search level is valid.
 
@@ -57,7 +69,11 @@ Validate if the safe search level is valid.
 
 <a id="camel.toolkits.searxng_toolkit.SearxNGToolkit._validate_time_range"></a>
 
-### `def _validate_time_range(self, time_range: str):`
+### _validate_time_range
+
+```python
+def _validate_time_range(self, time_range: str):
+```
 
 Validate if the time range is valid.
 
@@ -67,7 +83,7 @@ Validate if the time range is valid.
 
 <a id="camel.toolkits.searxng_toolkit.SearxNGToolkit.search"></a>
 
-### `search`
+### search
 
 ```python
 def search(
@@ -93,7 +109,11 @@ dictionary containing 'title', 'link', and 'snippet' keys.
 
 <a id="camel.toolkits.searxng_toolkit.SearxNGToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

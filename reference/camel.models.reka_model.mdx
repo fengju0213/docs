@@ -2,7 +2,11 @@
 
 <a id="camel.models.reka_model.RekaModel"></a>
 
-## `class RekaModel(BaseModelBackend):`
+## RekaModel
+
+```python
+class RekaModel(BaseModelBackend):
+```
 
 Reka API in a unified OpenAICompatibleModel interface.
 
@@ -17,7 +21,7 @@ Reka API in a unified OpenAICompatibleModel interface.
 
 <a id="camel.models.reka_model.RekaModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,7 +37,11 @@ def __init__(
 
 <a id="camel.models.reka_model.RekaModel._convert_reka_to_openai_response"></a>
 
-### `def _convert_reka_to_openai_response(self, response: 'ChatResponse'):`
+### _convert_reka_to_openai_response
+
+```python
+def _convert_reka_to_openai_response(self, response: 'ChatResponse'):
+```
 
 Converts a Reka `ChatResponse` to an OpenAI-style `ChatCompletion`
 response.
@@ -48,7 +56,7 @@ response.
 
 <a id="camel.models.reka_model.RekaModel._convert_openai_to_reka_messages"></a>
 
-### `_convert_openai_to_reka_messages`
+### _convert_openai_to_reka_messages
 
 ```python
 def _convert_openai_to_reka_messages(
@@ -71,7 +79,11 @@ Converts OpenAI API messages to Reka API messages.
 
 <a id="camel.models.reka_model.RekaModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -80,7 +92,7 @@ tokenization style.
 
 <a id="camel.models.reka_model.RekaModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -103,11 +115,19 @@ Runs inference of Mistral chat completion.
 
 <a id="camel.models.reka_model.RekaModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 <a id="camel.models.reka_model.RekaModel.stream"></a>
 
-### `def stream(self):`
+### stream
+
+```python
+def stream(self):
+```
 
 **Returns:**
 

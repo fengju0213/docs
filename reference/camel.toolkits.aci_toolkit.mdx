@@ -2,13 +2,17 @@
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit"></a>
 
-## `class ACIToolkit(BaseToolkit):`
+## ACIToolkit
+
+```python
+class ACIToolkit(BaseToolkit):
+```
 
 A toolkit for interacting with the ACI API.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -31,7 +35,7 @@ Initialize the ACI toolkit.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.search_tool"></a>
 
-### `search_tool`
+### search_tool
 
 ```python
 def search_tool(
@@ -63,7 +67,7 @@ error message otherwise.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.list_configured_apps"></a>
 
-### `list_configured_apps`
+### list_configured_apps
 
 ```python
 def list_configured_apps(
@@ -89,7 +93,11 @@ successful, error message otherwise.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.configure_app"></a>
 
-### `def configure_app(self, app_name: str):`
+### configure_app
+
+```python
+def configure_app(self, app_name: str):
+```
 
 Configure an app with specified authentication type.
 
@@ -103,7 +111,11 @@ Configure an app with specified authentication type.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.get_app_configuration"></a>
 
-### `def get_app_configuration(self, app_name: str):`
+### get_app_configuration
+
+```python
+def get_app_configuration(self, app_name: str):
+```
 
 Get app configuration by app name.
 
@@ -118,7 +130,11 @@ error message otherwise.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.delete_app"></a>
 
-### `def delete_app(self, app_name: str):`
+### delete_app
+
+```python
+def delete_app(self, app_name: str):
+```
 
 Delete an app configuration.
 
@@ -132,7 +148,11 @@ Delete an app configuration.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.link_account"></a>
 
-### `def link_account(self, app_name: str):`
+### link_account
+
+```python
+def link_account(self, app_name: str):
+```
 
 Link an account to a configured app.
 
@@ -147,7 +167,11 @@ error message otherwise.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.get_app_details"></a>
 
-### `def get_app_details(self, app_name: str):`
+### get_app_details
+
+```python
+def get_app_details(self, app_name: str):
+```
 
 Get details of an app.
 
@@ -161,7 +185,11 @@ Get details of an app.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.get_linked_accounts"></a>
 
-### `def get_linked_accounts(self, app_name: str):`
+### get_linked_accounts
+
+```python
+def get_linked_accounts(self, app_name: str):
+```
 
 List all linked accounts for a specific app.
 
@@ -176,7 +204,11 @@ successful, error message otherwise.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.enable_linked_account"></a>
 
-### `def enable_linked_account(self, linked_account_id: str):`
+### enable_linked_account
+
+```python
+def enable_linked_account(self, linked_account_id: str):
+```
 
 Enable a linked account.
 
@@ -191,7 +223,11 @@ message otherwise.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.disable_linked_account"></a>
 
-### `def disable_linked_account(self, linked_account_id: str):`
+### disable_linked_account
+
+```python
+def disable_linked_account(self, linked_account_id: str):
+```
 
 Disable a linked account.
 
@@ -206,7 +242,11 @@ successful, error message otherwise.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.delete_linked_account"></a>
 
-### `def delete_linked_account(self, linked_account_id: str):`
+### delete_linked_account
+
+```python
+def delete_linked_account(self, linked_account_id: str):
+```
 
 Delete a linked account.
 
@@ -220,7 +260,11 @@ Delete a linked account.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.function_definition"></a>
 
-### `def function_definition(self, func_name: str):`
+### function_definition
+
+```python
+def function_definition(self, func_name: str):
+```
 
 Get the function definition for an app.
 
@@ -234,7 +278,7 @@ Get the function definition for an app.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.search_function"></a>
 
-### `search_function`
+### search_function
 
 ```python
 def search_function(
@@ -263,7 +307,7 @@ Search for functions based on intent.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.execute_function"></a>
 
-### `execute_function`
+### execute_function
 
 ```python
 def execute_function(
@@ -290,7 +334,11 @@ Execute a function call.
 
 <a id="camel.toolkits.aci_toolkit.ACIToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

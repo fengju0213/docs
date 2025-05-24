@@ -2,7 +2,11 @@
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage"></a>
 
-## `class RedisStorage(BaseKeyValueStorage):`
+## RedisStorage
+
+```python
+class RedisStorage(BaseKeyValueStorage):
+```
 
 A concrete implementation of the :obj:`BaseCacheStorage` using Redis as
 the backend. This is suitable for distributed cache systems that require
@@ -10,7 +14,7 @@ persistence and high availability.
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -32,11 +36,15 @@ options.
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage.__enter__"></a>
 
-### `def __enter__(self):`
+### __enter__
+
+```python
+def __enter__(self):
+```
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage.__exit__"></a>
 
-### `__exit__`
+### __exit__
 
 ```python
 def __exit__(
@@ -49,13 +57,21 @@ def __exit__(
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage._create_client"></a>
 
-### `def _create_client(self, **kwargs):`
+### _create_client
+
+```python
+def _create_client(self, **kwargs):
+```
 
 Creates the Redis client with the provided URL and options.
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage.client"></a>
 
-### `def client(self):`
+### client
+
+```python
+def client(self):
+```
 
 **Returns:**
 
@@ -63,7 +79,7 @@ Creates the Redis client with the provided URL and options.
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage.save"></a>
 
-### `save`
+### save
 
 ```python
 def save(
@@ -77,7 +93,11 @@ Saves a batch of records to the key-value storage system.
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 **Returns:**
 
@@ -86,10 +106,18 @@ represents a stored record.
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the key-value storage system.
 
 <a id="camel.storages.key_value_storages.redis.RedisStorage._run_async"></a>
 
-### `def _run_async(self, coro):`
+### _run_async
+
+```python
+def _run_async(self, coro):
+```

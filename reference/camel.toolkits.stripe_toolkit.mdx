@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit"></a>
 
-## `class StripeToolkit(BaseToolkit):`
+## StripeToolkit
+
+```python
+class StripeToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for Stripe operations.
 
@@ -18,11 +22,19 @@ logger (Logger): a logger to write logs.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.__init__"></a>
 
-### `def __init__(self, retries: int = 3, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, retries: int = 3, timeout: Optional[float] = None):
+```
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.customer_get"></a>
 
-### `def customer_get(self, customer_id: str):`
+### customer_get
+
+```python
+def customer_get(self, customer_id: str):
+```
 
 Retrieve a customer by ID.
 
@@ -36,7 +48,11 @@ Retrieve a customer by ID.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.customer_list"></a>
 
-### `def customer_list(self, limit: int = 100):`
+### customer_list
+
+```python
+def customer_list(self, limit: int = 100):
+```
 
 List customers.
 
@@ -51,7 +67,11 @@ failed.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.balance_get"></a>
 
-### `def balance_get(self):`
+### balance_get
+
+```python
+def balance_get(self):
+```
 
 **Returns:**
 
@@ -60,7 +80,11 @@ error message string if failed.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.balance_transaction_list"></a>
 
-### `def balance_transaction_list(self, limit: int = 100):`
+### balance_transaction_list
+
+```python
+def balance_transaction_list(self, limit: int = 100):
+```
 
 List your balance transactions.
 
@@ -75,7 +99,11 @@ message string if failed.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.payment_get"></a>
 
-### `def payment_get(self, payment_id: str):`
+### payment_get
+
+```python
+def payment_get(self, payment_id: str):
+```
 
 Retrieve a payment by ID.
 
@@ -90,7 +118,11 @@ string if failed.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.payment_list"></a>
 
-### `def payment_list(self, limit: int = 100):`
+### payment_list
+
+```python
+def payment_list(self, limit: int = 100):
+```
 
 List payments.
 
@@ -105,7 +137,11 @@ string if failed.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.refund_get"></a>
 
-### `def refund_get(self, refund_id: str):`
+### refund_get
+
+```python
+def refund_get(self, refund_id: str):
+```
 
 Retrieve a refund by ID.
 
@@ -120,7 +156,11 @@ string if failed.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.refund_list"></a>
 
-### `def refund_list(self, limit: int = 100):`
+### refund_list
+
+```python
+def refund_list(self, limit: int = 100):
+```
 
 List refunds.
 
@@ -135,7 +175,11 @@ message string if failed.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.handle_exception"></a>
 
-### `def handle_exception(self, func_name: str, error: Exception):`
+### handle_exception
+
+```python
+def handle_exception(self, func_name: str, error: Exception):
+```
 
 Handle exceptions by logging and returning an error message.
 
@@ -150,7 +194,11 @@ Handle exceptions by logging and returning an error message.
 
 <a id="camel.toolkits.stripe_toolkit.StripeToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

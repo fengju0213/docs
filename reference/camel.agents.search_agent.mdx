@@ -2,7 +2,11 @@
 
 <a id="camel.agents.search_agent.SearchAgent"></a>
 
-## `class SearchAgent(ChatAgent):`
+## SearchAgent
+
+```python
+class SearchAgent(ChatAgent):
+```
 
 An agent that summarizes text based on a query and evaluates the
 relevance of an answer.
@@ -13,11 +17,19 @@ relevance of an answer.
 
 <a id="camel.agents.search_agent.SearchAgent.__init__"></a>
 
-### `def __init__(self, model: Optional[BaseModelBackend] = None):`
+### __init__
+
+```python
+def __init__(self, model: Optional[BaseModelBackend] = None):
+```
 
 <a id="camel.agents.search_agent.SearchAgent.summarize_text"></a>
 
-### `def summarize_text(self, text: str, query: str):`
+### summarize_text
+
+```python
+def summarize_text(self, text: str, query: str):
+```
 
 Summarize the information from the text, base on the query.
 
@@ -32,7 +44,11 @@ Summarize the information from the text, base on the query.
 
 <a id="camel.agents.search_agent.SearchAgent.continue_search"></a>
 
-### `def continue_search(self, query: str, answer: str):`
+### continue_search
+
+```python
+def continue_search(self, query: str, answer: str):
+```
 
 Ask whether to continue search or not based on the provided answer.
 

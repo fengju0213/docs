@@ -2,7 +2,11 @@
 
 <a id="camel.memories.base.MemoryBlock"></a>
 
-## `class MemoryBlock(ABC):`
+## MemoryBlock
+
+```python
+class MemoryBlock(ABC):
+```
 
 An abstract class serves as the fundamental component within the agent
 memory system. This class is equipped with "write" and "clear" functions.
@@ -12,7 +16,11 @@ memory blocks.
 
 <a id="camel.memories.base.MemoryBlock.write_records"></a>
 
-### `def write_records(self, records: List[MemoryRecord]):`
+### write_records
+
+```python
+def write_records(self, records: List[MemoryRecord]):
+```
 
 Writes records to the memory, appending them to existing ones.
 
@@ -22,7 +30,11 @@ Writes records to the memory, appending them to existing ones.
 
 <a id="camel.memories.base.MemoryBlock.write_record"></a>
 
-### `def write_record(self, record: MemoryRecord):`
+### write_record
+
+```python
+def write_record(self, record: MemoryRecord):
+```
 
 Writes a record to the memory, appending it to existing ones.
 
@@ -32,13 +44,21 @@ Writes a record to the memory, appending it to existing ones.
 
 <a id="camel.memories.base.MemoryBlock.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Clears all messages from the memory.
 
 <a id="camel.memories.base.BaseContextCreator"></a>
 
-## `class BaseContextCreator(ABC):`
+## BaseContextCreator
+
+```python
+class BaseContextCreator(ABC):
+```
 
 An abstract base class defining the interface for context creation
 strategies.
@@ -60,15 +80,27 @@ generated context.
 
 <a id="camel.memories.base.BaseContextCreator.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 <a id="camel.memories.base.BaseContextCreator.token_limit"></a>
 
-### `def token_limit(self):`
+### token_limit
+
+```python
+def token_limit(self):
+```
 
 <a id="camel.memories.base.BaseContextCreator.create_context"></a>
 
-### `def create_context(self, records: List[ContextRecord]):`
+### create_context
+
+```python
+def create_context(self, records: List[ContextRecord]):
+```
 
 An abstract method to create conversational context from the chat
 history.
@@ -89,7 +121,11 @@ context in OpenAIMessage format and the total token count.
 
 <a id="camel.memories.base.AgentMemory"></a>
 
-## `class AgentMemory(MemoryBlock, ABC):`
+## AgentMemory
+
+```python
+class AgentMemory(MemoryBlock, ABC):
+```
 
 Represents a specialized form of `MemoryBlock`, uniquely designed for
 direct integration with an agent. Two key abstract functions, "retrieve"
@@ -98,15 +134,27 @@ the memory records stored within the AgentMemory.
 
 <a id="camel.memories.base.AgentMemory.agent_id"></a>
 
-### `def agent_id(self):`
+### agent_id
+
+```python
+def agent_id(self):
+```
 
 <a id="camel.memories.base.AgentMemory.agent_id"></a>
 
-### `def agent_id(self, val: Optional[str]):`
+### agent_id
+
+```python
+def agent_id(self, val: Optional[str]):
+```
 
 <a id="camel.memories.base.AgentMemory.retrieve"></a>
 
-### `def retrieve(self):`
+### retrieve
+
+```python
+def retrieve(self):
+```
 
 **Returns:**
 
@@ -114,7 +162,11 @@ the memory records stored within the AgentMemory.
 
 <a id="camel.memories.base.AgentMemory.get_context_creator"></a>
 
-### `def get_context_creator(self):`
+### get_context_creator
+
+```python
+def get_context_creator(self):
+```
 
 **Returns:**
 
@@ -122,7 +174,11 @@ the memory records stored within the AgentMemory.
 
 <a id="camel.memories.base.AgentMemory.get_context"></a>
 
-### `def get_context(self):`
+### get_context
+
+```python
+def get_context(self):
+```
 
 **Returns:**
 
@@ -131,7 +187,11 @@ context in OpenAIMessage format and the total token count.
 
 <a id="camel.memories.base.AgentMemory.__repr__"></a>
 
-### `def __repr__(self):`
+### __repr__
+
+```python
+def __repr__(self):
+```
 
 **Returns:**
 

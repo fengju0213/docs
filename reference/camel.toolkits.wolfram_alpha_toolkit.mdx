@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.wolfram_alpha_toolkit.WolframAlphaToolkit"></a>
 
-## `class WolframAlphaToolkit(BaseToolkit):`
+## WolframAlphaToolkit
+
+```python
+class WolframAlphaToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for WolframAlpha.
 
@@ -12,7 +16,11 @@ by computing answers from externally sourced data.
 
 <a id="camel.toolkits.wolfram_alpha_toolkit.WolframAlphaToolkit.query_wolfram_alpha"></a>
 
-### `def query_wolfram_alpha(self, query: str):`
+### query_wolfram_alpha
+
+```python
+def query_wolfram_alpha(self, query: str):
+```
 
 Queries Wolfram|Alpha and returns the result as a simple answer.
 
@@ -26,7 +34,11 @@ Queries Wolfram|Alpha and returns the result as a simple answer.
 
 <a id="camel.toolkits.wolfram_alpha_toolkit.WolframAlphaToolkit.query_wolfram_alpha_step_by_step"></a>
 
-### `def query_wolfram_alpha_step_by_step(self, query: str):`
+### query_wolfram_alpha_step_by_step
+
+```python
+def query_wolfram_alpha_step_by_step(self, query: str):
+```
 
 Queries Wolfram|Alpha and returns detailed results with
 step-by-step solution.
@@ -42,7 +54,11 @@ step-by-step solution.
 
 <a id="camel.toolkits.wolfram_alpha_toolkit.WolframAlphaToolkit.query_wolfram_alpha_llm"></a>
 
-### `def query_wolfram_alpha_llm(self, query: str):`
+### query_wolfram_alpha_llm
+
+```python
+def query_wolfram_alpha_llm(self, query: str):
+```
 
 Sends a query to the Wolfram|Alpha API optimized for language
 model usage.
@@ -57,7 +73,11 @@ model usage.
 
 <a id="camel.toolkits.wolfram_alpha_toolkit.WolframAlphaToolkit._parse_wolfram_result"></a>
 
-### `def _parse_wolfram_result(self, result):`
+### _parse_wolfram_result
+
+```python
+def _parse_wolfram_result(self, result):
+```
 
 Parses a Wolfram Alpha API result into a structured dictionary
 format.
@@ -73,7 +93,11 @@ and the final answer.
 
 <a id="camel.toolkits.wolfram_alpha_toolkit.WolframAlphaToolkit._get_wolframalpha_step_by_step_solution"></a>
 
-### `def _get_wolframalpha_step_by_step_solution(self, app_id: str, query: str):`
+### _get_wolframalpha_step_by_step_solution
+
+```python
+def _get_wolframalpha_step_by_step_solution(self, app_id: str, query: str):
+```
 
 Retrieve a step-by-step solution from the Wolfram Alpha API for a
 given query.
@@ -90,7 +114,11 @@ Alpha API.
 
 <a id="camel.toolkits.wolfram_alpha_toolkit.WolframAlphaToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

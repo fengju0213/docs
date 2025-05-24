@@ -2,7 +2,11 @@
 
 <a id="camel.storages.key_value_storages.in_memory.InMemoryKeyValueStorage"></a>
 
-## `class InMemoryKeyValueStorage(BaseKeyValueStorage):`
+## InMemoryKeyValueStorage
+
+```python
+class InMemoryKeyValueStorage(BaseKeyValueStorage):
+```
 
 A concrete implementation of the :obj:`BaseKeyValueStorage` using
 in-memory list. Ideal for temporary storage purposes, as data will be lost
@@ -10,11 +14,19 @@ when the program ends.
 
 <a id="camel.storages.key_value_storages.in_memory.InMemoryKeyValueStorage.__init__"></a>
 
-### `def __init__(self):`
+### __init__
+
+```python
+def __init__(self):
+```
 
 <a id="camel.storages.key_value_storages.in_memory.InMemoryKeyValueStorage.save"></a>
 
-### `def save(self, records: List[Dict[str, Any]]):`
+### save
+
+```python
+def save(self, records: List[Dict[str, Any]]):
+```
 
 Saves a batch of records to the key-value storage system.
 
@@ -24,7 +36,11 @@ Saves a batch of records to the key-value storage system.
 
 <a id="camel.storages.key_value_storages.in_memory.InMemoryKeyValueStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 **Returns:**
 
@@ -33,6 +49,10 @@ represents a stored record.
 
 <a id="camel.storages.key_value_storages.in_memory.InMemoryKeyValueStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the key-value storage system.

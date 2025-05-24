@@ -2,13 +2,17 @@
 
 <a id="camel.environments.multi_step.MultiStepEnv"></a>
 
-## `class MultiStepEnv(ABC):`
+## MultiStepEnv
+
+```python
+class MultiStepEnv(ABC):
+```
 
 A multi-step environment for reinforcement learning with LLMs.
 
 <a id="camel.environments.multi_step.MultiStepEnv.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -28,19 +32,35 @@ Initialize the environment.
 
 <a id="camel.environments.multi_step.MultiStepEnv._get_initial_state"></a>
 
-### `def _get_initial_state(self):`
+### _get_initial_state
+
+```python
+def _get_initial_state(self):
+```
 
 <a id="camel.environments.multi_step.MultiStepEnv._get_next_observation"></a>
 
-### `def _get_next_observation(self):`
+### _get_next_observation
+
+```python
+def _get_next_observation(self):
+```
 
 <a id="camel.environments.multi_step.MultiStepEnv._get_terminal_observation"></a>
 
-### `def _get_terminal_observation(self):`
+### _get_terminal_observation
+
+```python
+def _get_terminal_observation(self):
+```
 
 <a id="camel.environments.multi_step.MultiStepEnv.is_done"></a>
 
-### `def is_done(self):`
+### is_done
+
+```python
+def is_done(self):
+```
 
 **Returns:**
 
@@ -48,11 +68,19 @@ Initialize the environment.
 
 <a id="camel.environments.multi_step.MultiStepEnv._is_done"></a>
 
-### `def _is_done(self):`
+### _is_done
+
+```python
+def _is_done(self):
+```
 
 <a id="camel.environments.multi_step.MultiStepEnv.metadata"></a>
 
-### `def metadata(self):`
+### metadata
+
+```python
+def metadata(self):
+```
 
 **Returns:**
 
@@ -60,7 +88,11 @@ Initialize the environment.
 
 <a id="camel.environments.multi_step.MultiStepEnv.current_step"></a>
 
-### `def current_step(self):`
+### current_step
+
+```python
+def current_step(self):
+```
 
 **Returns:**
 

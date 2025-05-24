@@ -2,7 +2,11 @@
 
 <a id="camel.models.watsonx_model.WatsonXModel"></a>
 
-## `class WatsonXModel(BaseModelBackend):`
+## WatsonXModel
+
+```python
+class WatsonXModel(BaseModelBackend):
+```
 
 WatsonX API in a unified BaseModelBackend interface.
 
@@ -19,7 +23,7 @@ WatsonX API in a unified BaseModelBackend interface.
 
 <a id="camel.models.watsonx_model.WatsonXModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -36,13 +40,21 @@ def __init__(
 
 <a id="camel.models.watsonx_model.WatsonXModel._to_openai_response"></a>
 
-### `def _to_openai_response(self, response: Dict[str, Any]):`
+### _to_openai_response
+
+```python
+def _to_openai_response(self, response: Dict[str, Any]):
+```
 
 Convert WatsonX response to OpenAI format.
 
 <a id="camel.models.watsonx_model.WatsonXModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -51,7 +63,7 @@ tokenization style.
 
 <a id="camel.models.watsonx_model.WatsonXModel._prepare_request"></a>
 
-### `_prepare_request`
+### _prepare_request
 
 ```python
 def _prepare_request(
@@ -64,7 +76,7 @@ def _prepare_request(
 
 <a id="camel.models.watsonx_model.WatsonXModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -89,11 +101,19 @@ Runs inference of WatsonX chat completion.
 
 <a id="camel.models.watsonx_model.WatsonXModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 <a id="camel.models.watsonx_model.WatsonXModel.stream"></a>
 
-### `def stream(self):`
+### stream
+
+```python
+def stream(self):
+```
 
 **Returns:**
 

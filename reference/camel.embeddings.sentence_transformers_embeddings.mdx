@@ -2,7 +2,11 @@
 
 <a id="camel.embeddings.sentence_transformers_embeddings.SentenceTransformerEncoder"></a>
 
-## `class SentenceTransformerEncoder:`
+## SentenceTransformerEncoder
+
+```python
+class SentenceTransformerEncoder:
+```
 
 This class provides functionalities to generate text
 embeddings using `Sentence Transformers`.
@@ -12,7 +16,11 @@ https://www.sbert.net/
 
 <a id="camel.embeddings.sentence_transformers_embeddings.SentenceTransformerEncoder.__init__"></a>
 
-### `def __init__(self, model_name: str = 'intfloat/e5-large-v2', **kwargs):`
+### __init__
+
+```python
+def __init__(self, model_name: str = 'intfloat/e5-large-v2', **kwargs):
+```
 
 Initializes the: obj: `SentenceTransformerEmbedding` class
 with the specified transformer model.
@@ -23,7 +31,11 @@ with the specified transformer model.
 
 <a id="camel.embeddings.sentence_transformers_embeddings.SentenceTransformerEncoder.embed_list"></a>
 
-### `def embed_list(self, objs: list[str], **kwargs: Any):`
+### embed_list
+
+```python
+def embed_list(self, objs: list[str], **kwargs: Any):
+```
 
 Generates embeddings for the given texts using the model.
 
@@ -38,7 +50,11 @@ as a list of floating-point numbers.
 
 <a id="camel.embeddings.sentence_transformers_embeddings.SentenceTransformerEncoder.get_output_dim"></a>
 
-### `def get_output_dim(self):`
+### get_output_dim
+
+```python
+def get_output_dim(self):
+```
 
 **Returns:**
 

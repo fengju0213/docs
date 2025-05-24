@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.google_maps_toolkit.handle_googlemaps_exceptions"></a>
 
-## `def handle_googlemaps_exceptions(func: Callable[..., Any]):`
+## handle_googlemaps_exceptions
+
+```python
+def handle_googlemaps_exceptions(func: Callable[..., Any]):
+```
 
 Decorator to catch and handle exceptions raised by Google Maps API
 calls.
@@ -18,7 +22,11 @@ handles exceptions.
 
 <a id="camel.toolkits.google_maps_toolkit._format_offset_to_natural_language"></a>
 
-## `def _format_offset_to_natural_language(offset: int):`
+## _format_offset_to_natural_language
+
+```python
+def _format_offset_to_natural_language(offset: int):
+```
 
 Converts a time offset in seconds to a more natural language
 description using hours as the unit, with decimal places to represent
@@ -35,7 +43,11 @@ minutes and seconds.
 
 <a id="camel.toolkits.google_maps_toolkit.GoogleMapsToolkit"></a>
 
-## `class GoogleMapsToolkit(BaseToolkit):`
+## GoogleMapsToolkit
+
+```python
+class GoogleMapsToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for interacting with GoogleMaps API.
 This class provides methods for validating addresses, retrieving elevation,
@@ -43,11 +55,15 @@ and fetching timezone information using the Google Maps API.
 
 <a id="camel.toolkits.google_maps_toolkit.GoogleMapsToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 <a id="camel.toolkits.google_maps_toolkit.GoogleMapsToolkit.get_address_description"></a>
 
-### `get_address_description`
+### get_address_description
 
 ```python
 def get_address_description(
@@ -79,7 +95,11 @@ types true for the address.
 
 <a id="camel.toolkits.google_maps_toolkit.GoogleMapsToolkit.get_elevation"></a>
 
-### `def get_elevation(self, lat: float, lng: float):`
+### get_elevation
+
+```python
+def get_elevation(self, lat: float, lng: float):
+```
 
 Retrieves elevation data for a given latitude and longitude.
 Uses the Google Maps API to fetch elevation data for the specified
@@ -101,7 +121,11 @@ returned.
 
 <a id="camel.toolkits.google_maps_toolkit.GoogleMapsToolkit.get_timezone"></a>
 
-### `def get_timezone(self, lat: float, lng: float):`
+### get_timezone
+
+```python
+def get_timezone(self, lat: float, lng: float):
+```
 
 Retrieves timezone information for a given latitude and longitude.
 This function uses the Google Maps Timezone API to fetch timezone
@@ -123,7 +147,11 @@ daylight saving time offset, and total offset from UTC.
 
 <a id="camel.toolkits.google_maps_toolkit.GoogleMapsToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

@@ -2,7 +2,11 @@
 
 <a id="camel.models.gemini_model.GeminiModel"></a>
 
-## `class GeminiModel(OpenAICompatibleModel):`
+## GeminiModel
+
+```python
+class GeminiModel(OpenAICompatibleModel):
+```
 
 Gemini API in a unified OpenAICompatibleModel interface.
 
@@ -17,7 +21,7 @@ Gemini API in a unified OpenAICompatibleModel interface.
 
 <a id="camel.models.gemini_model.GeminiModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -33,14 +37,18 @@ def __init__(
 
 <a id="camel.models.gemini_model.GeminiModel._process_messages"></a>
 
-### `def _process_messages(self, messages):`
+### _process_messages
+
+```python
+def _process_messages(self, messages):
+```
 
 Process the messages for Gemini API to ensure no empty content,
 which is not accepted by Gemini.
 
 <a id="camel.models.gemini_model.GeminiModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -67,7 +75,7 @@ Runs inference of Gemini chat completion.
 
 <a id="camel.models.gemini_model.GeminiModel._request_chat_completion"></a>
 
-### `_request_chat_completion`
+### _request_chat_completion
 
 ```python
 def _request_chat_completion(
@@ -79,4 +87,8 @@ def _request_chat_completion(
 
 <a id="camel.models.gemini_model.GeminiModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```

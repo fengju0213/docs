@@ -2,7 +2,11 @@
 
 <a id="camel.datagen.self_instruct.filter.filter_function.FilterFunction"></a>
 
-## `class FilterFunction(ABC):`
+## FilterFunction
+
+```python
+class FilterFunction(ABC):
+```
 
 A base abstract class for filter functions.
 
@@ -11,7 +15,11 @@ a given instruction passes the filter criteria.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.FilterFunction.apply"></a>
 
-### `def apply(self, instruction: str):`
+### apply
+
+```python
+def apply(self, instruction: str):
+```
 
 Evaluate the given instruction based on the filter's criteria.
 
@@ -25,7 +33,11 @@ Evaluate the given instruction based on the filter's criteria.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.LengthFilter"></a>
 
-## `class LengthFilter(FilterFunction):`
+## LengthFilter
+
+```python
+class LengthFilter(FilterFunction):
+```
 
 Filters instructions based on their word count.
 
@@ -36,11 +48,19 @@ Filters instructions based on their word count.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.LengthFilter.__init__"></a>
 
-### `def __init__(self, min_len: int = 5, max_len: int = 200):`
+### __init__
+
+```python
+def __init__(self, min_len: int = 5, max_len: int = 200):
+```
 
 <a id="camel.datagen.self_instruct.filter.filter_function.LengthFilter.apply"></a>
 
-### `def apply(self, instruction: str):`
+### apply
+
+```python
+def apply(self, instruction: str):
+```
 
 Filter the instruction
 
@@ -55,7 +75,11 @@ of [min_len, max_len]
 
 <a id="camel.datagen.self_instruct.filter.filter_function.KeywordFilter"></a>
 
-## `class KeywordFilter(FilterFunction):`
+## KeywordFilter
+
+```python
+class KeywordFilter(FilterFunction):
+```
 
 Filters instructions that contain specific undesirable keywords.
 
@@ -65,11 +89,19 @@ Filters instructions that contain specific undesirable keywords.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.KeywordFilter.__init__"></a>
 
-### `def __init__(self, keywords: List[str]):`
+### __init__
+
+```python
+def __init__(self, keywords: List[str]):
+```
 
 <a id="camel.datagen.self_instruct.filter.filter_function.KeywordFilter.apply"></a>
 
-### `def apply(self, instruction: str):`
+### apply
+
+```python
+def apply(self, instruction: str):
+```
 
 Filter the instruction
 
@@ -83,13 +115,21 @@ Filter the instruction
 
 <a id="camel.datagen.self_instruct.filter.filter_function.PunctuationFilter"></a>
 
-## `class PunctuationFilter(FilterFunction):`
+## PunctuationFilter
+
+```python
+class PunctuationFilter(FilterFunction):
+```
 
 Filters instructions that begin with a non-alphanumeric character.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.PunctuationFilter.apply"></a>
 
-### `def apply(self, instruction: str):`
+### apply
+
+```python
+def apply(self, instruction: str):
+```
 
 Filter the instruction
 
@@ -103,13 +143,21 @@ Filter the instruction
 
 <a id="camel.datagen.self_instruct.filter.filter_function.NonEnglishFilter"></a>
 
-## `class NonEnglishFilter(FilterFunction):`
+## NonEnglishFilter
+
+```python
+class NonEnglishFilter(FilterFunction):
+```
 
 Filters instructions that do not begin with English letters.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.NonEnglishFilter.apply"></a>
 
-### `def apply(self, instruction: str):`
+### apply
+
+```python
+def apply(self, instruction: str):
+```
 
 Filter the instruction
 
@@ -123,7 +171,11 @@ Filter the instruction
 
 <a id="camel.datagen.self_instruct.filter.filter_function.RougeSimilarityFilter"></a>
 
-## `class RougeSimilarityFilter(FilterFunction):`
+## RougeSimilarityFilter
+
+```python
+class RougeSimilarityFilter(FilterFunction):
+```
 
 Filters instructions that are too similar to existing instructions
 based on ROUGE scores.
@@ -135,11 +187,19 @@ based on ROUGE scores.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.RougeSimilarityFilter.__init__"></a>
 
-### `def __init__(self, existing_instructions: List[str], threshold: float = 0.7):`
+### __init__
+
+```python
+def __init__(self, existing_instructions: List[str], threshold: float = 0.7):
+```
 
 <a id="camel.datagen.self_instruct.filter.filter_function.RougeSimilarityFilter.apply"></a>
 
-### `def apply(self, instruction: str):`
+### apply
+
+```python
+def apply(self, instruction: str):
+```
 
 Filter the instruction
 
@@ -154,7 +214,11 @@ instruction is below the threshold.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.RewardModelFilter"></a>
 
-## `class RewardModelFilter(FilterFunction):`
+## RewardModelFilter
+
+```python
+class RewardModelFilter(FilterFunction):
+```
 
 Filters instructions based on scores provided by a reward model.
 
@@ -165,11 +229,19 @@ Filters instructions based on scores provided by a reward model.
 
 <a id="camel.datagen.self_instruct.filter.filter_function.RewardModelFilter.__init__"></a>
 
-### `def __init__(self, reward_model: BaseRewardModel, threshold: float = 0.5):`
+### __init__
+
+```python
+def __init__(self, reward_model: BaseRewardModel, threshold: float = 0.5):
+```
 
 <a id="camel.datagen.self_instruct.filter.filter_function.RewardModelFilter.apply"></a>
 
-### `def apply(self, instruction: str):`
+### apply
+
+```python
+def apply(self, instruction: str):
+```
 
 Filter the instruction
 

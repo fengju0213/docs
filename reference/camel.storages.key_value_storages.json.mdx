@@ -2,18 +2,30 @@
 
 <a id="camel.storages.key_value_storages.json.CamelJSONEncoder"></a>
 
-## `class CamelJSONEncoder(JSONEncoder):`
+## CamelJSONEncoder
+
+```python
+class CamelJSONEncoder(JSONEncoder):
+```
 
 A custom JSON encoder for serializing specifically enumerated types.
 Ensures enumerated types can be stored in and retrieved from JSON format.
 
 <a id="camel.storages.key_value_storages.json.CamelJSONEncoder.default"></a>
 
-### `def default(self, obj):`
+### default
+
+```python
+def default(self, obj):
+```
 
 <a id="camel.storages.key_value_storages.json.JsonStorage"></a>
 
-## `class JsonStorage(BaseKeyValueStorage):`
+## JsonStorage
+
+```python
+class JsonStorage(BaseKeyValueStorage):
+```
 
 A concrete implementation of the :obj:`BaseKeyValueStorage` using JSON
 files. Allows for persistent storage of records in a human-readable format.
@@ -24,15 +36,27 @@ files. Allows for persistent storage of records in a human-readable format.
 
 <a id="camel.storages.key_value_storages.json.JsonStorage.__init__"></a>
 
-### `def __init__(self, path: Optional[Path] = None):`
+### __init__
+
+```python
+def __init__(self, path: Optional[Path] = None):
+```
 
 <a id="camel.storages.key_value_storages.json.JsonStorage._json_object_hook"></a>
 
-### `def _json_object_hook(self, d):`
+### _json_object_hook
+
+```python
+def _json_object_hook(self, d):
+```
 
 <a id="camel.storages.key_value_storages.json.JsonStorage.save"></a>
 
-### `def save(self, records: List[Dict[str, Any]]):`
+### save
+
+```python
+def save(self, records: List[Dict[str, Any]]):
+```
 
 Saves a batch of records to the key-value storage system.
 
@@ -42,7 +66,11 @@ Saves a batch of records to the key-value storage system.
 
 <a id="camel.storages.key_value_storages.json.JsonStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 **Returns:**
 
@@ -51,6 +79,10 @@ represents a stored record.
 
 <a id="camel.storages.key_value_storages.json.JsonStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Removes all records from the key-value storage system.

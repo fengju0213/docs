@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit"></a>
 
-## `class PubMedToolkit(BaseToolkit):`
+## PubMedToolkit
+
+```python
+class PubMedToolkit(BaseToolkit):
+```
 
 A toolkit for interacting with PubMed's E-utilities API to access
 MEDLINE data.
@@ -16,13 +20,17 @@ PubMed database, including abstracts, citations, and other metadata.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initializes the PubMedToolkit.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit._make_request"></a>
 
-### `_make_request`
+### _make_request
 
 ```python
 def _make_request(
@@ -48,7 +56,7 @@ retries.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit.search_papers"></a>
 
-### `search_papers`
+### search_papers
 
 ```python
 def search_papers(
@@ -78,7 +86,7 @@ filtering options.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit.get_paper_details"></a>
 
-### `get_paper_details`
+### get_paper_details
 
 ```python
 def get_paper_details(
@@ -103,7 +111,11 @@ abstract, etc., or None if retrieval fails.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit.get_abstract"></a>
 
-### `def get_abstract(self, paper_id: Union[str, int]):`
+### get_abstract
+
+```python
+def get_abstract(self, paper_id: Union[str, int]):
+```
 
 Get the abstract of a specific biomedical paper from MEDLINE/
 PubMed.
@@ -118,7 +130,11 @@ PubMed.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit.get_citation_count"></a>
 
-### `def get_citation_count(self, paper_id: Union[str, int]):`
+### get_citation_count
+
+```python
+def get_citation_count(self, paper_id: Union[str, int]):
+```
 
 Get the number of citations for a biomedical paper in MEDLINE/
 PubMed.
@@ -133,7 +149,11 @@ PubMed.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit.get_related_papers"></a>
 
-### `def get_related_papers(self, paper_id: Union[str, int], max_results: int = 10):`
+### get_related_papers
+
+```python
+def get_related_papers(self, paper_id: Union[str, int], max_results: int = 10):
+```
 
 Get biomedical papers related to a specific paper in MEDLINE/
 PubMed.
@@ -149,7 +169,11 @@ PubMed.
 
 <a id="camel.toolkits.pubmed_toolkit.PubMedToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

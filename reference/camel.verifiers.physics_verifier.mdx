@@ -2,17 +2,29 @@
 
 <a id="camel.verifiers.physics_verifier.UnitParser"></a>
 
-## `class UnitParser:`
+## UnitParser
+
+```python
+class UnitParser:
+```
 
 Class for handling unit parsing and manipulation operations.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.__init__"></a>
 
-### `def __init__(self):`
+### __init__
+
+```python
+def __init__(self):
+```
 
 <a id="camel.verifiers.physics_verifier.UnitParser._load_sympy_units"></a>
 
-### `def _load_sympy_units():`
+### _load_sympy_units
+
+```python
+def _load_sympy_units():
+```
 
 **Returns:**
 
@@ -21,13 +33,21 @@ corresponding sympy Quantity objects.
 
 <a id="camel.verifiers.physics_verifier.UnitParser._add_si_prefixes"></a>
 
-### `def _add_si_prefixes(self):`
+### _add_si_prefixes
+
+```python
+def _add_si_prefixes(self):
+```
 
 Add SI prefixed units (like km, MHz, etc.) to the allowed units.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.parse_unit"></a>
 
-### `def parse_unit(self, unit_str: str):`
+### parse_unit
+
+```python
+def parse_unit(self, unit_str: str):
+```
 
 Parse a unit string into a SymPy expression using the appropriate
 method.
@@ -43,7 +63,11 @@ if parsing fails or the unit is dimensionless.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.parse_unit_with_latex"></a>
 
-### `def parse_unit_with_latex(self, unit_str: str):`
+### parse_unit_with_latex
+
+```python
+def parse_unit_with_latex(self, unit_str: str):
+```
 
 Parse a unit string using SymPy's LaTeX parser.
 
@@ -58,7 +82,11 @@ original string if parsing fails.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.detect_scaling_factor"></a>
 
-### `def detect_scaling_factor(self, unit_expr: Any):`
+### detect_scaling_factor
+
+```python
+def detect_scaling_factor(self, unit_expr: Any):
+```
 
 Detect a scaling factor in the unit expression.
 
@@ -73,7 +101,11 @@ factor and base unit.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.preprocess_unit_string"></a>
 
-### `def preprocess_unit_string(unit_str: str):`
+### preprocess_unit_string
+
+```python
+def preprocess_unit_string(unit_str: str):
+```
 
 Preprocess a unit string to replace '^' with '**' for
 exponentiation.
@@ -88,7 +120,11 @@ exponentiation.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.unit_is_none"></a>
 
-### `def unit_is_none(unit_str: Optional[str]):`
+### unit_is_none
+
+```python
+def unit_is_none(unit_str: Optional[str]):
+```
 
 Check if a unit string represents 'no unit' or is empty.
 
@@ -102,7 +138,11 @@ Check if a unit string represents 'no unit' or is empty.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.extract_value_and_unit"></a>
 
-### `def extract_value_and_unit(expr: Any):`
+### extract_value_and_unit
+
+```python
+def extract_value_and_unit(expr: Any):
+```
 
 Extract numerical value and unit components from a SymPy
 expression.
@@ -118,7 +158,11 @@ value and unit expression.
 
 <a id="camel.verifiers.physics_verifier.UnitParser.detect_unit_args"></a>
 
-### `def detect_unit_args(unit_expr: Any):`
+### detect_unit_args
+
+```python
+def detect_unit_args(unit_expr: Any):
+```
 
 Extract the base units from a composite SymPy unit expression.
 
@@ -132,7 +176,11 @@ Extract the base units from a composite SymPy unit expression.
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator"></a>
 
-## `class PhysicsSolutionComparator:`
+## PhysicsSolutionComparator
+
+```python
+class PhysicsSolutionComparator:
+```
 
 Class for compare solutions and reference answers that contains value
 and units.
@@ -145,7 +193,7 @@ and units.
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -158,7 +206,11 @@ def __init__(
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._split_value_unit"></a>
 
-### `def _split_value_unit(s: str):`
+### _split_value_unit
+
+```python
+def _split_value_unit(s: str):
+```
 
 Split a string into value and unit components.
 Handles LaTeX-style units enclosed in dollar signs.
@@ -173,7 +225,11 @@ Handles LaTeX-style units enclosed in dollar signs.
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._clean_answer"></a>
 
-### `def _clean_answer(raw_answer: str):`
+### _clean_answer
+
+```python
+def _clean_answer(raw_answer: str):
+```
 
 Clean a raw answer string by removing LaTeX formatting.
 
@@ -187,7 +243,11 @@ Clean a raw answer string by removing LaTeX formatting.
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._parse_expression"></a>
 
-### `def _parse_expression(expr: Any):`
+### _parse_expression
+
+```python
+def _parse_expression(expr: Any):
+```
 
 Parse an expression into a SymPy expression.
 
@@ -201,7 +261,11 @@ Parse an expression into a SymPy expression.
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._is_number"></a>
 
-### `def _is_number(s: Any):`
+### _is_number
+
+```python
+def _is_number(s: Any):
+```
 
 Check if a value can be converted to a number.
 
@@ -215,21 +279,37 @@ Check if a value can be converted to a number.
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._detect_tolerance"></a>
 
-### `def _detect_tolerance(default_tolerance: float, value: str):`
+### _detect_tolerance
+
+```python
+def _detect_tolerance(default_tolerance: float, value: str):
+```
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._convert_units"></a>
 
-### `def _convert_units(self):`
+### _convert_units
+
+```python
+def _convert_units(self):
+```
 
 Convert the solution units to match gt units
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator.verify_unit"></a>
 
-### `def verify_unit(sol_unit_expr: Any, gt_unit_expr: Any):`
+### verify_unit
+
+```python
+def verify_unit(sol_unit_expr: Any, gt_unit_expr: Any):
+```
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator.compare_solution_to_reference"></a>
 
-### `def compare_solution_to_reference(self):`
+### compare_solution_to_reference
+
+```python
+def compare_solution_to_reference(self):
+```
 
 **Returns:**
 
@@ -237,23 +317,39 @@ Convert the solution units to match gt units
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._get_value_unit_pairs"></a>
 
-### `def _get_value_unit_pairs(self):`
+### _get_value_unit_pairs
+
+```python
+def _get_value_unit_pairs(self):
+```
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._compare_numeric_values"></a>
 
-### `def _compare_numeric_values(self):`
+### _compare_numeric_values
+
+```python
+def _compare_numeric_values(self):
+```
 
 Compare numerical values, with unit conversion if needed.
 
 <a id="camel.verifiers.physics_verifier.PhysicsSolutionComparator._compare_symbolic_values"></a>
 
-### `def _compare_symbolic_values(self):`
+### _compare_symbolic_values
+
+```python
+def _compare_symbolic_values(self):
+```
 
 Compare symbolic expressions for equivalence.
 
 <a id="camel.verifiers.physics_verifier.PhysicsVerifier"></a>
 
-## `class PhysicsVerifier(PythonVerifier):`
+## PhysicsVerifier
+
+```python
+class PhysicsVerifier(PythonVerifier):
+```
 
 The PhysicsVerifier inherits PythonVerifier and makes it able to
 compare and convert units.
@@ -267,7 +363,7 @@ compare and convert units.
 
 <a id="camel.verifiers.physics_verifier.PhysicsVerifier.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(

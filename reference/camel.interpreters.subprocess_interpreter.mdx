@@ -2,7 +2,11 @@
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter"></a>
 
-## `class SubprocessInterpreter(BaseInterpreter):`
+## SubprocessInterpreter
+
+```python
+class SubprocessInterpreter(BaseInterpreter):
+```
 
 SubprocessInterpreter is a class for executing code files or code
 strings in a subprocess.
@@ -21,7 +25,7 @@ strings.
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -35,7 +39,11 @@ def __init__(
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter.run_file"></a>
 
-### `def run_file(self, file: Path, code_type: str):`
+### run_file
+
+```python
+def run_file(self, file: Path, code_type: str):
+```
 
 Executes a code file in a subprocess and captures its output.
 
@@ -51,7 +59,11 @@ executed code.
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter.run"></a>
 
-### `def run(self, code: str, code_type: str):`
+### run
+
+```python
+def run(self, code: str, code_type: str):
+```
 
 Generates a temporary file with the given code, executes it, and
 deletes the file afterward.
@@ -68,7 +80,11 @@ executed code.
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter._create_temp_file"></a>
 
-### `def _create_temp_file(self, code: str, extension: str):`
+### _create_temp_file
+
+```python
+def _create_temp_file(self, code: str, extension: str):
+```
 
 Creates a temporary file with the given code and extension.
 
@@ -83,23 +99,39 @@ Creates a temporary file with the given code and extension.
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter._check_code_type"></a>
 
-### `def _check_code_type(self, code_type: str):`
+### _check_code_type
+
+```python
+def _check_code_type(self, code_type: str):
+```
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter.supported_code_types"></a>
 
-### `def supported_code_types(self):`
+### supported_code_types
+
+```python
+def supported_code_types(self):
+```
 
 Provides supported code types by the interpreter.
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter.update_action_space"></a>
 
-### `def update_action_space(self, action_space: Dict[str, Any]):`
+### update_action_space
+
+```python
+def update_action_space(self, action_space: Dict[str, Any]):
+```
 
 Updates action space for *python* interpreter
 
 <a id="camel.interpreters.subprocess_interpreter.SubprocessInterpreter._is_command_available"></a>
 
-### `def _is_command_available(self, command: str):`
+### _is_command_available
+
+```python
+def _is_command_available(self, command: str):
+```
 
 Check if a command is available in the system PATH.
 

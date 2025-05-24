@@ -2,7 +2,11 @@
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline"></a>
 
-## `class EvolInstructPipeline:`
+## EvolInstructPipeline
+
+```python
+class EvolInstructPipeline:
+```
 
 Pipeline for evolving prompts using the Evol-Instruct methodology.
 
@@ -18,7 +22,7 @@ specified evolution strategies.
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -37,7 +41,11 @@ Initialize pipeline with templates and language model agent.
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline._resolve_evolution_method"></a>
 
-### `def _resolve_evolution_method(self, method_key: str):`
+### _resolve_evolution_method
+
+```python
+def _resolve_evolution_method(self, method_key: str):
+```
 
 Resolve evolution method key to concrete implementation.
 
@@ -51,7 +59,11 @@ Resolve evolution method key to concrete implementation.
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline._get_evolution_methods"></a>
 
-### `def _get_evolution_methods(self, method: Union[str, List[str]], num_generations: int = 2):`
+### _get_evolution_methods
+
+```python
+def _get_evolution_methods(self, method: Union[str, List[str]], num_generations: int = 2):
+```
 
 Get list of evolution methods based on input specification.
 
@@ -66,7 +78,7 @@ Get list of evolution methods based on input specification.
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline._generate_single_evolution"></a>
 
-### `_generate_single_evolution`
+### _generate_single_evolution
 
 ```python
 def _generate_single_evolution(
@@ -91,7 +103,7 @@ Generate a single evolved prompt from a seed prompt.
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline._generate_multiple_evolutions"></a>
 
-### `_generate_multiple_evolutions`
+### _generate_multiple_evolutions
 
 ```python
 def _generate_multiple_evolutions(
@@ -120,7 +132,7 @@ Generate multiple evolved versions of a prompt.
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline._generate_iterative_evolutions"></a>
 
-### `_generate_iterative_evolutions`
+### _generate_iterative_evolutions
 
 ```python
 def _generate_iterative_evolutions(
@@ -155,7 +167,7 @@ where each candidate is represented as a dict with keys:
 
 <a id="camel.datagen.evol_instruct.evol_instruct.EvolInstructPipeline.generate"></a>
 
-### `generate`
+### generate
 
 ```python
 def generate(

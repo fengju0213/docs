@@ -2,7 +2,11 @@
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage"></a>
 
-## `class FaissStorage(BaseVectorStorage):`
+## FaissStorage
+
+```python
+class FaissStorage(BaseVectorStorage):
+```
 
 An implementation of the `BaseVectorStorage` using FAISS,
 Facebook AI's Similarity Search library for efficient vector search.
@@ -23,7 +27,7 @@ The detailed information about FAISS is available at:
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -53,25 +57,41 @@ Initialize the FAISS vector storage.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._generate_collection_name"></a>
 
-### `def _generate_collection_name(self):`
+### _generate_collection_name
+
+```python
+def _generate_collection_name(self):
+```
 
 Generates a collection name if user doesn't provide
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._get_index_path"></a>
 
-### `def _get_index_path(self):`
+### _get_index_path
+
+```python
+def _get_index_path(self):
+```
 
 Returns the path to the index file
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._get_metadata_path"></a>
 
-### `def _get_metadata_path(self):`
+### _get_metadata_path
+
+```python
+def _get_metadata_path(self):
+```
 
 Returns the path to the metadata file
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._create_index"></a>
 
-### `def _create_index(self):`
+### _create_index
+
+```python
+def _create_index(self):
+```
 
 **Returns:**
 
@@ -79,19 +99,31 @@ Returns the path to the metadata file
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._save_to_disk"></a>
 
-### `def _save_to_disk(self):`
+### _save_to_disk
+
+```python
+def _save_to_disk(self):
+```
 
 Save the index and metadata to disk if storage_path is provided.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._load_from_disk"></a>
 
-### `def _load_from_disk(self):`
+### _load_from_disk
+
+```python
+def _load_from_disk(self):
+```
 
 Loads the index and metadata from disk if they exist.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.add"></a>
 
-### `def add(self, records: List[VectorRecord], **kwargs):`
+### add
+
+```python
+def add(self, records: List[VectorRecord], **kwargs):
+```
 
 Adds a list of vectors to the index.
 
@@ -101,7 +133,7 @@ Adds a list of vectors to the index.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.update_payload"></a>
 
-### `update_payload`
+### update_payload
 
 ```python
 def update_payload(
@@ -121,13 +153,17 @@ Updates the payload of the vectors identified by their IDs.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.delete_collection"></a>
 
-### `def delete_collection(self):`
+### delete_collection
+
+```python
+def delete_collection(self):
+```
 
 Deletes the entire collection (index and metadata).
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.delete"></a>
 
-### `delete`
+### delete
 
 ```python
 def delete(
@@ -148,7 +184,11 @@ filters.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.status"></a>
 
-### `def status(self):`
+### status
+
+```python
+def status(self):
+```
 
 **Returns:**
 
@@ -156,7 +196,7 @@ filters.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.query"></a>
 
-### `query`
+### query
 
 ```python
 def query(
@@ -182,25 +222,41 @@ similarity.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.clear"></a>
 
-### `def clear(self):`
+### clear
+
+```python
+def clear(self):
+```
 
 Remove all vectors from the storage.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 Load the index from disk if storage_path is provided.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage.client"></a>
 
-### `def client(self):`
+### client
+
+```python
+def client(self):
+```
 
 Provides access to the underlying FAISS client.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._matches_filter"></a>
 
-### `def _matches_filter(self, vector_id: str, filter_conditions: Dict[str, Any]):`
+### _matches_filter
+
+```python
+def _matches_filter(self, vector_id: str, filter_conditions: Dict[str, Any]):
+```
 
 Checks if a vector's payload matches the filter conditions.
 
@@ -215,7 +271,11 @@ Checks if a vector's payload matches the filter conditions.
 
 <a id="camel.storages.vectordb_storages.faiss.FaissStorage._normalize_vector"></a>
 
-### `def _normalize_vector(self, vector: 'ndarray'):`
+### _normalize_vector
+
+```python
+def _normalize_vector(self, vector: 'ndarray'):
+```
 
 Normalizes a vector to unit length for cosine similarity.
 

@@ -2,7 +2,11 @@
 
 <a id="camel.terminators.token_limit_terminator.TokenLimitTerminator"></a>
 
-## `class TokenLimitTerminator(BaseTerminator):`
+## TokenLimitTerminator
+
+```python
+class TokenLimitTerminator(BaseTerminator):
+```
 
 Terminate agent if number of tokens reached to token limit threshold.
 
@@ -12,15 +16,27 @@ Terminate agent if number of tokens reached to token limit threshold.
 
 <a id="camel.terminators.token_limit_terminator.TokenLimitTerminator.__init__"></a>
 
-### `def __init__(self, token_limit: int):`
+### __init__
+
+```python
+def __init__(self, token_limit: int):
+```
 
 <a id="camel.terminators.token_limit_terminator.TokenLimitTerminator._validate"></a>
 
-### `def _validate(self):`
+### _validate
+
+```python
+def _validate(self):
+```
 
 <a id="camel.terminators.token_limit_terminator.TokenLimitTerminator.is_terminated"></a>
 
-### `def is_terminated(self, num_tokens: int):`
+### is_terminated
+
+```python
+def is_terminated(self, num_tokens: int):
+```
 
 Whether terminate the agent by checking number of
 used tokens reached to token limit.
@@ -36,6 +52,10 @@ terminated and a string of termination reason.
 
 <a id="camel.terminators.token_limit_terminator.TokenLimitTerminator.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 Reset the terminator.

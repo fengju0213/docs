@@ -2,7 +2,11 @@
 
 <a id="camel.agents.programmed_agent_instruction.ProgrammableAgentRequirement"></a>
 
-## `class ProgrammableAgentRequirement(Enum):`
+## ProgrammableAgentRequirement
+
+```python
+class ProgrammableAgentRequirement(Enum):
+```
 
 Requirements for programmable agent state.
 
@@ -15,7 +19,11 @@ conversation was not from the user.
 
 <a id="camel.agents.programmed_agent_instruction.ProgrammedAgentInstructionResult"></a>
 
-## `class ProgrammedAgentInstructionResult(BaseModel):`
+## ProgrammedAgentInstructionResult
+
+```python
+class ProgrammedAgentInstructionResult(BaseModel):
+```
 
 Result of a programmable agent instruction execution.
 
@@ -29,7 +37,11 @@ value (T): The computed result value of type T.
 
 <a id="camel.agents.programmed_agent_instruction.AbstractProgrammableAgent"></a>
 
-## `class AbstractProgrammableAgent(ABC):`
+## AbstractProgrammableAgent
+
+```python
+class AbstractProgrammableAgent(ABC):
+```
 
 Abstract class for a programmable agent.
 
@@ -46,7 +58,7 @@ programming interface for its functionality.
 
 <a id="camel.agents.programmed_agent_instruction.AbstractProgrammableAgent.run_atomic"></a>
 
-### `run_atomic`
+### run_atomic
 
 ```python
 def run_atomic(
@@ -70,7 +82,11 @@ be executed without interruption by any other operation.
 
 <a id="camel.agents.programmed_agent_instruction.AbstractProgrammableAgent.repair_state"></a>
 
-### `def repair_state(self, requirement: ProgrammableAgentRequirement):`
+### repair_state
+
+```python
+def repair_state(self, requirement: ProgrammableAgentRequirement):
+```
 
 Repair the state of the agent.
 
@@ -85,7 +101,11 @@ requirement.
 
 <a id="camel.agents.programmed_agent_instruction.programmable_capability"></a>
 
-## `def programmable_capability(func: Callable[..., ProgrammedAgentInstructionResult[T]]):`
+## programmable_capability
+
+```python
+def programmable_capability(func: Callable[..., ProgrammedAgentInstructionResult[T]]):
+```
 
 Decorator for programmable agent capabilities.
 
@@ -103,7 +123,11 @@ method that ensures atomic execution.
 
 <a id="camel.agents.programmed_agent_instruction.ProgrammableChatAgent"></a>
 
-## `class ProgrammableChatAgent(ChatAgent, AbstractProgrammableAgent):`
+## ProgrammableChatAgent
+
+```python
+class ProgrammableChatAgent(ChatAgent, AbstractProgrammableAgent):
+```
 
 A chat agent that can be programmed to perform specific tasks.
 
@@ -118,13 +142,17 @@ conversation.
 
 <a id="camel.agents.programmed_agent_instruction.ProgrammableChatAgent.__init__"></a>
 
-### `def __init__(self, **kwargs: Any):`
+### __init__
+
+```python
+def __init__(self, **kwargs: Any):
+```
 
 Initialize the ProgrammableChatAgent.
 
 <a id="camel.agents.programmed_agent_instruction.ProgrammableChatAgent.run_atomic"></a>
 
-### `run_atomic`
+### run_atomic
 
 ```python
 def run_atomic(
@@ -147,7 +175,11 @@ Ensures thread-safe execution of the callback function by using a lock.
 
 <a id="camel.agents.programmed_agent_instruction.ProgrammableChatAgent.repair_state"></a>
 
-### `def repair_state(self, requirement: ProgrammableAgentRequirement):`
+### repair_state
+
+```python
+def repair_state(self, requirement: ProgrammableAgentRequirement):
+```
 
 Repair the state of the agent.
 

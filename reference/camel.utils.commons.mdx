@@ -2,7 +2,11 @@
 
 <a id="camel.utils.commons.print_text_animated"></a>
 
-## `def print_text_animated(text, delay: float = 0.02, end: str = ''):`
+## print_text_animated
+
+```python
+def print_text_animated(text, delay: float = 0.02, end: str = ''):
+```
 
 Prints the given text with an animated effect.
 
@@ -14,7 +18,11 @@ Prints the given text with an animated effect.
 
 <a id="camel.utils.commons.get_prompt_template_key_words"></a>
 
-## `def get_prompt_template_key_words(template: str):`
+## get_prompt_template_key_words
+
+```python
+def get_prompt_template_key_words(template: str):
+```
 
 Given a string template containing curly braces {}, return a set of
 the words inside the braces.
@@ -29,7 +37,11 @@ the words inside the braces.
 
 <a id="camel.utils.commons.get_first_int"></a>
 
-## `def get_first_int(string: str):`
+## get_first_int
+
+```python
+def get_first_int(string: str):
+```
 
 Returns the first integer number found in the given string.
 
@@ -46,7 +58,11 @@ no integer number is found.
 
 <a id="camel.utils.commons.download_tasks"></a>
 
-## `def download_tasks(task: TaskType, folder_path: str):`
+## download_tasks
+
+```python
+def download_tasks(task: TaskType, folder_path: str):
+```
 
 Downloads task-related files from a specified URL and extracts them.
 
@@ -62,7 +78,11 @@ extraction, the zip file is deleted.
 
 <a id="camel.utils.commons.get_task_list"></a>
 
-## `def get_task_list(task_response: str):`
+## get_task_list
+
+```python
+def get_task_list(task_response: str):
+```
 
 Parse the response of the Agent and return task list.
 
@@ -76,7 +96,11 @@ Parse the response of the Agent and return task list.
 
 <a id="camel.utils.commons.check_server_running"></a>
 
-## `def check_server_running(server_url: str):`
+## check_server_running
+
+```python
+def check_server_running(server_url: str):
+```
 
 Check whether the port referred by the URL to the server
 is open.
@@ -91,7 +115,11 @@ is open.
 
 <a id="camel.utils.commons.dependencies_required"></a>
 
-## `def dependencies_required(*required_modules: str):`
+## dependencies_required
+
+```python
+def dependencies_required(*required_modules: str):
+```
 
 A decorator to ensure that specified Python modules
 are available before a function executes.
@@ -111,7 +139,11 @@ required module dependencies.
 
 <a id="camel.utils.commons.is_module_available"></a>
 
-## `def is_module_available(module_name: str):`
+## is_module_available
+
+```python
+def is_module_available(module_name: str):
+```
 
 Check if a module is available for import.
 
@@ -125,7 +157,11 @@ Check if a module is available for import.
 
 <a id="camel.utils.commons.api_keys_required"></a>
 
-## `def api_keys_required(param_env_list: List[Tuple[Optional[str], str]]):`
+## api_keys_required
+
+```python
+def api_keys_required(param_env_list: List[Tuple[Optional[str], str]]):
+```
 
 A decorator to check if the required API keys are provided in the
 environment variables or as function arguments.
@@ -145,7 +181,11 @@ for the required API keys.
 
 <a id="camel.utils.commons.get_system_information"></a>
 
-## `def get_system_information():`
+## get_system_information
+
+```python
+def get_system_information():
+```
 
 **Returns:**
 
@@ -153,7 +193,11 @@ for the required API keys.
 
 <a id="camel.utils.commons.to_pascal"></a>
 
-## `def to_pascal(snake: str):`
+## to_pascal
+
+```python
+def to_pascal(snake: str):
+```
 
 Convert a snake_case string to PascalCase.
 
@@ -167,7 +211,11 @@ Convert a snake_case string to PascalCase.
 
 <a id="camel.utils.commons.get_pydantic_major_version"></a>
 
-## `def get_pydantic_major_version():`
+## get_pydantic_major_version
+
+```python
+def get_pydantic_major_version():
+```
 
 **Returns:**
 
@@ -175,7 +223,11 @@ Convert a snake_case string to PascalCase.
 
 <a id="camel.utils.commons.get_pydantic_object_schema"></a>
 
-## `def get_pydantic_object_schema(pydantic_params: Type[BaseModel]):`
+## get_pydantic_object_schema
+
+```python
+def get_pydantic_object_schema(pydantic_params: Type[BaseModel]):
+```
 
 Get the JSON schema of a Pydantic model.
 
@@ -189,7 +241,11 @@ Get the JSON schema of a Pydantic model.
 
 <a id="camel.utils.commons.func_string_to_callable"></a>
 
-## `def func_string_to_callable(code: str):`
+## func_string_to_callable
+
+```python
+def func_string_to_callable(code: str):
+```
 
 Convert a function code string to a callable function object.
 
@@ -204,7 +260,11 @@ code string.
 
 <a id="camel.utils.commons.json_to_function_code"></a>
 
-## `def json_to_function_code(json_obj: Dict):`
+## json_to_function_code
+
+```python
+def json_to_function_code(json_obj: Dict):
+```
 
 Generate a Python function code from a JSON schema.
 
@@ -218,7 +278,11 @@ Generate a Python function code from a JSON schema.
 
 <a id="camel.utils.commons.text_extract_from_web"></a>
 
-## `def text_extract_from_web(url: str):`
+## text_extract_from_web
+
+```python
+def text_extract_from_web(url: str):
+```
 
 Get the text information from given url.
 
@@ -232,7 +296,11 @@ Get the text information from given url.
 
 <a id="camel.utils.commons.create_chunks"></a>
 
-## `def create_chunks(text: str, n: int):`
+## create_chunks
+
+```python
+def create_chunks(text: str, n: int):
+```
 
 Returns successive n-sized chunks from provided text. Split a text
 into smaller chunks of size n".
@@ -248,7 +316,11 @@ into smaller chunks of size n".
 
 <a id="camel.utils.commons.is_docker_running"></a>
 
-## `def is_docker_running():`
+## is_docker_running
+
+```python
+def is_docker_running():
+```
 
 **Returns:**
 
@@ -256,7 +328,11 @@ into smaller chunks of size n".
 
 <a id="camel.utils.commons.agentops_decorator"></a>
 
-## `def agentops_decorator(func):`
+## agentops_decorator
+
+```python
+def agentops_decorator(func):
+```
 
 Decorator that records the execution of a function if ToolEvent is
 available.
@@ -271,7 +347,11 @@ available.
 
 <a id="camel.utils.commons.AgentOpsMeta"></a>
 
-## `class AgentOpsMeta(type):`
+## AgentOpsMeta
+
+```python
+class AgentOpsMeta(type):
+```
 
 Metaclass that automatically decorates all callable attributes with
 the agentops_decorator,
@@ -283,7 +363,7 @@ Creates a new class with decorated methods.
 
 <a id="camel.utils.commons.AgentOpsMeta.__new__"></a>
 
-### `__new__`
+### __new__
 
 ```python
 def __new__(
@@ -296,13 +376,21 @@ def __new__(
 
 <a id="camel.utils.commons.track_agent"></a>
 
-## `def track_agent(*args, **kwargs):`
+## track_agent
+
+```python
+def track_agent(*args, **kwargs):
+```
 
 Mock track agent decorator for AgentOps.
 
 <a id="camel.utils.commons.handle_http_error"></a>
 
-## `def handle_http_error(response: requests.Response):`
+## handle_http_error
+
+```python
+def handle_http_error(response: requests.Response):
+```
 
 Handles the HTTP errors based on the status code of the response.
 
@@ -316,7 +404,11 @@ Handles the HTTP errors based on the status code of the response.
 
 <a id="camel.utils.commons.retry_on_error"></a>
 
-## `def retry_on_error(max_retries: int = 3, initial_delay: float = 1.0):`
+## retry_on_error
+
+```python
+def retry_on_error(max_retries: int = 3, initial_delay: float = 1.0):
+```
 
 Decorator to retry function calls on exception with exponential
 backoff.
@@ -332,14 +424,18 @@ backoff.
 
 <a id="camel.utils.commons.BatchProcessor"></a>
 
-## `class BatchProcessor:`
+## BatchProcessor
+
+```python
+class BatchProcessor:
+```
 
 Handles batch processing with dynamic sizing and error handling based
 on system load.
 
 <a id="camel.utils.commons.BatchProcessor.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -364,25 +460,41 @@ Initialize the BatchProcessor with dynamic worker allocation.
 
 <a id="camel.utils.commons.BatchProcessor._calculate_optimal_workers"></a>
 
-### `def _calculate_optimal_workers(self):`
+### _calculate_optimal_workers
+
+```python
+def _calculate_optimal_workers(self):
+```
 
 Calculate optimal number of workers based on system resources.
 
 <a id="camel.utils.commons.BatchProcessor._update_resource_metrics"></a>
 
-### `def _update_resource_metrics(self):`
+### _update_resource_metrics
+
+```python
+def _update_resource_metrics(self):
+```
 
 Update current resource usage metrics.
 
 <a id="camel.utils.commons.BatchProcessor._should_check_resources"></a>
 
-### `def _should_check_resources(self):`
+### _should_check_resources
+
+```python
+def _should_check_resources(self):
+```
 
 Determine if it's time to check resource usage again.
 
 <a id="camel.utils.commons.BatchProcessor.adjust_batch_size"></a>
 
-### `def adjust_batch_size(self, success: bool, processing_time: Optional[float] = None):`
+### adjust_batch_size
+
+```python
+def adjust_batch_size(self, success: bool, processing_time: Optional[float] = None):
+```
 
 Adjust batch size based on success/failure and system resources.
 
@@ -393,7 +505,11 @@ Adjust batch size based on success/failure and system resources.
 
 <a id="camel.utils.commons.BatchProcessor.get_performance_metrics"></a>
 
-### `def get_performance_metrics(self):`
+### get_performance_metrics
+
+```python
+def get_performance_metrics(self):
+```
 
 **Returns:**
 
@@ -408,7 +524,7 @@ Adjust batch size based on success/failure and system resources.
 
 <a id="camel.utils.commons.download_github_subdirectory"></a>
 
-## `download_github_subdirectory`
+## download_github_subdirectory
 
 ```python
 def download_github_subdirectory(
@@ -435,7 +551,11 @@ saves them to a local directory.
 
 <a id="camel.utils.commons.generate_prompt_for_structured_output"></a>
 
-## `def generate_prompt_for_structured_output(response_format: Optional[Type[BaseModel]], user_message: str):`
+## generate_prompt_for_structured_output
+
+```python
+def generate_prompt_for_structured_output(response_format: Optional[Type[BaseModel]], user_message: str):
+```
 
 This function generates a prompt based on the provided Pydantic model and
 user message.
@@ -451,7 +571,11 @@ user message.
 
 <a id="camel.utils.commons.with_timeout"></a>
 
-## `def with_timeout(timeout = None):`
+## with_timeout
+
+```python
+def with_timeout(timeout = None):
+```
 
 Decorator that adds timeout functionality to functions.
 
@@ -464,7 +588,11 @@ message if execution time is exceeded.
 
 <a id="camel.utils.commons.browser_toolkit_save_auth_cookie"></a>
 
-## `def browser_toolkit_save_auth_cookie(cookie_json_path: str, url: str, wait_time: int = 60):`
+## browser_toolkit_save_auth_cookie
+
+```python
+def browser_toolkit_save_auth_cookie(cookie_json_path: str, url: str, wait_time: int = 60):
+```
 
 Saves authentication cookies and browser storage state to a JSON file.
 
@@ -484,7 +612,11 @@ later to maintain authenticated sessions without requiring manual login.
 
 <a id="camel.utils.commons.run_async"></a>
 
-## `def run_async(func: Callable[..., Any]):`
+## run_async
+
+```python
+def run_async(func: Callable[..., Any]):
+```
 
 Helper function to run async functions in synchronous context.
 

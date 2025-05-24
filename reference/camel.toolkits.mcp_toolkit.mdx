@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient"></a>
 
-## `class MCPClient(BaseToolkit):`
+## MCPClient
+
+```python
+class MCPClient(BaseToolkit):
+```
 
 Internal class that provides an abstraction layer to interact with
 external tools using the Model Context Protocol (MCP). It supports three
@@ -67,7 +71,7 @@ function call. (default: :obj:`False`)
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -84,32 +88,52 @@ def __init__(
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.connect_sync"></a>
 
-### `def connect_sync(self):`
+### connect_sync
+
+```python
+def connect_sync(self):
+```
 
 Synchronously connect to the MCP server.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.disconnect_sync"></a>
 
-### `def disconnect_sync(self):`
+### disconnect_sync
+
+```python
+def disconnect_sync(self):
+```
 
 Synchronously disconnect from the MCP server.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.connection_sync"></a>
 
-### `def connection_sync(self):`
+### connection_sync
+
+```python
+def connection_sync(self):
+```
 
 Synchronously connect to the MCP server.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.list_mcp_tools_sync"></a>
 
-### `def list_mcp_tools_sync(self):`
+### list_mcp_tools_sync
+
+```python
+def list_mcp_tools_sync(self):
+```
 
 Synchronously list the available tools from the connected MCP
 server.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.generate_function_from_mcp_tool"></a>
 
-### `def generate_function_from_mcp_tool(self, mcp_tool: 'Tool'):`
+### generate_function_from_mcp_tool
+
+```python
+def generate_function_from_mcp_tool(self, mcp_tool: 'Tool'):
+```
 
 Dynamically generates a Python callable function corresponding to
 a given MCP tool.
@@ -125,17 +149,29 @@ the MCP tool.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.generate_function_from_mcp_tool_sync"></a>
 
-### `def generate_function_from_mcp_tool_sync(self, mcp_tool: 'Tool'):`
+### generate_function_from_mcp_tool_sync
+
+```python
+def generate_function_from_mcp_tool_sync(self, mcp_tool: 'Tool'):
+```
 
 Synchronously generate a function from an MCP tool.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient._build_tool_schema"></a>
 
-### `def _build_tool_schema(self, mcp_tool: 'Tool'):`
+### _build_tool_schema
+
+```python
+def _build_tool_schema(self, mcp_tool: 'Tool'):
+```
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 
@@ -144,7 +180,11 @@ representing the functions in the toolkit.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.get_text_tools"></a>
 
-### `def get_text_tools(self):`
+### get_text_tools
+
+```python
+def get_text_tools(self):
+```
 
 **Returns:**
 
@@ -153,17 +193,25 @@ in the toolkit.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.call_tool_sync"></a>
 
-### `def call_tool_sync(self, tool_name: str, tool_args: Dict[str, Any]):`
+### call_tool_sync
+
+```python
+def call_tool_sync(self, tool_name: str, tool_args: Dict[str, Any]):
+```
 
 Synchronously call a tool.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.session"></a>
 
-### `def session(self):`
+### session
+
+```python
+def session(self):
+```
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.create_sync"></a>
 
-### `create_sync`
+### create_sync
 
 ```python
 def create_sync(
@@ -181,13 +229,17 @@ Synchronously create and connect to the MCP server.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.__enter__"></a>
 
-### `def __enter__(self):`
+### __enter__
+
+```python
+def __enter__(self):
+```
 
 Synchronously enter the async context manager.
 
 <a id="camel.toolkits.mcp_toolkit.MCPClient.__exit__"></a>
 
-### `__exit__`
+### __exit__
 
 ```python
 def __exit__(
@@ -212,7 +264,11 @@ Synchronously exit the async context manager.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit"></a>
 
-## `class MCPToolkit(BaseToolkit):`
+## MCPToolkit
+
+```python
+class MCPToolkit(BaseToolkit):
+```
 
 MCPToolkit provides a unified interface for managing multiple
 MCP server connections and their tools.
@@ -263,7 +319,7 @@ await toolkit.disconnect()
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -277,7 +333,11 @@ def __init__(
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit._load_servers_from_config"></a>
 
-### `def _load_servers_from_config(self, config_path: str, strict: Optional[bool] = False):`
+### _load_servers_from_config
+
+```python
+def _load_servers_from_config(self, config_path: str, strict: Optional[bool] = False):
+```
 
 Loads MCP server configurations from a JSON file.
 
@@ -292,7 +352,11 @@ Loads MCP server configurations from a JSON file.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit._load_servers_from_dict"></a>
 
-### `def _load_servers_from_dict(self, config: Dict[str, Any], strict: Optional[bool] = False):`
+### _load_servers_from_dict
+
+```python
+def _load_servers_from_dict(self, config: Dict[str, Any], strict: Optional[bool] = False):
+```
 
 Loads MCP server configurations from a dictionary.
 
@@ -307,25 +371,41 @@ Loads MCP server configurations from a dictionary.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit.connect_sync"></a>
 
-### `def connect_sync(self):`
+### connect_sync
+
+```python
+def connect_sync(self):
+```
 
 Synchronously connect to all MCP servers.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit.disconnect_sync"></a>
 
-### `def disconnect_sync(self):`
+### disconnect_sync
+
+```python
+def disconnect_sync(self):
+```
 
 Synchronously disconnect from all MCP servers.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit.connection_sync"></a>
 
-### `def connection_sync(self):`
+### connection_sync
+
+```python
+def connection_sync(self):
+```
 
 Synchronously connect to all MCP servers.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit.is_connected"></a>
 
-### `def is_connected(self):`
+### is_connected
+
+```python
+def is_connected(self):
+```
 
 **Returns:**
 
@@ -333,7 +413,11 @@ Synchronously connect to all MCP servers.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 
@@ -341,7 +425,11 @@ Synchronously connect to all MCP servers.
 
 <a id="camel.toolkits.mcp_toolkit.MCPToolkit.get_text_tools"></a>
 
-### `def get_text_tools(self):`
+### get_text_tools
+
+```python
+def get_text_tools(self):
+```
 
 **Returns:**
 

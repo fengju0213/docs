@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit"></a>
 
-## `class OpenAPIToolkit:`
+## OpenAPIToolkit
+
+```python
+class OpenAPIToolkit:
+```
 
 A class representing a toolkit for interacting with OpenAPI APIs.
 
@@ -13,7 +17,11 @@ to the API endpoints.
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit.parse_openapi_file"></a>
 
-### `def parse_openapi_file(self, openapi_spec_path: str):`
+### parse_openapi_file
+
+```python
+def parse_openapi_file(self, openapi_spec_path: str):
+```
 
 Load and parse an OpenAPI specification file.
 
@@ -32,7 +40,11 @@ as a dictionary. :obj:`None` if the package is not installed.
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit.openapi_spec_to_openai_schemas"></a>
 
-### `def openapi_spec_to_openai_schemas(self, api_name: str, openapi_spec: Dict[str, Any]):`
+### openapi_spec_to_openai_schemas
+
+```python
+def openapi_spec_to_openai_schemas(self, api_name: str, openapi_spec: Dict[str, Any]):
+```
 
 Convert OpenAPI specification to OpenAI schema format.
 
@@ -56,7 +68,7 @@ the function's name, description, and parameters.
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit.openapi_function_decorator"></a>
 
-### `openapi_function_decorator`
+### openapi_function_decorator
 
 ```python
 def openapi_function_decorator(
@@ -99,7 +111,11 @@ operation details.
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit.generate_openapi_funcs"></a>
 
-### `def generate_openapi_funcs(self, api_name: str, openapi_spec: Dict[str, Any]):`
+### generate_openapi_funcs
+
+```python
+def generate_openapi_funcs(self, api_name: str, openapi_spec: Dict[str, Any]):
+```
 
 Generates a list of Python functions based on
 OpenAPI specification.
@@ -127,7 +143,11 @@ specification.
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit.apinames_filepaths_to_funs_schemas"></a>
 
-### `def apinames_filepaths_to_funs_schemas(self, apinames_filepaths: List[Tuple[str, str]]):`
+### apinames_filepaths_to_funs_schemas
+
+```python
+def apinames_filepaths_to_funs_schemas(self, apinames_filepaths: List[Tuple[str, str]]):
+```
 
 Combines functions and schemas from multiple OpenAPI
 specifications, using API names as keys.
@@ -148,7 +168,11 @@ representing the schemas from the specifications.
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit.generate_apinames_filepaths"></a>
 
-### `def generate_apinames_filepaths(self):`
+### generate_apinames_filepaths
+
+```python
+def generate_apinames_filepaths(self):
+```
 
 **Returns:**
 
@@ -160,7 +184,11 @@ specification file.
 
 <a id="camel.toolkits.open_api_toolkit.OpenAPIToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

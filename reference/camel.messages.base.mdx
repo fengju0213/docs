@@ -2,7 +2,11 @@
 
 <a id="camel.messages.base.BaseMessage"></a>
 
-## `class BaseMessage:`
+## BaseMessage
+
+```python
+class BaseMessage:
+```
 
 Base class for message objects used in CAMEL chat system.
 
@@ -20,7 +24,7 @@ Base class for message objects used in CAMEL chat system.
 
 <a id="camel.messages.base.BaseMessage.make_user_message"></a>
 
-### `make_user_message`
+### make_user_message
 
 ```python
 def make_user_message(
@@ -53,7 +57,7 @@ Create a new user message.
 
 <a id="camel.messages.base.BaseMessage.make_assistant_message"></a>
 
-### `make_assistant_message`
+### make_assistant_message
 
 ```python
 def make_assistant_message(
@@ -86,7 +90,11 @@ Create a new assistant message.
 
 <a id="camel.messages.base.BaseMessage.create_new_instance"></a>
 
-### `def create_new_instance(self, content: str):`
+### create_new_instance
+
+```python
+def create_new_instance(self, content: str):
+```
 
 Create a new instance of the :obj:`BaseMessage` with updated
 content.
@@ -101,7 +109,11 @@ content.
 
 <a id="camel.messages.base.BaseMessage.__add__"></a>
 
-### `def __add__(self, other: Any):`
+### __add__
+
+```python
+def __add__(self, other: Any):
+```
 
 Addition operator override for :obj:`BaseMessage`.
 
@@ -115,7 +127,11 @@ Addition operator override for :obj:`BaseMessage`.
 
 <a id="camel.messages.base.BaseMessage.__mul__"></a>
 
-### `def __mul__(self, other: Any):`
+### __mul__
+
+```python
+def __mul__(self, other: Any):
+```
 
 Multiplication operator override for :obj:`BaseMessage`.
 
@@ -129,7 +145,11 @@ Multiplication operator override for :obj:`BaseMessage`.
 
 <a id="camel.messages.base.BaseMessage.__len__"></a>
 
-### `def __len__(self):`
+### __len__
+
+```python
+def __len__(self):
+```
 
 **Returns:**
 
@@ -137,7 +157,11 @@ Multiplication operator override for :obj:`BaseMessage`.
 
 <a id="camel.messages.base.BaseMessage.__contains__"></a>
 
-### `def __contains__(self, item: str):`
+### __contains__
+
+```python
+def __contains__(self, item: str):
+```
 
 Contains operator override for :obj:`BaseMessage`.
 
@@ -152,7 +176,11 @@ Contains operator override for :obj:`BaseMessage`.
 
 <a id="camel.messages.base.BaseMessage.extract_text_and_code_prompts"></a>
 
-### `def extract_text_and_code_prompts(self):`
+### extract_text_and_code_prompts
+
+```python
+def extract_text_and_code_prompts(self):
+```
 
 **Returns:**
 
@@ -162,7 +190,7 @@ from the content.
 
 <a id="camel.messages.base.BaseMessage.from_sharegpt"></a>
 
-### `from_sharegpt`
+### from_sharegpt
 
 ```python
 def from_sharegpt(
@@ -188,7 +216,11 @@ Note tool calls and responses have an 'assistant' role in CAMEL
 
 <a id="camel.messages.base.BaseMessage.to_sharegpt"></a>
 
-### `def to_sharegpt(self, function_format: Optional[FunctionCallFormatter] = None):`
+### to_sharegpt
+
+```python
+def to_sharegpt(self, function_format: Optional[FunctionCallFormatter] = None):
+```
 
 Convert BaseMessage to ShareGPT message
 
@@ -198,7 +230,11 @@ Convert BaseMessage to ShareGPT message
 
 <a id="camel.messages.base.BaseMessage.to_openai_message"></a>
 
-### `def to_openai_message(self, role_at_backend: OpenAIBackendRole):`
+### to_openai_message
+
+```python
+def to_openai_message(self, role_at_backend: OpenAIBackendRole):
+```
 
 Converts the message to an :obj:`OpenAIMessage` object.
 
@@ -212,7 +248,11 @@ Converts the message to an :obj:`OpenAIMessage` object.
 
 <a id="camel.messages.base.BaseMessage.to_openai_system_message"></a>
 
-### `def to_openai_system_message(self):`
+### to_openai_system_message
+
+```python
+def to_openai_system_message(self):
+```
 
 **Returns:**
 
@@ -221,7 +261,11 @@ object.
 
 <a id="camel.messages.base.BaseMessage.to_openai_user_message"></a>
 
-### `def to_openai_user_message(self):`
+### to_openai_user_message
+
+```python
+def to_openai_user_message(self):
+```
 
 **Returns:**
 
@@ -229,7 +273,11 @@ object.
 
 <a id="camel.messages.base.BaseMessage.to_openai_assistant_message"></a>
 
-### `def to_openai_assistant_message(self):`
+### to_openai_assistant_message
+
+```python
+def to_openai_assistant_message(self):
+```
 
 **Returns:**
 
@@ -238,7 +286,11 @@ object.
 
 <a id="camel.messages.base.BaseMessage.to_dict"></a>
 
-### `def to_dict(self):`
+### to_dict
+
+```python
+def to_dict(self):
+```
 
 **Returns:**
 

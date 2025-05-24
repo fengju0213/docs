@@ -2,7 +2,11 @@
 
 <a id="camel.benchmarks.browsecomp.QueryResponse"></a>
 
-## `class QueryResponse(BaseModel):`
+## QueryResponse
+
+```python
+class QueryResponse(BaseModel):
+```
 
 A structured query response for benchmark evaluation.
 
@@ -11,7 +15,11 @@ questions, including explanation, exact answer, and confidence score.
 
 <a id="camel.benchmarks.browsecomp.GradingResponse"></a>
 
-## `class GradingResponse(BaseModel):`
+## GradingResponse
+
+```python
+class GradingResponse(BaseModel):
+```
 
 A structured grading response for evaluating model answers.
 
@@ -21,7 +29,11 @@ and confidence score extraction.
 
 <a id="camel.benchmarks.browsecomp.SingleEvalResult"></a>
 
-## `class SingleEvalResult(BaseModel):`
+## SingleEvalResult
+
+```python
+class SingleEvalResult(BaseModel):
+```
 
 Result of evaluating a single benchmark sample.
 
@@ -30,7 +42,11 @@ including score, HTML representation, conversation history, and metrics.
 
 <a id="camel.benchmarks.browsecomp.EvalResult"></a>
 
-## `class EvalResult(BaseModel):`
+## EvalResult
+
+```python
+class EvalResult(BaseModel):
+```
 
 Result of running a complete benchmark evaluation.
 
@@ -39,25 +55,41 @@ the overall score, detailed metrics, HTML reports, and conversation logs.
 
 <a id="camel.benchmarks.browsecomp.JinjaEnv"></a>
 
-## `class JinjaEnv:`
+## JinjaEnv
+
+```python
+class JinjaEnv:
+```
 
 A class that encapsulates the Jinja environment setup.
 
 <a id="camel.benchmarks.browsecomp.JinjaEnv.__init__"></a>
 
-### `def __init__(self):`
+### __init__
+
+```python
+def __init__(self):
+```
 
 Initialize the JinjaEnv instance if not already initialized.
 
 <a id="camel.benchmarks.browsecomp.JinjaEnv.__new__"></a>
 
-### `def __new__(cls):`
+### __new__
+
+```python
+def __new__(cls):
+```
 
 Implement singleton pattern to ensure only one instance exists.
 
 <a id="camel.benchmarks.browsecomp.JinjaEnv.get_instance"></a>
 
-### `def get_instance(cls):`
+### get_instance
+
+```python
+def get_instance(cls):
+```
 
 **Returns:**
 
@@ -65,7 +97,11 @@ Implement singleton pattern to ensure only one instance exists.
 
 <a id="camel.benchmarks.browsecomp.JinjaEnv.env"></a>
 
-### `def env(self):`
+### env
+
+```python
+def env(self):
+```
 
 **Returns:**
 
@@ -73,7 +109,11 @@ Implement singleton pattern to ensure only one instance exists.
 
 <a id="camel.benchmarks.browsecomp.JinjaEnv.from_string"></a>
 
-### `def from_string(self, template_str):`
+### from_string
+
+```python
+def from_string(self, template_str):
+```
 
 Create a template from the given string.
 
@@ -87,7 +127,11 @@ Create a template from the given string.
 
 <a id="camel.benchmarks.browsecomp.JinjaEnv.message_to_html"></a>
 
-### `def message_to_html(message: Message):`
+### message_to_html
+
+```python
+def message_to_html(message: Message):
+```
 
 Generate HTML snippet (inside a <div>) for a message.
 
@@ -101,23 +145,35 @@ Generate HTML snippet (inside a <div>) for a message.
 
 <a id="camel.benchmarks.browsecomp.derive_key"></a>
 
-## `def derive_key(password: str, length: int):`
+## derive_key
+
+```python
+def derive_key(password: str, length: int):
+```
 
 Derive a fixed-length key from the password using SHA256.
 
 <a id="camel.benchmarks.browsecomp.decrypt"></a>
 
-## `def decrypt(ciphertext_b64: str, password: str):`
+## decrypt
+
+```python
+def decrypt(ciphertext_b64: str, password: str):
+```
 
 Decrypt base64-encoded ciphertext with XOR.
 
 <a id="camel.benchmarks.browsecomp._compute_stat"></a>
 
-## `def _compute_stat(values: list, stat: str):`
+## _compute_stat
+
+```python
+def _compute_stat(values: list, stat: str):
+```
 
 <a id="camel.benchmarks.browsecomp.aggregate_results"></a>
 
-## `aggregate_results`
+## aggregate_results
 
 ```python
 def aggregate_results(
@@ -141,7 +197,11 @@ Aggregate results from multiple evaluations into a single EvalResult.
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark"></a>
 
-## `class BrowseCompBenchmark(BaseBenchmark):`
+## BrowseCompBenchmark
+
+```python
+class BrowseCompBenchmark(BaseBenchmark):
+```
 
 BrowseComp Benchmark for evaluating browser-based comprehension tasks.
 
@@ -151,7 +211,7 @@ performance.
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -174,7 +234,11 @@ Initialize the BrowseComp benchmark.
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark.download"></a>
 
-### `def download(self):`
+### download
+
+```python
+def download(self):
+```
 
 **Returns:**
 
@@ -182,7 +246,11 @@ Initialize the BrowseComp benchmark.
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark.load"></a>
 
-### `def load(self):`
+### load
+
+```python
+def load(self):
+```
 
 **Returns:**
 
@@ -190,11 +258,15 @@ Initialize the BrowseComp benchmark.
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark.train"></a>
 
-### `def train(self):`
+### train
+
+```python
+def train(self):
+```
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -221,13 +293,21 @@ using tqdm and stores the results in self._raw_results.
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark.make_report"></a>
 
-### `def make_report(self, eval_result: EvalResult):`
+### make_report
+
+```python
+def make_report(self, eval_result: EvalResult):
+```
 
 Create a standalone HTML report from an EvalResult.
 
 <a id="camel.benchmarks.browsecomp.BrowseCompBenchmark.validate"></a>
 
-### `def validate(self, grader: Optional[ChatAgent] = None):`
+### validate
+
+```python
+def validate(self, grader: Optional[ChatAgent] = None):
+```
 
 Validate the raw results using the GRADER_TEMPLATE and ChatAgent.
 

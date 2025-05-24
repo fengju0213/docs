@@ -2,7 +2,11 @@
 
 <a id="camel.loaders.base_io.create_file"></a>
 
-## `def create_file(file: BytesIO, filename: str):`
+## create_file
+
+```python
+def create_file(file: BytesIO, filename: str):
+```
 
 Reads an uploaded file and returns a File object.
 
@@ -17,7 +21,11 @@ Reads an uploaded file and returns a File object.
 
 <a id="camel.loaders.base_io.create_file_from_raw_bytes"></a>
 
-## `def create_file_from_raw_bytes(raw_bytes: bytes, filename: str):`
+## create_file_from_raw_bytes
+
+```python
+def create_file_from_raw_bytes(raw_bytes: bytes, filename: str):
+```
 
 Reads raw bytes and returns a File object.
 
@@ -32,7 +40,11 @@ Reads raw bytes and returns a File object.
 
 <a id="camel.loaders.base_io.File"></a>
 
-## `class File(ABC):`
+## File
+
+```python
+class File(ABC):
+```
 
 Represents an uploaded file comprised of Documents.
 
@@ -46,7 +58,7 @@ Represents an uploaded file comprised of Documents.
 
 <a id="camel.loaders.base_io.File.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -61,7 +73,11 @@ def __init__(
 
 <a id="camel.loaders.base_io.File.from_bytes"></a>
 
-### `def from_bytes(cls, file: BytesIO, filename: str):`
+### from_bytes
+
+```python
+def from_bytes(cls, file: BytesIO, filename: str):
+```
 
 Creates a File object from a BytesIO object.
 
@@ -76,7 +92,11 @@ Creates a File object from a BytesIO object.
 
 <a id="camel.loaders.base_io.File.from_raw_bytes"></a>
 
-### `def from_raw_bytes(cls, raw_bytes: bytes, filename: str):`
+### from_raw_bytes
+
+```python
+def from_raw_bytes(cls, raw_bytes: bytes, filename: str):
+```
 
 Creates a File object from raw bytes.
 
@@ -91,21 +111,37 @@ Creates a File object from raw bytes.
 
 <a id="camel.loaders.base_io.File.__repr__"></a>
 
-### `def __repr__(self):`
+### __repr__
+
+```python
+def __repr__(self):
+```
 
 <a id="camel.loaders.base_io.File.__str__"></a>
 
-### `def __str__(self):`
+### __str__
+
+```python
+def __str__(self):
+```
 
 <a id="camel.loaders.base_io.File.copy"></a>
 
-### `def copy(self):`
+### copy
+
+```python
+def copy(self):
+```
 
 Create a deep copy of this File
 
 <a id="camel.loaders.base_io.strip_consecutive_newlines"></a>
 
-## `def strip_consecutive_newlines(text: str):`
+## strip_consecutive_newlines
+
+```python
+def strip_consecutive_newlines(text: str):
+```
 
 Strips consecutive newlines from a string.
 
@@ -119,11 +155,19 @@ Strips consecutive newlines from a string.
 
 <a id="camel.loaders.base_io.DocxFile"></a>
 
-## `class DocxFile(File):`
+## DocxFile
+
+```python
+class DocxFile(File):
+```
 
 <a id="camel.loaders.base_io.DocxFile.from_bytes"></a>
 
-### `def from_bytes(cls, file: BytesIO, filename: str):`
+### from_bytes
+
+```python
+def from_bytes(cls, file: BytesIO, filename: str):
+```
 
 Creates a DocxFile object from a BytesIO object.
 
@@ -138,11 +182,19 @@ Creates a DocxFile object from a BytesIO object.
 
 <a id="camel.loaders.base_io.PdfFile"></a>
 
-## `class PdfFile(File):`
+## PdfFile
+
+```python
+class PdfFile(File):
+```
 
 <a id="camel.loaders.base_io.PdfFile.from_bytes"></a>
 
-### `def from_bytes(cls, file: BytesIO, filename: str):`
+### from_bytes
+
+```python
+def from_bytes(cls, file: BytesIO, filename: str):
+```
 
 Creates a PdfFile object from a BytesIO object.
 
@@ -157,11 +209,19 @@ Creates a PdfFile object from a BytesIO object.
 
 <a id="camel.loaders.base_io.TxtFile"></a>
 
-## `class TxtFile(File):`
+## TxtFile
+
+```python
+class TxtFile(File):
+```
 
 <a id="camel.loaders.base_io.TxtFile.from_bytes"></a>
 
-### `def from_bytes(cls, file: BytesIO, filename: str):`
+### from_bytes
+
+```python
+def from_bytes(cls, file: BytesIO, filename: str):
+```
 
 Creates a TxtFile object from a BytesIO object.
 
@@ -176,11 +236,19 @@ Creates a TxtFile object from a BytesIO object.
 
 <a id="camel.loaders.base_io.JsonFile"></a>
 
-## `class JsonFile(File):`
+## JsonFile
+
+```python
+class JsonFile(File):
+```
 
 <a id="camel.loaders.base_io.JsonFile.from_bytes"></a>
 
-### `def from_bytes(cls, file: BytesIO, filename: str):`
+### from_bytes
+
+```python
+def from_bytes(cls, file: BytesIO, filename: str):
+```
 
 Creates a JsonFile object from a BytesIO object.
 
@@ -195,11 +263,19 @@ Creates a JsonFile object from a BytesIO object.
 
 <a id="camel.loaders.base_io.HtmlFile"></a>
 
-## `class HtmlFile(File):`
+## HtmlFile
+
+```python
+class HtmlFile(File):
+```
 
 <a id="camel.loaders.base_io.HtmlFile.from_bytes"></a>
 
-### `def from_bytes(cls, file: BytesIO, filename: str):`
+### from_bytes
+
+```python
+def from_bytes(cls, file: BytesIO, filename: str):
+```
 
 Creates a HtmlFile object from a BytesIO object.
 

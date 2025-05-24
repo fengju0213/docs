@@ -2,7 +2,11 @@
 
 <a id="camel.utils.mcp.MCPServer"></a>
 
-## `class MCPServer:`
+## MCPServer
+
+```python
+class MCPServer:
+```
 
 Decorator class for registering functions of a class as tools in an MCP
 (Model Context Protocol) server.
@@ -18,7 +22,7 @@ automatically register specified methods (or methods derived from
 
 <a id="camel.utils.mcp.MCPServer.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -30,7 +34,11 @@ def __init__(
 
 <a id="camel.utils.mcp.MCPServer.make_wrapper"></a>
 
-### `def make_wrapper(self, func: Callable[..., Any]):`
+### make_wrapper
+
+```python
+def make_wrapper(self, func: Callable[..., Any]):
+```
 
 Wraps a function (sync or async) to preserve its signature and
 metadata.
@@ -49,7 +57,11 @@ and async support.
 
 <a id="camel.utils.mcp.MCPServer.__call__"></a>
 
-### `def __call__(self, cls):`
+### __call__
+
+```python
+def __call__(self, cls):
+```
 
 Decorates a class by injecting an MCP server instance and
 registering specified methods.

@@ -2,11 +2,19 @@
 
 <a id="camel.models.stub_model.StubTokenCounter"></a>
 
-## `class StubTokenCounter(BaseTokenCounter):`
+## StubTokenCounter
+
+```python
+class StubTokenCounter(BaseTokenCounter):
+```
 
 <a id="camel.models.stub_model.StubTokenCounter.count_tokens_from_messages"></a>
 
-### `def count_tokens_from_messages(self, messages: List[OpenAIMessage]):`
+### count_tokens_from_messages
+
+```python
+def count_tokens_from_messages(self, messages: List[OpenAIMessage]):
+```
 
 Token counting for STUB models, directly returning a constant.
 
@@ -21,7 +29,11 @@ messages.
 
 <a id="camel.models.stub_model.StubTokenCounter.encode"></a>
 
-### `def encode(self, text: str):`
+### encode
+
+```python
+def encode(self, text: str):
+```
 
 Encode text into token IDs for STUB models.
 
@@ -35,7 +47,11 @@ Encode text into token IDs for STUB models.
 
 <a id="camel.models.stub_model.StubTokenCounter.decode"></a>
 
-### `def decode(self, token_ids: List[int]):`
+### decode
+
+```python
+def decode(self, token_ids: List[int]):
+```
 
 Decode token IDs back to text for STUB models.
 
@@ -49,13 +65,17 @@ Decode token IDs back to text for STUB models.
 
 <a id="camel.models.stub_model.StubModel"></a>
 
-## `class StubModel(BaseModelBackend):`
+## StubModel
+
+```python
+class StubModel(BaseModelBackend):
+```
 
 A dummy model used for unit tests.
 
 <a id="camel.models.stub_model.StubModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -73,7 +93,11 @@ All arguments are unused for the dummy model.
 
 <a id="camel.models.stub_model.StubModel.token_counter"></a>
 
-### `def token_counter(self):`
+### token_counter
+
+```python
+def token_counter(self):
+```
 
 **Returns:**
 
@@ -82,7 +106,7 @@ tokenization style.
 
 <a id="camel.models.stub_model.StubModel._run"></a>
 
-### `_run`
+### _run
 
 ```python
 def _run(
@@ -99,6 +123,10 @@ def _run(
 
 <a id="camel.models.stub_model.StubModel.check_model_config"></a>
 
-### `def check_model_config(self):`
+### check_model_config
+
+```python
+def check_model_config(self):
+```
 
 Directly pass the check on arguments to STUB model.

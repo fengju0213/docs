@@ -2,7 +2,11 @@
 
 <a id="camel.loaders.firecrawl_reader.Firecrawl"></a>
 
-## `class Firecrawl:`
+## Firecrawl
+
+```python
+class Firecrawl:
+```
 
 Firecrawl allows you to turn entire websites into LLM-ready markdown.
 
@@ -15,7 +19,7 @@ Firecrawl allows you to turn entire websites into LLM-ready markdown.
 
 <a id="camel.loaders.firecrawl_reader.Firecrawl.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -27,7 +31,7 @@ def __init__(
 
 <a id="camel.loaders.firecrawl_reader.Firecrawl.crawl"></a>
 
-### `crawl`
+### crawl
 
 ```python
 def crawl(
@@ -54,7 +58,11 @@ completion.
 
 <a id="camel.loaders.firecrawl_reader.Firecrawl.check_crawl_job"></a>
 
-### `def check_crawl_job(self, job_id: str):`
+### check_crawl_job
+
+```python
+def check_crawl_job(self, job_id: str):
+```
 
 Check the status of a crawl job.
 
@@ -68,7 +76,11 @@ Check the status of a crawl job.
 
 <a id="camel.loaders.firecrawl_reader.Firecrawl.scrape"></a>
 
-### `def scrape(self, url: str, params: Optional[Dict[str, Any]] = None):`
+### scrape
+
+```python
+def scrape(self, url: str, params: Optional[Dict[str, Any]] = None):
+```
 
 To scrape a single URL. This function supports advanced scraping
 by setting different parameters and returns the full scraped data as a
@@ -87,7 +99,11 @@ Reference: https://docs.firecrawl.dev/advanced-scraping-guide
 
 <a id="camel.loaders.firecrawl_reader.Firecrawl.structured_scrape"></a>
 
-### `def structured_scrape(self, url: str, response_format: BaseModel):`
+### structured_scrape
+
+```python
+def structured_scrape(self, url: str, response_format: BaseModel):
+```
 
 Use LLM to extract structured data from given URL.
 
@@ -102,7 +118,11 @@ Use LLM to extract structured data from given URL.
 
 <a id="camel.loaders.firecrawl_reader.Firecrawl.map_site"></a>
 
-### `def map_site(self, url: str, params: Optional[Dict[str, Any]] = None):`
+### map_site
+
+```python
+def map_site(self, url: str, params: Optional[Dict[str, Any]] = None):
+```
 
 Map a website to retrieve all accessible URLs.
 

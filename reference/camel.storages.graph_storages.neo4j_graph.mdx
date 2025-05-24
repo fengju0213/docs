@@ -2,7 +2,11 @@
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph"></a>
 
-## `class Neo4jGraph(BaseGraphStorage):`
+## Neo4jGraph
+
+```python
+class Neo4jGraph(BaseGraphStorage):
+```
 
 Provides a connection to a Neo4j database for various graph operations.
 
@@ -22,7 +26,7 @@ This module referred to the work of Langchian and Llamaindex.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -40,13 +44,21 @@ Create a new Neo4j graph instance.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.get_client"></a>
 
-### `def get_client(self):`
+### get_client
+
+```python
+def get_client(self):
+```
 
 Get the underlying graph storage client.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.get_schema"></a>
 
-### `def get_schema(self, refresh: bool = False):`
+### get_schema
+
+```python
+def get_schema(self, refresh: bool = False):
+```
 
 Retrieve the schema of the Neo4jGraph store.
 
@@ -60,7 +72,11 @@ Retrieve the schema of the Neo4jGraph store.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.get_structured_schema"></a>
 
-### `def get_structured_schema(self):`
+### get_structured_schema
+
+```python
+def get_structured_schema(self):
+```
 
 **Returns:**
 
@@ -68,7 +84,11 @@ Retrieve the schema of the Neo4jGraph store.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph._value_truncate"></a>
 
-### `def _value_truncate(self, raw_value: Any):`
+### _value_truncate
+
+```python
+def _value_truncate(self, raw_value: Any):
+```
 
 Truncates the input raw value by removing entries that is
 dictionary or list with values resembling embeddings and containing
@@ -88,7 +108,11 @@ dictionaries and oversized lists handled.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.query"></a>
 
-### `def query(self, query: str, params: Optional[Dict[str, Any]] = None):`
+### query
+
+```python
+def query(self, query: str, params: Optional[Dict[str, Any]] = None):
+```
 
 Executes a Neo4j Cypher declarative query in a database.
 
@@ -104,7 +128,11 @@ dictionary represents a row of results from the Cypher query.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.refresh_schema"></a>
 
-### `def refresh_schema(self):`
+### refresh_schema
+
+```python
+def refresh_schema(self):
+```
 
 Refreshes the Neo4j graph schema information by querying the
 database for node properties, relationship properties, and
@@ -112,7 +140,7 @@ relationships.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.add_triplet"></a>
 
-### `add_triplet`
+### add_triplet
 
 ```python
 def add_triplet(
@@ -136,7 +164,7 @@ in the database with a timestamp.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph._delete_rel"></a>
 
-### `_delete_rel`
+### _delete_rel
 
 ```python
 def _delete_rel(
@@ -158,7 +186,11 @@ database.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph._delete_entity"></a>
 
-### `def _delete_entity(self, entity: str):`
+### _delete_entity
+
+```python
+def _delete_entity(self, entity: str):
+```
 
 Deletes an entity from the Neo4j database based on its unique
 identifier.
@@ -169,7 +201,11 @@ identifier.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph._check_edges"></a>
 
-### `def _check_edges(self, entity: str):`
+### _check_edges
+
+```python
+def _check_edges(self, entity: str):
+```
 
 Checks if the given entity has any relationships in the graph
 database.
@@ -185,7 +221,7 @@ False otherwise.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.delete_triplet"></a>
 
-### `delete_triplet`
+### delete_triplet
 
 ```python
 def delete_triplet(
@@ -207,7 +243,11 @@ object and relationship.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph._get_node_import_query"></a>
 
-### `def _get_node_import_query(self, base_entity_label: bool, include_source: bool):`
+### _get_node_import_query
+
+```python
+def _get_node_import_query(self, base_entity_label: bool, include_source: bool):
+```
 
 Constructs a Cypher query string for importing nodes into a Neo4j
 database.
@@ -223,7 +263,11 @@ database.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph._get_rel_import_query"></a>
 
-### `def _get_rel_import_query(self, base_entity_label: bool):`
+### _get_rel_import_query
+
+```python
+def _get_rel_import_query(self, base_entity_label: bool):
+```
 
 Constructs a Cypher query string for importing relationship into a
 Neo4j database.
@@ -238,7 +282,7 @@ Neo4j database.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.add_graph_elements"></a>
 
-### `add_graph_elements`
+### add_graph_elements
 
 ```python
 def add_graph_elements(
@@ -260,7 +304,7 @@ to the graph storage.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.random_walk_with_restarts"></a>
 
-### `random_walk_with_restarts`
+### random_walk_with_restarts
 
 ```python
 def random_walk_with_restarts(
@@ -291,7 +335,7 @@ Runs the Random Walk with Restarts (RWR) sampling algorithm.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.common_neighbour_aware_random_walk"></a>
 
-### `common_neighbour_aware_random_walk`
+### common_neighbour_aware_random_walk
 
 ```python
 def common_neighbour_aware_random_walk(
@@ -322,7 +366,7 @@ sampling.
 
 <a id="camel.storages.graph_storages.neo4j_graph.Neo4jGraph.get_triplet"></a>
 
-### `get_triplet`
+### get_triplet
 
 ```python
 def get_triplet(

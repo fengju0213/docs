@@ -2,7 +2,11 @@
 
 <a id="camel.benchmarks.apibank.process_messages"></a>
 
-## `def process_messages(chat_history: List[Dict[str, Any]], prompt: str):`
+## process_messages
+
+```python
+def process_messages(chat_history: List[Dict[str, Any]], prompt: str):
+```
 
 Processes chat history into a structured format for further use.
 
@@ -21,7 +25,11 @@ API responses when applicable.
 
 <a id="camel.benchmarks.apibank.APIBankBenchmark"></a>
 
-## `class APIBankBenchmark(BaseBenchmark):`
+## APIBankBenchmark
+
+```python
+class APIBankBenchmark(BaseBenchmark):
+```
 
 API-Bank Benchmark adapted from `API-Bank:
 A Comprehensive Benchmark for Tool-Augmented LLMs`
@@ -34,7 +42,11 @@ A Comprehensive Benchmark for Tool-Augmented LLMs`
 
 <a id="camel.benchmarks.apibank.APIBankBenchmark.__init__"></a>
 
-### `def __init__(self, save_to: str, processes: int = 1):`
+### __init__
+
+```python
+def __init__(self, save_to: str, processes: int = 1):
+```
 
 Initialize the APIBank benchmark.
 
@@ -45,13 +57,21 @@ Initialize the APIBank benchmark.
 
 <a id="camel.benchmarks.apibank.APIBankBenchmark.download"></a>
 
-### `def download(self):`
+### download
+
+```python
+def download(self):
+```
 
 Download APIBank dataset and code from Github.
 
 <a id="camel.benchmarks.apibank.APIBankBenchmark.load"></a>
 
-### `def load(self, level: str, force_download: bool = False):`
+### load
+
+```python
+def load(self, level: str, force_download: bool = False):
+```
 
 Load the APIBank Benchmark dataset.
 
@@ -62,7 +82,7 @@ Load the APIBank Benchmark dataset.
 
 <a id="camel.benchmarks.apibank.APIBankBenchmark.run"></a>
 
-### `run`
+### run
 
 ```python
 def run(
@@ -91,31 +111,47 @@ Run the benchmark.
 
 <a id="camel.benchmarks.apibank.agent_call"></a>
 
-## `def agent_call(messages: List[Dict], agent: ChatAgent):`
+## agent_call
+
+```python
+def agent_call(messages: List[Dict], agent: ChatAgent):
+```
 
 Add messages to agent memory and get response.
 
 <a id="camel.benchmarks.apibank.calculate_rouge_l_score"></a>
 
-## `def calculate_rouge_l_score(reference, hypothesis):`
+## calculate_rouge_l_score
+
+```python
+def calculate_rouge_l_score(reference, hypothesis):
+```
 
 Calculate rouge l score between hypothesis and reference.
 
 <a id="camel.benchmarks.apibank.get_api_call"></a>
 
-## `def get_api_call(model_output):`
+## get_api_call
+
+```python
+def get_api_call(model_output):
+```
 
 Parse api call from model output.
 
 <a id="camel.benchmarks.apibank.APIBankSample"></a>
 
-## `class APIBankSample:`
+## APIBankSample
+
+```python
+class APIBankSample:
+```
 
 APIBank sample used to load the datasets.
 
 <a id="camel.benchmarks.apibank.APIBankSample.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -128,34 +164,66 @@ def __init__(
 
 <a id="camel.benchmarks.apibank.APIBankSample.__repr__"></a>
 
-### `def __repr__(self):`
+### __repr__
+
+```python
+def __repr__(self):
+```
 
 <a id="camel.benchmarks.apibank.APIBankSample.from_chat_history"></a>
 
-### `def from_chat_history(cls, chat_history):`
+### from_chat_history
+
+```python
+def from_chat_history(cls, chat_history):
+```
 
 <a id="camel.benchmarks.apibank.Evaluator"></a>
 
-## `class Evaluator:`
+## Evaluator
+
+```python
+class Evaluator:
+```
 
 Evaluator for APIBank benchmark.
 
 <a id="camel.benchmarks.apibank.Evaluator.__init__"></a>
 
-### `def __init__(self, samples: List[APIBankSample]):`
+### __init__
+
+```python
+def __init__(self, samples: List[APIBankSample]):
+```
 
 <a id="camel.benchmarks.apibank.Evaluator.get_all_sample_ids"></a>
 
-### `def get_all_sample_ids(self):`
+### get_all_sample_ids
+
+```python
+def get_all_sample_ids(self):
+```
 
 <a id="camel.benchmarks.apibank.Evaluator.get_api_description"></a>
 
-### `def get_api_description(self, api_name):`
+### get_api_description
+
+```python
+def get_api_description(self, api_name):
+```
 
 <a id="camel.benchmarks.apibank.Evaluator.get_model_input"></a>
 
-### `def get_model_input(self, sample_id: int):`
+### get_model_input
+
+```python
+def get_model_input(self, sample_id: int):
+```
 
 <a id="camel.benchmarks.apibank.Evaluator.evaluate"></a>
 
-### `def evaluate(self, sample_id, model_output):`
+### evaluate
+
+```python
+def evaluate(self, sample_id, model_output):
+```

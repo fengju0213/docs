@@ -2,7 +2,11 @@
 
 <a id="camel.agents.mcp_agent.MCPAgent"></a>
 
-## `class MCPAgent(ChatAgent):`
+## MCPAgent
+
+```python
+class MCPAgent(ChatAgent):
+```
 
 A specialized agent designed to interact with MCP registries.
 The MCPAgent enhances a base ChatAgent by integrating MCP tools from
@@ -28,7 +32,7 @@ model is equipped with the function calling ability.
 
 <a id="camel.agents.mcp_agent.MCPAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -46,13 +50,21 @@ def __init__(
 
 <a id="camel.agents.mcp_agent.MCPAgent._initialize_mcp_toolkit"></a>
 
-### `def _initialize_mcp_toolkit(self):`
+### _initialize_mcp_toolkit
+
+```python
+def _initialize_mcp_toolkit(self):
+```
 
 Initialize the MCP toolkit from the provided configuration.
 
 <a id="camel.agents.mcp_agent.MCPAgent.add_registry"></a>
 
-### `def add_registry(self, registry_config: BaseMCPRegistryConfig):`
+### add_registry
+
+```python
+def add_registry(self, registry_config: BaseMCPRegistryConfig):
+```
 
 Add a new registry configuration to the agent.
 
@@ -62,7 +74,7 @@ Add a new registry configuration to the agent.
 
 <a id="camel.agents.mcp_agent.MCPAgent.step"></a>
 
-### `step`
+### step
 
 ```python
 def step(

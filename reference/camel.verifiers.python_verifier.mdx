@@ -2,7 +2,11 @@
 
 <a id="camel.verifiers.python_verifier.PythonVerifier"></a>
 
-## `class PythonVerifier(BaseVerifier):`
+## PythonVerifier
+
+```python
+class PythonVerifier(BaseVerifier):
+```
 
 The PythonVerifier class verifies Python-based implementations
 by executing them in an isolated virtual environment.
@@ -19,7 +23,7 @@ environment, minimizing external dependencies and conflicts.
 
 <a id="camel.verifiers.python_verifier.PythonVerifier.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -43,25 +47,41 @@ Initializes the PythonVerifier.
 
 <a id="camel.verifiers.python_verifier.PythonVerifier._cleanup_venv"></a>
 
-### `def _cleanup_venv(self):`
+### _cleanup_venv
+
+```python
+def _cleanup_venv(self):
+```
 
 Clean up the virtual environment if it exists.
 
 <a id="camel.verifiers.python_verifier.PythonVerifier._is_uv_environment"></a>
 
-### `def _is_uv_environment(self):`
+### _is_uv_environment
+
+```python
+def _is_uv_environment(self):
+```
 
 Detect whether the current Python runtime is managed by uv.
 
 <a id="camel.verifiers.python_verifier.PythonVerifier._setup_with_uv"></a>
 
-### `def _setup_with_uv(self):`
+### _setup_with_uv
+
+```python
+def _setup_with_uv(self):
+```
 
 Create virtual environment and install packages using uv.
 
 <a id="camel.verifiers.python_verifier.PythonVerifier._is_expression"></a>
 
-### `def _is_expression(self, code: str):`
+### _is_expression
+
+```python
+def _is_expression(self, code: str):
+```
 
 Determines whether a given string of code is a single expression.
 
@@ -78,7 +98,11 @@ it consists of a single expression node.
 
 <a id="camel.verifiers.python_verifier.PythonVerifier._is_equal_with_tolerance"></a>
 
-### `def _is_equal_with_tolerance(self, a: Any, b: Any):`
+### _is_equal_with_tolerance
+
+```python
+def _is_equal_with_tolerance(self, a: Any, b: Any):
+```
 
 Compares two Python objects for equality with optional float
 tolerance.

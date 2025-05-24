@@ -2,7 +2,11 @@
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter"></a>
 
-## `class OutlinesConverter(BaseConverter):`
+## OutlinesConverter
+
+```python
+class OutlinesConverter(BaseConverter):
+```
 
 OutlinesConverter is a class that converts a string or a function
 into a BaseModel schema.
@@ -15,7 +19,7 @@ into a BaseModel schema.
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -28,7 +32,11 @@ def __init__(
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.convert_regex"></a>
 
-### `def convert_regex(self, content: str, regex_pattern: str):`
+### convert_regex
+
+```python
+def convert_regex(self, content: str, regex_pattern: str):
+```
 
 Convert the content to the specified regex pattern.
 
@@ -43,7 +51,11 @@ Convert the content to the specified regex pattern.
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.convert_json"></a>
 
-### `def convert_json(self, content: str, output_schema: Union[str, Callable]):`
+### convert_json
+
+```python
+def convert_json(self, content: str, output_schema: Union[str, Callable]):
+```
 
 Convert the content to the specified JSON schema given by
 output_schema.
@@ -59,7 +71,11 @@ output_schema.
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.convert_pydantic"></a>
 
-### `def convert_pydantic(self, content: str, output_schema: Type[BaseModel]):`
+### convert_pydantic
+
+```python
+def convert_pydantic(self, content: str, output_schema: Type[BaseModel]):
+```
 
 Convert the content to the specified Pydantic schema.
 
@@ -74,7 +90,11 @@ Convert the content to the specified Pydantic schema.
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.convert_type"></a>
 
-### `def convert_type(self, content: str, type_name: type):`
+### convert_type
+
+```python
+def convert_type(self, content: str, type_name: type):
+```
 
 Convert the content to the specified type.
 
@@ -98,7 +118,11 @@ The following types are currently available:
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.convert_choice"></a>
 
-### `def convert_choice(self, content: str, choices: List[str]):`
+### convert_choice
+
+```python
+def convert_choice(self, content: str, choices: List[str]):
+```
 
 Convert the content to the specified choice.
 
@@ -113,7 +137,11 @@ Convert the content to the specified choice.
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.convert_grammar"></a>
 
-### `def convert_grammar(self, content: str, grammar: str):`
+### convert_grammar
+
+```python
+def convert_grammar(self, content: str, grammar: str):
+```
 
 Convert the content to the specified grammar.
 
@@ -128,7 +156,7 @@ Convert the content to the specified grammar.
 
 <a id="camel.schemas.outlines_converter.OutlinesConverter.convert"></a>
 
-### `convert`
+### convert
 
 ```python
 def convert(

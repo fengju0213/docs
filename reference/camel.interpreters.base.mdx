@@ -2,13 +2,21 @@
 
 <a id="camel.interpreters.base.BaseInterpreter"></a>
 
-## `class BaseInterpreter(ABC):`
+## BaseInterpreter
+
+```python
+class BaseInterpreter(ABC):
+```
 
 An abstract base class for code interpreters.
 
 <a id="camel.interpreters.base.BaseInterpreter.run"></a>
 
-### `def run(self, code: str, code_type: str):`
+### run
+
+```python
+def run(self, code: str, code_type: str):
+```
 
 Executes the given code based on its type.
 
@@ -25,12 +33,20 @@ the issue.
 
 <a id="camel.interpreters.base.BaseInterpreter.supported_code_types"></a>
 
-### `def supported_code_types(self):`
+### supported_code_types
+
+```python
+def supported_code_types(self):
+```
 
 Provides supported code types by the interpreter.
 
 <a id="camel.interpreters.base.BaseInterpreter.update_action_space"></a>
 
-### `def update_action_space(self, action_space: Dict[str, Any]):`
+### update_action_space
+
+```python
+def update_action_space(self, action_space: Dict[str, Any]):
+```
 
 Updates action space for *python* interpreter

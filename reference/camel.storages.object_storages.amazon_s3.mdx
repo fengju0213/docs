@@ -2,7 +2,11 @@
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage"></a>
 
-## `class AmazonS3Storage(BaseObjectStorage):`
+## AmazonS3Storage
+
+```python
+class AmazonS3Storage(BaseObjectStorage):
+```
 
 A class to connect with AWS S3 object storage to put and get objects
 from one S3 bucket. The class will first try to use the credentials passed
@@ -24,7 +28,7 @@ logged in with AWS CLI).
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -39,13 +43,21 @@ def __init__(
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage._prepare_and_check"></a>
 
-### `def _prepare_and_check(self):`
+### _prepare_and_check
+
+```python
+def _prepare_and_check(self):
+```
 
 Check privileges and existence of the bucket.
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage.canonicalize_path"></a>
 
-### `def canonicalize_path(file_path: PurePath):`
+### canonicalize_path
+
+```python
+def canonicalize_path(file_path: PurePath):
+```
 
 Canonicalize file path for Amazon S3.
 
@@ -59,7 +71,11 @@ Canonicalize file path for Amazon S3.
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage._put_file"></a>
 
-### `def _put_file(self, file_key: str, file: File):`
+### _put_file
+
+```python
+def _put_file(self, file_key: str, file: File):
+```
 
 Put a file to the Amazon S3 bucket.
 
@@ -70,7 +86,11 @@ Put a file to the Amazon S3 bucket.
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage._get_file"></a>
 
-### `def _get_file(self, file_key: str, filename: str):`
+### _get_file
+
+```python
+def _get_file(self, file_key: str, filename: str):
+```
 
 Get a file from the Amazon S3 bucket.
 
@@ -85,7 +105,11 @@ Get a file from the Amazon S3 bucket.
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage._upload_file"></a>
 
-### `def _upload_file(self, local_file_path: Path, remote_file_key: str):`
+### _upload_file
+
+```python
+def _upload_file(self, local_file_path: Path, remote_file_key: str):
+```
 
 Upload a local file to the Amazon S3 bucket.
 
@@ -96,7 +120,11 @@ Upload a local file to the Amazon S3 bucket.
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage._download_file"></a>
 
-### `def _download_file(self, local_file_path: Path, remote_file_key: str):`
+### _download_file
+
+```python
+def _download_file(self, local_file_path: Path, remote_file_key: str):
+```
 
 Download a file from the Amazon S3 bucket to the local system.
 
@@ -107,7 +135,11 @@ Download a file from the Amazon S3 bucket to the local system.
 
 <a id="camel.storages.object_storages.amazon_s3.AmazonS3Storage._object_exists"></a>
 
-### `def _object_exists(self, file_key: str):`
+### _object_exists
+
+```python
+def _object_exists(self, file_key: str):
+```
 
 Check if the object exists in the Amazon S3 bucket.
 

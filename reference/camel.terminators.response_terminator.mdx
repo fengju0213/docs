@@ -2,7 +2,11 @@
 
 <a id="camel.terminators.response_terminator.ResponseWordsTerminator"></a>
 
-## `class ResponseWordsTerminator(ResponseTerminator):`
+## ResponseWordsTerminator
+
+```python
+class ResponseWordsTerminator(ResponseTerminator):
+```
 
 Terminate agent when some words reached to occurrence
 limit by any message of the response.
@@ -15,7 +19,7 @@ limit by any message of the response.
 
 <a id="camel.terminators.response_terminator.ResponseWordsTerminator.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -28,11 +32,19 @@ def __init__(
 
 <a id="camel.terminators.response_terminator.ResponseWordsTerminator._validate"></a>
 
-### `def _validate(self):`
+### _validate
+
+```python
+def _validate(self):
+```
 
 <a id="camel.terminators.response_terminator.ResponseWordsTerminator.is_terminated"></a>
 
-### `def is_terminated(self, messages: List[BaseMessage]):`
+### is_terminated
+
+```python
+def is_terminated(self, messages: List[BaseMessage]):
+```
 
 Whether terminate the agent by checking the occurrence
 of specified words reached to preset thresholds.
@@ -48,6 +60,10 @@ terminated and a string of termination reason.
 
 <a id="camel.terminators.response_terminator.ResponseWordsTerminator.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 Reset the terminator.

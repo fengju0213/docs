@@ -2,7 +2,11 @@
 
 <a id="camel.societies.workforce.workforce.Workforce"></a>
 
-## `class Workforce(BaseNode):`
+## Workforce
+
+```python
+class Workforce(BaseNode):
+```
 
 A system where multiple workder nodes (agents) cooperate together
 to solve tasks. It can assign tasks to workder nodes and also take
@@ -19,7 +23,7 @@ situations when the task fails.
 
 <a id="camel.societies.workforce.workforce.Workforce.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -34,11 +38,19 @@ def __init__(
 
 <a id="camel.societies.workforce.workforce.Workforce.__repr__"></a>
 
-### `def __repr__(self):`
+### __repr__
+
+```python
+def __repr__(self):
+```
 
 <a id="camel.societies.workforce.workforce.Workforce._decompose_task"></a>
 
-### `def _decompose_task(self, task: Task):`
+### _decompose_task
+
+```python
+def _decompose_task(self, task: Task):
+```
 
 **Returns:**
 
@@ -46,7 +58,11 @@ def __init__(
 
 <a id="camel.societies.workforce.workforce.Workforce.process_task"></a>
 
-### `def process_task(self, task: Task):`
+### process_task
+
+```python
+def process_task(self, task: Task):
+```
 
 The main entry point for the workforce to process a task. It will
 start the workforce and all the child nodes under it, process the
@@ -62,7 +78,11 @@ task provided and return the updated task.
 
 <a id="camel.societies.workforce.workforce.Workforce.add_single_agent_worker"></a>
 
-### `def add_single_agent_worker(self, description: str, worker: ChatAgent):`
+### add_single_agent_worker
+
+```python
+def add_single_agent_worker(self, description: str, worker: ChatAgent):
+```
 
 Add a worker node to the workforce that uses a single agent.
 
@@ -77,7 +97,7 @@ Add a worker node to the workforce that uses a single agent.
 
 <a id="camel.societies.workforce.workforce.Workforce.add_role_playing_worker"></a>
 
-### `add_role_playing_worker`
+### add_role_playing_worker
 
 ```python
 def add_role_playing_worker(
@@ -110,7 +130,11 @@ Add a worker node to the workforce that uses `RolePlaying` system.
 
 <a id="camel.societies.workforce.workforce.Workforce.add_workforce"></a>
 
-### `def add_workforce(self, workforce: Workforce):`
+### add_workforce
+
+```python
+def add_workforce(self, workforce: Workforce):
+```
 
 Add a workforce node to the workforce.
 
@@ -124,26 +148,42 @@ Add a workforce node to the workforce.
 
 <a id="camel.societies.workforce.workforce.Workforce.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 Reset the workforce and all the child nodes under it. Can only
 be called when the workforce is not running.
 
 <a id="camel.societies.workforce.workforce.Workforce.set_channel"></a>
 
-### `def set_channel(self, channel: TaskChannel):`
+### set_channel
+
+```python
+def set_channel(self, channel: TaskChannel):
+```
 
 Set the channel for the node and all the child nodes under it.
 
 <a id="camel.societies.workforce.workforce.Workforce._get_child_nodes_info"></a>
 
-### `def _get_child_nodes_info(self):`
+### _get_child_nodes_info
+
+```python
+def _get_child_nodes_info(self):
+```
 
 Get the information of all the child nodes under this node.
 
 <a id="camel.societies.workforce.workforce.Workforce._find_assignee"></a>
 
-### `def _find_assignee(self, task: Task):`
+### _find_assignee
+
+```python
+def _find_assignee(self, task: Task):
+```
 
 Assigns a task to a worker node with the best capability.
 
@@ -157,7 +197,11 @@ Assigns a task to a worker node with the best capability.
 
 <a id="camel.societies.workforce.workforce.Workforce._create_worker_node_for_task"></a>
 
-### `def _create_worker_node_for_task(self, task: Task):`
+### _create_worker_node_for_task
+
+```python
+def _create_worker_node_for_task(self, task: Task):
+```
 
 Creates a new worker node for a given task and add it to the
 children list of this node. This is one of the actions that
@@ -173,18 +217,30 @@ the coordinator can take when a task has failed.
 
 <a id="camel.societies.workforce.workforce.Workforce._create_new_agent"></a>
 
-### `def _create_new_agent(self, role: str, sys_msg: str):`
+### _create_new_agent
+
+```python
+def _create_new_agent(self, role: str, sys_msg: str):
+```
 
 <a id="camel.societies.workforce.workforce.Workforce.stop"></a>
 
-### `def stop(self):`
+### stop
+
+```python
+def stop(self):
+```
 
 Stop all the child nodes under it. The node itself will be stopped
 by its parent node.
 
 <a id="camel.societies.workforce.workforce.Workforce.clone"></a>
 
-### `def clone(self, with_memory: bool = False):`
+### clone
+
+```python
+def clone(self, with_memory: bool = False):
+```
 
 Creates a new instance of Workforce with the same configuration.
 

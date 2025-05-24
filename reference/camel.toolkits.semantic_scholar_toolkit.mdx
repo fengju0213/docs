@@ -2,20 +2,32 @@
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit"></a>
 
-## `class SemanticScholarToolkit(BaseToolkit):`
+## SemanticScholarToolkit
+
+```python
+class SemanticScholarToolkit(BaseToolkit):
+```
 
 A toolkit for interacting with the Semantic Scholar
 API to fetch paper and author data.
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initializes the SemanticScholarToolkit.
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit.fetch_paper_data_title"></a>
 
-### `def fetch_paper_data_title(self, paper_title: str, fields: Optional[List[str]] = None):`
+### fetch_paper_data_title
+
+```python
+def fetch_paper_data_title(self, paper_title: str, fields: Optional[List[str]] = None):
+```
 
 Fetches a SINGLE paper from the Semantic Scholar
 API based on a paper title.
@@ -32,7 +44,11 @@ request fails.
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit.fetch_paper_data_id"></a>
 
-### `def fetch_paper_data_id(self, paper_id: str, fields: Optional[List[str]] = None):`
+### fetch_paper_data_id
+
+```python
+def fetch_paper_data_id(self, paper_id: str, fields: Optional[List[str]] = None):
+```
 
 Fetches a SINGLE paper from the Semantic Scholar
 API based on a paper ID.
@@ -49,7 +65,7 @@ if the request fails.
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit.fetch_bulk_paper_data"></a>
 
-### `fetch_bulk_paper_data`
+### fetch_bulk_paper_data
 
 ```python
 def fetch_bulk_paper_data(
@@ -76,7 +92,7 @@ request fails.
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit.fetch_recommended_papers"></a>
 
-### `fetch_recommended_papers`
+### fetch_recommended_papers
 
 ```python
 def fetch_recommended_papers(
@@ -107,7 +123,7 @@ citation count.
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit.fetch_author_data"></a>
 
-### `fetch_author_data`
+### fetch_author_data
 
 ```python
 def fetch_author_data(
@@ -134,7 +150,11 @@ the request fails.
 
 <a id="camel.toolkits.semantic_scholar_toolkit.SemanticScholarToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

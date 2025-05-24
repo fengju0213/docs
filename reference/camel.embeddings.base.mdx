@@ -2,13 +2,21 @@
 
 <a id="camel.embeddings.base.BaseEmbedding"></a>
 
-## `class BaseEmbedding(ABC):`
+## BaseEmbedding
+
+```python
+class BaseEmbedding(ABC):
+```
 
 Abstract base class for text embedding functionalities.
 
 <a id="camel.embeddings.base.BaseEmbedding.embed_list"></a>
 
-### `def embed_list(self, objs: list[T], **kwargs: Any):`
+### embed_list
+
+```python
+def embed_list(self, objs: list[T], **kwargs: Any):
+```
 
 Generates embeddings for the given texts.
 
@@ -23,7 +31,11 @@ generated embedding as a list of floating-point numbers.
 
 <a id="camel.embeddings.base.BaseEmbedding.embed"></a>
 
-### `def embed(self, obj: T, **kwargs: Any):`
+### embed
+
+```python
+def embed(self, obj: T, **kwargs: Any):
+```
 
 Generates an embedding for the given text.
 
@@ -38,7 +50,11 @@ generated embedding.
 
 <a id="camel.embeddings.base.BaseEmbedding.get_output_dim"></a>
 
-### `def get_output_dim(self):`
+### get_output_dim
+
+```python
+def get_output_dim(self):
+```
 
 **Returns:**
 

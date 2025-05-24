@@ -2,7 +2,11 @@
 
 <a id="camel.toolkits.ask_news_toolkit._process_response"></a>
 
-## `def _process_response(response, return_type: str):`
+## _process_response
+
+```python
+def _process_response(response, return_type: str):
+```
 
 Process the response based on the specified return type.
 
@@ -29,7 +33,11 @@ containing both formats.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit"></a>
 
-## `class AskNewsToolkit(BaseToolkit):`
+## AskNewsToolkit
+
+```python
+class AskNewsToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for interacting with the AskNews API.
 
@@ -38,14 +46,18 @@ based on user queries using the AskNews API.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit.__init__"></a>
 
-### `def __init__(self, timeout: Optional[float] = None):`
+### __init__
+
+```python
+def __init__(self, timeout: Optional[float] = None):
+```
 
 Initialize the AskNewsToolkit with API clients.The API keys and
 credentials are retrieved from environment variables.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit.get_news"></a>
 
-### `get_news`
+### get_news
 
 ```python
 def get_news(
@@ -74,7 +86,7 @@ if the process fails.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit.get_stories"></a>
 
-### `get_stories`
+### get_stories
 
 ```python
 def get_stories(
@@ -106,7 +118,7 @@ associated data, or error message if the process fails.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit.get_web_search"></a>
 
-### `get_web_search`
+### get_web_search
 
 ```python
 def get_web_search(
@@ -131,7 +143,7 @@ error message if the process fails.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit.search_reddit"></a>
 
-### `search_reddit`
+### search_reddit
 
 ```python
 def search_reddit(
@@ -160,7 +172,7 @@ the process fails.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit.query_finance"></a>
 
-### `query_finance`
+### query_finance
 
 ```python
 def query_finance(
@@ -194,7 +206,11 @@ fails.
 
 <a id="camel.toolkits.ask_news_toolkit.AskNewsToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 
@@ -203,7 +219,11 @@ the functions in the toolkit.
 
 <a id="camel.toolkits.ask_news_toolkit.AsyncAskNewsToolkit"></a>
 
-## `class AsyncAskNewsToolkit(BaseToolkit):`
+## AsyncAskNewsToolkit
+
+```python
+class AsyncAskNewsToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for interacting with the AskNews API
 asynchronously.
@@ -213,14 +233,22 @@ content based on user queries using the AskNews API.
 
 <a id="camel.toolkits.ask_news_toolkit.AsyncAskNewsToolkit.__init__"></a>
 
-### `def __init__(self):`
+### __init__
+
+```python
+def __init__(self):
+```
 
 Initialize the AsyncAskNewsToolkit with API clients.The API keys
 and credentials are retrieved from environment variables.
 
 <a id="camel.toolkits.ask_news_toolkit.AsyncAskNewsToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

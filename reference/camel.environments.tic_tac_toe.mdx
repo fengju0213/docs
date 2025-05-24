@@ -2,13 +2,21 @@
 
 <a id="camel.environments.tic_tac_toe.MoveExtractor"></a>
 
-## `class MoveExtractor(BaseExtractorStrategy):`
+## MoveExtractor
+
+```python
+class MoveExtractor(BaseExtractorStrategy):
+```
 
 A strategy for extracting Tic Tac Toe actions from text.
 
 <a id="camel.environments.tic_tac_toe.Opponent"></a>
 
-## `class Opponent:`
+## Opponent
+
+```python
+class Opponent:
+```
 
 AI opponent for the Tic Tac Toe game.
 
@@ -18,7 +26,11 @@ pruning, and a random strategy.
 
 <a id="camel.environments.tic_tac_toe.Opponent.__init__"></a>
 
-### `def __init__(self, play_style: Literal['optimal', 'random'] = 'optimal'):`
+### __init__
+
+```python
+def __init__(self, play_style: Literal['optimal', 'random'] = 'optimal'):
+```
 
 Initialize the opponent with a specific play style.
 
@@ -28,7 +40,11 @@ Initialize the opponent with a specific play style.
 
 <a id="camel.environments.tic_tac_toe.Opponent.select_move"></a>
 
-### `def select_move(self, board: List[str]):`
+### select_move
+
+```python
+def select_move(self, board: List[str]):
+```
 
 Select a move based on the opponent's play style.
 
@@ -43,7 +59,11 @@ is available.
 
 <a id="camel.environments.tic_tac_toe.Opponent.get_optimal_move"></a>
 
-### `def get_optimal_move(self, board: List[str]):`
+### get_optimal_move
+
+```python
+def get_optimal_move(self, board: List[str]):
+```
 
 Get the optimal move using the minimax algorithm.
 
@@ -58,7 +78,7 @@ is available.
 
 <a id="camel.environments.tic_tac_toe.Opponent.minimax"></a>
 
-### `minimax`
+### minimax
 
 ```python
 def minimax(
@@ -95,7 +115,11 @@ terminal state
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv"></a>
 
-## `class TicTacToeEnv(MultiStepEnv):`
+## TicTacToeEnv
+
+```python
+class TicTacToeEnv(MultiStepEnv):
+```
 
 A Tic Tac Toe environment for reinforcement learning with LLMs.
 
@@ -106,7 +130,7 @@ strategy.
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -128,7 +152,11 @@ Initialize the Tic Tac Toe environment.
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv._get_initial_state"></a>
 
-### `def _get_initial_state(self):`
+### _get_initial_state
+
+```python
+def _get_initial_state(self):
+```
 
 **Returns:**
 
@@ -137,7 +165,11 @@ empty board, game status flags, and move history.
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv._get_next_observation"></a>
 
-### `def _get_next_observation(self):`
+### _get_next_observation
+
+```python
+def _get_next_observation(self):
+```
 
 **Returns:**
 
@@ -146,7 +178,11 @@ description.
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv._get_terminal_observation"></a>
 
-### `def _get_terminal_observation(self):`
+### _get_terminal_observation
+
+```python
+def _get_terminal_observation(self):
+```
 
 **Returns:**
 
@@ -155,7 +191,7 @@ description.
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv.evaluate_position_for_x"></a>
 
-### `evaluate_position_for_x`
+### evaluate_position_for_x
 
 ```python
 def evaluate_position_for_x(
@@ -186,7 +222,11 @@ perfect play
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv._is_done"></a>
 
-### `def _is_done(self):`
+### _is_done
+
+```python
+def _is_done(self):
+```
 
 **Returns:**
 
@@ -194,7 +234,11 @@ perfect play
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv.available_moves"></a>
 
-### `def available_moves(board: List[str]):`
+### available_moves
+
+```python
+def available_moves(board: List[str]):
+```
 
 Get all available moves on the board.
 
@@ -208,7 +252,11 @@ Get all available moves on the board.
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv.check_winner"></a>
 
-### `def check_winner(board: List[str]):`
+### check_winner
+
+```python
+def check_winner(board: List[str]):
+```
 
 Check if there is a winner or a draw on the board.
 
@@ -224,7 +272,11 @@ still ongoing.
 
 <a id="camel.environments.tic_tac_toe.TicTacToeEnv.render_board"></a>
 
-### `def render_board(self, board: List[str]):`
+### render_board
+
+```python
+def render_board(self, board: List[str]):
+```
 
 Render the board as a string for display.
 

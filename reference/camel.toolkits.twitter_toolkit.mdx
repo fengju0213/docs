@@ -2,7 +2,7 @@
 
 <a id="camel.toolkits.twitter_toolkit.create_tweet"></a>
 
-## `create_tweet`
+## create_tweet
 
 ```python
 def create_tweet(
@@ -44,7 +44,11 @@ https://developer.x.com/en/docs/x-api/tweets/manage-tweets/api-reference/post-tw
 
 <a id="camel.toolkits.twitter_toolkit.delete_tweet"></a>
 
-## `def delete_tweet(tweet_id: str):`
+## delete_tweet
+
+```python
+def delete_tweet(tweet_id: str):
+```
 
 Deletes a tweet with the specified ID for an authorized user.
 
@@ -68,7 +72,11 @@ https://developer.x.com/en/docs/x-api/tweets/manage-tweets/api-reference/delete-
 
 <a id="camel.toolkits.twitter_toolkit.get_my_user_profile"></a>
 
-## `def get_my_user_profile():`
+## get_my_user_profile
+
+```python
+def get_my_user_profile():
+```
 
 **Returns:**
 
@@ -84,7 +92,11 @@ https://developer.x.com/en/docs/x-api/users/lookup/api-reference/get-users-me
 
 <a id="camel.toolkits.twitter_toolkit.get_user_by_username"></a>
 
-## `def get_user_by_username(username: str):`
+## get_user_by_username
+
+```python
+def get_user_by_username(username: str):
+```
 
 Retrieves one user's Twitter profile info by username (handle).
 
@@ -110,7 +122,11 @@ https://developer.x.com/en/docs/x-api/users/lookup/api-reference/get-users-by-us
 
 <a id="camel.toolkits.twitter_toolkit._get_user_info"></a>
 
-## `def _get_user_info(username: Optional[str] = None):`
+## _get_user_info
+
+```python
+def _get_user_info(username: Optional[str] = None):
+```
 
 Generates a formatted report of the user information from the
 JSON response.
@@ -125,7 +141,11 @@ JSON response.
 
 <a id="camel.toolkits.twitter_toolkit._handle_http_error"></a>
 
-## `def _handle_http_error(response: requests.Response):`
+## _handle_http_error
+
+```python
+def _handle_http_error(response: requests.Response):
+```
 
 Handles the HTTP response by checking the status code and
 returning an appropriate message if there is an error.
@@ -144,7 +164,11 @@ https://github.com/tweepy/tweepy/blob/master/tweepy/client.py#L64
 
 <a id="camel.toolkits.twitter_toolkit.TwitterToolkit"></a>
 
-## `class TwitterToolkit(BaseToolkit):`
+## TwitterToolkit
+
+```python
+class TwitterToolkit(BaseToolkit):
+```
 
 A class representing a toolkit for Twitter operations.
 
@@ -165,7 +189,11 @@ API.
 
 <a id="camel.toolkits.twitter_toolkit.TwitterToolkit.get_tools"></a>
 
-### `def get_tools(self):`
+### get_tools
+
+```python
+def get_tools(self):
+```
 
 **Returns:**
 

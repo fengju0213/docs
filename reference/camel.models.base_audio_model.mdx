@@ -2,14 +2,18 @@
 
 <a id="camel.models.base_audio_model.BaseAudioModel"></a>
 
-## `class BaseAudioModel(ABC):`
+## BaseAudioModel
+
+```python
+class BaseAudioModel(ABC):
+```
 
 Base class for audio models providing Text-to-Speech (TTS) and
 Speech-to-Text (STT) functionality.
 
 <a id="camel.models.base_audio_model.BaseAudioModel.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -30,7 +34,11 @@ Initialize an instance of BaseAudioModel.
 
 <a id="camel.models.base_audio_model.BaseAudioModel.text_to_speech"></a>
 
-### `def text_to_speech(self, input: str, **kwargs: Any):`
+### text_to_speech
+
+```python
+def text_to_speech(self, input: str, **kwargs: Any):
+```
 
 Convert text to speech.
 
@@ -46,7 +54,11 @@ implementation.
 
 <a id="camel.models.base_audio_model.BaseAudioModel.speech_to_text"></a>
 
-### `def speech_to_text(self, audio_file_path: str, **kwargs: Any):`
+### speech_to_text
+
+```python
+def speech_to_text(self, audio_file_path: str, **kwargs: Any):
+```
 
 Convert speech audio to text.
 
@@ -60,7 +72,11 @@ Convert speech audio to text.
 
 <a id="camel.models.base_audio_model.BaseAudioModel._ensure_directory_exists"></a>
 
-### `def _ensure_directory_exists(self, file_path: str):`
+### _ensure_directory_exists
+
+```python
+def _ensure_directory_exists(self, file_path: str):
+```
 
 Ensure the directory for the given file path exists.
 

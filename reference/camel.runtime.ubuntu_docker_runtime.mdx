@@ -2,7 +2,11 @@
 
 <a id="camel.runtime.ubuntu_docker_runtime.UbuntuDockerRuntime"></a>
 
-## `class UbuntuDockerRuntime(DockerRuntime):`
+## UbuntuDockerRuntime
+
+```python
+class UbuntuDockerRuntime(DockerRuntime):
+```
 
 A specialized Docker runtime for Ubuntu-based environments.
 
@@ -17,7 +21,7 @@ docker_config (dict): Configuration dict for Docker container setup
 
 <a id="camel.runtime.ubuntu_docker_runtime.UbuntuDockerRuntime.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -41,7 +45,7 @@ Initialize the Ubuntu Docker Runtime.
 
 <a id="camel.runtime.ubuntu_docker_runtime.UbuntuDockerRuntime.add"></a>
 
-### `add`
+### add
 
 ```python
 def add(
@@ -61,7 +65,11 @@ Add functions to the runtime with Ubuntu-specific modifications.
 
 <a id="camel.runtime.ubuntu_docker_runtime.UbuntuDockerRuntime._setup_default_mounts"></a>
 
-### `def _setup_default_mounts(self):`
+### _setup_default_mounts
+
+```python
+def _setup_default_mounts(self):
+```
 
 Setup default volume mounts for the container.
 
@@ -69,7 +77,11 @@ This method can be extended to add Ubuntu-specific volume mounts.
 
 <a id="camel.runtime.ubuntu_docker_runtime.UbuntuDockerRuntime.build"></a>
 
-### `def build(self, time_out: int = 15):`
+### build
+
+```python
+def build(self, time_out: int = 15):
+```
 
 Build and initialize the Ubuntu container with proper setup.
 
@@ -83,7 +95,7 @@ Build and initialize the Ubuntu container with proper setup.
 
 <a id="camel.runtime.ubuntu_docker_runtime.UbuntuDockerRuntime.exec_python_file"></a>
 
-### `exec_python_file`
+### exec_python_file
 
 ```python
 def exec_python_file(
@@ -105,7 +117,11 @@ Execute a Python file inside the Docker container.
 
 <a id="camel.runtime.ubuntu_docker_runtime.UbuntuDockerRuntime._create_archive_from_file"></a>
 
-### `def _create_archive_from_file(self, file_path: Union[str, Path]):`
+### _create_archive_from_file
+
+```python
+def _create_archive_from_file(self, file_path: Union[str, Path]):
+```
 
 Create a tar archive from a single file for docker.put_archive().
 

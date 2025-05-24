@@ -2,7 +2,11 @@
 
 <a id="camel.agents.chat_agent.ChatAgent"></a>
 
-## `class ChatAgent(BaseAgent):`
+## ChatAgent
+
+```python
+class ChatAgent(BaseAgent):
+```
 
 Class for managing conversations of CAMEL Chat Agents.
 
@@ -22,7 +26,7 @@ Class for managing conversations of CAMEL Chat Agents.
 
 <a id="camel.agents.chat_agent.ChatAgent.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -45,13 +49,17 @@ def __init__(
 
 <a id="camel.agents.chat_agent.ChatAgent.reset"></a>
 
-### `def reset(self):`
+### reset
+
+```python
+def reset(self):
+```
 
 Resets the :obj:`ChatAgent` to its initial state.
 
 <a id="camel.agents.chat_agent.ChatAgent._resolve_models"></a>
 
-### `_resolve_models`
+### _resolve_models
 
 ```python
 def _resolve_models(
@@ -76,7 +84,11 @@ backend(s).
 
 <a id="camel.agents.chat_agent.ChatAgent._resolve_model_list"></a>
 
-### `def _resolve_model_list(self, model_list: list):`
+### _resolve_model_list
+
+```python
+def _resolve_model_list(self, model_list: list):
+```
 
 Resolves a list of model specifications into model backend
 instances.
@@ -92,25 +104,41 @@ backend(s).
 
 <a id="camel.agents.chat_agent.ChatAgent.system_message"></a>
 
-### `def system_message(self):`
+### system_message
+
+```python
+def system_message(self):
+```
 
 Returns the system message for the agent.
 
 <a id="camel.agents.chat_agent.ChatAgent.tool_dict"></a>
 
-### `def tool_dict(self):`
+### tool_dict
+
+```python
+def tool_dict(self):
+```
 
 Returns a dictionary of internal tools.
 
 <a id="camel.agents.chat_agent.ChatAgent.output_language"></a>
 
-### `def output_language(self):`
+### output_language
+
+```python
+def output_language(self):
+```
 
 Returns the output language for the agent.
 
 <a id="camel.agents.chat_agent.ChatAgent.output_language"></a>
 
-### `def output_language(self, value: str):`
+### output_language
+
+```python
+def output_language(self, value: str):
+```
 
 Set the output language for the agent.
 
@@ -118,36 +146,60 @@ Note that this will clear the message history.
 
 <a id="camel.agents.chat_agent.ChatAgent._get_full_tool_schemas"></a>
 
-### `def _get_full_tool_schemas(self):`
+### _get_full_tool_schemas
+
+```python
+def _get_full_tool_schemas(self):
+```
 
 Returns a list of tool schemas of all tools, including internal
 and external tools.
 
 <a id="camel.agents.chat_agent.ChatAgent._get_external_tool_names"></a>
 
-### `def _get_external_tool_names(self):`
+### _get_external_tool_names
+
+```python
+def _get_external_tool_names(self):
+```
 
 Returns a set of external tool names.
 
 <a id="camel.agents.chat_agent.ChatAgent.add_tool"></a>
 
-### `def add_tool(self, tool: Union[FunctionTool, Callable]):`
+### add_tool
+
+```python
+def add_tool(self, tool: Union[FunctionTool, Callable]):
+```
 
 Add a tool to the agent.
 
 <a id="camel.agents.chat_agent.ChatAgent.add_tools"></a>
 
-### `def add_tools(self, tools: List[Union[FunctionTool, Callable]]):`
+### add_tools
+
+```python
+def add_tools(self, tools: List[Union[FunctionTool, Callable]]):
+```
 
 Add a list of tools to the agent.
 
 <a id="camel.agents.chat_agent.ChatAgent.add_external_tool"></a>
 
-### `def add_external_tool(self, tool: Union[FunctionTool, Callable, Dict[str, Any]]):`
+### add_external_tool
+
+```python
+def add_external_tool(self, tool: Union[FunctionTool, Callable, Dict[str, Any]]):
+```
 
 <a id="camel.agents.chat_agent.ChatAgent.remove_tool"></a>
 
-### `def remove_tool(self, tool_name: str):`
+### remove_tool
+
+```python
+def remove_tool(self, tool_name: str):
+```
 
 Remove a tool from the agent by name.
 
@@ -161,13 +213,21 @@ Remove a tool from the agent by name.
 
 <a id="camel.agents.chat_agent.ChatAgent.remove_tools"></a>
 
-### `def remove_tools(self, tool_names: List[str]):`
+### remove_tools
+
+```python
+def remove_tools(self, tool_names: List[str]):
+```
 
 Remove a list of tools from the agent by name.
 
 <a id="camel.agents.chat_agent.ChatAgent.remove_external_tool"></a>
 
-### `def remove_external_tool(self, tool_name: str):`
+### remove_external_tool
+
+```python
+def remove_external_tool(self, tool_name: str):
+```
 
 Remove an external tool from the agent by name.
 
@@ -181,7 +241,7 @@ Remove an external tool from the agent by name.
 
 <a id="camel.agents.chat_agent.ChatAgent.update_memory"></a>
 
-### `update_memory`
+### update_memory
 
 ```python
 def update_memory(
@@ -202,7 +262,11 @@ Updates the agent memory with a new message.
 
 <a id="camel.agents.chat_agent.ChatAgent.load_memory"></a>
 
-### `def load_memory(self, memory: AgentMemory):`
+### load_memory
+
+```python
+def load_memory(self, memory: AgentMemory):
+```
 
 Load the provided memory into the agent.
 
@@ -216,7 +280,11 @@ Load the provided memory into the agent.
 
 <a id="camel.agents.chat_agent.ChatAgent.load_memory_from_path"></a>
 
-### `def load_memory_from_path(self, path: str):`
+### load_memory_from_path
+
+```python
+def load_memory_from_path(self, path: str):
+```
 
 Loads memory records from a JSON file filtered by this agent's ID.
 
@@ -226,7 +294,11 @@ Loads memory records from a JSON file filtered by this agent's ID.
 
 <a id="camel.agents.chat_agent.ChatAgent.save_memory"></a>
 
-### `def save_memory(self, path: str):`
+### save_memory
+
+```python
+def save_memory(self, path: str):
+```
 
 Retrieves the current conversation data from memory and writes it
 into a JSON file using JsonStorage.
@@ -237,7 +309,11 @@ into a JSON file using JsonStorage.
 
 <a id="camel.agents.chat_agent.ChatAgent.clear_memory"></a>
 
-### `def clear_memory(self):`
+### clear_memory
+
+```python
+def clear_memory(self):
+```
 
 **Returns:**
 
@@ -245,7 +321,11 @@ into a JSON file using JsonStorage.
 
 <a id="camel.agents.chat_agent.ChatAgent._generate_system_message_for_output_language"></a>
 
-### `def _generate_system_message_for_output_language(self):`
+### _generate_system_message_for_output_language
+
+```python
+def _generate_system_message_for_output_language(self):
+```
 
 **Returns:**
 
@@ -253,14 +333,22 @@ into a JSON file using JsonStorage.
 
 <a id="camel.agents.chat_agent.ChatAgent.init_messages"></a>
 
-### `def init_messages(self):`
+### init_messages
+
+```python
+def init_messages(self):
+```
 
 Initializes the stored messages list with the current system
 message.
 
 <a id="camel.agents.chat_agent.ChatAgent.record_message"></a>
 
-### `def record_message(self, message: BaseMessage):`
+### record_message
+
+```python
+def record_message(self, message: BaseMessage):
+```
 
 Records the externally provided message into the agent memory as if
 it were an answer of the :obj:`ChatAgent` from the backend. Currently,
@@ -272,7 +360,11 @@ the choice of the critic is submitted with this method.
 
 <a id="camel.agents.chat_agent.ChatAgent._try_format_message"></a>
 
-### `def _try_format_message(self, message: BaseMessage, response_format: Type[BaseModel]):`
+### _try_format_message
+
+```python
+def _try_format_message(self, message: BaseMessage, response_format: Type[BaseModel]):
+```
 
 **Returns:**
 
@@ -281,7 +373,7 @@ is needed).
 
 <a id="camel.agents.chat_agent.ChatAgent._format_response_if_needed"></a>
 
-### `_format_response_if_needed`
+### _format_response_if_needed
 
 ```python
 def _format_response_if_needed(
@@ -299,7 +391,7 @@ This function won't format the response under the following cases:
 
 <a id="camel.agents.chat_agent.ChatAgent.step"></a>
 
-### `step`
+### step
 
 ```python
 def step(
@@ -324,11 +416,19 @@ flag, and session information.
 
 <a id="camel.agents.chat_agent.ChatAgent.chat_history"></a>
 
-### `def chat_history(self):`
+### chat_history
+
+```python
+def chat_history(self):
+```
 
 <a id="camel.agents.chat_agent.ChatAgent._create_token_usage_tracker"></a>
 
-### `def _create_token_usage_tracker(self):`
+### _create_token_usage_tracker
+
+```python
+def _create_token_usage_tracker(self):
+```
 
 **Returns:**
 
@@ -336,7 +436,11 @@ flag, and session information.
 
 <a id="camel.agents.chat_agent.ChatAgent._update_token_usage_tracker"></a>
 
-### `def _update_token_usage_tracker(self, tracker: Dict[str, int], usage_dict: Dict[str, int]):`
+### _update_token_usage_tracker
+
+```python
+def _update_token_usage_tracker(self, tracker: Dict[str, int], usage_dict: Dict[str, int]):
+```
 
 Updates a token usage tracker with values from a usage dictionary.
 
@@ -347,7 +451,7 @@ Updates a token usage tracker with values from a usage dictionary.
 
 <a id="camel.agents.chat_agent.ChatAgent._convert_to_chatagent_response"></a>
 
-### `_convert_to_chatagent_response`
+### _convert_to_chatagent_response
 
 ```python
 def _convert_to_chatagent_response(
@@ -366,13 +470,17 @@ Parse the final model response into the chat agent response.
 
 <a id="camel.agents.chat_agent.ChatAgent._record_final_output"></a>
 
-### `def _record_final_output(self, output_messages: List[BaseMessage]):`
+### _record_final_output
+
+```python
+def _record_final_output(self, output_messages: List[BaseMessage]):
+```
 
 Log final messages or warnings about multiple responses.
 
 <a id="camel.agents.chat_agent.ChatAgent._get_model_response"></a>
 
-### `_get_model_response`
+### _get_model_response
 
 ```python
 def _get_model_response(
@@ -388,7 +496,11 @@ Internal function for agent step model response.
 
 <a id="camel.agents.chat_agent.ChatAgent._sanitize_messages_for_logging"></a>
 
-### `def _sanitize_messages_for_logging(self, messages):`
+### _sanitize_messages_for_logging
+
+```python
+def _sanitize_messages_for_logging(self, messages):
+```
 
 Sanitize OpenAI messages for logging by replacing base64 image
 data with a simple message and a link to view the image.
@@ -403,7 +515,7 @@ data with a simple message and a link to view the image.
 
 <a id="camel.agents.chat_agent.ChatAgent._step_get_info"></a>
 
-### `_step_get_info`
+### _step_get_info
 
 ```python
 def _step_get_info(
@@ -449,7 +561,11 @@ termination reason is recorded.
 
 <a id="camel.agents.chat_agent.ChatAgent._handle_batch_response"></a>
 
-### `def _handle_batch_response(self, response: ChatCompletion):`
+### _handle_batch_response
+
+```python
+def _handle_batch_response(self, response: ChatCompletion):
+```
 
 Process a batch response from the model and extract the necessary
 information.
@@ -464,7 +580,11 @@ information.
 
 <a id="camel.agents.chat_agent.ChatAgent._handle_stream_response"></a>
 
-### `def _handle_stream_response(self, response: Stream[ChatCompletionChunk], prompt_tokens: int):`
+### _handle_stream_response
+
+```python
+def _handle_stream_response(self, response: Stream[ChatCompletionChunk], prompt_tokens: int):
+```
 
 Process a stream response from the model and extract the necessary
 information.
@@ -480,7 +600,7 @@ information.
 
 <a id="camel.agents.chat_agent.ChatAgent._handle_chunk"></a>
 
-### `_handle_chunk`
+### _handle_chunk
 
 ```python
 def _handle_chunk(
@@ -496,7 +616,7 @@ Handle a chunk of the model response.
 
 <a id="camel.agents.chat_agent.ChatAgent._step_terminate"></a>
 
-### `_step_terminate`
+### _step_terminate
 
 ```python
 def _step_terminate(
@@ -528,7 +648,11 @@ termination details, token counts, and tool call information.
 
 <a id="camel.agents.chat_agent.ChatAgent._execute_tool"></a>
 
-### `def _execute_tool(self, tool_call_request: ToolCallRequest):`
+### _execute_tool
+
+```python
+def _execute_tool(self, tool_call_request: ToolCallRequest):
+```
 
 Execute the tool with arguments following the model's response.
 
@@ -543,7 +667,7 @@ function call.
 
 <a id="camel.agents.chat_agent.ChatAgent._record_tool_calling"></a>
 
-### `_record_tool_calling`
+### _record_tool_calling
 
 ```python
 def _record_tool_calling(
@@ -560,7 +684,11 @@ tool calling record.
 
 <a id="camel.agents.chat_agent.ChatAgent.get_usage_dict"></a>
 
-### `def get_usage_dict(self, output_messages: List[BaseMessage], prompt_tokens: int):`
+### get_usage_dict
+
+```python
+def get_usage_dict(self, output_messages: List[BaseMessage], prompt_tokens: int):
+```
 
 Get usage dictionary when using the stream mode.
 
@@ -575,7 +703,11 @@ Get usage dictionary when using the stream mode.
 
 <a id="camel.agents.chat_agent.ChatAgent.add_model_scheduling_strategy"></a>
 
-### `def add_model_scheduling_strategy(self, name: str, strategy_fn: Callable):`
+### add_model_scheduling_strategy
+
+```python
+def add_model_scheduling_strategy(self, name: str, strategy_fn: Callable):
+```
 
 Add a scheduling strategy method provided by user to ModelManger.
 
@@ -586,7 +718,11 @@ Add a scheduling strategy method provided by user to ModelManger.
 
 <a id="camel.agents.chat_agent.ChatAgent.clone"></a>
 
-### `def clone(self, with_memory: bool = False):`
+### clone
+
+```python
+def clone(self, with_memory: bool = False):
+```
 
 Creates a new instance of :obj:`ChatAgent` with the same
 configuration as the current instance.
@@ -602,7 +738,11 @@ configuration.
 
 <a id="camel.agents.chat_agent.ChatAgent.__repr__"></a>
 
-### `def __repr__(self):`
+### __repr__
+
+```python
+def __repr__(self):
+```
 
 **Returns:**
 
@@ -610,7 +750,7 @@ configuration.
 
 <a id="camel.agents.chat_agent.ChatAgent.to_mcp"></a>
 
-### `to_mcp`
+### to_mcp
 
 ```python
 def to_mcp(

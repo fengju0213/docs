@@ -2,20 +2,32 @@
 
 <a id="camel.toolkits.function_tool._remove_a_key"></a>
 
-## `def _remove_a_key(d: Dict, remove_key: Any):`
+## _remove_a_key
+
+```python
+def _remove_a_key(d: Dict, remove_key: Any):
+```
 
 Remove a key from a dictionary recursively.
 
 <a id="camel.toolkits.function_tool._remove_title_recursively"></a>
 
-## `def _remove_title_recursively(data, parent_key = None):`
+## _remove_title_recursively
+
+```python
+def _remove_title_recursively(data, parent_key = None):
+```
 
 Recursively removes the 'title' key from all levels of a nested
 dictionary, except when 'title' is an argument name in the schema.
 
 <a id="camel.toolkits.function_tool.get_openai_function_schema"></a>
 
-## `def get_openai_function_schema(func: Callable):`
+## get_openai_function_schema
+
+```python
+def get_openai_function_schema(func: Callable):
+```
 
 Generates a schema dict for an OpenAI function based on its signature.
 
@@ -36,7 +48,11 @@ specifications.
 
 <a id="camel.toolkits.function_tool.get_openai_tool_schema"></a>
 
-## `def get_openai_tool_schema(func: Callable):`
+## get_openai_tool_schema
+
+```python
+def get_openai_tool_schema(func: Callable):
+```
 
 Generates an OpenAI JSON schema from a given Python function.
 
@@ -69,7 +85,11 @@ See Also:
 
 <a id="camel.toolkits.function_tool.sanitize_and_enforce_required"></a>
 
-## `def sanitize_and_enforce_required(parameters_dict):`
+## sanitize_and_enforce_required
+
+```python
+def sanitize_and_enforce_required(parameters_dict):
+```
 
 Cleans and updates the function schema to conform with OpenAI's
 requirements:
@@ -87,7 +107,11 @@ fields set as required.
 
 <a id="camel.toolkits.function_tool.generate_docstring"></a>
 
-## `def generate_docstring(code: str, model: Optional[BaseModelBackend] = None):`
+## generate_docstring
+
+```python
+def generate_docstring(code: str, model: Optional[BaseModelBackend] = None):
+```
 
 Generates a docstring for a given function code using LLM.
 
@@ -106,7 +130,11 @@ If no model is supplied, a default gpt-4o-mini is used.
 
 <a id="camel.toolkits.function_tool.FunctionTool"></a>
 
-## `class FunctionTool:`
+## FunctionTool
+
+```python
+class FunctionTool:
+```
 
 An abstraction of a function that OpenAI chat models can call. See
 https://platform.openai.com/docs/api-reference/chat/create.
@@ -127,7 +155,7 @@ provide a user-defined tool schema to override.
 
 <a id="camel.toolkits.function_tool.FunctionTool.__init__"></a>
 
-### `__init__`
+### __init__
 
 ```python
 def __init__(
@@ -145,15 +173,27 @@ def __init__(
 
 <a id="camel.toolkits.function_tool.FunctionTool.__call__"></a>
 
-### `def __call__(self, *args: Any, **kwargs: Any):`
+### __call__
+
+```python
+def __call__(self, *args: Any, **kwargs: Any):
+```
 
 <a id="camel.toolkits.function_tool.FunctionTool.is_async"></a>
 
-### `def is_async(self):`
+### is_async
+
+```python
+def is_async(self):
+```
 
 <a id="camel.toolkits.function_tool.FunctionTool.validate_openai_tool_schema"></a>
 
-### `def validate_openai_tool_schema(openai_tool_schema: Dict[str, Any]):`
+### validate_openai_tool_schema
+
+```python
+def validate_openai_tool_schema(openai_tool_schema: Dict[str, Any]):
+```
 
 Validates the OpenAI tool schema against
 :obj:`ToolAssistantToolsFunction`.
@@ -169,7 +209,11 @@ Schema specifications.
 
 <a id="camel.toolkits.function_tool.FunctionTool.get_openai_tool_schema"></a>
 
-### `def get_openai_tool_schema(self):`
+### get_openai_tool_schema
+
+```python
+def get_openai_tool_schema(self):
+```
 
 **Returns:**
 
@@ -177,7 +221,11 @@ Schema specifications.
 
 <a id="camel.toolkits.function_tool.FunctionTool.set_openai_tool_schema"></a>
 
-### `def set_openai_tool_schema(self, schema: Dict[str, Any]):`
+### set_openai_tool_schema
+
+```python
+def set_openai_tool_schema(self, schema: Dict[str, Any]):
+```
 
 Sets the OpenAI tool schema for this function.
 
@@ -189,7 +237,11 @@ Allows setting a custom OpenAI tool schema for this function.
 
 <a id="camel.toolkits.function_tool.FunctionTool.get_openai_function_schema"></a>
 
-### `def get_openai_function_schema(self):`
+### get_openai_function_schema
+
+```python
+def get_openai_function_schema(self):
+```
 
 **Returns:**
 
@@ -198,7 +250,11 @@ schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.set_openai_function_schema"></a>
 
-### `def set_openai_function_schema(self, openai_function_schema: Dict[str, Any]):`
+### set_openai_function_schema
+
+```python
+def set_openai_function_schema(self, openai_function_schema: Dict[str, Any]):
+```
 
 Sets the schema of the function within the OpenAI tool schema.
 
@@ -208,7 +264,11 @@ Sets the schema of the function within the OpenAI tool schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.get_function_name"></a>
 
-### `def get_function_name(self):`
+### get_function_name
+
+```python
+def get_function_name(self):
+```
 
 **Returns:**
 
@@ -216,7 +276,11 @@ Sets the schema of the function within the OpenAI tool schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.set_function_name"></a>
 
-### `def set_function_name(self, name: str):`
+### set_function_name
+
+```python
+def set_function_name(self, name: str):
+```
 
 Sets the name of the function in the OpenAI tool schema.
 
@@ -226,7 +290,11 @@ Sets the name of the function in the OpenAI tool schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.get_function_description"></a>
 
-### `def get_function_description(self):`
+### get_function_description
+
+```python
+def get_function_description(self):
+```
 
 **Returns:**
 
@@ -234,7 +302,11 @@ Sets the name of the function in the OpenAI tool schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.set_function_description"></a>
 
-### `def set_function_description(self, description: str):`
+### set_function_description
+
+```python
+def set_function_description(self, description: str):
+```
 
 Sets the description of the function in the OpenAI tool schema.
 
@@ -244,7 +316,11 @@ Sets the description of the function in the OpenAI tool schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.get_paramter_description"></a>
 
-### `def get_paramter_description(self, param_name: str):`
+### get_paramter_description
+
+```python
+def get_paramter_description(self, param_name: str):
+```
 
 Gets the description of a specific parameter from the function
 schema.
@@ -259,7 +335,11 @@ schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.set_paramter_description"></a>
 
-### `def set_paramter_description(self, param_name: str, description: str):`
+### set_paramter_description
+
+```python
+def set_paramter_description(self, param_name: str, description: str):
+```
 
 Sets the description for a specific parameter in the function
 schema.
@@ -271,7 +351,11 @@ schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.get_parameter"></a>
 
-### `def get_parameter(self, param_name: str):`
+### get_parameter
+
+```python
+def get_parameter(self, param_name: str):
+```
 
 Gets the schema for a specific parameter from the function schema.
 
@@ -285,7 +369,11 @@ Gets the schema for a specific parameter from the function schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.set_parameter"></a>
 
-### `def set_parameter(self, param_name: str, value: Dict[str, Any]):`
+### set_parameter
+
+```python
+def set_parameter(self, param_name: str, value: Dict[str, Any]):
+```
 
 Sets the schema for a specific parameter in the function schema.
 
@@ -296,7 +384,11 @@ Sets the schema for a specific parameter in the function schema.
 
 <a id="camel.toolkits.function_tool.FunctionTool.synthesize_openai_tool_schema"></a>
 
-### `def synthesize_openai_tool_schema(self, max_retries: Optional[int] = None):`
+### synthesize_openai_tool_schema
+
+```python
+def synthesize_openai_tool_schema(self, max_retries: Optional[int] = None):
+```
 
 Synthesizes an OpenAI tool schema for the specified function.
 
@@ -316,7 +408,7 @@ schema synthesis and validation process is retried up to
 
 <a id="camel.toolkits.function_tool.FunctionTool.synthesize_execution_output"></a>
 
-### `synthesize_execution_output`
+### synthesize_execution_output
 
 ```python
 def synthesize_execution_output(
@@ -341,7 +433,11 @@ synthesis model is provided, a warning is logged.
 
 <a id="camel.toolkits.function_tool.FunctionTool.parameters"></a>
 
-### `def parameters(self):`
+### parameters
+
+```python
+def parameters(self):
+```
 
 **Returns:**
 
@@ -350,7 +446,11 @@ parameters of this function.
 
 <a id="camel.toolkits.function_tool.FunctionTool.parameters"></a>
 
-### `def parameters(self, value: Dict[str, Any]):`
+### parameters
+
+```python
+def parameters(self, value: Dict[str, Any]):
+```
 
 Setter method for the property :obj:`parameters`. It will
 firstly check if the input parameters schema is valid. If invalid,

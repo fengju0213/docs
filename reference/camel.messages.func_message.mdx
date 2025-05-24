@@ -2,7 +2,11 @@
 
 <a id="camel.messages.func_message.FunctionCallingMessage"></a>
 
-## `class FunctionCallingMessage(BaseMessage):`
+## FunctionCallingMessage
+
+```python
+class FunctionCallingMessage(BaseMessage):
+```
 
 Class for message objects used specifically for
 function-related messages.
@@ -16,7 +20,11 @@ function-related messages.
 
 <a id="camel.messages.func_message.FunctionCallingMessage.to_openai_message"></a>
 
-### `def to_openai_message(self, role_at_backend: OpenAIBackendRole):`
+### to_openai_message
+
+```python
+def to_openai_message(self, role_at_backend: OpenAIBackendRole):
+```
 
 Converts the message to an :obj:`OpenAIMessage` object.
 
@@ -30,7 +38,7 @@ Converts the message to an :obj:`OpenAIMessage` object.
 
 <a id="camel.messages.func_message.FunctionCallingMessage.to_sharegpt"></a>
 
-### `to_sharegpt`
+### to_sharegpt
 
 ```python
 def to_sharegpt(
@@ -43,7 +51,11 @@ Convert FunctionCallingMessage to ShareGPT message.
 
 <a id="camel.messages.func_message.FunctionCallingMessage.to_openai_assistant_message"></a>
 
-### `def to_openai_assistant_message(self):`
+### to_openai_assistant_message
+
+```python
+def to_openai_assistant_message(self):
+```
 
 **Returns:**
 
@@ -52,7 +64,11 @@ object.
 
 <a id="camel.messages.func_message.FunctionCallingMessage.to_openai_tool_message"></a>
 
-### `def to_openai_tool_message(self):`
+### to_openai_tool_message
+
+```python
+def to_openai_tool_message(self):
+```
 
 **Returns:**
 

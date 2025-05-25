@@ -47,7 +47,7 @@ Initialize the self-improving cot pipeline.
 - **reason_agent** (ChatAgent): The chat agent used for generating and improving reasoning traces.
 - **problems** (List[Dict]): List of problem dictionaries to process.
 - **max_iterations** (int, optional): Maximum number of improvement iterations. If set to `0`, the pipeline will generate an initial trace without any improvement iterations. (default: :obj:`3`)
-- **score_threshold** (Union[float, Dict[str, float]], optional): Quality threshold. Can be either a single float value applied to average score, or a dictionary mapping score dimensions to their thresholds. For example: {"correctness": 0.8, "coherence": 0.7}. If using reward model and threshold for a dimension is not specified, will use the default value 0.7. (default: :obj:`0.7`)
+- **score_threshold** (Union[float, Dict[str, float]], optional): Quality threshold. Can be either a single float value applied to average score, or a dictionary mapping score dimensions to their thresholds. For example: `{"correctness": 0.8, "coherence": 0.7}`. If using reward model and threshold for a dimension is not specified, will use the default value 0.7. (default: :obj:`0.7`)
 - **rejection_sampling_n** (int, optional): Specifies the number of samples to be drawn using the rejection sampling method, where samples are accepted or rejected based on a predefined condition to achieve a desired distribution. (default: :obj: `None`)
 - **evaluate_agent** (Optional[ChatAgent]): The chat agent used for evaluating reasoning traces. (default: :obj:`None`)
 - **reward_model** (BaseRewardModel, optional): Model used to evaluate reasoning traces. If `None`, uses Agent self-evaluation. (default: :obj:`None`)

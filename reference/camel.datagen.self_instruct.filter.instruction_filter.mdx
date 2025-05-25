@@ -25,7 +25,7 @@ configurations.
 
 **Parameters:**
 
-- **filters_config** (Dict[str, Dict[str, Any]]): Example filters_config: { "length": {"min_len": 5, "max_len": 100}, "keyword": {"keywords": ["image", "video"]}, "non_english": {}, "rouge_similarity": { "existing_instructions": ["Some existing text"], "threshold": 0.6 } } Each key in filters_config corresponds to a filter name (registered in FILTER_REGISTRY). Each value is a dict of parameters for that filter.
+- **filters_config** (Dict[str, Dict[str, Any]]): Example filters_config: `{ "length": {"min_len": 5, "max_len": 100}, "keyword": {"keywords": ["image", "video"]}, "non_english": {}, "rouge_similarity": { "existing_instructions": ["Some existing text"], "threshold": 0.6 } }` Each key in filters_config corresponds to a filter name (registered in FILTER_REGISTRY). Each value is a dict of parameters for that filter.
 - **stop_on_first_failure** (bool): If True, stops checking filters after the first failure.
 
 <a id="camel.datagen.self_instruct.filter.instruction_filter.InstructionFilter.add_filter"></a>

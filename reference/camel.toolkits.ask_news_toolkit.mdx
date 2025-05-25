@@ -75,8 +75,8 @@ Fetch news or stories based on a user query.
 
 - **query** (str): The search query for fetching relevant news.
 - **n_articles** (int): Number of articles to include in the response. (default: :obj:`10`)
-- **return_type** (Literal["string", "dicts", "both"]): The format of the return value. (default: :obj:`"string"`)
-- **method** (Literal["nl", "kw"]): The search method, either "nl" for natural language or "kw" for keyword search. (default: :obj:`"kw"`)
+- **return_type** (`Literal["string", "dicts", "both"]`): The format of the return value. (default: :obj:`"string"`)
+- **method** (`Literal["nl", "kw"]`): The search method, either "nl" for natural language or "kw" for keyword search. (default: :obj:`"kw"`)
 
 **Returns:**
 
@@ -133,7 +133,7 @@ Perform a live web search based on the given queries.
 **Parameters:**
 
 - **queries** (List[str]): A list of search queries.
-- **return_type** (Literal["string", "dicts", "both"]): The format of the return value. (default: :obj:`"string"`)
+- **return_type** (`Literal["string", "dicts", "both"]`): The format of the return value. (default: :obj:`"string"`)
 
 **Returns:**
 
@@ -161,8 +161,8 @@ Search Reddit based on the provided keywords.
 
 - **keywords** (List[str]): The keywords to search for on Reddit.
 - **n_threads** (int): Number of Reddit threads to summarize and return. (default: :obj:`5`)
-- **return_type** (Literal["string", "dicts", "both"]): The format of the return value. (default: :obj:`"string"`)
-- **method** (Literal["nl", "kw"]): The search method, either "nl" for natural language or "kw" for keyword search. (default: :obj:`"kw"`)
+- **return_type** (`Literal["string", "dicts", "both"]`): The format of the return value. (default: :obj:`"string"`)
+- **method** (`Literal["nl", "kw"]`): The search method, either "nl" for natural language or "kw" for keyword search. (default: :obj:`"kw"`)
 
 **Returns:**
 
@@ -192,7 +192,7 @@ range.
 
 - **asset** (Literal): The asset for which to fetch sentiment data.
 - **metric** (Literal): The sentiment metric to analyze.
-- **return_type** (Literal["list", "string"]): The format of the return value. (default: :obj:`"string"`)
+- **return_type** (`Literal["list", "string"]`): The format of the return value. (default: :obj:`"string"`)
 - **date_from** (datetime, optional): The start date and time for the data in ISO 8601 format.
 - **date_to** (datetime, optional): The end date and time for the data in ISO 8601 format.
 

@@ -32,7 +32,7 @@ The detailed information about TiDB is available at:
 **Parameters:**
 
 - **vector_dim** (int): The dimension of storing vectors.
-- **url_and_api_key** (Optional[Union[Tuple[str, str], str]]): A tuple containing the database url and API key for connecting to a TiDB cluster. The URL should be in the format: "mysql+pymysql://<username>:<password>@<host>:<port>/<db_name>". TiDB will not use the API Key, but retains the definition for interface compatible.
+- **url_and_api_key** (Optional[Union[Tuple[str, str], str]]): A tuple containing the database url and API key for connecting to a TiDB cluster. The URL should be in the format: "mysql+pymysql://`<username>`:`<password>`@`<host>`:`<port>`/`<db_name>`". TiDB will not use the API Key, but retains the definition for interface compatible.
 - **collection_name** (Optional[str]): Name of the collection. The collection name will be used as the table name in TiDB. If not provided, set it to the current time with iso format. **kwargs (Any): Additional keyword arguments for initializing TiDB connection.
 
 <a id="camel.storages.vectordb_storages.tidb.TiDBStorage.__init__"></a>

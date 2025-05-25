@@ -54,7 +54,7 @@ texts are duplicates (not yet implemented).
 - **threshold** (float, optional): The similarity threshold for considering two texts as duplicates. (default: :obj:`0.65`)
 - **embedding_instance** (Optional[BaseEmbedding[str]], optional): A CAMEL embedding instance for automatic embedding. (default: :obj:`None`)
 - **embeddings** (Optional[List[List[float]]], optional): Pre-computed embeddings of `texts`. Each element in the list corresponds to the embedding of the text in the same index of `texts`. (default: :obj:`None`)
-- **strategy** (Literal["top1", "llm-supervise"], optional): The strategy to use for deduplication. (default: :obj:`"top1"`)
+- **strategy** (`Literal["top1", "llm-supervise"], optional`): The strategy to use for deduplication. (default: :obj:`"top1"`)
 - **batch_size** (int, optional): The size of the batch to use for calculating cosine similarities. (default: :obj:`1000`)
 
 **Returns:**

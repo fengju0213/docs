@@ -73,7 +73,7 @@ companies sorted by market cap.
 **Parameters:**
 
 - **query** (str): Search query (company name or symbol), use "" for complete SEC list.
-- **provider** (Literal["intrinio", "sec"]): Data provider. Available
+- **provider** (`Literal["intrinio", "sec"]`): Data provider. Available
 - **options**: - sec: SEC EDGAR Database (sorted by market cap) - intrinio: Intrinio Financial Data
 
 **Returns:**
@@ -116,7 +116,7 @@ Search for SEC filings by CIK or ticker symbol.
 **Parameters:**
 
 - **symbol** (str): Symbol to get data for (e.g., "MAXD").
-- **provider** (Literal["fmp", "intrinio", "sec"]): Data provider. (default: :obj:`sec`)
+- **provider** (`Literal["fmp", "intrinio", "sec"]`): Data provider. (default: :obj:`sec`)
 - **form_type** (Optional[str]): Filter by form type. Check the data provider for available types. Multiple comma separated items allowed for provider(s): sec. (default: :obj:`None`)
 
 **Returns:**
@@ -136,7 +136,7 @@ Search for ETF information.
 **Parameters:**
 
 - **query** (str): Search query (ETF name or symbol).
-- **provider** (Literal["fmp", "intrinio"]): Data provider. (default: :obj:`fmp`)
+- **provider** (`Literal["fmp", "intrinio"]`): Data provider. (default: :obj:`fmp`)
 
 **Returns:**
 
@@ -165,7 +165,7 @@ Screen stocks based on market and fundamental criteria.
 
 **Parameters:**
 
-- **provider** (Literal["fmp", "yfinance"]): Data provider. (default: :obj:`fmp`)
+- **provider** (`Literal["fmp", "yfinance"]`): Data provider. (default: :obj:`fmp`)
 - **country** (Optional[str]): Two-letter ISO country code (e.g., 'US', 'IN', 'CN'). (default: :obj:`None`)
 - **exchange** (Optional[str]): Stock exchange code (e.g., 'NYSE', 'AMEX', 'NSE'). (default: :obj:`None`)
 - **sector** (Optional[str]): Market sector (e.g., 'Financial Services', 'Healthcare). (default: :obj:`None`)
@@ -191,7 +191,7 @@ Get list of available market indices.
 
 **Parameters:**
 
-- **provider** (Literal["fmp", "yfinance"]): Data provider. (default: :obj:`fmp`)
+- **provider** (`Literal["fmp", "yfinance"]`): Data provider. (default: :obj:`fmp`)
 
 **Returns:**
 
@@ -214,7 +214,7 @@ Get current stock quote for a given symbol.
 **Parameters:**
 
 - **symbol** (str): Stock symbol (e.g., 'AAPL' for Apple Inc.)
-- **provider** (Literal["fmp", "intrinio", "yfinance"]): Data source. (default: :obj:`fmp`)
+- **provider** (`Literal["fmp", "intrinio", "yfinance"]`): Data source. (default: :obj:`fmp`)
 
 **Returns:**
 
@@ -241,8 +241,8 @@ Retrieves historical market data from OpenBB Platform providers.
 **Parameters:**
 
 - **symbol** (str): Stock symbol (e.g., 'AAPL' for Apple Inc.).
-- **provider** (Literal["fmp", "polygon", "tiingo", "yfinance"]): Data source. (default: :obj:`fmp`)
-- **asset_type** (Literal["equity", "currency", "crypto"]): Asset type. (default: :obj:`equity`)
+- **provider** (`Literal["fmp", "polygon", "tiingo", "yfinance"]`): Data source. (default: :obj:`fmp`)
+- **asset_type** (`Literal["equity", "currency", "crypto"]`): Asset type. (default: :obj:`equity`)
 - **start_date**: Start date in YYYY-MM-DD format. If None, uses provider's default lookback. (default: :obj:`None`)
 - **end_date**: End date in YYYY-MM-DD format. If None, uses current date. (default: :obj:`None`)
 - **interval**: Data frequency/timeframe. (default: :obj:`1d`) (default: 1d)
@@ -266,7 +266,7 @@ Get market movers data.
 
 **Parameters:**
 
-- **category** (Literal["gainers", "losers", "active"]): Type of market data. Must be 'gainers', 'losers', or 'active'. (default: :obj:`active`)
+- **category** (`Literal["gainers", "losers", "active"]`): Type of market data. Must be 'gainers', 'losers', or 'active'. (default: :obj:`active`)
 
 **Returns:**
 
@@ -353,7 +353,7 @@ Get list of available economic indicators.
 
 **Parameters:**
 
-- **provider** (Literal["econdb", "imf"]): Data provider. (default: :obj:`econdb`)
+- **provider** (`Literal["econdb", "imf"]`): Data provider. (default: :obj:`econdb`)
 
 **Returns:**
 
@@ -378,7 +378,7 @@ Get detailed metadata for an economic indicator.
 
 - **symbol** (str): Stock symbol (e.g., 'AAPL' for Apple Inc.).
 - **country** (str): Country code (e.g., 'US' for United States).
-- **provider** (Literal["econdb", "imf"]): Data provider. (default: :obj:`econdb`)
+- **provider** (`Literal["econdb", "imf"]`): Data provider. (default: :obj:`econdb`)
 
 **Returns:**
 
@@ -403,8 +403,8 @@ Get company financial metrics and ratios.
 **Parameters:**
 
 - **symbol** (str): Stock symbol (e.g., 'AAPL' for Apple Inc.).
-- **provider** (Literal["fmp", "intrinio", "yfinance"]): Data source. (default: :obj:`fmp`)
-- **period** (Literal["annual", "quarter"]): Reporting period, "annual": Annual metrics, "quarter": Quarterly metrics. (default: :obj:`annual`)
+- **provider** (`Literal["fmp", "intrinio", "yfinance"]`): Data source. (default: :obj:`fmp`)
+- **period** (`Literal["annual", "quarter"]`): Reporting period, "annual": Annual metrics, "quarter": Quarterly metrics. (default: :obj:`annual`)
 - **limit** (int): Number of periods to return. (default: :obj:`5`) (default: 5)
 
 **Returns:**
@@ -428,7 +428,7 @@ Get company profile information.
 **Parameters:**
 
 - **symbol** (str): Stock symbol (e.g., 'AAPL' for Apple Inc.).
-- **provider** (Literal["fmp", "intrinio", "yfinance"]): Data provider. (default: :obj:`fmp`)
+- **provider** (`Literal["fmp", "intrinio", "yfinance"]`): Data provider. (default: :obj:`fmp`)
 
 **Returns:**
 
@@ -457,9 +457,9 @@ Data availability and field names vary by provider and company type.
 **Parameters:**
 
 - **symbol** (str): Stock symbol (e.g., 'AAPL' for Apple Inc.).
-- **provider** (Literal["fmp", "intrinio", "polygon", "yfinance"]): Data provider. (default: :obj:`fmp`)
-- **statement_type** (Literal["balance", "income", "cash"]): Type of financial statement, "balance": Balance sheet, "income": Income statement, "cash": Cash flow statement. (default: :obj:`balance`)
-- **period** (Literal["annual", "quarter"]): Reporting period, "annual": Annual reports, "quarter": Quarterly reports. (default: :obj:`annual`)
+- **provider** (`Literal["fmp", "intrinio", "polygon", "yfinance"]`): Data provider. (default: :obj:`fmp`)
+- **statement_type** (`Literal["balance", "income", "cash"]`): Type of financial statement, "balance": Balance sheet, "income": Income statement, "cash": Cash flow statement. (default: :obj:`balance`)
+- **period** (`Literal["annual", "quarter"]`): Reporting period, "annual": Annual reports, "quarter": Quarterly reports. (default: :obj:`annual`)
 - **limit** (int): Number of periods to return. (default: :obj:`5`) (default: 5)
 
 **Returns:**
@@ -525,7 +525,7 @@ Get economic calendar events.
 
 **Parameters:**
 
-- **provider** (Literal["fmp", "tradingeconomics"]): Data provider. (default: :obj:`fmp`)
+- **provider** (`Literal["fmp", "tradingeconomics"]`): Data provider. (default: :obj:`fmp`)
 - **start_date** (Optional[str]): Start date in YYYY-MM-DD format. (default: :obj:`None`)
 - **end_date** (Optional[str]): End date in YYYY-MM-DD format. (default: :obj:`None`)
 

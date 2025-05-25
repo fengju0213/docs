@@ -216,7 +216,7 @@ Initialize the asynchronous browser core.
 
 - **headless** (bool): Whether to run the browser in headless mode.
 - **cache_dir** (Union[str, None]): The directory to store cache files.
-- **channel** (Literal["chrome", "msedge", "chromium"]): The browser channel to use. Must be one of "chrome", "msedge", or "chromium".
+- **channel** (`Literal["chrome", "msedge", "chromium"]`): The browser channel to use. Must be one of "chrome", "msedge", or "chromium".
 - **cookie_json_path** (Optional[str]): Path to a JSON file containing authentication cookies and browser storage state. If provided and the file exists, the browser will load this state to maintain authenticated sessions without requiring manual login.
 
 **Returns:**
@@ -585,7 +585,7 @@ Initialize the BrowserToolkit instance.
 
 - **headless** (bool): Whether to run the browser in headless mode.
 - **cache_dir** (Union[str, None]): The directory to store cache files.
-- **channel** (Literal["chrome", "msedge", "chromium"]): The browser channel to use. Must be one of "chrome", "msedge", or "chromium".
+- **channel** (`Literal["chrome", "msedge", "chromium"]`): The browser channel to use. Must be one of "chrome", "msedge", or "chromium".
 - **history_window** (int): The window size for storing the history of actions.
 - **web_agent_model** (Optional[BaseModelBackend]): The model backend for the web agent.
 - **planning_agent_model** (Optional[BaseModelBackend]): The model backend for the planning agent.

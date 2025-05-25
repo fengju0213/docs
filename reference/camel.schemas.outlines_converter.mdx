@@ -171,7 +171,7 @@ Formats the input content into the expected BaseModel.
 
 **Parameters:**
 
-- **type** (Literal["regex", "json", "type", "choice", "grammar"]): The type of conversion to perform. Options are: - "regex": Match the content against a regex pattern. - "pydantic": Convert the content into a pydantic model. - "json": Convert the content into a JSON based on a schema. - "type": Convert the content into a specified type. - "choice": Match the content against a list of valid choices. - "grammar": Convert the content using a specified grammar.
+- **type** (`Literal["regex", "json", "type", "choice", "grammar"]`): The type of conversion to perform. Options are: - "regex": Match the content against a regex pattern. - "pydantic": Convert the content into a pydantic model. - "json": Convert the content into a JSON based on a schema. - "type": Convert the content into a specified type. - "choice": Match the content against a list of valid choices. - "grammar": Convert the content using a specified grammar.
 - **content** (str): The content to be formatted. **kwargs: Additional keyword arguments specific to the conversion type. - For "regex":
 - **regex_pattern** (str): The regex pattern to use for matching. - For "pydantic":
 - **output_schema** (Type[BaseModel]): The schema to validate and format the pydantic model. - For "json":

@@ -30,7 +30,7 @@ Used by the data collector.
 
 - **id** (UUID): The id of the message.
 - **name** (str): The name of the agent.
-- **role** (Literal["user", "assistant", "system", "function"]): The role of the message.
+- **role** (`Literal["user", "assistant", "system", "function"]`): The role of the message.
 - **message** (Optional[str], optional): The message. (default: :obj:`None`)
 - **function_call** (Optional[Dict[str, Any]], optional): The function call. (default: :obj:`None`)
 
@@ -91,7 +91,7 @@ Record a message.
 
 **Parameters:**
 
-- **role** (Literal["user", "assistant", "system", "tool"]): The role of the message.
+- **role** (`Literal["user", "assistant", "system", "tool"]`): The role of the message.
 - **name** (Optional[str], optional): The name of the agent. (default: :obj:`None`)
 - **message** (Optional[str], optional): The message to record. (default: :obj:`None`)
 - **function_call** (Optional[Dict[str, Any]], optional): The function call to record. (default: :obj:`None`)
